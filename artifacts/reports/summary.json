@@ -1,0 +1,156 @@
+{
+  "dataset_dir": "D:\\zhk02\\Desktop\\OCR\\baseline\\GameEngine",
+  "region_count": 8,
+  "fail_case_count": 6,
+  "averages": {
+    "block_recall": 1.0,
+    "node_recall": 1.0,
+    "edge_recall": 0.5597
+  },
+  "regions": [
+    {
+      "region_id": "region_01",
+      "ocr": {
+        "block_recall": 1.0,
+        "block_precision": 0.6667,
+        "duplicate_rate": 0.3333
+      },
+      "nodes": {
+        "node_recall": 1.0,
+        "node_precision": 0.8571,
+        "multiline_merge_accuracy": 0.75
+      },
+      "graph": {
+        "edge_recall": 0.0,
+        "root_count": 27,
+        "weak_edge_ratio": 0.0266
+      }
+    },
+    {
+      "region_id": "region_02",
+      "ocr": {
+        "block_recall": 1.0,
+        "block_precision": 0.4545,
+        "duplicate_rate": 0.5455
+      },
+      "nodes": {
+        "node_recall": 1.0,
+        "node_precision": 0.5455,
+        "multiline_merge_accuracy": 1.0
+      },
+      "graph": {
+        "edge_recall": 0.2857,
+        "root_count": 27,
+        "weak_edge_ratio": 0.0266
+      }
+    },
+    {
+      "region_id": "region_03",
+      "ocr": {
+        "block_recall": 1.0,
+        "block_precision": 0.625,
+        "duplicate_rate": 0.375
+      },
+      "nodes": {
+        "node_recall": 1.0,
+        "node_precision": 0.75,
+        "multiline_merge_accuracy": 1.0
+      },
+      "graph": {
+        "edge_recall": 0.5,
+        "root_count": 27,
+        "weak_edge_ratio": 0.0266
+      }
+    },
+    {
+      "region_id": "region_04",
+      "ocr": {
+        "block_recall": 1.0,
+        "block_precision": 1.0,
+        "duplicate_rate": 0.0
+      },
+      "nodes": {
+        "node_recall": 1.0,
+        "node_precision": 1.0,
+        "multiline_merge_accuracy": 1.0
+      },
+      "graph": {
+        "edge_recall": 0.6667,
+        "root_count": 27,
+        "weak_edge_ratio": 0.0266
+      }
+    },
+    {
+      "region_id": "region_05",
+      "ocr": {
+        "block_recall": 1.0,
+        "block_precision": 0.2632,
+        "duplicate_rate": 0.7368
+      },
+      "nodes": {
+        "node_recall": 1.0,
+        "node_precision": 0.75,
+        "multiline_merge_accuracy": 1.0
+      },
+      "graph": {
+        "edge_recall": 0.625,
+        "root_count": 27,
+        "weak_edge_ratio": 0.0266
+      }
+    },
+    {
+      "region_id": "region_06",
+      "ocr": {
+        "block_recall": 1.0,
+        "block_precision": 0.6667,
+        "duplicate_rate": 0.3333
+      },
+      "nodes": {
+        "node_recall": 1.0,
+        "node_precision": 1.0,
+        "multiline_merge_accuracy": 1.0
+      },
+      "graph": {
+        "edge_recall": 1.0,
+        "root_count": 27,
+        "weak_edge_ratio": 0.0266
+      }
+    },
+    {
+      "region_id": "region_07",
+      "ocr": {
+        "block_recall": 1.0,
+        "block_precision": 0.4545,
+        "duplicate_rate": 0.5455
+      },
+      "nodes": {
+        "node_recall": 1.0,
+        "node_precision": 0.8571,
+        "multiline_merge_accuracy": 1.0
+      },
+      "graph": {
+        "edge_recall": 0.6,
+        "root_count": 27,
+        "weak_edge_ratio": 0.0266
+      }
+    },
+    {
+      "region_id": "region_08",
+      "ocr": {
+        "block_recall": 1.0,
+        "block_precision": 0.5,
+        "duplicate_rate": 0.5
+      },
+      "nodes": {
+        "node_recall": 1.0,
+        "node_precision": 0.8571,
+        "multiline_merge_accuracy": 1.0
+      },
+      "graph": {
+        "edge_recall": 0.8,
+        "root_count": 27,
+        "weak_edge_ratio": 0.0266
+      }
+    }
+  ]
+}

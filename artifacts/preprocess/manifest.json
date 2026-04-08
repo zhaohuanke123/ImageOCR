@@ -1,0 +1,11 @@
+{
+  "source": "GameEngine.jpg",
+  "width": 7679,
+  "height": 14925,
+  "preview_path": "artifacts\\preprocess\\GameEngine_preview.jpg",
+  "scales": [
+    1.0,
+    0.75,
+    0.5
+  ]
+}

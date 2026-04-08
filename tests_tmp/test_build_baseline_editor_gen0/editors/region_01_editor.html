@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baseline Editor</title>
+  <style>
+    :root { --bg:#f4efe5; --panel:#fffdf8; --line:#d8d1c1; --text:#201b16; --muted:#75695f; --accent:#0f766e; --danger:#b91c1c; --info:#2563eb; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Segoe UI","PingFang SC",sans-serif; background:var(--bg); color:var(--text); }
+    .layout { display:grid; grid-template-columns:320px 1fr 380px; height:100vh; }
+    .panel { overflow:auto; background:var(--panel); border-right:1px solid var(--line); padding:16px; }
+    .panel:last-child { border-right:0; border-left:1px solid var(--line); }
+    .viewer { position:relative; overflow:hidden; background:linear-gradient(180deg,#d7e2de,#c2d0cb); }
+    .toolbar,.form,.node-list,.edge-list,.candidate-list { display:grid; gap:8px; }
+    .btn-row { display:flex; gap:8px; flex-wrap:wrap; }
+    h1 { margin:0 0 8px; font-size:22px; }
+    h2 { margin:18px 0 8px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+    button { border:1px solid var(--line); border-radius:10px; background:#fff; padding:8px 10px; cursor:pointer; }
+    button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+    button.danger { background:var(--danger); color:#fff; border-color:var(--danger); }
+    button.info { background:var(--info); color:#fff; border-color:var(--info); }
+    input,textarea,select { width:100%; border:1px solid var(--line); border-radius:10px; padding:8px 10px; background:#fff; }
+    textarea { min-height:120px; resize:vertical; }
+    .shell { position:absolute; inset:0; overflow:auto; cursor:grab; }
+    .shell.dragging { cursor:grabbing; }
+    .stage { position:relative; transform-origin:top left; }
+    .stage img { display:block; max-width:none; user-select:none; -webkit-user-drag:none; }
+    .overlay { position:absolute; inset:0; }
+    .item { border:1px solid var(--line); border-radius:12px; padding:10px; background:#fff; cursor:pointer; }
+    .item.active { border-color:var(--accent); box-shadow:0 0 0 2px rgba(15,118,110,.08); }
+    .tiny { font-size:12px; color:var(--muted); }
+    .status { padding:8px 10px; border-radius:10px; font-size:12px; }
+    .status.clean { background:#eef7f4; color:var(--accent); }
+    .status.dirty { background:#fef2f2; color:var(--danger); }
+    .status.warn { background:#eff6ff; color:var(--info); }
+    .handle { fill:#fff; stroke:#0f766e; stroke-width:2; cursor:nwse-resize; }
+    .candidate-controls { display:flex; gap:8px; flex-wrap:wrap; }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="panel">
+      <h1>区域编辑器</h1>
+      <div class="tiny" id="region-title"></div>
+      <div id="dirty" class="status clean">No unsaved changes</div>
+      <div id="mode-status" class="status warn">Ready</div>
+      <h2>数据</h2>
+      <div class="toolbar">
+        <input id="json-file" type="file" accept=".json,application/json">
+        <input id="image-file" type="file" accept=".jpg,.jpeg,.png,image/jpeg,image/png">
+        <div class="tiny">加载 JSON 会自动尝试切到其中的 JPG/PNG；失败时可手动指定图片。</div>
+      </div>
+      <h2>操作</h2>
+      <div class="toolbar">
+        <div class="btn-row">
+          <button id="draw-node">Draw Node</button>
+          <button id="run-ocr-node" class="info">Run OCR For Node</button>
+          <button id="fill-ocr">Fill From OCR</button>
+        </div>
+        <div class="btn-row">
+          <button id="merge-node">Merge Node</button>
+          <button id="connect-nodes">Connect Nodes</button>
+          <button id="set-parent">Set Parent</button>
+        </div>
+        <div class="btn-row">
+          <button id="delete-node" class="danger">Delete Node</button>
+          <button id="delete-edge">Delete Edge</button>
+          <button id="export" class="primary">Export JSON</button>
+        </div>
+        <div class="btn-row">
+          <button id="undo">Undo</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+      <h2>图层</h2>
+      <label class="tiny"><input id="show-ocr" type="checkbox" checked> 显示 OCR blocks</label>
+      <h2>搜索</h2>
+      <input id="search" type="search" placeholder="搜索节点文本">
+      <h2>节点</h2>
+      <div class="node-list" id="node-list"></div>
+      <h2>连接</h2>
+      <div class="edge-list" id="edge-list"></div>
+    </aside>
+    <main class="viewer">
+      <div style="position:absolute;top:12px;left:12px;z-index:10;background:#fffdf8;border:1px solid #d8d1c1;border-radius:12px;padding:10px;">
+        <label>缩放 <input id="zoom" type="range" min="20" max="200" value="80"></label>
+      </div>
+      <div id="shell" class="shell">
+        <div id="stage" class="stage">
+          <img id="image" alt="region">
+          <svg id="overlay" class="overlay"></svg>
+        </div>
+      </div>
+    </main>
+    <aside class="panel">
+      <h2>当前节点</h2>
+      <div class="form">
+        <input id="node-id" readonly>
+        <textarea id="node-text" placeholder="节点文本"></textarea>
+        <label>Parent
+          <select id="parent-select"></select>
+        </label>
+        <div id="selected-ocr" class="tiny">未选中 OCR block</div>
+      </div>
+      <h2>OCR Candidates</h2>
+      <div class="candidate-controls">
+        <button id="apply-ocr-replace" class="info">Replace Node Text</button>
+        <button id="apply-ocr-append">Append To Node</button>
+      </div>
+      <div id="ocr-summary" class="tiny">No OCR result</div>
+      <div id="candidate-list" class="candidate-list"></div>
+      <h2>当前边</h2>
+      <div id="edge-detail" class="tiny">未选中</div>
+    </aside>
+  </div>
+  <script id="editor-data" type="application/json">{"region": {"region_id": "region_01", "image_path": "D:\\zhk02\\Desktop\\OCR\\tests_tmp\\test_build_baseline_editor_gen0\\region.jpg", "crop_bbox": [0, 0, 400, 300], "expected_blocks": [], "expected_nodes": [{"id": "manual_node_001", "text": "Node A", "bbox": [10, 10, 120, 50], "lines": ["Node A"]}, {"id": "node_b", "text": "Node B", "bbox": [180, 10, 280, 50], "lines": ["Node B"]}], "expected_edges": [{"parent_id": "manual_node_001", "child_id": "node_b", "parent_text": "Node A", "child_text": ""}], "source_path": "D:\\zhk02\\Desktop\\OCR\\tests_tmp\\test_build_baseline_editor_gen0\\region_01.json"}, "image_src": "file:///D:/zhk02/Desktop/OCR/tests_tmp/test_build_baseline_editor_gen0/region.jpg", "image_source_path": "D:\\zhk02\\Desktop\\OCR\\tests_tmp\\test_build_baseline_editor_gen0\\region.jpg", "image_width": 400, "image_height": 300, "project_root_uri": "file:///D:/zhk02/Desktop/OCR/", "api_base": "http://127.0.0.1:8765"}</script>
+  <script>
+    const initial = JSON.parse(document.getElementById("editor-data").textContent);
+    const image = document.getElementById("image");
+    const overlay = document.getElementById("overlay");
+    const stage = document.getElementById("stage");
+    const shell = document.getElementById("shell");
+    const nodeList = document.getElementById("node-list");
+    const edgeList = document.getElementById("edge-list");
+    const candidateList = document.getElementById("candidate-list");
+    const nodeIdInput = document.getElementById("node-id");
+    const nodeTextInput = document.getElementById("node-text");
+    const parentSelect = document.getElementById("parent-select");
+    const dirtyStatus = document.getElementById("dirty");
+    const modeStatus = document.getElementById("mode-status");
+    const edgeDetail = document.getElementById("edge-detail");
+    const searchInput = document.getElementById("search");
+    const jsonFileInput = document.getElementById("json-file");
+    const imageFileInput = document.getElementById("image-file");
+    const showOcrInput = document.getElementById("show-ocr");
+    const selectedOcr = document.getElementById("selected-ocr");
+    const ocrSummary = document.getElementById("ocr-summary");
+    const regionTitle = document.getElementById("region-title");
+
+    const state = {
+      scale: 0.8, selectedNodeId: null, selectedEdgeKey: null, selectedBlockIndex: null, drag: null,
+      drawingNode: false, drawingDraft: null, connecting: false, connectFromNodeId: null,
+      settingParent: false, mergingNode: false, fillingFromOcr: false, dirty: false, search: "",
+      history: [], ocrCandidates: [], selectedCandidateIds: new Set(),
+      baseline: structuredClone(initial.region), region: structuredClone(initial.region),
+      imagePath: initial.image_source_path, imageSrc: initial.image_src,
+      imageWidth: initial.image_width, imageHeight: initial.image_height,
+      apiBase: initial.api_base, projectRootUri: initial.project_root_uri,
+      imageDataUrl: null
+    };
+
+    function summarize(text) { return (text || "").replace(/\s+/g, " ").trim().slice(0, 72); }
+    function snapshot() { state.history.push(JSON.stringify(state.region)); if (state.history.length > 50) state.history.shift(); }
+    function markDirty(flag) { dirtyStatus.textContent = flag ? "Unsaved changes" : "No unsaved changes"; dirtyStatus.className = flag ? "status dirty" : "status clean"; state.dirty = flag; }
+    function setModeStatus(text) { modeStatus.textContent = text; }
+    function clearModes() { state.drawingNode = false; state.drawingDraft = null; state.connecting = false; state.connectFromNodeId = null; state.settingParent = false; state.mergingNode = false; state.fillingFromOcr = false; setModeStatus("Ready"); }
+    function ensureNodeLines(node) { node.lines = (node.text || "").split(/\r?\n/).map((line) => line.trim()).filter(Boolean); if (node.lines.length === 0 && node.text) node.lines = [node.text]; }
+    function ensureNodeIds(region) {
+      region.expected_nodes = (region.expected_nodes || []).map((node, index) => {
+        const id = node.id || `manual_node_${String(index + 1).padStart(3, "0")}`;
+        const text = node.text || "";
+        const lines = node.lines || text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean) || [text];
+        return { id, text, lines, bbox: [...node.bbox] };
+      });
+    }
+    function localizeRegion(region) {
+      const crop = region.crop_bbox || state.region.crop_bbox;
+      const [offsetX, offsetY] = crop;
+      const localized = structuredClone(region);
+      ensureNodeIds(localized);
+      localized.expected_nodes = localized.expected_nodes.map((node) => ({ ...node, bbox: [node.bbox[0] - offsetX, node.bbox[1] - offsetY, node.bbox[2] - offsetX, node.bbox[3] - offsetY] }));
+      localized.expected_blocks = (localized.expected_blocks || []).map((block, index) => ({ id: block.id || `block_${String(index + 1).padStart(4, "0")}`, text: block.text || "", confidence: Number(block.confidence || 1), bbox: [block.bbox[0] - offsetX, block.bbox[1] - offsetY, block.bbox[2] - offsetX, block.bbox[3] - offsetY] }));
+      const textToId = Object.fromEntries(localized.expected_nodes.map((node) => [node.text, node.id]));
+      localized.expected_edges = (localized.expected_edges || []).map((edge) => ({ parent_id: edge.parent_id || textToId[edge.parent_text || ""], child_id: edge.child_id || textToId[edge.child_text || ""], parent_text: edge.parent_text || "", child_text: edge.child_text || "" })).filter((edge) => edge.parent_id && edge.child_id);
+      return localized;
+    }
+    function resolveImageUrl(imagePath) {
+      if (!imagePath) return null;
+      if (/^file:|^https?:|^data:/i.test(imagePath)) return imagePath;
+      if (/^[a-zA-Z]:[\\/]/.test(imagePath)) return "file:///" + imagePath.replaceAll("\\", "/");
+      return new URL(String(imagePath).replaceAll("\\", "/"), state.projectRootUri).href;
+    }
+    function nodeById(id) { return state.region.expected_nodes.find((node) => node.id === id); }
+    function nodeCenter(node) { const [left, top, right, bottom] = node.bbox; return [(left + right) / 2, (top + bottom) / 2]; }
+    function edgeKey(edge) { return `${edge.parent_id}->${edge.child_id}`; }
+    function syncEdgeTexts() {
+      const nodes = Object.fromEntries(state.region.expected_nodes.map((node) => [node.id, node]));
+      for (const edge of state.region.expected_edges) { edge.parent_text = nodes[edge.parent_id]?.text ?? edge.parent_text ?? ""; edge.child_text = nodes[edge.child_id]?.text ?? edge.child_text ?? ""; }
+    }
+    function updateImageLayout(width, height) {
+      state.imageWidth = width; state.imageHeight = height; image.width = width; image.height = height;
+      overlay.setAttribute("viewBox", `0 0 ${width} ${height}`); overlay.setAttribute("width", width); overlay.setAttribute("height", height);
+      stage.style.width = `${width}px`; stage.style.height = `${height}px`;
+    }
+    function setImageSource(src, imagePath, regionId) {
+      return new Promise((resolve, reject) => {
+        const probe = new window.Image();
+        probe.onload = () => { state.imageSrc = src; state.imagePath = imagePath || state.imagePath; image.src = src; updateImageLayout(probe.width, probe.height); regionTitle.textContent = regionId || state.region.region_id; renderOverlay(); resolve(); };
+        probe.onerror = () => reject(new Error(`Unable to load image: ${imagePath || src}`));
+        probe.src = src;
+      });
+    }
+    async function loadImageFromRegion(region) {
+      const candidate = resolveImageUrl(region.image_path);
+      if (!candidate) { setModeStatus("Image path missing in region JSON"); return; }
+      try { await setImageSource(candidate, region.image_path, region.region_id); state.imageDataUrl = null; setModeStatus(`Loaded image: ${region.image_path}`); }
+      catch (error) { setModeStatus(`${error.message}. Use the image picker as fallback.`); }
+    }
+    function clampBbox(bbox) { return [Math.max(0, Math.round(bbox[0])), Math.max(0, Math.round(bbox[1])), Math.min(state.imageWidth, Math.round(bbox[2])), Math.min(state.imageHeight, Math.round(bbox[3]))]; }
+    function toPath(bbox) { const [left, top, right, bottom] = bbox; return `M${left},${top} L${right},${top} L${right},${bottom} L${left},${bottom} Z`; }
+    function handleMarkup(node) {
+      if (node.id !== state.selectedNodeId) return "";
+      const [left, top, right, bottom] = node.bbox;
+      return [["nw", left, top], ["ne", right, top], ["sw", left, bottom], ["se", right, bottom]]
+        .map(([name, x, y]) => `<circle class="handle" data-handle="${name}" cx="${x}" cy="${y}" r="7"></circle>`).join("");
+    }
+    function eventToStagePoint(event) { const rect = overlay.getBoundingClientRect(); return [(event.clientX - rect.left) / state.scale, (event.clientY - rect.top) / state.scale]; }
+    function renderNodeList() {
+      const items = state.region.expected_nodes.filter((node) => !state.search || node.text.toLowerCase().includes(state.search.toLowerCase()));
+      nodeList.innerHTML = items.map((node) => `<div class="item ${state.selectedNodeId === node.id ? "active" : ""}" data-node-id="${node.id}"><div><strong>${node.id}</strong></div><div class="tiny">${summarize(node.text)}</div></div>`).join("");
+      for (const el of nodeList.querySelectorAll("[data-node-id]")) el.addEventListener("click", () => selectNode(el.dataset.nodeId));
+    }
+    function renderEdgeList() {
+      edgeList.innerHTML = state.region.expected_edges.map((edge) => `<div class="item ${state.selectedEdgeKey === edgeKey(edge) ? "active" : ""}" data-edge-key="${edgeKey(edge)}"><div><strong>${edge.parent_id}</strong> -> <strong>${edge.child_id}</strong></div><div class="tiny">${summarize(edge.parent_text)} -> ${summarize(edge.child_text)}</div></div>`).join("");
+      for (const el of edgeList.querySelectorAll("[data-edge-key]")) el.addEventListener("click", () => { state.selectedEdgeKey = el.dataset.edgeKey; edgeDetail.textContent = el.dataset.edgeKey; renderEdgeList(); renderOverlay(); });
+    }
+    function renderParentOptions() {
+      const options = [`<option value="">(none)</option>`].concat(state.region.expected_nodes.filter((node) => node.id !== state.selectedNodeId).map((node) => `<option value="${node.id}">${node.id} | ${summarize(node.text)}</option>`));
+      parentSelect.innerHTML = options.join("");
+      const edge = state.region.expected_edges.find((item) => item.child_id === state.selectedNodeId);
+      parentSelect.value = edge?.parent_id || "";
+    }
+    function renderSelection() {
+      const node = nodeById(state.selectedNodeId);
+      if (!node) { nodeIdInput.value = ""; nodeTextInput.value = ""; selectedOcr.textContent = "未选中 OCR block"; renderParentOptions(); return; }
+      nodeIdInput.value = node.id; nodeTextInput.value = node.text; renderParentOptions();
+    }
+    function renderCandidates() {
+      if (state.ocrCandidates.length === 0) { ocrSummary.textContent = "No OCR result"; candidateList.innerHTML = ""; return; }
+      ocrSummary.textContent = `${state.ocrCandidates.length} OCR blocks`;
+      candidateList.innerHTML = state.ocrCandidates.map((candidate) => `<label class="item"><input type="checkbox" data-candidate-id="${candidate.id}" ${state.selectedCandidateIds.has(candidate.id) ? "checked" : ""}><div><strong>${candidate.confidence.toFixed(2)}</strong></div><div class="tiny">${candidate.text}</div></label>`).join("");
+      for (const el of candidateList.querySelectorAll("[data-candidate-id]")) {
+        el.addEventListener("change", () => { if (el.checked) state.selectedCandidateIds.add(el.dataset.candidateId); else state.selectedCandidateIds.delete(el.dataset.candidateId); renderOverlay(); });
+      }
+    }
+    function applyScale() { stage.style.transform = `scale(${state.scale})`; }
+    function renderOverlay() {
+      const nodes = Object.fromEntries(state.region.expected_nodes.map((node) => [node.id, node]));
+      const parts = [];
+      const renderBlocks = () => {
+        if (!showOcrInput.checked) return;
+        state.region.expected_blocks.forEach((block, index) => {
+          const active = state.selectedBlockIndex === index;
+          parts.push(`<path data-block-index="${index}" d="${toPath(block.bbox)}" fill="${active ? "rgba(59,130,246,.22)" : "rgba(59,130,246,.06)"}" stroke="${active ? "#2563eb" : "rgba(37,99,235,.65)"}" stroke-width="${active ? 3 : 1.5}"></path>`);
+        });
+      };
+      if (!state.fillingFromOcr) renderBlocks();
+      state.ocrCandidates.forEach((candidate) => {
+        const active = state.selectedCandidateIds.has(candidate.id);
+        parts.push(`<path d="${toPath(candidate.bbox)}" fill="${active ? "rgba(15,118,110,.18)" : "rgba(15,118,110,.04)"}" stroke="${active ? "#0f766e" : "rgba(15,118,110,.5)"}" stroke-width="${active ? 3 : 1.5}" stroke-dasharray="5 4"></path>`);
+      });
+      for (const edge of state.region.expected_edges) {
+        const parent = nodes[edge.parent_id], child = nodes[edge.child_id];
+        if (!parent || !child) continue;
+        const [px, py] = nodeCenter(parent), [cx, cy] = nodeCenter(child);
+        const active = state.selectedEdgeKey === edgeKey(edge);
+        parts.push(`<line data-edge-key="${edgeKey(edge)}" x1="${px}" y1="${py}" x2="${cx}" y2="${cy}" stroke="${active ? "#f59e0b" : "rgba(22,163,74,.75)"}" stroke-width="${active ? 4 : 2}"></line>`);
+      }
+      for (const node of state.region.expected_nodes) {
+        const active = node.id === state.selectedNodeId;
+        const fill = state.fillingFromOcr ? "rgba(220,38,38,.03)" : (active ? "rgba(245,158,11,.25)" : "rgba(220,38,38,.08)");
+        parts.push(`<path data-node-id="${node.id}" d="${toPath(node.bbox)}" fill="${fill}" stroke="${active ? "#f59e0b" : "rgba(220,38,38,.85)"}" stroke-width="${active ? 4 : 2}"></path>`);
+        parts.push(handleMarkup(node));
+      }
+      if (state.drawingDraft) parts.push(`<path d="${toPath(state.drawingDraft)}" fill="rgba(15,118,110,.12)" stroke="#0f766e" stroke-width="2" stroke-dasharray="8 4"></path>`);
+      if (state.fillingFromOcr) renderBlocks();
+      overlay.innerHTML = parts.join("");
+      for (const el of overlay.querySelectorAll("[data-block-index]")) {
+        el.addEventListener("click", (event) => {
+          event.stopPropagation();
+          state.selectedBlockIndex = Number(el.dataset.blockIndex);
+          const block = state.region.expected_blocks[state.selectedBlockIndex];
+          selectedOcr.textContent = block ? `OCR: ${block.text}` : "未选中 OCR block";
+          if (state.fillingFromOcr && state.selectedNodeId) { applyOcrBlocks("append", [block]); state.fillingFromOcr = false; setModeStatus("OCR block appended to node"); return; }
+          renderOverlay();
+        });
+      }
+      for (const el of overlay.querySelectorAll("[data-node-id]")) {
+        el.addEventListener("click", (event) => {
+          event.stopPropagation();
+          const nodeId = el.dataset.nodeId;
+          if (state.connecting) {
+            if (!state.connectFromNodeId) { state.connectFromNodeId = nodeId; state.selectedNodeId = nodeId; renderNodeList(); renderSelection(); renderOverlay(); setModeStatus(`Parent selected: ${nodeId}. Click child node.`); return; }
+            if (state.connectFromNodeId !== nodeId) { createEdge(state.connectFromNodeId, nodeId); state.connecting = false; state.connectFromNodeId = null; setModeStatus("Connection created"); return; }
+          }
+          if (state.settingParent && state.selectedNodeId && nodeId !== state.selectedNodeId) { createEdge(nodeId, state.selectedNodeId); state.settingParent = false; setModeStatus("Parent updated"); return; }
+          if (state.mergingNode && state.selectedNodeId && nodeId !== state.selectedNodeId) { mergeIntoTarget(state.selectedNodeId, nodeId); return; }
+          selectNode(nodeId);
+        });
+        el.addEventListener("mousedown", (event) => startDrag(event, el.dataset.nodeId, "move"));
+      }
+      for (const el of overlay.querySelectorAll("[data-handle]")) el.addEventListener("mousedown", (event) => { event.stopPropagation(); startDrag(event, state.selectedNodeId, el.dataset.handle); });
+      for (const el of overlay.querySelectorAll("[data-edge-key]")) el.addEventListener("click", (event) => { event.stopPropagation(); state.selectedEdgeKey = el.dataset.edgeKey; edgeDetail.textContent = el.dataset.edgeKey; renderEdgeList(); renderOverlay(); });
+    }
+    function selectNode(id) { state.selectedNodeId = id; state.selectedEdgeKey = null; renderNodeList(); renderEdgeList(); renderSelection(); renderOverlay(); }
+    function createEdge(parentId, childId) {
+      if (!parentId || !childId || parentId === childId) return;
+      snapshot();
+      state.region.expected_edges = state.region.expected_edges.filter((edge) => edge.child_id !== childId);
+      const parent = nodeById(parentId), child = nodeById(childId);
+      state.region.expected_edges.push({ parent_id: parentId, child_id: childId, parent_text: parent?.text || "", child_text: child?.text || "" });
+      syncEdgeTexts();
+      state.selectedEdgeKey = `${parentId}->${childId}`;
+      markDirty(true);
+      renderEdgeList(); renderSelection(); renderOverlay();
+    }
+    function updateNodeText(text) {
+      const node = nodeById(state.selectedNodeId);
+      if (!node) return;
+      snapshot();
+      node.text = text; ensureNodeLines(node); syncEdgeTexts(); markDirty(true); renderNodeList(); renderEdgeList();
+    }
+    function mergeIntoTarget(targetId, sourceId) {
+      if (!targetId || !sourceId || targetId === sourceId) return;
+      const target = nodeById(targetId), source = nodeById(sourceId);
+      if (!target || !source) return;
+      snapshot();
+      const uniqueLines = [...new Set([].concat(target.lines || []).concat(source.lines || []).map((line) => line.trim()).filter(Boolean))];
+      target.lines = uniqueLines; target.text = uniqueLines.join("\n");
+      target.bbox = [Math.min(target.bbox[0], source.bbox[0]), Math.min(target.bbox[1], source.bbox[1]), Math.max(target.bbox[2], source.bbox[2]), Math.max(target.bbox[3], source.bbox[3])];
+      const nextEdges = [], seen = new Set();
+      for (const edge of state.region.expected_edges) {
+        let parentId = edge.parent_id, childId = edge.child_id;
+        if (parentId === sourceId) parentId = targetId;
+        if (childId === sourceId) childId = targetId;
+        if (parentId === childId) continue;
+        const key = `${parentId}->${childId}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        nextEdges.push({ parent_id: parentId, child_id: childId, parent_text: edge.parent_text || "", child_text: edge.child_text || "" });
+      }
+      state.region.expected_edges = nextEdges;
+      state.region.expected_nodes = state.region.expected_nodes.filter((node) => node.id !== sourceId);
+      state.selectedNodeId = targetId; state.mergingNode = false; syncEdgeTexts(); markDirty(true);
+      renderNodeList(); renderEdgeList(); renderSelection(); renderOverlay();
+    }
+    function deleteNode() {
+      if (!state.selectedNodeId) return;
+      snapshot();
+      state.region.expected_nodes = state.region.expected_nodes.filter((node) => node.id !== state.selectedNodeId);
+      state.region.expected_edges = state.region.expected_edges.filter((edge) => edge.parent_id !== state.selectedNodeId && edge.child_id !== state.selectedNodeId);
+      state.selectedNodeId = null; state.selectedEdgeKey = null; markDirty(true);
+      renderNodeList(); renderEdgeList(); renderSelection(); renderOverlay();
+    }
+    function deleteEdge() {
+      if (!state.selectedEdgeKey) return;
+      snapshot();
+      state.region.expected_edges = state.region.expected_edges.filter((edge) => edgeKey(edge) !== state.selectedEdgeKey);
+      state.selectedEdgeKey = null; edgeDetail.textContent = "未选中"; markDirty(true); renderEdgeList(); renderOverlay();
+    }
+    function startDraw(event) {
+      if (!state.drawingNode || event.target !== overlay) return;
+      const [x, y] = eventToStagePoint(event);
+      snapshot(); state.drawingDraft = [x, y, x, y]; renderOverlay();
+    }
+    function finishDraw() {
+      if (!state.drawingDraft) return;
+      const [left, top, right, bottom] = state.drawingDraft;
+      if (right - left >= 20 && bottom - top >= 20) {
+        const id = `manual_node_${String(Date.now()).slice(-6)}`;
+        state.region.expected_nodes.push({ id, text: "", lines: [], bbox: clampBbox([left, top, right, bottom]) });
+        markDirty(true); renderNodeList(); selectNode(id); runOcrForSelectedNode();
+      }
+      state.drawingDraft = null; state.drawingNode = false; renderOverlay();
+    }
+    function startDrag(event, nodeId, mode) {
+      event.preventDefault();
+      const node = nodeById(nodeId);
+      if (!node) return;
+      snapshot();
+      state.drag = { nodeId, mode, startX: event.clientX, startY: event.clientY, bbox: [...node.bbox] };
+      shell.classList.add("dragging");
+    }
+    function updateDrag(event) {
+      if (!state.drag) return;
+      const node = nodeById(state.drag.nodeId);
+      if (!node) return;
+      const dx = (event.clientX - state.drag.startX) / state.scale, dy = (event.clientY - state.drag.startY) / state.scale;
+      const [left, top, right, bottom] = state.drag.bbox;
+      let next = [left, top, right, bottom];
+      if (state.drag.mode === "move") next = [left + dx, top + dy, right + dx, bottom + dy];
+      if (state.drag.mode === "nw") next = [left + dx, top + dy, right, bottom];
+      if (state.drag.mode === "ne") next = [left, top + dy, right + dx, bottom];
+      if (state.drag.mode === "sw") next = [left + dx, top, right, bottom + dy];
+      if (state.drag.mode === "se") next = [left, top, right + dx, bottom + dy];
+      next[2] = Math.max(next[2], next[0] + 20); next[3] = Math.max(next[3], next[1] + 20);
+      node.bbox = clampBbox(next); markDirty(true); renderOverlay(); renderSelection();
+    }
+    function endDrag() { state.drag = null; shell.classList.remove("dragging"); }
+    function updateDraw(event) {
+      if (!state.drawingDraft) return;
+      const [x, y] = eventToStagePoint(event);
+      state.drawingDraft = [Math.min(state.drawingDraft[0], x), Math.min(state.drawingDraft[1], y), Math.max(state.drawingDraft[0], x), Math.max(state.drawingDraft[1], y)];
+      renderOverlay();
+    }
+    function getSelectedCandidates() { return state.selectedCandidateIds.size === 0 ? state.ocrCandidates : state.ocrCandidates.filter((candidate) => state.selectedCandidateIds.has(candidate.id)); }
+    function appendBlocksToRegistry(blocks) {
+      for (const block of blocks) {
+        const exists = state.region.expected_blocks.some((row) => row.text === block.text && JSON.stringify(row.bbox) === JSON.stringify(block.bbox));
+        if (!exists) state.region.expected_blocks.push({ id: block.id || `block_${Date.now()}_${Math.random().toString(16).slice(2, 6)}`, text: block.text, confidence: Number(block.confidence || 1), bbox: [...block.bbox] });
+      }
+    }
+    function applyOcrBlocks(mode, blocks) {
+      const node = nodeById(state.selectedNodeId);
+      if (!node || blocks.length === 0) return;
+      snapshot();
+      const sorted = [...blocks].sort((left, right) => left.bbox[1] - right.bbox[1] || left.bbox[0] - right.bbox[0]);
+      const lines = sorted.map((block) => block.text).filter(Boolean);
+      if (mode === "replace") { node.text = lines.join("\n"); node.lines = lines; }
+      else {
+        const merged = [].concat(node.lines || []).concat(lines).map((line) => line.trim()).filter(Boolean);
+        node.lines = [...new Set(merged)]; node.text = node.lines.join("\n");
+      }
+      node.bbox = clampBbox([Math.min(node.bbox[0], ...sorted.map((block) => block.bbox[0])), Math.min(node.bbox[1], ...sorted.map((block) => block.bbox[1])), Math.max(node.bbox[2], ...sorted.map((block) => block.bbox[2])), Math.max(node.bbox[3], ...sorted.map((block) => block.bbox[3]))]);
+      appendBlocksToRegistry(sorted); syncEdgeTexts(); markDirty(true); renderNodeList(); renderEdgeList(); renderSelection(); renderOverlay();
+    }
+    function cropNodeDataUrl(node) {
+      const canvas = document.createElement("canvas");
+      const [left, top, right, bottom] = node.bbox;
+      const width = Math.max(1, Math.round(right - left)), height = Math.max(1, Math.round(bottom - top));
+      canvas.width = width; canvas.height = height;
+      const context = canvas.getContext("2d");
+      context.drawImage(image, left, top, width, height, 0, 0, width, height);
+      return canvas.toDataURL("image/png");
+    }
+    function regionCropBbox(node) {
+      return [
+        node.bbox[0],
+        node.bbox[1],
+        node.bbox[2],
+        node.bbox[3],
+      ];
+    }
+    async function fetchHealth() {
+      try { const response = await fetch(`${state.apiBase}/health`); return response.ok; }
+      catch (_error) { return false; }
+    }
+    async function runOcrForSelectedNode() {
+      const node = nodeById(state.selectedNodeId);
+      if (!node) return;
+      if (!(await fetchHealth())) { setModeStatus(`Local OCR API unavailable at ${state.apiBase}`); return; }
+      try {
+        setModeStatus("Running OCR for selected node...");
+        const payload = {};
+        if (state.imageDataUrl) {
+          payload.image_data = cropNodeDataUrl(node);
+          payload.offset = [node.bbox[0], node.bbox[1]];
+        } else if (state.region.image_path) {
+          payload.image_path = state.region.image_path;
+          payload.crop_bbox = regionCropBbox(node);
+        } else {
+          payload.image_data = cropNodeDataUrl(node);
+          payload.offset = [node.bbox[0], node.bbox[1]];
+        }
+        const response = await fetch(`${state.apiBase}/ocr/region`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "OCR request failed");
+        state.ocrCandidates = result.blocks || [];
+        state.selectedCandidateIds = new Set(state.ocrCandidates.map((candidate) => candidate.id));
+        renderCandidates(); renderOverlay();
+        setModeStatus(result.suggested_text ? `OCR ready: ${state.ocrCandidates.length} candidates` : "OCR completed with no text found");
+      } catch (error) { setModeStatus(error.message || "OCR request failed"); }
+    }
+    function resetState() {
+      state.region = structuredClone(state.baseline);
+      state.selectedNodeId = null; state.selectedEdgeKey = null; state.selectedBlockIndex = null;
+      state.history = []; state.ocrCandidates = []; state.selectedCandidateIds = new Set();
+      clearModes(); markDirty(false); renderNodeList(); renderEdgeList(); renderSelection(); renderCandidates(); renderOverlay(); loadImageFromRegion(state.region);
+    }
+    function undo() {
+      const last = state.history.pop();
+      if (!last) return;
+      state.region = JSON.parse(last); markDirty(true); renderNodeList(); renderEdgeList(); renderSelection(); renderOverlay();
+    }
+    function exportJson() {
+      syncEdgeTexts();
+      const [offsetX, offsetY] = state.region.crop_bbox;
+      const payloadRegion = structuredClone(state.region);
+      for (const node of payloadRegion.expected_nodes) { ensureNodeLines(node); node.bbox = [node.bbox[0] + offsetX, node.bbox[1] + offsetY, node.bbox[2] + offsetX, node.bbox[3] + offsetY]; }
+      for (const block of payloadRegion.expected_blocks) block.bbox = [block.bbox[0] + offsetX, block.bbox[1] + offsetY, block.bbox[2] + offsetX, block.bbox[3] + offsetY];
+      const blob = new Blob([JSON.stringify(payloadRegion, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob), link = document.createElement("a");
+      link.href = url; link.download = `${state.region.region_id}.json`; link.click(); URL.revokeObjectURL(url); markDirty(false);
+    }
+    async function loadJsonFile(file) {
+      if (!file) return;
+      const parsed = JSON.parse(await file.text());
+      const localized = localizeRegion(parsed);
+      state.baseline = structuredClone(localized); state.region = structuredClone(localized);
+      state.selectedNodeId = null; state.selectedEdgeKey = null; state.selectedBlockIndex = null;
+      state.history = []; state.ocrCandidates = []; state.selectedCandidateIds = new Set();
+      clearModes(); markDirty(false); renderNodeList(); renderEdgeList(); renderSelection(); renderCandidates(); renderOverlay();
+      await loadImageFromRegion(localized); setModeStatus(`Loaded JSON: ${file.name}`);
+    }
+    async function loadImageFile(file) {
+      if (!file) return;
+      const dataUrl = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(String(reader.result));
+        reader.onerror = () => reject(new Error("Failed to read image file"));
+        reader.readAsDataURL(file);
+      });
+      try { await setImageSource(dataUrl, file.name, state.region.region_id); state.imageDataUrl = dataUrl; setModeStatus(`Loaded image: ${file.name}`); }
+      catch (error) { setModeStatus(error.message || "Failed to load image"); }
+    }
+    document.getElementById("draw-node").addEventListener("click", () => { clearModes(); state.drawingNode = true; setModeStatus("Draw mode: drag on the image to create a node"); });
+    document.getElementById("run-ocr-node").addEventListener("click", runOcrForSelectedNode);
+    document.getElementById("fill-ocr").addEventListener("click", () => { if (!state.selectedNodeId) return; clearModes(); state.fillingFromOcr = true; setModeStatus("Fill mode: click existing blue OCR block"); renderOverlay(); });
+    document.getElementById("merge-node").addEventListener("click", () => { clearModes(); state.mergingNode = !!state.selectedNodeId; if (state.mergingNode) setModeStatus(`Merge mode: target is ${state.selectedNodeId}, click source node`); });
+    document.getElementById("connect-nodes").addEventListener("click", () => { clearModes(); state.connecting = true; setModeStatus("Connect mode: click parent node, then child node"); });
+    document.getElementById("set-parent").addEventListener("click", () => { clearModes(); state.settingParent = !!state.selectedNodeId; if (state.settingParent) setModeStatus(`Set Parent: child is ${state.selectedNodeId}, click parent node`); });
+    document.getElementById("delete-node").addEventListener("click", deleteNode);
+    document.getElementById("delete-edge").addEventListener("click", deleteEdge);
+    document.getElementById("undo").addEventListener("click", undo);
+    document.getElementById("reset").addEventListener("click", resetState);
+    document.getElementById("export").addEventListener("click", exportJson);
+    document.getElementById("apply-ocr-replace").addEventListener("click", () => applyOcrBlocks("replace", getSelectedCandidates()));
+    document.getElementById("apply-ocr-append").addEventListener("click", () => applyOcrBlocks("append", getSelectedCandidates()));
+    document.getElementById("zoom").addEventListener("input", (event) => { state.scale = Number(event.target.value) / 100; applyScale(); });
+    nodeTextInput.addEventListener("input", (event) => updateNodeText(event.target.value));
+    parentSelect.addEventListener("change", (event) => createEdge(event.target.value, state.selectedNodeId));
+    searchInput.addEventListener("input", (event) => { state.search = event.target.value; renderNodeList(); });
+    jsonFileInput.addEventListener("change", async (event) => loadJsonFile(event.target.files[0]));
+    imageFileInput.addEventListener("change", async (event) => loadImageFile(event.target.files[0]));
+    showOcrInput.addEventListener("change", renderOverlay);
+    overlay.addEventListener("mousedown", startDraw);
+    shell.addEventListener("mousemove", updateDrag);
+    shell.addEventListener("mousemove", updateDraw);
+    window.addEventListener("mouseup", endDrag);
+    window.addEventListener("mouseup", finishDraw);
+    window.addEventListener("beforeunload", (event) => { if (!state.dirty) return; event.preventDefault(); event.returnValue = ""; });
+    updateImageLayout(initial.image_width, initial.image_height);
+    image.src = initial.image_src;
+    regionTitle.textContent = initial.region.region_id;
+    renderNodeList(); renderEdgeList(); renderSelection(); renderCandidates(); renderOverlay(); applyScale();
+  </script>
+</body>
+</html>

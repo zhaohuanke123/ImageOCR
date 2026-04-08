@@ -1,0 +1,240 @@
+{
+  "annotation": {
+    "region_id": "region_02",
+    "image_path": "baseline\\GameEngine\\region_02.jpg",
+    "crop_bbox": [
+      0,
+      676,
+      1226,
+      1371
+    ],
+    "expected_blocks": [
+      {
+        "text": "Volumetric Scattering",
+        "bbox": [
+          750.0,
+          667.0,
+          1028.0,
+          700.0
+        ]
+      },
+      {
+        "text": "Beer's Law",
+        "bbox": [
+          506.0,
+          701.0,
+          649.0,
+          728.0
+        ]
+      },
+      {
+        "text": "被水滴或者其他粒子比如灰尘等所吸收，",
+        "bbox": [
+          788.0,
+          705.0,
+          1219.0,
+          731.0
+        ]
+      },
+      {
+        "text": "用于描述光线穿过一个材质后的衰减作用",
+        "bbox": [
+          141.0,
+          744.0,
+          587.0,
+          771.0
+        ]
+      },
+      {
+        "text": "这个过程称为extinction（消散）或者吸收（absorption）",
+        "bbox": [
+          788.0,
+          746.0,
+          1434.0,
+          773.0
+        ]
+      },
+      {
+        "text": "穿出云层抵达人眼，这个称之为内散射in-scattering",
+        "bbox": [
+          784.0,
+          789.0,
+          1374.0,
+          825.0
+        ]
+      },
+      {
+        "text": "穿出云层但是并未进入人眼，称为外散射out-scattering",
+        "bbox": [
+          784.0,
+          832.0,
+          1419.0,
+          868.0
+        ]
+      },
+      {
+        "text": "Henyey-GreensteinPhase Function",
+        "bbox": [
+          214.0,
+          836.0,
+          666.0,
+          862.0
+        ]
+      },
+      {
+        "text": "用于模拟光线与星际尘云交互后各个方向上",
+        "bbox": [
+          94.0,
+          879.0,
+          566.0,
+          904.0
+        ]
+      },
+      {
+        "text": "散射强度与入射光方向夹角的依赖规律",
+        "bbox": [
+          144.0,
+          924.0,
+          566.0,
+          951.0
+        ]
+      }
+    ],
+    "expected_nodes": [
+      {
+        "id": "node_0013",
+        "text": "Volumetric Scattering\n被水滴或者其他粒子比如灰尘等所吸收，\n这个过程称为extinction（消散）或者吸收（absorption）\n穿出云层抵达人眼，这个称之为内散射in-scattering\n穿出云层但是并未进入人眼，称为外散射out-scattering",
+        "bbox": [
+          750.0,
+          667.0,
+          1434.0,
+          868.0
+        ],
+        "lines": [
+          "Volumetric Scattering",
+          "被水滴或者其他粒子比如灰尘等所吸收，",
+          "这个过程称为extinction（消散）或者吸收（absorption）",
+          "穿出云层抵达人眼，这个称之为内散射in-scattering",
+          "穿出云层但是并未进入人眼，称为外散射out-scattering"
+        ]
+      },
+      {
+        "id": "node_0014",
+        "text": "Beer's Law",
+        "bbox": [
+          506.0,
+          701.0,
+          649.0,
+          728.0
+        ],
+        "lines": [
+          "Beer's Law"
+        ]
+      },
+      {
+        "id": "node_0015",
+        "text": "用于描述光线穿过一个材质后的衰减作用",
+        "bbox": [
+          141.0,
+          744.0,
+          587.0,
+          771.0
+        ],
+        "lines": [
+          "用于描述光线穿过一个材质后的衰减作用"
+        ]
+      },
+      {
+        "id": "node_0020",
+        "text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律",
+        "bbox": [
+          94.0,
+          836.0,
+          666.0,
+          951.0
+        ],
+        "lines": [
+          "Henyey-GreensteinPhase Function",
+          "用于模拟光线与星际尘云交互后各个方向上",
+          "散射强度与入射光方向夹角的依赖规律"
+        ]
+      },
+      {
+        "id": "node_0025",
+        "text": "基于公告板云",
+        "bbox": [
+          1140.0,
+          1016.0,
+          1288.0,
+          1042.0
+        ],
+        "lines": [
+          "基于公告板云"
+        ]
+      },
+      {
+        "id": "node_0027",
+        "text": "云层光照计算",
+        "bbox": [
+          851.0,
+          1027.0,
+          1001.0,
+          1054.0
+        ],
+        "lines": [
+          "云层光照计算"
+        ]
+      }
+    ],
+    "expected_edges": [
+      {
+        "parent_text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+        "child_text": "云层建模"
+      },
+      {
+        "parent_text": "用于描述光线穿过一个材质后的衰减作用",
+        "child_text": "Beer's Law"
+      },
+      {
+        "parent_text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+        "child_text": "云层渲染"
+      },
+      {
+        "parent_text": "云层渲染",
+        "child_text": "云层光照计算"
+      },
+      {
+        "parent_text": "FractalBrownianMotion\nDensity-Height Functions\nWeatherTexture\n云层覆盖率\n云层降雨概率\n云层种类",
+        "child_text": "体积云"
+      },
+      {
+        "parent_text": "体积云",
+        "child_text": "面片云"
+      },
+      {
+        "parent_text": "云层光照计算",
+        "child_text": "基于公告板云"
+      }
+    ],
+    "seed_source": "current_prediction",
+    "needs_review": true
+  },
+  "result": {
+    "region_id": "region_02",
+    "ocr": {
+      "block_recall": 1.0,
+      "block_precision": 0.4545,
+      "duplicate_rate": 0.5455
+    },
+    "nodes": {
+      "node_recall": 1.0,
+      "node_precision": 0.5455,
+      "multiline_merge_accuracy": 1.0
+    },
+    "graph": {
+      "edge_recall": 0.2857,
+      "root_count": 27,
+      "weak_edge_ratio": 0.0266
+    }
+  }
+}

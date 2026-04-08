@@ -1,0 +1,44 @@
+{
+  "region_id": "region_01",
+  "image_path": "D:\\zhk02\\Desktop\\OCR\\tests_tmp\\test_build_baseline_editor_gen0\\region.jpg",
+  "crop_bbox": [
+    0,
+    0,
+    400,
+    300
+  ],
+  "expected_blocks": [],
+  "expected_nodes": [
+    {
+      "text": "Node A",
+      "bbox": [
+        10,
+        10,
+        120,
+        50
+      ],
+      "lines": [
+        "Node A"
+      ]
+    },
+    {
+      "id": "node_b",
+      "text": "Node B",
+      "bbox": [
+        180,
+        10,
+        280,
+        50
+      ],
+      "lines": [
+        "Node B"
+      ]
+    }
+  ],
+  "expected_edges": [
+    {
+      "parent_text": "Node A",
+      "child_id": "node_b"
+    }
+  ]
+}

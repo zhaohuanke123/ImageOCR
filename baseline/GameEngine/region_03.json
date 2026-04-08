@@ -1,0 +1,214 @@
+{
+  "region_id": "region_03",
+  "image_path": "baseline\\GameEngine\\region_03.jpg",
+  "crop_bbox": [
+    0,
+    871,
+    1152,
+    1579
+  ],
+  "expected_blocks": [
+    {
+      "text": "用于模拟光线与星际尘云交互后各个方向上",
+      "bbox": [
+        94.0,
+        879.0,
+        566.0,
+        904.0
+      ]
+    },
+    {
+      "text": "散射强度与入射光方向夹角的依赖规律",
+      "bbox": [
+        144.0,
+        924.0,
+        566.0,
+        951.0
+      ]
+    },
+    {
+      "text": "云层光照计算",
+      "bbox": [
+        851.0,
+        1027.0,
+        1001.0,
+        1054.0
+      ]
+    },
+    {
+      "text": "In-ScatteringProbabilityFunction",
+      "bbox": [
+        165.0,
+        1031.0,
+        592.0,
+        1057.0
+      ]
+    },
+    {
+      "text": "模拟当观察方向与太阳光方向",
+      "bbox": [
+        187.0,
+        1084.0,
+        510.0,
+        1110.0
+      ]
+    },
+    {
+      "text": "云层渲染",
+      "bbox": [
+        668.0,
+        1099.0,
+        767.0,
+        1125.0
+      ]
+    },
+    {
+      "text": "一致时的in-scattering效果",
+      "bbox": [
+        201.0,
+        1132.0,
+        512.0,
+        1159.0
+      ]
+    },
+    {
+      "text": "云层建模",
+      "bbox": [
+        506.0,
+        1206.0,
+        606.0,
+        1232.0
+      ]
+    },
+    {
+      "text": "面片云",
+      "bbox": [
+        1057.0,
+        1223.0,
+        1136.0,
+        1251.0
+      ]
+    },
+    {
+      "text": "FractalBrownianMotion",
+      "bbox": [
+        248.0,
+        1249.0,
+        562.0,
+        1275.0
+      ]
+    }
+  ],
+  "expected_nodes": [
+    {
+      "id": "node_0020",
+      "text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律",
+      "bbox": [
+        94.0,
+        836.0,
+        666.0,
+        951.0
+      ],
+      "lines": [
+        "Henyey-GreensteinPhase Function",
+        "用于模拟光线与星际尘云交互后各个方向上",
+        "散射强度与入射光方向夹角的依赖规律"
+      ]
+    },
+    {
+      "id": "node_0027",
+      "text": "云层光照计算",
+      "bbox": [
+        851.0,
+        1027.0,
+        1001.0,
+        1054.0
+      ],
+      "lines": [
+        "云层光照计算"
+      ]
+    },
+    {
+      "id": "node_0028",
+      "text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+      "bbox": [
+        165.0,
+        1031.0,
+        592.0,
+        1159.0
+      ],
+      "lines": [
+        "In-ScatteringProbabilityFunction",
+        "模拟当观察方向与太阳光方向",
+        "一致时的in-scattering效果"
+      ]
+    },
+    {
+      "id": "node_0032",
+      "text": "云层渲染",
+      "bbox": [
+        668.0,
+        1099.0,
+        767.0,
+        1125.0
+      ],
+      "lines": [
+        "云层渲染"
+      ]
+    },
+    {
+      "id": "node_0039",
+      "text": "云层建模",
+      "bbox": [
+        506.0,
+        1206.0,
+        606.0,
+        1232.0
+      ],
+      "lines": [
+        "云层建模"
+      ]
+    },
+    {
+      "id": "node_0040",
+      "text": "面片云",
+      "bbox": [
+        1057.0,
+        1223.0,
+        1136.0,
+        1251.0
+      ],
+      "lines": [
+        "面片云"
+      ]
+    }
+  ],
+  "expected_edges": [
+    {
+      "parent_text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+      "child_text": "云层建模"
+    },
+    {
+      "parent_text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+      "child_text": "云层渲染"
+    },
+    {
+      "parent_text": "云层渲染",
+      "child_text": "云层光照计算"
+    },
+    {
+      "parent_text": "FractalBrownianMotion\nDensity-Height Functions\nWeatherTexture\n云层覆盖率\n云层降雨概率\n云层种类",
+      "child_text": "体积云"
+    },
+    {
+      "parent_text": "体积云",
+      "child_text": "面片云"
+    },
+    {
+      "parent_text": "云层光照计算",
+      "child_text": "基于公告板云"
+    }
+  ],
+  "seed_source": "current_prediction",
+  "needs_review": true
+}

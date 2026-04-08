@@ -1,0 +1,18 @@
+artifacts_dir: artifacts
+tile_size: 1800
+tile_overlap: 0.15
+min_text_confidence: 0.45
+node_merge_distance: 80
+node_merge_vertical_gap: 36
+graph_max_parent_distance: 1600
+graph_horizontal_bias: 0.65
+graph_vertical_tolerance: 220
+export_overlay_line_width: 3
+ocr:
+  lang: ch
+  use_angle_cls: true
+  use_gpu: false
+  det_model_dir: null
+  rec_model_dir: null
+  cls_model_dir: null
+  model_root: .paddle-models

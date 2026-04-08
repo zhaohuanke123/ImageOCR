@@ -1,0 +1,2359 @@
+﻿issue_type,node_id,text,reason,bbox
+low_confidence_node,node_0065,"World Probe ray must skip the interpolation footprint
+s  t    n   s
+ReprojectScreenProberayintersectionwithWorldProbesphere",confidence=0.834,"[[4667.0, 1817.0], [5578.0, 1817.0], [5578.0, 1956.0], [4667.0, 1956.0]]"
+low_confidence_node,node_0235,（基本概念）,confidence=0.861,"[[818.0, 5777.0], [1056.0, 5777.0], [1056.0, 5816.0], [818.0, 5816.0]]"
+low_confidence_node,node_0243,"LERP
+LCNF
+混合权重的计算
+混合时间轴对齐",confidence=0.882,"[[5227.0, 6099.0], [5520.0, 6099.0], [5520.0, 6263.0], [5227.0, 6263.0]]"
+low_confidence_node,node_0244,"姿势
+骨骼姿势
+月航安",confidence=0.872,"[[4515.0, 6101.0], [4684.0, 6101.0], [4684.0, 6152.0], [4515.0, 6152.0]]"
+low_confidence_node,node_0257,"专山
+动画技术基础
+术基础",confidence=0.886,"[[4380.0, 6360.0], [4770.0, 6360.0], [4770.0, 6426.0], [4380.0, 6426.0]]"
+low_confidence_node,node_0260,GPU渲染管线,confidence=0.881,"[[2713.0, 6381.0], [3120.0, 6381.0], [3120.0, 6433.0], [2713.0, 6433.0]]"
+low_confidence_node,node_0295,"Gal
+iame",confidence=0.881,"[[2944.0, 7347.0], [3687.0, 7347.0], [3687.0, 7578.0], [2944.0, 7578.0]]"
+low_confidence_node,node_0303,"Threadfork-join
+taroikjon",confidence=0.840,"[[140.0, 7629.0], [580.0, 7629.0], [580.0, 7680.0], [140.0, 7680.0]]"
+low_confidence_node,node_0304,C,confidence=0.792,"[[3488.0, 7728.0], [3699.0, 7728.0], [3699.0, 7925.0], [3488.0, 7925.0]]"
+low_confidence_node,node_0324,(GUI),confidence=0.863,"[[2876.0, 8212.0], [3079.0, 8212.0], [3079.0, 8272.0], [2876.0, 8272.0]]"
+low_confidence_node,node_0326,NG,confidence=0.650,"[[6989.0, 8329.0], [7156.0, 8329.0], [7156.0, 8473.0], [6989.0, 8473.0]]"
+low_confidence_node,node_0471,"帧同步
+NG",confidence=0.891,"[[1590.0, 12246.0], [1791.0, 12246.0], [1791.0, 12525.0], [1590.0, 12525.0]]"
+low_confidence_node,node_0502,"敌人的位置
+故入的位直
+收入位：
+你看到的敌人的位置
+服务器中敌人的位置
+敌人客户端真实的位置",confidence=0.887,"[[4601.0, 13114.0], [4894.0, 13114.0], [4894.0, 13299.0], [4601.0, 13299.0]]"
+low_confidence_node,node_0551,"LME
+t0",confidence=0.769,"[[7278.0, 14520.0], [7328.0, 14520.0], [7328.0, 14559.0], [7278.0, 14559.0]]"
+orphan_root,node_0015,用于描述光线穿过一个材质后的衰减作用,node has no parent,"[[141.0, 744.0], [587.0, 744.0], [587.0, 771.0], [141.0, 771.0]]"
+orphan_root,node_0020,"Henyey-GreensteinPhase Function
+用于模拟光线与星际尘云交互后各个方向上
+散射强度与入射光方向夹角的依赖规律",node has no parent,"[[94.0, 836.0], [666.0, 836.0], [666.0, 951.0], [94.0, 951.0]]"
+orphan_root,node_0028,"In-ScatteringProbabilityFunction
+模拟当观察方向与太阳光方向
+一致时的in-scattering效果",node has no parent,"[[165.0, 1031.0], [592.0, 1031.0], [592.0, 1159.0], [165.0, 1159.0]]"
+orphan_root,node_0069,亮度（Luminance）,node has no parent,"[[127.0, 1918.0], [354.0, 1918.0], [354.0, 1944.0], [127.0, 1944.0]]"
+orphan_root,node_0090,"色温是指绝对黑体从绝对零度（-273℃）开始加温后所呈现的颜色。
+色温是影响光源颜色的重要属性，是个可选属性，当启用色温时，
+色温也参与了光源颜色的组成部分。
+真实世界环境中，一天不同时段的环境色温也会动态发生变化：
+ENG
+认为物体表面由很多凹凸不平的微小镜面组成
+这些具有不同大小、方向的微表面在对入
+射光线进行反射时产生了不同的反射效果
+法线分布函数
+几何遮蔽函数
+菲涅尔方程
+迪士尼原则",node has no parent,"[[112.0, 2376.0], [861.0, 2376.0], [861.0, 3236.0], [112.0, 3236.0]]"
+orphan_root,node_0129,"应使用直观的参数，而不是物理类的晦涩参数
+参数应当尽可能的少
+参数在其合理范围内应该为0到1
+允许参数在有意义时超出正常的合理范围
+所有参数组合应当尽可能健壮和合理",node has no parent,"[[242.0, 3264.0], [741.0, 3264.0], [741.0, 3473.0], [242.0, 3473.0]]"
+orphan_root,node_0143,"基于物理的渲染（Physicallybased rendering）(PBR)
+意味着表面接近光线在真实世界的表现方式，
+而不是我们直观以为的应有方式。
+相较于完全依赖美术师直觉来设置参数的着色工作流程，
+遵守PBR原则的材质更准确，并且通常看起来更自然。",node has no parent,"[[169.0, 3574.0], [1033.0, 3574.0], [1033.0, 3836.0], [169.0, 3836.0]]"
+orphan_root,node_0160,"Reinhard Tone Mapping
+Filmic Tone Mapping
+ACES",node has no parent,"[[373.0, 3984.0], [780.0, 3984.0], [780.0, 4127.0], [373.0, 4127.0]]"
+orphan_root,node_0170,"ACES是一个开放的色彩管理和交换系统
+是编码和交换数据的规则集合，
+它也包含了一系列的开发工具，
+将数据规格集成到软硬件中",node has no parent,"[[272.0, 4148.0], [741.0, 4148.0], [741.0, 4314.0], [272.0, 4314.0]]"
+orphan_root,node_0176,"抗锯齿
+超级采样抗锯齿
+优点：往往能得到最佳的效果
+缺点：它会带来巨大的性能消耗
+多重采样抗锯齿
+图像保真度和性能之间找到最佳的平衡点
+快速近似抗锯齿
+优点：",node has no parent,"[[180.0, 4417.0], [759.0, 4417.0], [759.0, 4811.0], [180.0, 4811.0]]"
+orphan_root,node_0204,"BRDF模型
+Lambert模型
+Phong模型
+Blinn-Phong模型
+Cook-Torrance模型",node has no parent,"[[140.0, 5093.0], [542.0, 5093.0], [542.0, 5389.0], [140.0, 5389.0]]"
+orphan_root,node_0254,"数学计算库
+数据结构与容器
+内存管理",node has no parent,"[[137.0, 6343.0], [484.0, 6343.0], [484.0, 6533.0], [137.0, 6533.0]]"
+orphan_root,node_0277,"运行时资源管理
+虚拟文件系统
+Handle",node has no parent,"[[131.0, 6827.0], [422.0, 6827.0], [422.0, 6994.0], [131.0, 6994.0]]"
+orphan_root,node_0303,"Threadfork-join
+taroikjon",node has no parent,"[[140.0, 7629.0], [580.0, 7629.0], [580.0, 7680.0], [140.0, 7680.0]]"
+orphan_root,node_0310,"协程介绍
+协程与线程的对比
+协程实现方式
+有栈协程
+无栈协程",node has no parent,"[[142.0, 7907.0], [454.0, 7907.0], [454.0, 8153.0], [142.0, 8153.0]]"
+orphan_root,node_0322,"Job调度
+Job队列
+全局队列
+线程局部队列
+两种访问方式
+先进先出
+后进先出
+Job依赖
+Job Stealing",node has no parent,"[[195.0, 8208.0], [435.0, 8208.0], [435.0, 8646.0], [195.0, 8646.0]]"
+orphan_root,node_0335,"GINE
+回顾：基于组件的设计",node has no parent,"[[0.0, 8627.0], [626.0, 8627.0], [626.0, 8970.0], [0.0, 8970.0]]"
+orphan_root,node_0359,"Unity DOTS
+Unity ECS
+原型Archetype
+数据排布
+系统实现
+UnityC#任务系统
+原生容器
+安全性系统
+Burst编译器",node has no parent,"[[171.0, 9210.0], [514.0, 9210.0], [514.0, 9692.0], [171.0, 9692.0]]"
+orphan_root,node_0401,"TCP协议
+面向连接
+可靠、有序
+流控
+拥塞控制",node has no parent,"[[169.0, 10421.0], [332.0, 10421.0], [332.0, 10665.0], [169.0, 10665.0]]"
+orphan_root,node_0426,"网络时间协议（NTP）
+四个对应时间戳以及误差调整
+1.客户端发送时间戳
+2.服务端接收时间戳
+3.服务端发送返回时间戳
+4.客户端接收时间戳
+NTP在计算传输时延的时候
+默认上行延迟和下行延迟相等",node has no parent,"[[105.0, 11064.0], [546.0, 11064.0], [546.0, 11458.0], [105.0, 11458.0]]"
+orphan_root,node_0443,"基于流的消除高阶的时间同步协议
+游戏开始的时候直接进行类似NTP的对时操作
+利用多次对时消除误差过大项来达到时间差校准",node has no parent,"[[105.0, 11544.0], [726.0, 11544.0], [726.0, 11693.0], [105.0, 11693.0]]"
+orphan_root,node_0455,"NetMessage
+传统的消息机制
+通常是异步通信",node has no parent,"[[195.0, 11805.0], [507.0, 11805.0], [507.0, 11946.0], [195.0, 11946.0]]"
+orphan_root,node_0463,"Socket编程所面临的诸多问题
+消息格式不统
+封包和解包
+消息分发处理
+不是一种自然的编程模型",node has no parent,"[[114.0, 12088.0], [568.0, 12088.0], [568.0, 12323.0], [114.0, 12323.0]]"
+orphan_root,node_0506,掉线与重连问题,node has no parent,"[[176.0, 13254.0], [467.0, 13254.0], [467.0, 13292.0], [176.0, 13292.0]]"
+orphan_root,node_0525,重连的问题：耗时,node has no parent,"[[227.0, 13646.0], [495.0, 13646.0], [495.0, 13684.0], [227.0, 13684.0]]"
+orphan_root,node_0531,重连的优化,node has no parent,"[[227.0, 13766.0], [394.0, 13766.0], [394.0, 13800.0], [227.0, 13800.0]]"
+orphan_root,node_0552,PICCOLO官方网站,node has no parent,"[[6547.0, 14816.0], [6905.0, 14816.0], [6905.0, 14854.0], [6547.0, 14854.0]]"
+oversized_leaf,node_0000,"NGIN
+GlobalSDFcan'tsamplesurfacecache
+Mergeallcardsintoglobalclipmapscenteredaround thecamera
+structure
+Radiance per 6 directions per voxel
+Sample and interpolate 3 directions using normal
+VisibilityBuffer
+TrackobjectupdatesandsetmodifiedbricksonGPU
+Voxelizemodifiedbricksbytracingrays
+6 rays per voxel
+Cullobjectsto4^3bricks
+One thread per mesh SDF per trace
+Cachehitsinavisibilitybuffer
+HitT I Mesh Index
+InterlockedMinwritehit tovisibilitybuffer
+Updating",area=814680.0,"[[6629.0, 19.0], [7505.0, 19.0], [7505.0, 949.0], [6629.0, 949.0]]"
+oversized_leaf,node_0002,"Mindmap
+Piccolo社区 https:/ /www.piccoloengine.com/
+Piccolo
+缺点场景复杂度和光源数量相关
+会有大量的overdraw
+Distance Field Shaodw",area=1066518.0,"[[1548.0, 149.0], [3285.0, 149.0], [3285.0, 763.0], [1548.0, 763.0]]"
+oversized_leaf,node_0005,"GAMES104
+4
+GAMES104官网
+https://games104.boomingtech.com/
+INE
+半透明渲染
+支持MSAA和半透明渲染
+带宽消耗小",area=1346826.0,"[[135.0, 171.0], [1806.0, 171.0], [1806.0, 977.0], [135.0, 977.0]]"
+oversized_leaf,node_0010,"4x4hemisphericalprobeper4x4tile
+Jitterprobeplacementandraydire
+Trace in last frame’ s Voxel Lighting
+Ligting Gather
+Bilinearinterpolationof 4probes
+Planeweighting
+Visibility weighting using probe h
+Covert to SH
+Shading pixels on surface cache",area=169511.0,"[[5903.0, 321.0], [6406.0, 321.0], [6406.0, 658.0], [5903.0, 658.0]]"
+oversized_leaf,node_0012,"Sampling
+Important Sampling
+PDF计算
+Incoming Radiance
+Radiance
+Last frame' s Screen Space
+ame’sScreenSpaceProbe‘sradiance
+Fallbackto theWorldSpac
+cktotheWorldSpaceProbes
+BRDF",area=166290.0,"[[4417.0, 513.0], [5107.0, 513.0], [5107.0, 754.0], [4417.0, 754.0]]"
+oversized_leaf,node_0036,"ENGINE
+离线生成的，并不知道有这些变形
+仅投射刚性网格体的阴影",area=327474.0,"[[6779.0, 1180.0], [7570.0, 1180.0], [7570.0, 1594.0], [6779.0, 1594.0]]"
+oversized_leaf,node_0051,"Markedworldprobesforinterpolation
+Marked world
+Reuse traces from last frame
+Reuse traces f
+Allocatetracesfornewprobes
+Re-trace a subset of cache hits to propagate lighting changes
+Re-trace a sub
+Importance Sampling
+AccumulateBF
+AccumulateBRDFfromScreenProbes
+Supersample near camera
+Spatial filtering
+Reuses probe
+Reusesprobedepthforocclusiontest
+Ray Connecting
+World Probe ra
+Screen Probe
+ReprojectScre",area=474012.0,"[[4631.0, 1389.0], [5467.0, 1389.0], [5467.0, 1956.0], [4631.0, 1956.0]]"
+oversized_leaf,node_0061,"全局距离场是分辨率较低的距离场，跟随
+摄像机的同时，在关卡中使用有向距
+离场遮蔽。这会创建每个Object网格体距离场
+的缓存，然后将它们合成到围绕摄像机的
+若干体积纹理中，称为裁剪图。由于只有新
+的可见区域或受到场景修改影响
+的可见区域才需要更新，合成过程不会有太多消耗。",area=174585.0,"[[6651.0, 1637.0], [7216.0, 1637.0], [7216.0, 1946.0], [6651.0, 1946.0]]"
+oversized_leaf,node_0062,"在追踪光线时，通过追踪经过遮挡物
+最近的光线就可以计算
+出近似的锥体交叉点，而不产生额
+外成本。这种近似法可以利用
+这种近似法可以利用
+距离场来实现非常柔和的
+区域阴影和天空遮蔽。
+这个属性是距离场环境光遮
+蔽的关键，因为少量的锥体
+即可为接收器点的整个半
+出柔和的可见性。",area=151931.0,"[[5807.0, 1665.0], [6210.0, 1665.0], [6210.0, 2042.0], [5807.0, 2042.0]]"
+oversized_leaf,node_0081,"参与介质中的粒子本身会吸收光能，转换成其
+身会吸收光能，转换成其他形式的能量，这样在传播路径上的光就会衰减
+光遇到粒子时，粒子会分散光的传播方向，因此也会减弱传播路径上的光
+出散射，即光遇到粒子时，粒子会分
+番路径上散射到当前传播路径上的现象，这会加强当前路径上的光的能量
+入散射，从其他传播路径上散射到当前传播
+粒子本身是发光的，这会加强传播路径上的光",area=188416.0,"[[1299.0, 2162.0], [2323.0, 2162.0], [2323.0, 2346.0], [1299.0, 2346.0]]"
+oversized_leaf,node_0086,"动画轨道（track）数据之间的差别
+关节动画数据之间的差别
+DoF缩减
+关键帧
+关键帧提取
+浮点数压缩
+四元数压缩
+误差累积
+精读衡量
+误差补偿",area=496249.0,"[[6833.0, 2269.0], [7480.0, 2269.0], [7480.0, 3036.0], [6833.0, 3036.0]]"
+oversized_leaf,node_0105,"关节姿势
+旋转Orientation
+位置Position
+缩放Scale
+仿射矩阵
+局部空间到物体空间",area=188032.0,"[[5400.0, 2649.0], [5816.0, 2649.0], [5816.0, 3101.0], [5400.0, 3101.0]]"
+oversized_leaf,node_0114,"Fixtexelbudgetperframe(512x512)
+Sort by distance to camera
+and GPU feedback
+Copy card capture to surface
+cache and compress
+Cardcapture分瓣率
+根据cardbounds最大extent投影
+到屏幕像素的长度决定，
+从8到1024，不一定是正方形，
+根据card的bounds长宽比确定",area=194732.0,"[[4922.0, 2884.0], [5469.0, 2884.0], [5469.0, 3240.0], [4922.0, 3240.0]]"
+oversized_leaf,node_0116,"阴影贴图光线追踪
+光线追踪
+一种结合虚拟阴影贴图的采样算
+虚拟阴影贴图的采样算法，能生成
+的柔和阴影和接触硬阴影。对象投
+阴影比近处阴影拥有更柔和的效果
+射的远处阴影比近处阴影拥有更
+Nanite Meshe
+Build Process
+Group
+Merge
+Simplify
+Split",area=372060.0,"[[2910.0, 2921.0], [3705.0, 2921.0], [3705.0, 3389.0], [2910.0, 3389.0]]"
+oversized_leaf,node_0139,"面部动画
+面部编码系统（FACS）
+Action Unit
+Key Pose Blending
+Morph Target Animation
+UV Texture Facial Animation
+Muscle Model Animation",area=297891.0,"[[6798.0, 3484.0], [7447.0, 3484.0], [7447.0, 3943.0], [6798.0, 3943.0]]"
+oversized_leaf,node_0143,"基于物理的渲染（Physicallybased rendering）(PBR)
+意味着表面接近光线在真实世界的表现方式，
+而不是我们直观以为的应有方式。
+相较于完全依赖美术师直觉来设置参数的着色工作流程，
+遵守PBR原则的材质更准确，并且通常看起来更自然。",area=226368.0,"[[169.0, 3574.0], [1033.0, 3574.0], [1033.0, 3836.0], [169.0, 3836.0]]"
+oversized_leaf,node_0169,"中的顺序依赖
+万向节死锁
+死锁
+欧拉角的缺点
+的缺点
+衣赖
+顺序依赖
+节死锁
+难以插值、组合等
+四元数
+2D旋转与复数
+四元数的定义
+欧拉角到四元数的转换
+四元数进行旋转
+四元数到旋转矩阵的转换
+给定旋转轴的四元数旋转",area=341850.0,"[[5737.0, 4116.0], [6167.0, 4116.0], [6167.0, 4911.0], [5737.0, 4911.0]]"
+oversized_leaf,node_0189,"是低端PC最佳的抗锯齿方案.它对GPU的要求不是很高
+因为它直接平滑屏幕图像而不需要考虑到游戏中的3D模型
+缺点：边缘和纹理会变得有点模糊
+时间性抗锯齿",area=121760.0,"[[244.0, 4781.0], [1005.0, 4781.0], [1005.0, 4941.0], [244.0, 4941.0]]"
+oversized_leaf,node_0215,"ENGIN
+贴图压缩
+剪
+可见性裁剪
+视锥裁剪",area=331639.0,"[[2797.0, 5334.0], [3308.0, 5334.0], [3308.0, 5983.0], [2797.0, 5983.0]]"
+oversized_leaf,node_0237,"万物皆GameObject
+动态物
+静态物
+环境
+其它",area=187264.0,"[[594.0, 5953.0], [1298.0, 5953.0], [1298.0, 6219.0], [594.0, 6219.0]]"
+oversized_leaf,node_0241,"碰撞解决
+惩罚力法
+求解速度约束
+拉格朗日力学
+碰撞约束
+迭代求解
+求解位置约束",area=126880.0,"[[7068.0, 6079.0], [7373.0, 6079.0], [7373.0, 6495.0], [7068.0, 6495.0]]"
+oversized_leaf,node_0269,"静态刚体static
+动态刚体dynamic
+触发器(trigger)
+受控刚体kinematic
+刚体PhysicsActor",area=130075.0,"[[4772.0, 6608.0], [5245.0, 6608.0], [5245.0, 6883.0], [4772.0, 6883.0]]"
+oversized_leaf,node_0270,"破坏模拟
+概念
+分块层级
+连接图
+连接强度
+计算损伤
+模型破碎算法
+维诺图
+二维
+三维
+不同的破碎图案
+破坏系统
+增加真实感
+破坏系统引入的问题
+常见的破坏SDK",area=362148.0,"[[7128.0, 6619.0], [7540.0, 6619.0], [7540.0, 7498.0], [7128.0, 7498.0]]"
+oversized_leaf,node_0285,"本动力学
+刚体动力学
+质点动力学
+刚体动力学
+朝向
+角速度
+角加速度
+转动惯量
+角动量
+扭矩
+应用：",area=137016.0,"[[5818.0, 6988.0], [6082.0, 6988.0], [6082.0, 7507.0], [5818.0, 7507.0]]"
+oversized_leaf,node_0288,"转向过度与转向不足
+NGINE
+重量转移
+转向角
+Ackermann转向
+轮胎接触
+基于网格的布料模拟
+PBD/XPBD
+物理网格VS.渲染网格
+刷布料约束
+拉格朗日力学约束建模
+布料物理材质
+拉伸约束
+求解
+约束投影
+工作流
+XPBD",area=970748.0,"[[6586.0, 7063.0], [7593.0, 7063.0], [7593.0, 8027.0], [6586.0, 8027.0]]"
+oversized_leaf,node_0305,"Unreal并行框架
+Named Thread与Worker Thread
+Thread
+Name
+TaskGraph",area=146370.0,"[[1020.0, 7796.0], [1734.0, 7796.0], [1734.0, 8001.0], [1020.0, 8001.0]]"
+oversized_leaf,node_0342,"发布-订阅模式
+事件定义
+硬编码
+反射与自动代码生成
+事件回调函数注册
+对象生命周期及回调安全保证
+对象的强引用
+对象的弱引用
+事件分发机制
+立即分发
+延迟分发
+消息队列",area=253624.0,"[[4974.0, 8743.0], [5366.0, 8743.0], [5366.0, 9390.0], [4974.0, 9390.0]]"
+oversized_leaf,node_0361,"音效衰减
+衰减函数
+线性
+对数
+反函数
+对数反函数
+自然音效
+自定义
+衰减形状
+球体
+胶囊体
+盒体
+椎体",area=162759.0,"[[7283.0, 9236.0], [7522.0, 9236.0], [7522.0, 9917.0], [7283.0, 9917.0]]"
+oversized_leaf,node_0368,"脚本语言的选择
+多种脚本语言的对比
+INE
+可视化脚本",area=227760.0,"[[5889.0, 9347.0], [6473.0, 9347.0], [6473.0, 9737.0], [5889.0, 9737.0]]"
+oversized_leaf,node_0375,"如何利用强化学习构建AI
+状态抽象
+长度固定的统计变量
+长度不固定的序列数据
+图像数据
+动作抽象
+奖励设置
+AlphaStar
+OpenAIFive",area=159344.0,"[[4108.0, 9613.0], [4476.0, 9613.0], [4476.0, 10046.0], [4108.0, 10046.0]]"
+oversized_leaf,node_0419,"在一个场
+在一个场景内协同编辑
+同步操作
+分布式操作
+分布式操作的一致性问题
+锁
+实例锁
+资产锁
+操作转换
+操作转换(OT)
+无冲突复
+无冲突复制数据类型(CRDT)
+工作流",area=242536.0,"[[3112.0, 10903.0], [3609.0, 10903.0], [3609.0, 11391.0], [3112.0, 11391.0]]"
+oversized_leaf,node_0439,"对WorldState中的部分属性做是否满足的判断
+动作集
+前提条件
+动作损耗
+动作影响",area=138666.0,"[[4851.0, 11346.0], [5424.0, 11346.0], [5424.0, 11588.0], [4851.0, 11588.0]]"
+oversized_leaf,node_0440,"一个客户端挂掉
+一个客户端挂掉，不影响其他玩家
+不依赖于服务器
+缺点
+易作弊
+需要良好的网络连接
+玩家人数受限",area=132014.0,"[[1559.0, 11421.0], [2002.0, 11421.0], [2002.0, 11719.0], [1559.0, 11719.0]]"
+oversized_leaf,node_0446,"CCOLO
+对WorldState的改变描述
+IGINE
+逆向规划
+游戏优化",area=773463.0,"[[4848.0, 11563.0], [5889.0, 11563.0], [5889.0, 12306.0], [4848.0, 12306.0]]"
+oversized_leaf,node_0447,"进阶内容：寻路网格生成
+体素化
+区域分割
+分水岭算法
+网格生成
+高级特性
+多边形标记
+分块",area=177840.0,"[[7017.0, 11597.0], [7473.0, 11597.0], [7473.0, 11987.0], [7017.0, 11987.0]]"
+oversized_leaf,node_0457,"DN3
+执行节点/叶子节点
+行为节点
+条件节点
+控制节点
+序列节点Sequence
+选择器Selector
+并行节点Parallel
+运行
+实现优化
+装饰节点
+前置条件
+黑板变量",area=423912.0,"[[7270.0, 11841.0], [7678.0, 11841.0], [7678.0, 12880.0], [7270.0, 12880.0]]"
+oversized_leaf,node_0474,"CO
+如何解决延迟
+哑客户端（客户端不做预测）
+发出移动请求
+等待服务器回复
+收到服务器回复，并作出移动",area=328861.0,"[[1834.0, 12367.0], [2451.0, 12367.0], [2451.0, 12900.0], [1834.0, 12900.0]]"
+oversized_leaf,node_0485,"从开火到命中的流程
+射击指令传输的网络状况
+Hitscan
+Hitscan Weapons
+瞬时完
+瞬时完成射击操作
+Projectil
+ProjectileWeapons
+子弹有
+子弹有弹道距离，重力等因素的影响",area=138803.0,"[[4641.0, 12711.0], [5194.0, 12711.0], [5194.0, 12962.0], [4641.0, 12962.0]]"
+oversized_leaf,node_0491,"帧同步需要面对的挑战与解决：多端不一致问题
+浮点数
+随机数
+容器与排序算法等
+数学工具",area=215878.0,"[[178.0, 12812.0], [1052.0, 12812.0], [1052.0, 13059.0], [178.0, 13059.0]]"
+oversized_leaf,node_0495,"反作弊
+作弊手段分类
+读取、篡改内存
+读取网络包
+Al Cheat
+修改本地文件，贴图等",area=164160.0,"[[7082.0, 12973.0], [7538.0, 12973.0], [7538.0, 13333.0], [7082.0, 13333.0]]"
+oversized_leaf,node_0508,"ENGIN
+掉线重连的基本流程
+掉线
+帧同步的优缺点
+重连
+优点
+接收游戏开始到现在所有请求
+追帧
+低带宽
+开发效率高
+缺点
+大重连（客户端崩溃，内存中无数据）
+通过快照，加速重连
+客户端定时快照，关键帧快照，序列化到磁盘
+服务器做定时快照（更换终端登录，用这种优化）",area=635760.0,"[[225.0, 13299.0], [1108.0, 13299.0], [1108.0, 14019.0], [225.0, 14019.0]]"
+oversized_leaf,node_0516,"反作弊方法
+混淆加密内存
+加壳
+本地文件校验
+网络包加密
+非对称加密分发密钥
+对称加密传输数据
+VAC&EAV
+基于统计数据反作弊
+检测已知的作弊程序",area=211451.0,"[[6949.0, 13507.0], [7308.0, 13507.0], [7308.0, 14096.0], [6949.0, 14096.0]]"
+oversized_node,node_0000,"NGIN
+GlobalSDFcan'tsamplesurfacecache
+Mergeallcardsintoglobalclipmapscenteredaround thecamera
+structure
+Radiance per 6 directions per voxel
+Sample and interpolate 3 directions using normal
+VisibilityBuffer
+TrackobjectupdatesandsetmodifiedbricksonGPU
+Voxelizemodifiedbricksbytracingrays
+6 rays per voxel
+Cullobjectsto4^3bricks
+One thread per mesh SDF per trace
+Cachehitsinavisibilitybuffer
+HitT I Mesh Index
+InterlockedMinwritehit tovisibilitybuffer
+Updating","lines=16, height=930.0","[[6629.0, 19.0], [7505.0, 19.0], [7505.0, 949.0], [6629.0, 949.0]]"
+oversized_node,node_0001,"p V2.2
+技术交流群：
+洋：加微信Piccolo0301，回复关键词
+加微信Pic
+]【社区】入群
+Shadow Map
+Shadow Mapping步骤1：从光源处出发，向光照的方向看去，来构造出光照空间。
+算法流程
+算法济
+然后在光照空间，我们渲染需要产生阴影的物体，
+此时将深度写入到ZBuffer中，得到保存最近处物体的深度值的ShadowMap
+步骤2：然后我们再次正常渲染物体，在渲染时，
+我们根据渲染物体的世界坐标，变换到上一阶段的光照空间坐标，
+再计算出该点在ShadowMap中的深度值并进行比较，
+如果相对光源的距离比ShadowMap中的深度要大，
+就说明该点处在阴影中，否则就说明不在阴影中。
+ShadowBias
+Cascade Shadow Map
+VarianceShadowMap
+PCF
+PCSS","lines=21, height=1236.0","[[2861.0, 120.0], [4281.0, 120.0], [4281.0, 1356.0], [2861.0, 1356.0]]"
+oversized_node,node_0002,"Mindmap
+Piccolo社区 https:/ /www.piccoloengine.com/
+Piccolo
+缺点场景复杂度和光源数量相关
+会有大量的overdraw
+Distance Field Shaodw","lines=6, height=614.0","[[1548.0, 149.0], [3285.0, 149.0], [3285.0, 763.0], [1548.0, 763.0]]"
+oversized_node,node_0004,"Spatial Probe Filtering
+creenSpaceProbe
+Filterwithin theneighborScreenSpaceProbe
+lgnorenormaldifferences,Onlydepthweighting
+Onlydepthweighting
+ected neighbor ray hits
+UseAngleerrorfromreprojectedneighborrayh
+Clampneighborhitdistancetoourown
+toour own","lines=9, height=217.0","[[4181.0, 169.0], [4884.0, 169.0], [4884.0, 386.0], [4181.0, 386.0]]"
+oversized_node,node_0005,"GAMES104
+4
+GAMES104官网
+https://games104.boomingtech.com/
+INE
+半透明渲染
+支持MSAA和半透明渲染
+带宽消耗小","lines=8, height=806.0","[[135.0, 171.0], [1806.0, 171.0], [1806.0, 977.0], [135.0, 977.0]]"
+oversized_node,node_0008,"Fixed update budget
+Select pages to update based on priority
+Priority = LastUsed - LastUpdated
+Priority queue using radix sort
+1024x1024texelsfordirectlighting
+512x512 texels for indirect lighting","lines=6, height=293.0","[[5002.0, 238.0], [5601.0, 238.0], [5601.0, 531.0], [5002.0, 531.0]]"
+oversized_node,node_0010,"4x4hemisphericalprobeper4x4tile
+Jitterprobeplacementandraydire
+Trace in last frame’ s Voxel Lighting
+Ligting Gather
+Bilinearinterpolationof 4probes
+Planeweighting
+Visibility weighting using probe h
+Covert to SH
+Shading pixels on surface cache","lines=9, height=337.0","[[5903.0, 321.0], [6406.0, 321.0], [6406.0, 658.0], [5903.0, 658.0]]"
+oversized_node,node_0012,"Sampling
+Important Sampling
+PDF计算
+Incoming Radiance
+Radiance
+Last frame' s Screen Space
+ame’sScreenSpaceProbe‘sradiance
+Fallbackto theWorldSpac
+cktotheWorldSpaceProbes
+BRDF","lines=10, height=241.0","[[4417.0, 513.0], [5107.0, 513.0], [5107.0, 754.0], [4417.0, 754.0]]"
+oversized_node,node_0016,"Accumulate the BRDF from
+Resampling Rays
+Rays
+Calculate PDF = BRDF * Radial
+PDF = BRDF *Radiance
+by PDF
+Sort rays by PDF
+For every 3 rays with PDF belc","lines=8, height=201.0","[[4432.0, 767.0], [4903.0, 767.0], [4903.0, 968.0], [4432.0, 968.0]]"
+oversized_node,node_0023,"直接光照
+Cull lights to 8x8 tiles
+8x8 tiles
+tsper tile
+Select first8lightsper tile
+1 bit shadow mask
+owmask
+Shadows","lines=8, height=203.0","[[5659.0, 900.0], [6020.0, 900.0], [6020.0, 1103.0], [5659.0, 1103.0]]"
+oversized_node,node_0036,"ENGINE
+离线生成的，并不知道有这些变形
+仅投射刚性网格体的阴影","lines=3, height=414.0","[[6779.0, 1180.0], [7570.0, 1180.0], [7570.0, 1594.0], [6779.0, 1594.0]]"
+oversized_node,node_0041,"Screen Space Probe
+Probestructure
+8x8OctahedralAtlas
+Radiance and HitDistance
+Adaptive Placement
+uniformly 16x16
+adaptive8x8and4x4
+Probe jittering","lines=8, height=409.0","[[3975.0, 1234.0], [4393.0, 1234.0], [4393.0, 1643.0], [3975.0, 1643.0]]"
+oversized_node,node_0043,"FractalBrownianMotion
+Density-Height Functions
+WeatherTexture
+云层覆盖率
+云层降雨概率
+云层种类","lines=6, height=266.0","[[240.0, 1249.0], [566.0, 1249.0], [566.0, 1515.0], [240.0, 1515.0]]"
+oversized_node,node_0045,"Gubffer占用了较大的空间
+写需要大量显存带宽
+Gbuffer的读写需要大量显存带宽
+透明物体支持不友好
+对硬件MSAA支持不友好
+需要硬件支持MRT
+对大量自定义Shader支持不友好","lines=7, height=259.0","[[1374.0, 1277.0], [1750.0, 1277.0], [1750.0, 1536.0], [1374.0, 1536.0]]"
+oversized_node,node_0047,"在追踪光线时安全地跳过空白空间，因为到
+最近表面的距离已经明确（有时称这种方
+法为球体追踪）。只需区区几步就可以
+判定出交叉点。对距离场进行光线
+追踪将生成可见性效果，
+说如果光线和网格
+，光线就会投射出阴影。","lines=7, height=257.0","[[5811.0, 1365.0], [6289.0, 1365.0], [6289.0, 1622.0], [5811.0, 1622.0]]"
+oversized_node,node_0048,"地形材质混合
+TextureSplatting技术
+地表纹理使用多种不同的纹理混合，
+使用一张叫做splatmap的权重图来
+记录这些纹理的权重","lines=5, height=240.0","[[2040.0, 1387.0], [2515.0, 1387.0], [2515.0, 1627.0], [2040.0, 1627.0]]"
+oversized_node,node_0051,"Markedworldprobesforinterpolation
+Marked world
+Reuse traces from last frame
+Reuse traces f
+Allocatetracesfornewprobes
+Re-trace a subset of cache hits to propagate lighting changes
+Re-trace a sub
+Importance Sampling
+AccumulateBF
+AccumulateBRDFfromScreenProbes
+Supersample near camera
+Spatial filtering
+Reuses probe
+Reusesprobedepthforocclusiontest
+Ray Connecting
+World Probe ra
+Screen Probe
+ReprojectScre","lines=18, height=567.0","[[4631.0, 1389.0], [5467.0, 1389.0], [5467.0, 1956.0], [4631.0, 1956.0]]"
+oversized_node,node_0053,"Post
+Post Pass
+Oc
+Cu
+Ins
+Hie
+Ra
+Rasterizer
+Software Rasterizer
+HardwareRasterizer
+Bu
+Build Current Frame HZB","lines=12, height=418.0","[[3242.0, 1423.0], [3613.0, 1423.0], [3613.0, 1841.0], [3242.0, 1841.0]]"
+oversized_node,node_0061,"全局距离场是分辨率较低的距离场，跟随
+摄像机的同时，在关卡中使用有向距
+离场遮蔽。这会创建每个Object网格体距离场
+的缓存，然后将它们合成到围绕摄像机的
+若干体积纹理中，称为裁剪图。由于只有新
+的可见区域或受到场景修改影响
+的可见区域才需要更新，合成过程不会有太多消耗。","lines=7, height=309.0","[[6651.0, 1637.0], [7216.0, 1637.0], [7216.0, 1946.0], [6651.0, 1946.0]]"
+oversized_node,node_0062,"在追踪光线时，通过追踪经过遮挡物
+最近的光线就可以计算
+出近似的锥体交叉点，而不产生额
+外成本。这种近似法可以利用
+这种近似法可以利用
+距离场来实现非常柔和的
+区域阴影和天空遮蔽。
+这个属性是距离场环境光遮
+蔽的关键，因为少量的锥体
+即可为接收器点的整个半
+出柔和的可见性。","lines=11, height=377.0","[[5807.0, 1665.0], [6210.0, 1665.0], [6210.0, 2042.0], [5807.0, 2042.0]]"
+oversized_node,node_0072,"会有一个大尺寸Tile判定机制
+会有一个小尺寸Tile（4*4）判定机制
+会有一个2*2的quad作为最小处理单元进行输出
+会有
+目标是为了实现像素的并行计算
+现有
+现有的硬件光栅化对于小三角形并不友好，因为
+硬件光栅化逻辑做了很多在大尺寸面片
+上十分有效但是放到小尺寸面片
+上就会是浪费的工作","lines=10, height=363.0","[[3279.0, 1969.0], [3818.0, 1969.0], [3818.0, 2332.0], [3279.0, 2332.0]]"
+oversized_node,node_0079,"Main Pass
+ZB
+PrevHZB
+Instance Culling
+ing
+Hierarchy/Cluster Culling
+ing
+Rasterizer
+zer
+Software Rasterizer
+Hardware Rasterizer
+ZB
+Current Build HZB","lines=13, height=368.0","[[2779.0, 2133.0], [3173.0, 2133.0], [3173.0, 2501.0], [2779.0, 2501.0]]"
+oversized_node,node_0086,"动画轨道（track）数据之间的差别
+关节动画数据之间的差别
+DoF缩减
+关键帧
+关键帧提取
+浮点数压缩
+四元数压缩
+误差累积
+精读衡量
+误差补偿","lines=10, height=767.0","[[6833.0, 2269.0], [7480.0, 2269.0], [7480.0, 3036.0], [6833.0, 3036.0]]"
+oversized_node,node_0087,"有向距离场（SDF）
+距离最近表面的
+原理：有向距离场在每个点将距离最近表面的
+距离保存到体积纹理中。
+。
+的距离为
+网格体外的每个点保存的距离为
+正值，网格体内的每个点保存的距离为负值
+点保存的距离为负值","lines=9, height=246.0","[[5497.0, 2308.0], [6110.0, 2308.0], [6110.0, 2554.0], [5497.0, 2554.0]]"
+oversized_node,node_0090,"色温是指绝对黑体从绝对零度（-273℃）开始加温后所呈现的颜色。
+色温是影响光源颜色的重要属性，是个可选属性，当启用色温时，
+色温也参与了光源颜色的组成部分。
+真实世界环境中，一天不同时段的环境色温也会动态发生变化：
+ENG
+认为物体表面由很多凹凸不平的微小镜面组成
+这些具有不同大小、方向的微表面在对入
+射光线进行反射时产生了不同的反射效果
+法线分布函数
+几何遮蔽函数
+菲涅尔方程
+迪士尼原则","lines=12, height=860.0","[[112.0, 2376.0], [861.0, 2376.0], [861.0, 3236.0], [112.0, 3236.0]]"
+oversized_node,node_0098,"地球大气的渲染主要包含两种散射，
+瑞利散射以及米氏散射，瑞利散射主要
+构成了天空的颜色变化，而米氏散射则
+造成了太阳周围的光环效果
+相位函数
+瑞利散射
+米氏散射
+几何散射
+单次散射
+多重散射","lines=10, height=441.0","[[1789.0, 2481.0], [2216.0, 2481.0], [2216.0, 2922.0], [1789.0, 2922.0]]"
+oversized_node,node_0103,"将材质分类，找出每个材质对应的像素进行Shading
+MaterialID
+表示当前像素属于哪个材质
+Material Shading
+正常流程","lines=5, height=257.0","[[3896.0, 2634.0], [4528.0, 2634.0], [4528.0, 2891.0], [3896.0, 2891.0]]"
+oversized_node,node_0105,"关节姿势
+旋转Orientation
+位置Position
+缩放Scale
+仿射矩阵
+局部空间到物体空间","lines=6, height=452.0","[[5400.0, 2649.0], [5816.0, 2649.0], [5816.0, 3101.0], [5400.0, 3101.0]]"
+oversized_node,node_0111,"MR工作流
+Base
+Base Color
+Roug
+Roughness
+Metallic
+Meta
+Normal
+优点：
+缺点：","lines=10, height=295.0","[[1674.0, 2750.0], [1877.0, 2750.0], [1877.0, 3045.0], [1674.0, 3045.0]]"
+oversized_node,node_0114,"Fixtexelbudgetperframe(512x512)
+Sort by distance to camera
+and GPU feedback
+Copy card capture to surface
+cache and compress
+Cardcapture分瓣率
+根据cardbounds最大extent投影
+到屏幕像素的长度决定，
+从8到1024，不一定是正方形，
+根据card的bounds长宽比确定","lines=10, height=356.0","[[4922.0, 2884.0], [5469.0, 2884.0], [5469.0, 3240.0], [4922.0, 3240.0]]"
+oversized_node,node_0115,"为每个材质执行一次全屏渲染
+跳过那些未被当前材质覆盖的像素
+需要对每个材质都执行一遍渲染
+对每个像素都执行一遍是否被材质覆盖的检测，效率较低。
+Material Culling
+将MaterialID存成深度值
+将屏幕分成Tlle
+不需要进行一个全屏的材质的绘制
+进行基于tile尺寸的绘制","lines=9, height=400.0","[[3939.0, 2908.0], [4618.0, 2908.0], [4618.0, 3308.0], [3939.0, 3308.0]]"
+oversized_node,node_0116,"阴影贴图光线追踪
+光线追踪
+一种结合虚拟阴影贴图的采样算
+虚拟阴影贴图的采样算法，能生成
+的柔和阴影和接触硬阴影。对象投
+阴影比近处阴影拥有更柔和的效果
+射的远处阴影比近处阴影拥有更
+Nanite Meshe
+Build Process
+Group
+Merge
+Simplify
+Split","lines=13, height=468.0","[[2910.0, 2921.0], [3705.0, 2921.0], [3705.0, 3389.0], [2910.0, 3389.0]]"
+oversized_node,node_0128,"环境光遮蔽
+屏幕空间环境光遮蔽
+光线追踪环境光遮蔽
+水平基准环境光遮蔽
+体素基准环境光遮蔽
+GTAO","lines=6, height=281.0","[[2205.0, 3253.0], [2535.0, 3253.0], [2535.0, 3534.0], [2205.0, 3534.0]]"
+oversized_node,node_0130,"SG工作流
+Albedo
+Albedo Color
+Specular Color
+Glossiness
+Normal
+优点：可
+缺点：FO
+因
+但
+RG","lines=11, height=405.0","[[1652.0, 3270.0], [1881.0, 3270.0], [1881.0, 3675.0], [1652.0, 3675.0]]"
+oversized_node,node_0135,"在内存中存储骨骼
+蒙皮矩阵调色板
+多骨骼的权重蒙皮
+权重蒙皮的混合
+动画片段（clip）
+姿势的插值
+NLERP的最短路径插值
+SLERP","lines=8, height=557.0","[[5109.0, 3381.0], [5777.0, 3381.0], [5777.0, 3938.0], [5109.0, 3938.0]]"
+oversized_node,node_0137,"Two Bone
+多关节IK
+关节纟
+关节约束
+启发式算法
+循环坐标下降算法CCD
+FABRIK
+FABRIK的约束
+多终端效应器难题
+雅可比矩阵法
+IK前沿","lines=11, height=619.0","[[6057.0, 3459.0], [6453.0, 3459.0], [6453.0, 4078.0], [6057.0, 4078.0]]"
+oversized_node,node_0139,"面部动画
+面部编码系统（FACS）
+Action Unit
+Key Pose Blending
+Morph Target Animation
+UV Texture Facial Animation
+Muscle Model Animation","lines=7, height=459.0","[[6798.0, 3484.0], [7447.0, 3484.0], [7447.0, 3943.0], [6798.0, 3943.0]]"
+oversized_node,node_0141,"Mesh Card
+功能：可以看成是放在6个轴对称方向上的相机，
+可以看成是放
+功能：
+通过正交投影的方式来光栅化Mesh，
+通过正交投
+从而获取Mesh的各种属性
+从而获取Me
+(Albedo, N
+(Albedo, Normal, Depth等等)
+对应surface cache
+对应surfac
+离线生成：Mesh
+离线生成：Mesh-Surfel-Surfel Clusters－Cards
+最多2级LOD","lines=15, height=373.0","[[4584.0, 3497.0], [5271.0, 3497.0], [5271.0, 3870.0], [4584.0, 3870.0]]"
+oversized_node,node_0143,"基于物理的渲染（Physicallybased rendering）(PBR)
+意味着表面接近光线在真实世界的表现方式，
+而不是我们直观以为的应有方式。
+相较于完全依赖美术师直觉来设置参数的着色工作流程，
+遵守PBR原则的材质更准确，并且通常看起来更自然。","lines=5, height=262.0","[[169.0, 3574.0], [1033.0, 3574.0], [1033.0, 3836.0], [169.0, 3836.0]]"
+oversized_node,node_0145,"Worl
+Worklisk Pass
+构
+构建并Worklist，将屏幕划分成很多tile，根据使用到
+某
+某个MaterialID的tile加到该MaterialID
+的V
+的Worklist里，作为下一步的索引l","lines=8, height=180.0","[[3243.0, 3671.0], [3887.0, 3671.0], [3887.0, 3851.0], [3243.0, 3851.0]]"
+oversized_node,node_0146,"粒子常见属性
+Acceleration
+Attraction
+Camera
+Collision
+Color
+Lifetime
+Light
+Location
+Orbit
+Orientation
+Rotation
+Size
+Spawn
+Velocity","lines=15, height=647.0","[[2169.0, 3679.0], [2445.0, 3679.0], [2445.0, 4326.0], [2169.0, 4326.0]]"
+oversized_node,node_0149,"组件
+系统
+发射器
+模块
+参数","lines=5, height=245.0","[[1959.0, 3767.0], [2111.0, 3767.0], [2111.0, 4012.0], [1959.0, 4012.0]]"
+oversized_node,node_0161,"快门速度
+产生运动模糊效果
+光圈
+产生景深效果
+感光度
+产生Grain效果","lines=6, height=287.0","[[1057.0, 4003.0], [1292.0, 4003.0], [1292.0, 4290.0], [1057.0, 4290.0]]"
+oversized_node,node_0162,"分离轴定理
+凸性
+相交的必要条件
+分离判据
+二维情形
+三维情形","lines=6, height=279.0","[[7274.0, 4069.0], [7506.0, 4069.0], [7506.0, 4348.0], [7274.0, 4348.0]]"
+oversized_node,node_0163,"粒子数据类型
+Bill
+Billboard类型数据
+Mesh类型数据
+光束类型数据
+条带类型数据","lines=6, height=261.0","[[1749.0, 4070.0], [2115.0, 4070.0], [2115.0, 4331.0], [1749.0, 4331.0]]"
+oversized_node,node_0165,"动画混合树
+Blend Tree
+LERP blend node
+additive blend node
+动画混合树的节点
+动画树的控制信号","lines=6, height=386.0","[[6599.0, 4080.0], [7047.0, 4080.0], [7047.0, 4466.0], [6599.0, 4466.0]]"
+oversized_node,node_0168,"之前常见的GI算法
+Reflec
+Reflective Shadow Map
+Light Propag
+Light PropagationVolume
+Sparse Voxel Octree for Real-time Global Il
+al-time Global lllumination
+NG
+Voxelization Based Global llun
+ased Global llumination
+Screen Space Global Illumina
+e Global llumination
+Global Illumination
+Dynamic Diffuse Global lluminati
+Ray-tracing based Global Illuminatiol
+lobal llumination
+流程
+Setup","lines=18, height=610.0","[[4084.0, 4114.0], [5173.0, 4114.0], [5173.0, 4724.0], [4084.0, 4724.0]]"
+oversized_node,node_0169,"中的顺序依赖
+万向节死锁
+死锁
+欧拉角的缺点
+的缺点
+衣赖
+顺序依赖
+节死锁
+难以插值、组合等
+四元数
+2D旋转与复数
+四元数的定义
+欧拉角到四元数的转换
+四元数进行旋转
+四元数到旋转矩阵的转换
+给定旋转轴的四元数旋转","lines=16, height=795.0","[[5737.0, 4116.0], [6167.0, 4116.0], [6167.0, 4911.0], [5737.0, 4911.0]]"
+oversized_node,node_0176,"抗锯齿
+超级采样抗锯齿
+优点：往往能得到最佳的效果
+缺点：它会带来巨大的性能消耗
+多重采样抗锯齿
+图像保真度和性能之间找到最佳的平衡点
+快速近似抗锯齿
+优点：","lines=8, height=394.0","[[180.0, 4417.0], [759.0, 4417.0], [759.0, 4811.0], [180.0, 4811.0]]"
+oversized_node,node_0180,"游戏中的3D动画技术
+DoF(Degrees of Freedom)
+Rigid Hierarchical Animation
+Per-vertex Animation
+Morph Target Animation
+3D Skinned Animation
+基于物理的动画Physics-basedAnimation
+布娃娃系统Ragdoll
+布料与流体模拟
+IK(lnverse Kinematics)","lines=10, height=707.0","[[5136.0, 4511.0], [5970.0, 4511.0], [5970.0, 5218.0], [5136.0, 5218.0]]"
+oversized_node,node_0181,"压缩纹理算法特点
+二
+解压速度
+随机访问
+压缩率和图像质量
+十
+编码速度","lines=7, height=257.0","[[1766.0, 4611.0], [2158.0, 4611.0], [2158.0, 4868.0], [1766.0, 4868.0]]"
+oversized_node,node_0184,"EN
+概念
+闵可夫斯基和/差
+凸多
+凸多边形闵可夫斯基和性质
+相交对
+相交对应闵可夫斯基差中的原点","lines=7, height=334.0","[[6322.0, 4629.0], [6692.0, 4629.0], [6692.0, 4963.0], [6322.0, 4963.0]]"
+oversized_node,node_0194,"使用png和jpg等
+为什么不使用png和j
+格式
+常见压缩格式
+尽管像jpg、png的压缩率很高，
+ng的压缩率很高，但并不适合纹理
+支持像素的随机访问，这对GPU相当不友好，
+主要问题是不支持像素的随机访
+使用需要的纹理部分
+GPU渲染时只使用需要的纹理部","lines=10, height=304.0","[[1320.0, 4939.0], [2175.0, 4939.0], [2175.0, 5243.0], [1320.0, 5243.0]]"
+oversized_node,node_0203,"动画状态机
+ASM的定
+Cross Fades
+分层ASM","lines=4, height=262.0","[[6162.0, 5091.0], [6466.0, 5091.0], [6466.0, 5353.0], [6162.0, 5353.0]]"
+oversized_node,node_0204,"BRDF模型
+Lambert模型
+Phong模型
+Blinn-Phong模型
+Cook-Torrance模型","lines=5, height=296.0","[[140.0, 5093.0], [542.0, 5093.0], [542.0, 5389.0], [140.0, 5389.0]]"
+oversized_node,node_0209,"全局光照
+光照探灯
+反射探灯
+预计算光照数据","lines=4, height=248.0","[[1081.0, 5261.0], [1361.0, 5261.0], [1361.0, 5509.0], [1081.0, 5509.0]]"
+oversized_node,node_0213,"实现
+蒙皮动画实现
+转换
+坐标空间转换
+结构
+生物的骨骼结构
+骨骼
+关节
+根骨骼
+绑定
+骨骼绑定
+姿势
+绑定姿势
+T-pose
+ose
+bose
+A-pose","lines=17, height=739.0","[[4393.0, 5325.0], [4693.0, 5325.0], [4693.0, 6064.0], [4393.0, 6064.0]]"
+oversized_node,node_0215,"ENGIN
+贴图压缩
+剪
+可见性裁剪
+视锥裁剪","lines=5, height=649.0","[[2797.0, 5334.0], [3308.0, 5334.0], [3308.0, 5983.0], [2797.0, 5983.0]]"
+oversized_node,node_0224,"场景查询
+射线检测 raycast
+形状扫描sweep
+求交overlap
+碰撞组过滤","lines=5, height=306.0","[[7184.0, 5574.0], [7567.0, 5574.0], [7567.0, 5880.0], [7184.0, 5880.0]]"
+oversized_node,node_0226,"游戏中的2D
+动画技术
+EN
+精灵动画
+Live2D
+2D Skinned Animation
+动画混合","lines=7, height=461.0","[[5143.0, 5591.0], [5590.0, 5591.0], [5590.0, 6052.0], [5143.0, 6052.0]]"
+oversized_node,node_0229,"场景空间管理
+层次包围盒（BVH）
+二元空间分割树（BSPTrees）
+四叉树（Quad Tree）
+八叉树
+(Octree)
+场景图
+(Scene Graphs)
+KD树 (K-Dimensional Tree)","lines=9, height=514.0","[[3701.0, 5657.0], [4283.0, 5657.0], [4283.0, 6171.0], [3701.0, 6171.0]]"
+oversized_node,node_0237,"万物皆GameObject
+动态物
+静态物
+环境
+其它","lines=5, height=266.0","[[594.0, 5953.0], [1298.0, 5953.0], [1298.0, 6219.0], [594.0, 6219.0]]"
+oversized_node,node_0241,"碰撞解决
+惩罚力法
+求解速度约束
+拉格朗日力学
+碰撞约束
+迭代求解
+求解位置约束","lines=7, height=416.0","[[7068.0, 6079.0], [7373.0, 6079.0], [7373.0, 6495.0], [7068.0, 6495.0]]"
+oversized_node,node_0252,"GPU架构
+Immediate Mode Rendering
+Tile Based Rendering
+CCO
+Tile Based Deferred Rendering
+渲染","lines=6, height=612.0","[[3182.0, 6322.0], [4191.0, 6322.0], [4191.0, 6934.0], [3182.0, 6934.0]]"
+oversized_node,node_0264,"顶点着色器
+几何着色器
+光栅化
+像素着色器
+合并阶段","lines=5, height=372.0","[[2724.0, 6487.0], [2934.0, 6487.0], [2934.0, 6859.0], [2724.0, 6859.0]]"
+oversized_node,node_0266,"ENI
+渲","lines=2, height=412.0","[[3111.0, 6522.0], [3329.0, 6522.0], [3329.0, 6934.0], [3111.0, 6934.0]]"
+oversized_node,node_0268,"载具模拟
+真实感-风格化谱系
+建模
+力","lines=4, height=282.0","[[6522.0, 6551.0], [6940.0, 6551.0], [6940.0, 6833.0], [6522.0, 6833.0]]"
+oversized_node,node_0269,"静态刚体static
+动态刚体dynamic
+触发器(trigger)
+受控刚体kinematic
+刚体PhysicsActor","lines=5, height=275.0","[[4772.0, 6608.0], [5245.0, 6608.0], [5245.0, 6883.0], [4772.0, 6883.0]]"
+oversized_node,node_0270,"破坏模拟
+概念
+分块层级
+连接图
+连接强度
+计算损伤
+模型破碎算法
+维诺图
+二维
+三维
+不同的破碎图案
+破坏系统
+增加真实感
+破坏系统引入的问题
+常见的破坏SDK","lines=15, height=879.0","[[7128.0, 6619.0], [7540.0, 6619.0], [7540.0, 7498.0], [7128.0, 7498.0]]"
+oversized_node,node_0279,"形状
+分类
+球
+胶囊
+方盒
+凸包
+三角网格
+高度场","lines=8, height=384.0","[[5482.0, 6839.0], [5689.0, 6839.0], [5689.0, 7223.0], [5482.0, 7223.0]]"
+oversized_node,node_0285,"本动力学
+刚体动力学
+质点动力学
+刚体动力学
+朝向
+角速度
+角加速度
+转动惯量
+角动量
+扭矩
+应用：","lines=11, height=519.0","[[5818.0, 6988.0], [6082.0, 6988.0], [6082.0, 7507.0], [5818.0, 7507.0]]"
+oversized_node,node_0288,"转向过度与转向不足
+NGINE
+重量转移
+转向角
+Ackermann转向
+轮胎接触
+基于网格的布料模拟
+PBD/XPBD
+物理网格VS.渲染网格
+刷布料约束
+拉格朗日力学约束建模
+布料物理材质
+拉伸约束
+求解
+约束投影
+工作流
+XPBD","lines=17, height=964.0","[[6586.0, 7063.0], [7593.0, 7063.0], [7593.0, 8027.0], [6586.0, 8027.0]]"
+oversized_node,node_0294,"Engine
+ENGIN
+音效
+音
+复杂的游戏性及
+游戏性及其基本要素","lines=6, height=1200.0","[[3780.0, 7341.0], [5158.0, 7341.0], [5158.0, 8541.0], [3780.0, 8541.0]]"
+oversized_node,node_0298,"面回数据编程
+与任务系统
+GINE
+网","lines=4, height=673.0","[[1751.0, 7412.0], [2524.0, 7412.0], [2524.0, 8085.0], [1751.0, 8085.0]]"
+oversized_node,node_0306,"角色控制器
+与刚体动力学的差异
+基本组成
+与环境的碰撞
+自动阶跃（autostepping）
+坡度限制与强制滑坡
+更新大小
+推动物体
+移动平台","lines=9, height=465.0","[[5259.0, 7802.0], [5681.0, 7802.0], [5681.0, 8267.0], [5259.0, 8267.0]]"
+oversized_node,node_0310,"协程介绍
+协程与线程的对比
+协程实现方式
+有栈协程
+无栈协程","lines=5, height=246.0","[[142.0, 7907.0], [454.0, 7907.0], [454.0, 8153.0], [142.0, 8153.0]]"
+oversized_node,node_0312,"布娃娃模拟
+用途
+途
+骨骼与刚体的映射
+人体关节约束
+约束参数
+动画与布娃娃的混合过渡
+富力布娃娃","lines=8, height=360.0","[[5828.0, 7954.0], [6201.0, 7954.0], [6201.0, 8314.0], [5828.0, 8314.0]]"
+oversized_node,node_0322,"Job调度
+Job队列
+全局队列
+线程局部队列
+两种访问方式
+先进先出
+后进先出
+Job依赖
+Job Stealing","lines=9, height=438.0","[[195.0, 8208.0], [435.0, 8208.0], [435.0, 8646.0], [195.0, 8646.0]]"
+oversized_node,node_0323,"界面
+UI模式
+即时模式（IMGUI）
+保留模式（RMGUI）","lines=4, height=248.0","[[2717.0, 8212.0], [3077.0, 8212.0], [3077.0, 8460.0], [2717.0, 8460.0]]"
+oversized_node,node_0335,"GINE
+回顾：基于组件的设计","lines=2, height=343.0","[[0.0, 8627.0], [626.0, 8627.0], [626.0, 8970.0], [0.0, 8970.0]]"
+oversized_node,node_0336,"并行
+并行计算问题
+易并
+易并行问题
+不易
+不易并行问题
+解决数据竞争
+阻塞方法
+锁原语
+非阻塞方法
+原子操作
+内存序问题","lines=12, height=556.0","[[1674.0, 8639.0], [2025.0, 8639.0], [2025.0, 9195.0], [1674.0, 9195.0]]"
+oversized_node,node_0340,"资产管理
+资产格式
+文本（Text)
+二进制（Binary)","lines=4, height=293.0","[[2328.0, 8681.0], [2665.0, 8681.0], [2665.0, 8974.0], [2328.0, 8974.0]]"
+oversized_node,node_0342,"发布-订阅模式
+事件定义
+硬编码
+反射与自动代码生成
+事件回调函数注册
+对象生命周期及回调安全保证
+对象的强引用
+对象的弱引用
+事件分发机制
+立即分发
+延迟分发
+消息队列","lines=12, height=647.0","[[4974.0, 8743.0], [5366.0, 8743.0], [5366.0, 9390.0], [4974.0, 9390.0]]"
+oversized_node,node_0346,"声音基础
+声音三要素
+响度
+音高
+音色
+脉冲编码调制
+采样
+量化
+编码","lines=9, height=642.0","[[6550.0, 8763.0], [6850.0, 8763.0], [6850.0, 9405.0], [6550.0, 9405.0]]"
+oversized_node,node_0349,"听者几何体
+扬声器几何体
+中央声道
+音频平移
+线性平移
+等功率平移","lines=6, height=285.0","[[7322.0, 8871.0], [7527.0, 8871.0], [7527.0, 9156.0], [7322.0, 9156.0]]"
+oversized_node,node_0353,"监督学习
+无监督学习
+半监督学习
+强化学习
+马尔可夫决策过程
+状态
+动作
+奖励","lines=8, height=525.0","[[4074.0, 8996.0], [4369.0, 8996.0], [4369.0, 9521.0], [4074.0, 9521.0]]"
+oversized_node,node_0355,"数据定义
+基础元素
+继承
+引用
+两种设计方式
+独立的schema定义文件
+na定义文件
+代码内部定义","lines=8, height=398.0","[[2814.0, 9011.0], [3188.0, 9011.0], [3188.0, 9409.0], [2814.0, 9409.0]]"
+oversized_node,node_0359,"Unity DOTS
+Unity ECS
+原型Archetype
+数据排布
+系统实现
+UnityC#任务系统
+原生容器
+安全性系统
+Burst编译器","lines=9, height=482.0","[[171.0, 9210.0], [514.0, 9210.0], [514.0, 9692.0], [171.0, 9692.0]]"
+oversized_node,node_0360,"缓存
+局域性
+LRU策略
+缓存行
+缓存行Cacheline
+缓存缺
+缓存缺失Cachemiss","lines=7, height=278.0","[[1686.0, 9234.0], [2042.0, 9234.0], [2042.0, 9512.0], [1686.0, 9512.0]]"
+oversized_node,node_0361,"音效衰减
+衰减函数
+线性
+对数
+反函数
+对数反函数
+自然音效
+自定义
+衰减形状
+球体
+胶囊体
+盒体
+椎体","lines=13, height=681.0","[[7283.0, 9236.0], [7522.0, 9236.0], [7522.0, 9917.0], [7283.0, 9917.0]]"
+oversized_node,node_0365,"UnrealMass框架
+实体Entity实现
+组件Component实现
+组件C
+碎片 Fragment
+系统System实现
+碎片请求
+执行","lines=8, height=368.0","[[611.0, 9298.0], [1016.0, 9298.0], [1016.0, 9666.0], [611.0, 9666.0]]"
+oversized_node,node_0366,"资产结构设计
+资产引用
+资产实例
+数据拷贝
+数据继承","lines=5, height=272.0","[[2332.0, 9317.0], [2625.0, 9317.0], [2625.0, 9589.0], [2332.0, 9589.0]]"
+oversized_node,node_0368,"脚本语言的选择
+多种脚本语言的对比
+INE
+可视化脚本","lines=4, height=390.0","[[5889.0, 9347.0], [6473.0, 9347.0], [6473.0, 9737.0], [5889.0, 9737.0]]"
+oversized_node,node_0369,"代码分析
+抽象语法树（AST）
+Clang
+反射信息收集
+Tags
+代码生成
+代码渲染
+Mustache","lines=8, height=544.0","[[3509.0, 9392.0], [3870.0, 9392.0], [3870.0, 9936.0], [3509.0, 9936.0]]"
+oversized_node,node_0371,"双耳音频空间化
+双耳声级差
+双耳时间延迟
+频谱阴影
+头相关变换函数","lines=5, height=262.0","[[6751.0, 9518.0], [7057.0, 9518.0], [7057.0, 9780.0], [6751.0, 9780.0]]"
+oversized_node,node_0375,"如何利用强化学习构建AI
+状态抽象
+长度固定的统计变量
+长度不固定的序列数据
+图像数据
+动作抽象
+奖励设置
+AlphaStar
+OpenAIFive","lines=9, height=433.0","[[4108.0, 9613.0], [4476.0, 9613.0], [4476.0, 10046.0], [4108.0, 10046.0]]"
+oversized_node,node_0377,"鲁棒性设计
+Command模式
+定义
+UID","lines=4, height=260.0","[[2413.0, 9711.0], [2736.0, 9711.0], [2736.0, 9971.0], [2413.0, 9971.0]]"
+oversized_node,node_0378,"想
+原则思想
+万物皆数据
+数据
+数据
+指令也是数据
+紧致
+让代码与数据在内存中保持紧致
+GINE
+网络基础
+网络协议","lines=11, height=756.0","[[1127.0, 9744.0], [1815.0, 9744.0], [1815.0, 10500.0], [1127.0, 10500.0]]"
+oversized_node,node_0381,"软件架构
+构
+one架构
+Stand-alone架构
+架构
+In Game架构
+Editor
+Play in Editor","lines=8, height=296.0","[[2874.0, 9827.0], [3225.0, 9827.0], [3225.0, 10123.0], [2874.0, 10123.0]]"
+oversized_node,node_0382,"性能敏感编程
+减少顺序依赖
+false sharing
+分支预测
+基于存在性处理","lines=5, height=278.0","[[176.0, 9980.0], [490.0, 9980.0], [490.0, 10258.0], [176.0, 10258.0]]"
+oversized_node,node_0385,"序列化与反序列化
+基础command类型
+Add
+Delete
+Update","lines=5, height=257.0","[[2467.0, 9990.0], [2771.0, 9990.0], [2771.0, 10247.0], [2467.0, 10247.0]]"
+oversized_node,node_0390,"常见编辑器
+World Editor
+架构
+数据抽象
+布局信息（Layout）
+地形（Terrain）
+环境（Environment）
+多系统间的数据交互(eg.Rule System)","lines=8, height=448.0","[[3632.0, 10153.0], [4234.0, 10153.0], [4234.0, 10601.0], [3632.0, 10601.0]]"
+oversized_node,node_0396,"EN
+思考
+选择
+Tree Policy
+UCB公式
+平衡开发与探索问题","lines=6, height=435.0","[[4815.0, 10296.0], [5368.0, 10296.0], [5368.0, 10731.0], [4815.0, 10731.0]]"
+oversized_node,node_0401,"TCP协议
+面向连接
+可靠、有序
+流控
+拥塞控制","lines=5, height=244.0","[[169.0, 10421.0], [332.0, 10421.0], [332.0, 10665.0], [169.0, 10665.0]]"
+oversized_node,node_0404,"协同编辑
+资产拆分
+按逻辑分层
+按位置分块
+One File
+One File Per Actor","lines=6, height=358.0","[[3107.0, 10496.0], [3486.0, 10496.0], [3486.0, 10854.0], [3107.0, 10854.0]]"
+oversized_node,node_0407,"网络分层
+OSI七层模型
+物理层
+数据链路层
+网络层
+传输层
+会话层
+表示层
+应用层","lines=9, height=456.0","[[696.0, 10616.0], [928.0, 10616.0], [928.0, 11072.0], [696.0, 11072.0]]"
+oversized_node,node_0408,"相机（Camera)
+相机的绑定
+弹簧臂
+多种相机效果
+相机抖动
+滤镜
+基于玩家主观感受做优化","lines=7, height=338.0","[[7182.0, 10620.0], [7518.0, 10620.0], [7518.0, 10958.0], [7182.0, 10958.0]]"
+oversized_node,node_0418,"从路点到运动
+转向行为
+寻找/逃跑
+速度匹配
+对齐","lines=5, height=276.0","[[5572.0, 10901.0], [5824.0, 10901.0], [5824.0, 11177.0], [5572.0, 11177.0]]"
+oversized_node,node_0419,"在一个场
+在一个场景内协同编辑
+同步操作
+分布式操作
+分布式操作的一致性问题
+锁
+实例锁
+资产锁
+操作转换
+操作转换(OT)
+无冲突复
+无冲突复制数据类型(CRDT)
+工作流","lines=13, height=488.0","[[3112.0, 10903.0], [3609.0, 10903.0], [3609.0, 11391.0], [3112.0, 11391.0]]"
+oversized_node,node_0420,"同步分类
+同
+快照同步
+帧同步
+状态同步","lines=5, height=253.0","[[1749.0, 10905.0], [1959.0, 10905.0], [1959.0, 11158.0], [1749.0, 11158.0]]"
+oversized_node,node_0422,"地图表示
+可通行区域
+形式
+路点网络
+格子
+寻路网格
+凸多边形
+稀疏体素八","lines=8, height=398.0","[[6140.0, 10957.0], [6393.0, 10957.0], [6393.0, 11355.0], [6140.0, 11355.0]]"
+oversized_node,node_0423,"快照同步
+全量快照
+增量快照
+带宽对比
+全量快照大
+增量快照小
+快照同步的缺点
+随着游戏复杂，快照越来越大
+带宽浪费
+服务器压力大","lines=10, height=611.0","[[2572.0, 10986.0], [3122.0, 10986.0], [3122.0, 11597.0], [2572.0, 11597.0]]"
+oversized_node,node_0426,"网络时间协议（NTP）
+四个对应时间戳以及误差调整
+1.客户端发送时间戳
+2.服务端接收时间戳
+3.服务端发送返回时间戳
+4.客户端接收时间戳
+NTP在计算传输时延的时候
+默认上行延迟和下行延迟相等","lines=8, height=394.0","[[105.0, 11064.0], [546.0, 11064.0], [546.0, 11458.0], [105.0, 11458.0]]"
+oversized_node,node_0431,"最优优先算法
+Dijkstra算法
+A*算法
+计算开销
+启发函数
+格子情形
+寻路网格情形","lines=7, height=338.0","[[7233.0, 11145.0], [7508.0, 11145.0], [7508.0, 11483.0], [7233.0, 11483.0]]"
+oversized_node,node_0436,"群体模拟
+微观模型
+基于规则Boids
+宏观模型
+流场
+介观模型
+碰撞规避
+基于力的模型
+的模型
+基于速度的模型
+Vo
+RVO
+ORCA","lines=13, height=715.0","[[5672.0, 11304.0], [6008.0, 11304.0], [6008.0, 12019.0], [5672.0, 12019.0]]"
+oversized_node,node_0439,"对WorldState中的部分属性做是否满足的判断
+动作集
+前提条件
+动作损耗
+动作影响","lines=5, height=242.0","[[4851.0, 11346.0], [5424.0, 11346.0], [5424.0, 11588.0], [4851.0, 11588.0]]"
+oversized_node,node_0440,"一个客户端挂掉
+一个客户端挂掉，不影响其他玩家
+不依赖于服务器
+缺点
+易作弊
+需要良好的网络连接
+玩家人数受限","lines=7, height=298.0","[[1559.0, 11421.0], [2002.0, 11421.0], [2002.0, 11719.0], [1559.0, 11719.0]]"
+oversized_node,node_0444,"PICC
+内部信息
+外部信息
+静态空间信息
+NE
+动态空间信息
+经典决策算法
+影响力图
+其他游戏对象
+角色信息
+感知模拟","lines=11, height=626.0","[[6144.0, 11546.0], [6925.0, 11546.0], [6925.0, 12172.0], [6144.0, 12172.0]]"
+oversized_node,node_0446,"CCOLO
+对WorldState的改变描述
+IGINE
+逆向规划
+游戏优化","lines=5, height=743.0","[[4848.0, 11563.0], [5889.0, 11563.0], [5889.0, 12306.0], [4848.0, 12306.0]]"
+oversized_node,node_0447,"进阶内容：寻路网格生成
+体素化
+区域分割
+分水岭算法
+网格生成
+高级特性
+多边形标记
+分块","lines=8, height=390.0","[[7017.0, 11597.0], [7473.0, 11597.0], [7473.0, 11987.0], [7017.0, 11987.0]]"
+oversized_node,node_0453,"游戏响应
+帧同步
+较慢
+状态同步
+较快","lines=5, height=243.0","[[4243.0, 11721.0], [4419.0, 11721.0], [4419.0, 11964.0], [4243.0, 11964.0]]"
+oversized_node,node_0457,"DN3
+执行节点/叶子节点
+行为节点
+条件节点
+控制节点
+序列节点Sequence
+选择器Selector
+并行节点Parallel
+运行
+实现优化
+装饰节点
+前置条件
+黑板变量","lines=13, height=1039.0","[[7270.0, 11841.0], [7678.0, 11841.0], [7678.0, 12880.0], [7270.0, 12880.0]]"
+oversized_node,node_0461,"跨平台
+帧同步
+相对复杂
+状态同步
+相对简单","lines=5, height=250.0","[[4263.0, 12074.0], [4431.0, 12074.0], [4431.0, 12324.0], [4263.0, 12324.0]]"
+oversized_node,node_0464,"网络带宽
+帧同步
+小
+状态同步
+大","lines=5, height=253.0","[[3371.0, 12111.0], [3540.0, 12111.0], [3540.0, 12364.0], [3371.0, 12364.0]]"
+oversized_node,node_0466,"支持玩家的数量
+帧同步
+倾向步
+少量玩家
+状态同步
+大量玩家","lines=6, height=248.0","[[3664.0, 12167.0], [3953.0, 12167.0], [3953.0, 12415.0], [3664.0, 12415.0]]"
+oversized_node,node_0470,"GIN
+RPC实现通信的基本原理
+1.客户端发起函数调用（Clientfunctions）
+2.客户端通过ClientStub进行消息的封装（序列化）及传输
+3.Server端通过ServerStub(或者叫Skeleton)进行解码
+并找到对应的函数进行相关处理，以及返回处理结果
+4.ClientStub接收消息（反序列化），得到结果","lines=7, height=476.0","[[163.0, 12210.0], [862.0, 12210.0], [862.0, 12686.0], [163.0, 12686.0]]"
+oversized_node,node_0471,"帧同步
+NG","lines=2, height=279.0","[[1590.0, 12246.0], [1791.0, 12246.0], [1791.0, 12525.0], [1590.0, 12525.0]]"
+oversized_node,node_0474,"CO
+如何解决延迟
+哑客户端（客户端不做预测）
+发出移动请求
+等待服务器回复
+收到服务器回复，并作出移动","lines=6, height=533.0","[[1834.0, 12367.0], [2451.0, 12367.0], [2451.0, 12900.0], [1834.0, 12900.0]]"
+oversized_node,node_0479,"回放文件大小
+帧同步
+小
+状态同步
+大","lines=5, height=255.0","[[3649.0, 12529.0], [3900.0, 12529.0], [3900.0, 12784.0], [3649.0, 12784.0]]"
+oversized_node,node_0485,"从开火到命中的流程
+射击指令传输的网络状况
+Hitscan
+Hitscan Weapons
+瞬时完
+瞬时完成射击操作
+Projectil
+ProjectileWeapons
+子弹有
+子弹有弹道距离，重力等因素的影响","lines=10, height=251.0","[[4641.0, 12711.0], [5194.0, 12711.0], [5194.0, 12962.0], [4641.0, 12962.0]]"
+oversized_node,node_0489,"式系统挑战
+互斥问题
+等性
+故障与部分失效
+不可靠的网络
+分布式问题传染
+一致性和共识算法
+分布式事务","lines=8, height=390.0","[[5856.0, 12771.0], [6126.0, 12771.0], [6126.0, 13161.0], [5856.0, 13161.0]]"
+oversized_node,node_0490,"系统举例
+大厅系统
+用户管理系统
+交易系统
+社交系统
+匹配系统
+数据存储举例
+Mysql
+Mongo
+Redis","lines=10, height=683.0","[[5198.0, 12802.0], [5539.0, 12802.0], [5539.0, 13485.0], [5198.0, 13485.0]]"
+oversized_node,node_0491,"帧同步需要面对的挑战与解决：多端不一致问题
+浮点数
+随机数
+容器与排序算法等
+数学工具","lines=5, height=247.0","[[178.0, 12812.0], [1052.0, 12812.0], [1052.0, 13059.0], [178.0, 13059.0]]"
+oversized_node,node_0492,"数据压缩
+对象更新频率
+对象相关性
+静态区域
+AOI
+暴力法
+九宫格
+十字链表
+PVS","lines=9, height=478.0","[[6471.0, 12831.0], [6725.0, 12831.0], [6725.0, 13309.0], [6471.0, 13309.0]]"
+oversized_node,node_0495,"反作弊
+作弊手段分类
+读取、篡改内存
+读取网络包
+Al Cheat
+修改本地文件，贴图等","lines=6, height=360.0","[[7082.0, 12973.0], [7538.0, 12973.0], [7538.0, 13333.0], [7082.0, 13333.0]]"
+oversized_node,node_0508,"ENGIN
+掉线重连的基本流程
+掉线
+帧同步的优缺点
+重连
+优点
+接收游戏开始到现在所有请求
+追帧
+低带宽
+开发效率高
+缺点
+大重连（客户端崩溃，内存中无数据）
+通过快照，加速重连
+客户端定时快照，关键帧快照，序列化到磁盘
+服务器做定时快照（更换终端登录，用这种优化）","lines=15, height=720.0","[[225.0, 13299.0], [1108.0, 13299.0], [1108.0, 14019.0], [225.0, 14019.0]]"
+oversized_node,node_0516,"反作弊方法
+混淆加密内存
+加壳
+本地文件校验
+网络包加密
+非对称加密分发密钥
+对称加密传输数据
+VAC&EAV
+基于统计数据反作弊
+检测已知的作弊程序","lines=10, height=589.0","[[6949.0, 13507.0], [7308.0, 13507.0], [7308.0, 14096.0], [6949.0, 14096.0]]"
+oversized_node,node_0524,"CCO
+CCC
+ENDN
+外插值的使用场景、
+GINE
+典型例子：载具系统，赛车游戏
+算）
+外插值的实现方法（航位推算）
+投影速度混合法
+混合使用
+使用归一化参数平滑运动轨迹
+动轨迹
+对载具系统采用外插值
+外插值的碰撞处理
+对人物采用内插值
+端接管物理模拟
+发生碰撞的时刻让客户端接管物理模拟","lines=17, height=515.0","[[2754.0, 13636.0], [3834.0, 13636.0], [3834.0, 14151.0], [2754.0, 14151.0]]"
+oversized_node,node_0530,"立置
+开枪的位置了
+立置做判定
+一切以服务器为准：开枪的时间，回溯到开枪时候敌人的位置，做命中判定
+仓时候敌人的位置，做命中判定
+难点","lines=6, height=255.0","[[5355.0, 13764.0], [6221.0, 13764.0], [6221.0, 14019.0], [5355.0, 14019.0]]"
+oversized_node,node_0538,"解决
+添加前摇
+添加特效
+客户端预测命中过程
+不触发命中结果
+命中结果等待服务器返回","lines=6, height=285.0","[[4813.0, 13864.0], [5156.0, 13864.0], [5156.0, 14149.0], [4813.0, 14149.0]]"
+oversized_node,node_0547,"BOOMIHG
+TECH
+GINE","lines=3, height=432.0","[[364.0, 14471.0], [1058.0, 14471.0], [1058.0, 14903.0], [364.0, 14903.0]]"
+text_outlier,node_0000,"NGIN
+GlobalSDFcan'tsamplesurfacecache
+Mergeallcardsintoglobalclipmapscenteredaround thecamera
+structure
+Radiance per 6 directions per voxel
+Sample and interpolate 3 directions using normal
+VisibilityBuffer
+TrackobjectupdatesandsetmodifiedbricksonGPU
+Voxelizemodifiedbricksbytracingrays
+6 rays per voxel
+Cullobjectsto4^3bricks
+One thread per mesh SDF per trace
+Cachehitsinavisibilitybuffer
+HitT I Mesh Index
+InterlockedMinwritehit tovisibilitybuffer
+Updating",suspicious long token or unbroken text,"[[6629.0, 19.0], [7505.0, 19.0], [7505.0, 949.0], [6629.0, 949.0]]"
+text_outlier,node_0001,"p V2.2
+技术交流群：
+洋：加微信Piccolo0301，回复关键词
+加微信Pic
+]【社区】入群
+Shadow Map
+Shadow Mapping步骤1：从光源处出发，向光照的方向看去，来构造出光照空间。
+算法流程
+算法济
+然后在光照空间，我们渲染需要产生阴影的物体，
+此时将深度写入到ZBuffer中，得到保存最近处物体的深度值的ShadowMap
+步骤2：然后我们再次正常渲染物体，在渲染时，
+我们根据渲染物体的世界坐标，变换到上一阶段的光照空间坐标，
+再计算出该点在ShadowMap中的深度值并进行比较，
+如果相对光源的距离比ShadowMap中的深度要大，
+就说明该点处在阴影中，否则就说明不在阴影中。
+ShadowBias
+Cascade Shadow Map
+VarianceShadowMap
+PCF
+PCSS",suspicious long token or unbroken text,"[[2861.0, 120.0], [4281.0, 120.0], [4281.0, 1356.0], [2861.0, 1356.0]]"
+text_outlier,node_0002,"Mindmap
+Piccolo社区 https:/ /www.piccoloengine.com/
+Piccolo
+缺点场景复杂度和光源数量相关
+会有大量的overdraw
+Distance Field Shaodw",suspicious long token or unbroken text,"[[1548.0, 149.0], [3285.0, 149.0], [3285.0, 763.0], [1548.0, 763.0]]"
+text_outlier,node_0003,"Voxel Ligting
+动机",suspicious long token or unbroken text,"[[6595.0, 165.0], [6763.0, 165.0], [6763.0, 236.0], [6595.0, 236.0]]"
+text_outlier,node_0004,"Spatial Probe Filtering
+creenSpaceProbe
+Filterwithin theneighborScreenSpaceProbe
+lgnorenormaldifferences,Onlydepthweighting
+Onlydepthweighting
+ected neighbor ray hits
+UseAngleerrorfromreprojectedneighborrayh
+Clampneighborhitdistancetoourown
+toour own",suspicious long token or unbroken text,"[[4181.0, 169.0], [4884.0, 169.0], [4884.0, 386.0], [4181.0, 386.0]]"
+text_outlier,node_0008,"Fixed update budget
+Select pages to update based on priority
+Priority = LastUsed - LastUpdated
+Priority queue using radix sort
+1024x1024texelsfordirectlighting
+512x512 texels for indirect lighting",suspicious long token or unbroken text,"[[5002.0, 238.0], [5601.0, 238.0], [5601.0, 531.0], [5002.0, 531.0]]"
+text_outlier,node_0009,"N+2 bounces through feedback
+Probe",suspicious long token or unbroken text,"[[5902.0, 244.0], [6309.0, 244.0], [6309.0, 309.0], [5902.0, 309.0]]"
+text_outlier,node_0010,"4x4hemisphericalprobeper4x4tile
+Jitterprobeplacementandraydire
+Trace in last frame’ s Voxel Lighting
+Ligting Gather
+Bilinearinterpolationof 4probes
+Planeweighting
+Visibility weighting using probe h
+Covert to SH
+Shading pixels on surface cache",suspicious long token or unbroken text,"[[5903.0, 321.0], [6406.0, 321.0], [6406.0, 658.0], [5903.0, 658.0]]"
+text_outlier,node_0012,"Sampling
+Important Sampling
+PDF计算
+Incoming Radiance
+Radiance
+Last frame' s Screen Space
+ame’sScreenSpaceProbe‘sradiance
+Fallbackto theWorldSpac
+cktotheWorldSpaceProbes
+BRDF",suspicious long token or unbroken text,"[[4417.0, 513.0], [5107.0, 513.0], [5107.0, 754.0], [4417.0, 754.0]]"
+text_outlier,node_0013,"Volumetric Scattering
+被水滴或者其他粒子比如灰尘等所吸收，
+这个过程称为extinction（消散）或者吸收（absorption）
+穿出云层抵达人眼，这个称之为内散射in-scattering
+穿出云层但是并未进入人眼，称为外散射out-scattering",suspicious long token or unbroken text,"[[750.0, 667.0], [1434.0, 667.0], [1434.0, 868.0], [750.0, 868.0]]"
+text_outlier,node_0016,"Accumulate the BRDF from
+Resampling Rays
+Rays
+Calculate PDF = BRDF * Radial
+PDF = BRDF *Radiance
+by PDF
+Sort rays by PDF
+For every 3 rays with PDF belc",suspicious long token or unbroken text,"[[4432.0, 767.0], [4903.0, 767.0], [4903.0, 968.0], [4432.0, 968.0]]"
+text_outlier,node_0017,ulate the BRDF from all of the pixels that will use this ScreenProbe after interpolation,suspicious long token or unbroken text,"[[4594.0, 771.0], [5687.0, 771.0], [5687.0, 797.0], [4594.0, 797.0]]"
+text_outlier,node_0020,"Henyey-GreensteinPhase Function
+用于模拟光线与星际尘云交互后各个方向上
+散射强度与入射光方向夹角的依赖规律",suspicious long token or unbroken text,"[[94.0, 836.0], [666.0, 836.0], [666.0, 951.0], [94.0, 951.0]]"
+text_outlier,node_0023,"直接光照
+Cull lights to 8x8 tiles
+8x8 tiles
+tsper tile
+Select first8lightsper tile
+1 bit shadow mask
+owmask
+Shadows",suspicious long token or unbroken text,"[[5659.0, 900.0], [6020.0, 900.0], [6020.0, 1103.0], [5659.0, 1103.0]]"
+text_outlier,node_0024,"Shadetheentirevisibilitybuffereveryframe
+Samplelightingfromsurfacecache(Final Lighting)",suspicious long token or unbroken text,"[[6666.0, 962.0], [7310.0, 962.0], [7310.0, 1035.0], [6666.0, 1035.0]]"
+text_outlier,node_0028,"In-ScatteringProbabilityFunction
+模拟当观察方向与太阳光方向
+一致时的in-scattering效果",suspicious long token or unbroken text,"[[165.0, 1031.0], [592.0, 1031.0], [592.0, 1159.0], [165.0, 1159.0]]"
+text_outlier,node_0030,"First sample Shadow Map,then trace Offscreen Shadows",suspicious long token or unbroken text,"[[5244.0, 1074.0], [5994.0, 1074.0], [5994.0, 1101.0], [5244.0, 1101.0]]"
+text_outlier,node_0031,"群组渲染
+优点：相比于Tile的划分，
+进一步剔除了更多无关光源
+缺点：LightCulling流程比较复杂，
+需要多个pass完成",suspicious long token or unbroken text,"[[2081.0, 1086.0], [2509.0, 1086.0], [2509.0, 1305.0], [2081.0, 1305.0]]"
+text_outlier,node_0034,"World Space Probes and Ray Connecting
+World Space
+内容",suspicious long token or unbroken text,"[[4620.0, 1155.0], [5331.0, 1155.0], [5331.0, 1245.0], [4620.0, 1245.0]]"
+text_outlier,node_0035,"虚拟纹理
+Virtual texture
+Physical texture
+Page table
+优势",suspicious long token or unbroken text,"[[2591.0, 1179.0], [2841.0, 1179.0], [2841.0, 1378.0], [2591.0, 1378.0]]"
+text_outlier,node_0038,Radiance Injection,suspicious long token or unbroken text,"[[5859.0, 1202.0], [6248.0, 1202.0], [6248.0, 1245.0], [5859.0, 1245.0]]"
+text_outlier,node_0041,"Screen Space Probe
+Probestructure
+8x8OctahedralAtlas
+Radiance and HitDistance
+Adaptive Placement
+uniformly 16x16
+adaptive8x8and4x4
+Probe jittering",suspicious long token or unbroken text,"[[3975.0, 1234.0], [4393.0, 1234.0], [4393.0, 1643.0], [3975.0, 1643.0]]"
+text_outlier,node_0043,"FractalBrownianMotion
+Density-Height Functions
+WeatherTexture
+云层覆盖率
+云层降雨概率
+云层种类",suspicious long token or unbroken text,"[[240.0, 1249.0], [566.0, 1249.0], [566.0, 1515.0], [240.0, 1515.0]]"
+text_outlier,node_0044,"3dclipmap grie
+3dclipmapgridscenteredaroundcamera
+32x32 Radiance per probe, storing Radiance, TraceDistance
+32x32Radianc
+更新",suspicious long token or unbroken text,"[[4637.0, 1258.0], [5438.0, 1258.0], [5438.0, 1374.0], [4637.0, 1374.0]]"
+text_outlier,node_0048,"地形材质混合
+TextureSplatting技术
+地表纹理使用多种不同的纹理混合，
+使用一张叫做splatmap的权重图来
+记录这些纹理的权重",suspicious long token or unbroken text,"[[2040.0, 1387.0], [2515.0, 1387.0], [2515.0, 1627.0], [2040.0, 1627.0]]"
+text_outlier,node_0051,"Markedworldprobesforinterpolation
+Marked world
+Reuse traces from last frame
+Reuse traces f
+Allocatetracesfornewprobes
+Re-trace a subset of cache hits to propagate lighting changes
+Re-trace a sub
+Importance Sampling
+AccumulateBF
+AccumulateBRDFfromScreenProbes
+Supersample near camera
+Spatial filtering
+Reuses probe
+Reusesprobedepthforocclusiontest
+Ray Connecting
+World Probe ra
+Screen Probe
+ReprojectScre",suspicious long token or unbroken text,"[[4631.0, 1389.0], [5467.0, 1389.0], [5467.0, 1956.0], [4631.0, 1956.0]]"
+text_outlier,node_0053,"Post
+Post Pass
+Oc
+Cu
+Ins
+Hie
+Ra
+Rasterizer
+Software Rasterizer
+HardwareRasterizer
+Bu
+Build Current Frame HZB",suspicious long token or unbroken text,"[[3242.0, 1423.0], [3613.0, 1423.0], [3613.0, 1841.0], [3242.0, 1841.0]]"
+text_outlier,node_0055,"Occludedinstances&&OccludedNodesandClusters
+CurrentBuildHZB
+Instance Culling
+Hierarchical/Cluster Culling",suspicious long token or unbroken text,"[[3290.0, 1485.0], [3979.0, 1485.0], [3979.0, 1660.0], [3290.0, 1660.0]]"
+text_outlier,node_0065,"World Probe ray must skip the interpolation footprint
+s  t    n   s
+ReprojectScreenProberayintersectionwithWorldProbesphere",suspicious long token or unbroken text,"[[4667.0, 1817.0], [5578.0, 1817.0], [5578.0, 1956.0], [4667.0, 1956.0]]"
+text_outlier,node_0067,"光通量（LuminousFlux）
+单位流明（Im），单位时间内光源所发出
+或者被照物体所接收的总光能。
+改变光源大小不会影响场景照明效果。",suspicious long token or unbroken text,"[[819.0, 1847.0], [1357.0, 1847.0], [1357.0, 2016.0], [819.0, 2016.0]]"
+text_outlier,node_0077,"uild a lot of Probes
+with Different",suspicious long token or unbroken text,"[[4562.0, 2079.0], [4995.0, 2079.0], [4995.0, 2170.0], [4562.0, 2170.0]]"
+text_outlier,node_0079,"Main Pass
+ZB
+PrevHZB
+Instance Culling
+ing
+Hierarchy/Cluster Culling
+ing
+Rasterizer
+zer
+Software Rasterizer
+Hardware Rasterizer
+ZB
+Current Build HZB",suspicious long token or unbroken text,"[[2779.0, 2133.0], [3173.0, 2133.0], [3173.0, 2501.0], [2779.0, 2501.0]]"
+text_outlier,node_0093,"Cullin
+Dataflow",suspicious long token or unbroken text,"[[3218.0, 2411.0], [3398.0, 2411.0], [3398.0, 2499.0], [3218.0, 2499.0]]"
+text_outlier,node_0096,Rasterization,suspicious long token or unbroken text,"[[3570.0, 2434.0], [3846.0, 2434.0], [3846.0, 2475.0], [3570.0, 2475.0]]"
+text_outlier,node_0097,"Fast Ray Trace in
+Any Hardware",suspicious long token or unbroken text,"[[4984.0, 2447.0], [5359.0, 2447.0], [5359.0, 2541.0], [4984.0, 2541.0]]"
+text_outlier,node_0099,"Deferred Material
+思想：",suspicious long token or unbroken text,"[[3830.0, 2507.0], [4204.0, 2507.0], [4204.0, 2622.0], [3830.0, 2622.0]]"
+text_outlier,node_0101,"Virtual Shadow Map
+adowMape
+目标",suspicious long token or unbroken text,"[[2840.0, 2610.0], [3304.0, 2610.0], [3304.0, 2713.0], [2840.0, 2713.0]]"
+text_outlier,node_0103,"将材质分类，找出每个材质对应的像素进行Shading
+MaterialID
+表示当前像素属于哪个材质
+Material Shading
+正常流程",suspicious long token or unbroken text,"[[3896.0, 2634.0], [4528.0, 2634.0], [4528.0, 2891.0], [3896.0, 2891.0]]"
+text_outlier,node_0108,"Surface Cache
+5张Altas - Albedo, Normal,
+内容：5
+Depth, Emissive, Opacity
+生成
+Two Pass
+Card Capture",suspicious long token or unbroken text,"[[4852.0, 2664.0], [5301.0, 2664.0], [5301.0, 2880.0], [4852.0, 2880.0]]"
+text_outlier,node_0111,"MR工作流
+Base
+Base Color
+Roug
+Roughness
+Metallic
+Meta
+Normal
+优点：
+缺点：",suspicious long token or unbroken text,"[[1674.0, 2750.0], [1877.0, 2750.0], [1877.0, 3045.0], [1674.0, 3045.0]]"
+text_outlier,node_0114,"Fixtexelbudgetperframe(512x512)
+Sort by distance to camera
+and GPU feedback
+Copy card capture to surface
+cache and compress
+Cardcapture分瓣率
+根据cardbounds最大extent投影
+到屏幕像素的长度决定，
+从8到1024，不一定是正方形，
+根据card的bounds长宽比确定",suspicious long token or unbroken text,"[[4922.0, 2884.0], [5469.0, 2884.0], [5469.0, 3240.0], [4922.0, 3240.0]]"
+text_outlier,node_0115,"为每个材质执行一次全屏渲染
+跳过那些未被当前材质覆盖的像素
+需要对每个材质都执行一遍渲染
+对每个像素都执行一遍是否被材质覆盖的检测，效率较低。
+Material Culling
+将MaterialID存成深度值
+将屏幕分成Tlle
+不需要进行一个全屏的材质的绘制
+进行基于tile尺寸的绘制",suspicious long token or unbroken text,"[[3939.0, 2908.0], [4618.0, 2908.0], [4618.0, 3308.0], [3939.0, 3308.0]]"
+text_outlier,node_0116,"阴影贴图光线追踪
+光线追踪
+一种结合虚拟阴影贴图的采样算
+虚拟阴影贴图的采样算法，能生成
+的柔和阴影和接触硬阴影。对象投
+阴影比近处阴影拥有更柔和的效果
+射的远处阴影比近处阴影拥有更
+Nanite Meshe
+Build Process
+Group
+Merge
+Simplify
+Split",suspicious long token or unbroken text,"[[2910.0, 2921.0], [3705.0, 2921.0], [3705.0, 3389.0], [2910.0, 3389.0]]"
+text_outlier,node_0122,"反向
+反向动力学
+Inverse Kinematics
+基础概念
+基础相",suspicious long token or unbroken text,"[[6040.0, 3099.0], [6550.0, 3099.0], [6550.0, 3291.0], [6040.0, 3291.0]]"
+text_outlier,node_0123,"动画重定向
+重定向流程
+MorphAnimation的重定向",suspicious long token or unbroken text,"[[6773.0, 3139.0], [7366.0, 3139.0], [7366.0, 3334.0], [6773.0, 3334.0]]"
+text_outlier,node_0130,"SG工作流
+Albedo
+Albedo Color
+Specular Color
+Glossiness
+Normal
+优点：可
+缺点：FO
+因
+但
+RG",suspicious long token or unbroken text,"[[1652.0, 3270.0], [1881.0, 3270.0], [1881.0, 3675.0], [1652.0, 3675.0]]"
+text_outlier,node_0134,"Surface Cache Altas size: 4096x4096
+4096
+Pysical Page size:128x128
+Virutal page机制分配空间，通过
+page table进行物理地址映射",suspicious long token or unbroken text,"[[4916.0, 3307.0], [5415.0, 3307.0], [5415.0, 3450.0], [4916.0, 3450.0]]"
+text_outlier,node_0136,"流程
+Visib
+VisibilityPass
+对
+对场景进行光栅化，将PrimitiveID和
+Ma
+Material ID保存到visibility buffer中",suspicious long token or unbroken text,"[[3212.0, 3409.0], [3720.0, 3409.0], [3720.0, 3623.0], [3212.0, 3623.0]]"
+text_outlier,node_0137,"Two Bone
+多关节IK
+关节纟
+关节约束
+启发式算法
+循环坐标下降算法CCD
+FABRIK
+FABRIK的约束
+多终端效应器难题
+雅可比矩阵法
+IK前沿",suspicious long token or unbroken text,"[[6057.0, 3459.0], [6453.0, 3459.0], [6453.0, 4078.0], [6057.0, 4078.0]]"
+text_outlier,node_0138,"Virtualized
+Geometry
+Nanite",suspicious long token or unbroken text,"[[3804.0, 3474.0], [4088.0, 3474.0], [4088.0, 3645.0], [3804.0, 3645.0]]"
+text_outlier,node_0139,"面部动画
+面部编码系统（FACS）
+Action Unit
+Key Pose Blending
+Morph Target Animation
+UV Texture Facial Animation
+Muscle Model Animation",suspicious long token or unbroken text,"[[6798.0, 3484.0], [7447.0, 3484.0], [7447.0, 3943.0], [6798.0, 3943.0]]"
+text_outlier,node_0141,"Mesh Card
+功能：可以看成是放在6个轴对称方向上的相机，
+可以看成是放
+功能：
+通过正交投影的方式来光栅化Mesh，
+通过正交投
+从而获取Mesh的各种属性
+从而获取Me
+(Albedo, N
+(Albedo, Normal, Depth等等)
+对应surface cache
+对应surfac
+离线生成：Mesh
+离线生成：Mesh-Surfel-Surfel Clusters－Cards
+最多2级LOD",suspicious long token or unbroken text,"[[4584.0, 3497.0], [5271.0, 3497.0], [5271.0, 3870.0], [4584.0, 3870.0]]"
+text_outlier,node_0142,"三角形剔除
+Backface Culling
+Small Triangle Culling
+Occlusion Culling",suspicious long token or unbroken text,"[[2657.0, 3498.0], [3011.0, 3498.0], [3011.0, 3673.0], [2657.0, 3673.0]]"
+text_outlier,node_0143,"基于物理的渲染（Physicallybased rendering）(PBR)
+意味着表面接近光线在真实世界的表现方式，
+而不是我们直观以为的应有方式。
+相较于完全依赖美术师直觉来设置参数的着色工作流程，
+遵守PBR原则的材质更准确，并且通常看起来更自然。",suspicious long token or unbroken text,"[[169.0, 3574.0], [1033.0, 3574.0], [1033.0, 3836.0], [169.0, 3836.0]]"
+text_outlier,node_0145,"Worl
+Worklisk Pass
+构
+构建并Worklist，将屏幕划分成很多tile，根据使用到
+某
+某个MaterialID的tile加到该MaterialID
+的V
+的Worklist里，作为下一步的索引l",suspicious long token or unbroken text,"[[3243.0, 3671.0], [3887.0, 3671.0], [3887.0, 3851.0], [3243.0, 3851.0]]"
+text_outlier,node_0146,"粒子常见属性
+Acceleration
+Attraction
+Camera
+Collision
+Color
+Lifetime
+Light
+Location
+Orbit
+Orientation
+Rotation
+Size
+Spawn
+Velocity",suspicious long token or unbroken text,"[[2169.0, 3679.0], [2445.0, 3679.0], [2445.0, 4326.0], [2169.0, 4326.0]]"
+text_outlier,node_0148,Surface Caching,suspicious long token or unbroken text,"[[4168.0, 3748.0], [4523.0, 3748.0], [4523.0, 3801.0], [4168.0, 3801.0]]"
+text_outlier,node_0152,"Material Batch
+Indirect Draw
+Texture Batch
+Virtual Texture
+Bindless Texture",suspicious long token or unbroken text,"[[2771.0, 3861.0], [3008.0, 3861.0], [3008.0, 4054.0], [2771.0, 4054.0]]"
+text_outlier,node_0154,"Shading Passes
+拿到几何和材质信息，对表面着色",suspicious long token or unbroken text,"[[3245.0, 3900.0], [3677.0, 3900.0], [3677.0, 3984.0], [3245.0, 3984.0]]"
+text_outlier,node_0157,"Shading Full
+Pixels with
+Screen Space
+Probes",suspicious long token or unbroken text,"[[4065.0, 3943.0], [4369.0, 3943.0], [4369.0, 4142.0], [4065.0, 4142.0]]"
+text_outlier,node_0160,"Reinhard Tone Mapping
+Filmic Tone Mapping
+ACES",suspicious long token or unbroken text,"[[373.0, 3984.0], [780.0, 3984.0], [780.0, 4127.0], [373.0, 4127.0]]"
+text_outlier,node_0163,"粒子数据类型
+Bill
+Billboard类型数据
+Mesh类型数据
+光束类型数据
+条带类型数据",suspicious long token or unbroken text,"[[1749.0, 4070.0], [2115.0, 4070.0], [2115.0, 4331.0], [1749.0, 4331.0]]"
+text_outlier,node_0165,"动画混合树
+Blend Tree
+LERP blend node
+additive blend node
+动画混合树的节点
+动画树的控制信号",suspicious long token or unbroken text,"[[6599.0, 4080.0], [7047.0, 4080.0], [7047.0, 4466.0], [6599.0, 4466.0]]"
+text_outlier,node_0168,"之前常见的GI算法
+Reflec
+Reflective Shadow Map
+Light Propag
+Light PropagationVolume
+Sparse Voxel Octree for Real-time Global Il
+al-time Global lllumination
+NG
+Voxelization Based Global llun
+ased Global llumination
+Screen Space Global Illumina
+e Global llumination
+Global Illumination
+Dynamic Diffuse Global lluminati
+Ray-tracing based Global Illuminatiol
+lobal llumination
+流程
+Setup",suspicious long token or unbroken text,"[[4084.0, 4114.0], [5173.0, 4114.0], [5173.0, 4724.0], [4084.0, 4724.0]]"
+text_outlier,node_0177,"GPU Driven
+en
+peline
+Render Pipeline",suspicious long token or unbroken text,"[[2803.0, 4425.0], [3222.0, 4425.0], [3222.0, 4538.0], [2803.0, 4538.0]]"
+text_outlier,node_0180,"游戏中的3D动画技术
+DoF(Degrees of Freedom)
+Rigid Hierarchical Animation
+Per-vertex Animation
+Morph Target Animation
+3D Skinned Animation
+基于物理的动画Physics-basedAnimation
+布娃娃系统Ragdoll
+布料与流体模拟
+IK(lnverse Kinematics)",suspicious long token or unbroken text,"[[5136.0, 4511.0], [5970.0, 4511.0], [5970.0, 5218.0], [5136.0, 5218.0]]"
+text_outlier,node_0206,Block Compression,suspicious long token or unbroken text,"[[2419.0, 5135.0], [2931.0, 5135.0], [2931.0, 5186.0], [2419.0, 5186.0]]"
+text_outlier,node_0211,"Ericsson Texture Compression
+Ericsson T",suspicious long token or unbroken text,"[[1526.0, 5295.0], [2342.0, 5295.0], [2342.0, 5351.0], [1526.0, 5351.0]]"
+text_outlier,node_0213,"实现
+蒙皮动画实现
+转换
+坐标空间转换
+结构
+生物的骨骼结构
+骨骼
+关节
+根骨骼
+绑定
+骨骼绑定
+姿势
+绑定姿势
+T-pose
+ose
+bose
+A-pose",suspicious long token or unbroken text,"[[4393.0, 5325.0], [4693.0, 5325.0], [4693.0, 6064.0], [4393.0, 6064.0]]"
+text_outlier,node_0217,"Pre-filtered Environment Map
+Brdf Lut
+Diffuse
+Irradiance Map",suspicious long token or unbroken text,"[[596.0, 5353.0], [1013.0, 5353.0], [1013.0, 5539.0], [596.0, 5539.0]]"
+text_outlier,node_0218,"动态BVH树
+排序与扫描SortandSweep
+排序与扫描：
+粗阶段",suspicious long token or unbroken text,"[[6190.0, 5392.0], [6644.0, 5392.0], [6644.0, 5546.0], [6190.0, 5546.0]]"
+text_outlier,node_0221,"动画捕捉
+Motion Capture",suspicious long token or unbroken text,"[[5193.0, 5413.0], [5464.0, 5413.0], [5464.0, 5500.0], [5193.0, 5500.0]]"
+text_outlier,node_0222,"tive Scalable Texture Compression
+Adaptive Scala",suspicious long token or unbroken text,"[[1399.0, 5428.0], [2475.0, 5428.0], [2475.0, 5481.0], [1399.0, 5481.0]]"
+text_outlier,node_0226,"游戏中的2D
+动画技术
+EN
+精灵动画
+Live2D
+2D Skinned Animation
+动画混合",suspicious long token or unbroken text,"[[5143.0, 5591.0], [5590.0, 5591.0], [5590.0, 6052.0], [5143.0, 6052.0]]"
+text_outlier,node_0229,"场景空间管理
+层次包围盒（BVH）
+二元空间分割树（BSPTrees）
+四叉树（Quad Tree）
+八叉树
+(Octree)
+场景图
+(Scene Graphs)
+KD树 (K-Dimensional Tree)",suspicious long token or unbroken text,"[[3701.0, 5657.0], [4283.0, 5657.0], [4283.0, 6171.0], [3701.0, 6171.0]]"
+text_outlier,node_0234,"部混合SkeletonMaskedBlending
+叠加混合AdditiveBlending",suspicious long token or unbroken text,"[[5846.0, 5771.0], [6575.0, 5771.0], [6575.0, 5891.0], [5846.0, 5891.0]]"
+text_outlier,node_0239,"Potential Visibility Set
+et",suspicious long token or unbroken text,"[[2646.0, 6030.0], [3107.0, 6030.0], [3107.0, 6069.0], [2646.0, 6069.0]]"
+text_outlier,node_0252,"GPU架构
+Immediate Mode Rendering
+Tile Based Rendering
+CCO
+Tile Based Deferred Rendering
+渲染",suspicious long token or unbroken text,"[[3182.0, 6322.0], [4191.0, 6322.0], [4191.0, 6934.0], [3182.0, 6934.0]]"
+text_outlier,node_0269,"静态刚体static
+动态刚体dynamic
+触发器(trigger)
+受控刚体kinematic
+刚体PhysicsActor",suspicious long token or unbroken text,"[[4772.0, 6608.0], [5245.0, 6608.0], [5245.0, 6883.0], [4772.0, 6883.0]]"
+text_outlier,node_0303,"Threadfork-join
+taroikjon",suspicious long token or unbroken text,"[[140.0, 7629.0], [580.0, 7629.0], [580.0, 7680.0], [140.0, 7680.0]]"
+text_outlier,node_0305,"Unreal并行框架
+Named Thread与Worker Thread
+Thread
+Name
+TaskGraph",suspicious long token or unbroken text,"[[1020.0, 7796.0], [1734.0, 7796.0], [1734.0, 8001.0], [1020.0, 8001.0]]"
+text_outlier,node_0306,"角色控制器
+与刚体动力学的差异
+基本组成
+与环境的碰撞
+自动阶跃（autostepping）
+坡度限制与强制滑坡
+更新大小
+推动物体
+移动平台",suspicious long token or unbroken text,"[[5259.0, 7802.0], [5681.0, 7802.0], [5681.0, 8267.0], [5259.0, 8267.0]]"
+text_outlier,node_0311,"PBD (Position Based Dynamics)
+自碰撞",suspicious long token or unbroken text,"[[6717.0, 7927.0], [7126.0, 7927.0], [7126.0, 8012.0], [6717.0, 8012.0]]"
+text_outlier,node_0351,"Machine Learning
+（机器学习：ML）",suspicious long token or unbroken text,"[[3523.0, 8983.0], [4007.0, 8983.0], [4007.0, 9122.0], [3523.0, 9122.0]]"
+text_outlier,node_0359,"Unity DOTS
+Unity ECS
+原型Archetype
+数据排布
+系统实现
+UnityC#任务系统
+原生容器
+安全性系统
+Burst编译器",suspicious long token or unbroken text,"[[171.0, 9210.0], [514.0, 9210.0], [514.0, 9692.0], [171.0, 9692.0]]"
+text_outlier,node_0370,"不同场景下的引擎数据
+引擎数据
+Runtime
+Storage
+Tools",suspicious long token or unbroken text,"[[2856.0, 9467.0], [3191.0, 9467.0], [3191.0, 9679.0], [2856.0, 9679.0]]"
+text_outlier,node_0375,"如何利用强化学习构建AI
+状态抽象
+长度固定的统计变量
+长度不固定的序列数据
+图像数据
+动作抽象
+奖励设置
+AlphaStar
+OpenAIFive",suspicious long token or unbroken text,"[[4108.0, 9613.0], [4476.0, 9613.0], [4476.0, 10046.0], [4108.0, 10046.0]]"
+text_outlier,node_0381,"软件架构
+构
+one架构
+Stand-alone架构
+架构
+In Game架构
+Editor
+Play in Editor",suspicious long token or unbroken text,"[[2874.0, 9827.0], [3225.0, 9827.0], [3225.0, 10123.0], [2874.0, 10123.0]]"
+text_outlier,node_0382,"性能敏感编程
+减少顺序依赖
+false sharing
+分支预测
+基于存在性处理",suspicious long token or unbroken text,"[[176.0, 9980.0], [490.0, 9980.0], [490.0, 10258.0], [176.0, 10258.0]]"
+text_outlier,node_0384,"Monte Carlo Tree Search
+（蒙特卡洛树搜索；MCTS）",suspicious long token or unbroken text,"[[4862.0, 9986.0], [5396.0, 9986.0], [5396.0, 10091.0], [4862.0, 10091.0]]"
+text_outlier,node_0385,"序列化与反序列化
+基础command类型
+Add
+Delete
+Update",suspicious long token or unbroken text,"[[2467.0, 9990.0], [2771.0, 9990.0], [2771.0, 10247.0], [2467.0, 10247.0]]"
+text_outlier,node_0388,"网络设计
+MLP
+CNN
+LSTM
+Transformer",suspicious long token or unbroken text,"[[4170.0, 10089.0], [4365.0, 10089.0], [4365.0, 10285.0], [4170.0, 10285.0]]"
+text_outlier,node_0396,"EN
+思考
+选择
+Tree Policy
+UCB公式
+平衡开发与探索问题",suspicious long token or unbroken text,"[[4815.0, 10296.0], [5368.0, 10296.0], [5368.0, 10731.0], [4815.0, 10731.0]]"
+text_outlier,node_0398,"DefaultPolicy
+最保守的选择
+最佳的选择
+最鲁棒的选择
+最激进的选择",suspicious long token or unbroken text,"[[5280.0, 10320.0], [5490.0, 10320.0], [5490.0, 10549.0], [5280.0, 10549.0]]"
+text_outlier,node_0402,"Plugin Manager
+Interfaces
+SDK
+版本控制",suspicious long token or unbroken text,"[[2745.0, 10434.0], [3021.0, 10434.0], [3021.0, 10646.0], [2745.0, 10646.0]]"
+text_outlier,node_0404,"协同编辑
+资产拆分
+按逻辑分层
+按位置分块
+One File
+One File Per Actor",suspicious long token or unbroken text,"[[3107.0, 10496.0], [3486.0, 10496.0], [3486.0, 10854.0], [3107.0, 10854.0]]"
+text_outlier,node_0412,"拓展
+仿真+评估
+Rollout Policy
+评估函数
+反向传播",suspicious long token or unbroken text,"[[5036.0, 10740.0], [5254.0, 10740.0], [5254.0, 10954.0], [5036.0, 10954.0]]"
+text_outlier,node_0414,"Hierarchical Tasks Network
+（分层任务网络：HTN）",suspicious long token or unbroken text,"[[4012.0, 10774.0], [4594.0, 10774.0], [4594.0, 10867.0], [4012.0, 10867.0]]"
+text_outlier,node_0429,"Goal-Orientated Action Planner
+（目标导向的动作规划器；GOAP）",suspicious long token or unbroken text,"[[4785.0, 11132.0], [5452.0, 11132.0], [5452.0, 11231.0], [4785.0, 11231.0]]"
+text_outlier,node_0438,稀疏体素八叉树SparseVoxelOctree,suspicious long token or unbroken text,"[[6254.0, 11321.0], [6704.0, 11321.0], [6704.0, 11357.0], [6254.0, 11357.0]]"
+text_outlier,node_0470,"GIN
+RPC实现通信的基本原理
+1.客户端发起函数调用（Clientfunctions）
+2.客户端通过ClientStub进行消息的封装（序列化）及传输
+3.Server端通过ServerStub(或者叫Skeleton)进行解码
+并找到对应的函数进行相关处理，以及返回处理结果
+4.ClientStub接收消息（反序列化），得到结果",suspicious long token or unbroken text,"[[163.0, 12210.0], [862.0, 12210.0], [862.0, 12686.0], [163.0, 12686.0]]"
+text_outlier,node_0472,"流程的阶段拆分
+Authorized
+eg.开火",suspicious long token or unbroken text,"[[2685.0, 12300.0], [2976.0, 12300.0], [2976.0, 12471.0], [2685.0, 12471.0]]"
+text_outlier,node_0476,"Bucket
+Synchronization",suspicious long token or unbroken text,"[[945.0, 12452.0], [1281.0, 12452.0], [1281.0, 12546.0], [945.0, 12546.0]]"
+text_outlier,node_0485,"从开火到命中的流程
+射击指令传输的网络状况
+Hitscan
+Hitscan Weapons
+瞬时完
+瞬时完成射击操作
+Projectil
+ProjectileWeapons
+子弹有
+子弹有弹道距离，重力等因素的影响",suspicious long token or unbroken text,"[[4641.0, 12711.0], [5194.0, 12711.0], [5194.0, 12962.0], [4641.0, 12962.0]]"
+text_outlier,node_0487,"Deterministic
+Lockstep",suspicious long token or unbroken text,"[[1546.0, 12731.0], [1824.0, 12731.0], [1824.0, 12825.0], [1546.0, 12825.0]]"
+text_outlier,node_0490,"系统举例
+大厅系统
+用户管理系统
+交易系统
+社交系统
+匹配系统
+数据存储举例
+Mysql
+Mongo
+Redis",suspicious long token or unbroken text,"[[5198.0, 12802.0], [5539.0, 12802.0], [5539.0, 13485.0], [5198.0, 13485.0]]"
+text_outlier,node_0514,"发现
+服务发现
+Etcd
+Zookeeper",suspicious long token or unbroken text,"[[5794.0, 13457.0], [6044.0, 13457.0], [6044.0, 13619.0], [5794.0, 13619.0]]"
+text_outlier,node_0521,"延迟补偿的问题
+拐角问题
+拐角
+进入拐角问题
+Peekerandholder问题（探头打人）",suspicious long token or unbroken text,"[[4758.0, 13612.0], [5282.0, 13612.0], [5282.0, 13806.0], [4758.0, 13806.0]]"
+text_outlier,node_0547,"BOOMIHG
+TECH
+GINE",suspicious long token or unbroken text,"[[364.0, 14471.0], [1058.0, 14471.0], [1058.0, 14903.0], [364.0, 14903.0]]"
+text_outlier,node_0550,"PICCOLO
+ENGINE",suspicious long token or unbroken text,"[[3487.0, 14514.0], [4056.0, 14514.0], [4056.0, 14681.0], [3487.0, 14681.0]]"
+weak_edge,node_0004,"Spatial Probe Filtering
+creenSpaceProbe
+Filterwithin theneighborScreenSpaceProbe
+lgnorenormaldifferences,Onlydepthweighting
+Onlydepthweighting
+ected neighbor ray hits
+UseAngleerrorfromreprojectedneighborrayh
+Clampneighborhitdistancetoourown
+toour own","parent=node_0001, score=0.357","[[4181.0, 169.0], [4884.0, 169.0], [4884.0, 386.0], [4181.0, 386.0]]"
+weak_edge,node_0012,"Sampling
+Important Sampling
+PDF计算
+Incoming Radiance
+Radiance
+Last frame' s Screen Space
+ame’sScreenSpaceProbe‘sradiance
+Fallbackto theWorldSpac
+cktotheWorldSpaceProbes
+BRDF","parent=node_0001, score=0.447","[[4417.0, 513.0], [5107.0, 513.0], [5107.0, 754.0], [4417.0, 754.0]]"
+weak_edge,node_0210,"动画内容制作
+DCC","parent=node_0207, score=0.527","[[5139.0, 5267.0], [5389.0, 5267.0], [5389.0, 5400.0], [5139.0, 5400.0]]"
+weak_edge,node_0221,"动画捕捉
+Motion Capture","parent=node_0225, score=0.536","[[5193.0, 5413.0], [5464.0, 5413.0], [5464.0, 5500.0], [5193.0, 5500.0]]"
+weak_edge,node_0257,"专山
+动画技术基础
+术基础","parent=node_0229, score=0.511","[[4380.0, 6360.0], [4770.0, 6360.0], [4770.0, 6426.0], [4380.0, 6426.0]]"
+weak_edge,node_0283,动画系统,"parent=node_0252, score=0.460","[[4142.0, 6956.0], [4646.0, 6956.0], [4646.0, 7059.0], [4142.0, 7059.0]]"
+weak_edge,node_0294,"Engine
+ENGIN
+音效
+音
+复杂的游戏性及
+游戏性及其基本要素","parent=node_0304, score=0.541","[[3780.0, 7341.0], [5158.0, 7341.0], [5158.0, 8541.0], [3780.0, 8541.0]]"
+weak_edge,node_0295,"Gal
+iame","parent=node_0313, score=0.473","[[2944.0, 7347.0], [3687.0, 7347.0], [3687.0, 7578.0], [2944.0, 7578.0]]"
+weak_edge,node_0306,"角色控制器
+与刚体动力学的差异
+基本组成
+与环境的碰撞
+自动阶跃（autostepping）
+坡度限制与强制滑坡
+更新大小
+推动物体
+移动平台","parent=node_0294, score=0.543","[[5259.0, 7802.0], [5681.0, 7802.0], [5681.0, 8267.0], [5259.0, 8267.0]]"
+weak_edge,node_0337,如何编码游戏逻辑,"parent=node_0306, score=0.534","[[5807.0, 8666.0], [6195.0, 8666.0], [6195.0, 8706.0], [5807.0, 8706.0]]"
+weak_edge,node_0341,事件机制,"parent=node_0353, score=0.512","[[4710.0, 8743.0], [4903.0, 8743.0], [4903.0, 8790.0], [4710.0, 8790.0]]"
+weak_edge,node_0377,"鲁棒性设计
+Command模式
+定义
+UID","parent=node_0360, score=0.461","[[2413.0, 9711.0], [2736.0, 9711.0], [2736.0, 9971.0], [2413.0, 9971.0]]"
+weak_edge,node_0550,"PICCOLO
+ENGINE","parent=node_0549, score=0.433","[[3487.0, 14514.0], [4056.0, 14514.0], [4056.0, 14681.0], [3487.0, 14681.0]]"
+weak_edge,node_0551,"LME
+t0","parent=node_0552, score=0.515","[[7278.0, 14520.0], [7328.0, 14520.0], [7328.0, 14559.0], [7278.0, 14559.0]]"

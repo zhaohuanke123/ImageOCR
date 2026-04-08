@@ -1,0 +1,8354 @@
+[
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0065",
+    "text": "World Probe ray must skip the interpolation footprint\ns  t    n   s\nReprojectScreenProberayintersectionwithWorldProbesphere",
+    "reason": "confidence=0.834",
+    "bbox": [
+      [
+        4667.0,
+        1817.0
+      ],
+      [
+        5578.0,
+        1817.0
+      ],
+      [
+        5578.0,
+        1956.0
+      ],
+      [
+        4667.0,
+        1956.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0235",
+    "text": "（基本概念）",
+    "reason": "confidence=0.861",
+    "bbox": [
+      [
+        818.0,
+        5777.0
+      ],
+      [
+        1056.0,
+        5777.0
+      ],
+      [
+        1056.0,
+        5816.0
+      ],
+      [
+        818.0,
+        5816.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0243",
+    "text": "LERP\nLCNF\n混合权重的计算\n混合时间轴对齐",
+    "reason": "confidence=0.882",
+    "bbox": [
+      [
+        5227.0,
+        6099.0
+      ],
+      [
+        5520.0,
+        6099.0
+      ],
+      [
+        5520.0,
+        6263.0
+      ],
+      [
+        5227.0,
+        6263.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0244",
+    "text": "姿势\n骨骼姿势\n月航安",
+    "reason": "confidence=0.872",
+    "bbox": [
+      [
+        4515.0,
+        6101.0
+      ],
+      [
+        4684.0,
+        6101.0
+      ],
+      [
+        4684.0,
+        6152.0
+      ],
+      [
+        4515.0,
+        6152.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0257",
+    "text": "专山\n动画技术基础\n术基础",
+    "reason": "confidence=0.886",
+    "bbox": [
+      [
+        4380.0,
+        6360.0
+      ],
+      [
+        4770.0,
+        6360.0
+      ],
+      [
+        4770.0,
+        6426.0
+      ],
+      [
+        4380.0,
+        6426.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0260",
+    "text": "GPU渲染管线",
+    "reason": "confidence=0.881",
+    "bbox": [
+      [
+        2713.0,
+        6381.0
+      ],
+      [
+        3120.0,
+        6381.0
+      ],
+      [
+        3120.0,
+        6433.0
+      ],
+      [
+        2713.0,
+        6433.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0295",
+    "text": "Gal\niame",
+    "reason": "confidence=0.881",
+    "bbox": [
+      [
+        2944.0,
+        7347.0
+      ],
+      [
+        3687.0,
+        7347.0
+      ],
+      [
+        3687.0,
+        7578.0
+      ],
+      [
+        2944.0,
+        7578.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0303",
+    "text": "Threadfork-join\ntaroikjon",
+    "reason": "confidence=0.840",
+    "bbox": [
+      [
+        140.0,
+        7629.0
+      ],
+      [
+        580.0,
+        7629.0
+      ],
+      [
+        580.0,
+        7680.0
+      ],
+      [
+        140.0,
+        7680.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0304",
+    "text": "C",
+    "reason": "confidence=0.792",
+    "bbox": [
+      [
+        3488.0,
+        7728.0
+      ],
+      [
+        3699.0,
+        7728.0
+      ],
+      [
+        3699.0,
+        7925.0
+      ],
+      [
+        3488.0,
+        7925.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0324",
+    "text": "(GUI)",
+    "reason": "confidence=0.863",
+    "bbox": [
+      [
+        2876.0,
+        8212.0
+      ],
+      [
+        3079.0,
+        8212.0
+      ],
+      [
+        3079.0,
+        8272.0
+      ],
+      [
+        2876.0,
+        8272.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0326",
+    "text": "NG",
+    "reason": "confidence=0.650",
+    "bbox": [
+      [
+        6989.0,
+        8329.0
+      ],
+      [
+        7156.0,
+        8329.0
+      ],
+      [
+        7156.0,
+        8473.0
+      ],
+      [
+        6989.0,
+        8473.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0471",
+    "text": "帧同步\nNG",
+    "reason": "confidence=0.891",
+    "bbox": [
+      [
+        1590.0,
+        12246.0
+      ],
+      [
+        1791.0,
+        12246.0
+      ],
+      [
+        1791.0,
+        12525.0
+      ],
+      [
+        1590.0,
+        12525.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0502",
+    "text": "敌人的位置\n故入的位直\n收入位：\n你看到的敌人的位置\n服务器中敌人的位置\n敌人客户端真实的位置",
+    "reason": "confidence=0.887",
+    "bbox": [
+      [
+        4601.0,
+        13114.0
+      ],
+      [
+        4894.0,
+        13114.0
+      ],
+      [
+        4894.0,
+        13299.0
+      ],
+      [
+        4601.0,
+        13299.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "low_confidence_node",
+    "node_id": "node_0551",
+    "text": "LME\nt0",
+    "reason": "confidence=0.769",
+    "bbox": [
+      [
+        7278.0,
+        14520.0
+      ],
+      [
+        7328.0,
+        14520.0
+      ],
+      [
+        7328.0,
+        14559.0
+      ],
+      [
+        7278.0,
+        14559.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0015",
+    "text": "用于描述光线穿过一个材质后的衰减作用",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        141.0,
+        744.0
+      ],
+      [
+        587.0,
+        744.0
+      ],
+      [
+        587.0,
+        771.0
+      ],
+      [
+        141.0,
+        771.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0020",
+    "text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        94.0,
+        836.0
+      ],
+      [
+        666.0,
+        836.0
+      ],
+      [
+        666.0,
+        951.0
+      ],
+      [
+        94.0,
+        951.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0028",
+    "text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        165.0,
+        1031.0
+      ],
+      [
+        592.0,
+        1031.0
+      ],
+      [
+        592.0,
+        1159.0
+      ],
+      [
+        165.0,
+        1159.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0069",
+    "text": "亮度（Luminance）",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        127.0,
+        1918.0
+      ],
+      [
+        354.0,
+        1918.0
+      ],
+      [
+        354.0,
+        1944.0
+      ],
+      [
+        127.0,
+        1944.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0090",
+    "text": "色温是指绝对黑体从绝对零度（-273℃）开始加温后所呈现的颜色。\n色温是影响光源颜色的重要属性，是个可选属性，当启用色温时，\n色温也参与了光源颜色的组成部分。\n真实世界环境中，一天不同时段的环境色温也会动态发生变化：\nENG\n认为物体表面由很多凹凸不平的微小镜面组成\n这些具有不同大小、方向的微表面在对入\n射光线进行反射时产生了不同的反射效果\n法线分布函数\n几何遮蔽函数\n菲涅尔方程\n迪士尼原则",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        112.0,
+        2376.0
+      ],
+      [
+        861.0,
+        2376.0
+      ],
+      [
+        861.0,
+        3236.0
+      ],
+      [
+        112.0,
+        3236.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0129",
+    "text": "应使用直观的参数，而不是物理类的晦涩参数\n参数应当尽可能的少\n参数在其合理范围内应该为0到1\n允许参数在有意义时超出正常的合理范围\n所有参数组合应当尽可能健壮和合理",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        242.0,
+        3264.0
+      ],
+      [
+        741.0,
+        3264.0
+      ],
+      [
+        741.0,
+        3473.0
+      ],
+      [
+        242.0,
+        3473.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0143",
+    "text": "基于物理的渲染（Physicallybased rendering）(PBR)\n意味着表面接近光线在真实世界的表现方式，\n而不是我们直观以为的应有方式。\n相较于完全依赖美术师直觉来设置参数的着色工作流程，\n遵守PBR原则的材质更准确，并且通常看起来更自然。",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        169.0,
+        3574.0
+      ],
+      [
+        1033.0,
+        3574.0
+      ],
+      [
+        1033.0,
+        3836.0
+      ],
+      [
+        169.0,
+        3836.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0160",
+    "text": "Reinhard Tone Mapping\nFilmic Tone Mapping\nACES",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        373.0,
+        3984.0
+      ],
+      [
+        780.0,
+        3984.0
+      ],
+      [
+        780.0,
+        4127.0
+      ],
+      [
+        373.0,
+        4127.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0170",
+    "text": "ACES是一个开放的色彩管理和交换系统\n是编码和交换数据的规则集合，\n它也包含了一系列的开发工具，\n将数据规格集成到软硬件中",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        272.0,
+        4148.0
+      ],
+      [
+        741.0,
+        4148.0
+      ],
+      [
+        741.0,
+        4314.0
+      ],
+      [
+        272.0,
+        4314.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0176",
+    "text": "抗锯齿\n超级采样抗锯齿\n优点：往往能得到最佳的效果\n缺点：它会带来巨大的性能消耗\n多重采样抗锯齿\n图像保真度和性能之间找到最佳的平衡点\n快速近似抗锯齿\n优点：",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        180.0,
+        4417.0
+      ],
+      [
+        759.0,
+        4417.0
+      ],
+      [
+        759.0,
+        4811.0
+      ],
+      [
+        180.0,
+        4811.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0204",
+    "text": "BRDF模型\nLambert模型\nPhong模型\nBlinn-Phong模型\nCook-Torrance模型",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        140.0,
+        5093.0
+      ],
+      [
+        542.0,
+        5093.0
+      ],
+      [
+        542.0,
+        5389.0
+      ],
+      [
+        140.0,
+        5389.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0254",
+    "text": "数学计算库\n数据结构与容器\n内存管理",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        137.0,
+        6343.0
+      ],
+      [
+        484.0,
+        6343.0
+      ],
+      [
+        484.0,
+        6533.0
+      ],
+      [
+        137.0,
+        6533.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0277",
+    "text": "运行时资源管理\n虚拟文件系统\nHandle",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        131.0,
+        6827.0
+      ],
+      [
+        422.0,
+        6827.0
+      ],
+      [
+        422.0,
+        6994.0
+      ],
+      [
+        131.0,
+        6994.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0303",
+    "text": "Threadfork-join\ntaroikjon",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        140.0,
+        7629.0
+      ],
+      [
+        580.0,
+        7629.0
+      ],
+      [
+        580.0,
+        7680.0
+      ],
+      [
+        140.0,
+        7680.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0310",
+    "text": "协程介绍\n协程与线程的对比\n协程实现方式\n有栈协程\n无栈协程",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        142.0,
+        7907.0
+      ],
+      [
+        454.0,
+        7907.0
+      ],
+      [
+        454.0,
+        8153.0
+      ],
+      [
+        142.0,
+        8153.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0322",
+    "text": "Job调度\nJob队列\n全局队列\n线程局部队列\n两种访问方式\n先进先出\n后进先出\nJob依赖\nJob Stealing",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        195.0,
+        8208.0
+      ],
+      [
+        435.0,
+        8208.0
+      ],
+      [
+        435.0,
+        8646.0
+      ],
+      [
+        195.0,
+        8646.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0335",
+    "text": "GINE\n回顾：基于组件的设计",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        0.0,
+        8627.0
+      ],
+      [
+        626.0,
+        8627.0
+      ],
+      [
+        626.0,
+        8970.0
+      ],
+      [
+        0.0,
+        8970.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0359",
+    "text": "Unity DOTS\nUnity ECS\n原型Archetype\n数据排布\n系统实现\nUnityC#任务系统\n原生容器\n安全性系统\nBurst编译器",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        171.0,
+        9210.0
+      ],
+      [
+        514.0,
+        9210.0
+      ],
+      [
+        514.0,
+        9692.0
+      ],
+      [
+        171.0,
+        9692.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0401",
+    "text": "TCP协议\n面向连接\n可靠、有序\n流控\n拥塞控制",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        169.0,
+        10421.0
+      ],
+      [
+        332.0,
+        10421.0
+      ],
+      [
+        332.0,
+        10665.0
+      ],
+      [
+        169.0,
+        10665.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0426",
+    "text": "网络时间协议（NTP）\n四个对应时间戳以及误差调整\n1.客户端发送时间戳\n2.服务端接收时间戳\n3.服务端发送返回时间戳\n4.客户端接收时间戳\nNTP在计算传输时延的时候\n默认上行延迟和下行延迟相等",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        105.0,
+        11064.0
+      ],
+      [
+        546.0,
+        11064.0
+      ],
+      [
+        546.0,
+        11458.0
+      ],
+      [
+        105.0,
+        11458.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0443",
+    "text": "基于流的消除高阶的时间同步协议\n游戏开始的时候直接进行类似NTP的对时操作\n利用多次对时消除误差过大项来达到时间差校准",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        105.0,
+        11544.0
+      ],
+      [
+        726.0,
+        11544.0
+      ],
+      [
+        726.0,
+        11693.0
+      ],
+      [
+        105.0,
+        11693.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0455",
+    "text": "NetMessage\n传统的消息机制\n通常是异步通信",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        195.0,
+        11805.0
+      ],
+      [
+        507.0,
+        11805.0
+      ],
+      [
+        507.0,
+        11946.0
+      ],
+      [
+        195.0,
+        11946.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0463",
+    "text": "Socket编程所面临的诸多问题\n消息格式不统\n封包和解包\n消息分发处理\n不是一种自然的编程模型",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        114.0,
+        12088.0
+      ],
+      [
+        568.0,
+        12088.0
+      ],
+      [
+        568.0,
+        12323.0
+      ],
+      [
+        114.0,
+        12323.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0506",
+    "text": "掉线与重连问题",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        176.0,
+        13254.0
+      ],
+      [
+        467.0,
+        13254.0
+      ],
+      [
+        467.0,
+        13292.0
+      ],
+      [
+        176.0,
+        13292.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0525",
+    "text": "重连的问题：耗时",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        227.0,
+        13646.0
+      ],
+      [
+        495.0,
+        13646.0
+      ],
+      [
+        495.0,
+        13684.0
+      ],
+      [
+        227.0,
+        13684.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0531",
+    "text": "重连的优化",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        227.0,
+        13766.0
+      ],
+      [
+        394.0,
+        13766.0
+      ],
+      [
+        394.0,
+        13800.0
+      ],
+      [
+        227.0,
+        13800.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "orphan_root",
+    "node_id": "node_0552",
+    "text": "PICCOLO官方网站",
+    "reason": "node has no parent",
+    "bbox": [
+      [
+        6547.0,
+        14816.0
+      ],
+      [
+        6905.0,
+        14816.0
+      ],
+      [
+        6905.0,
+        14854.0
+      ],
+      [
+        6547.0,
+        14854.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0000",
+    "text": "NGIN\nGlobalSDFcan'tsamplesurfacecache\nMergeallcardsintoglobalclipmapscenteredaround thecamera\nstructure\nRadiance per 6 directions per voxel\nSample and interpolate 3 directions using normal\nVisibilityBuffer\nTrackobjectupdatesandsetmodifiedbricksonGPU\nVoxelizemodifiedbricksbytracingrays\n6 rays per voxel\nCullobjectsto4^3bricks\nOne thread per mesh SDF per trace\nCachehitsinavisibilitybuffer\nHitT I Mesh Index\nInterlockedMinwritehit tovisibilitybuffer\nUpdating",
+    "reason": "area=814680.0",
+    "bbox": [
+      [
+        6629.0,
+        19.0
+      ],
+      [
+        7505.0,
+        19.0
+      ],
+      [
+        7505.0,
+        949.0
+      ],
+      [
+        6629.0,
+        949.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0002",
+    "text": "Mindmap\nPiccolo社区 https:/ /www.piccoloengine.com/\nPiccolo\n缺点场景复杂度和光源数量相关\n会有大量的overdraw\nDistance Field Shaodw",
+    "reason": "area=1066518.0",
+    "bbox": [
+      [
+        1548.0,
+        149.0
+      ],
+      [
+        3285.0,
+        149.0
+      ],
+      [
+        3285.0,
+        763.0
+      ],
+      [
+        1548.0,
+        763.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0005",
+    "text": "GAMES104\n4\nGAMES104官网\nhttps://games104.boomingtech.com/\nINE\n半透明渲染\n支持MSAA和半透明渲染\n带宽消耗小",
+    "reason": "area=1346826.0",
+    "bbox": [
+      [
+        135.0,
+        171.0
+      ],
+      [
+        1806.0,
+        171.0
+      ],
+      [
+        1806.0,
+        977.0
+      ],
+      [
+        135.0,
+        977.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0010",
+    "text": "4x4hemisphericalprobeper4x4tile\nJitterprobeplacementandraydire\nTrace in last frame’ s Voxel Lighting\nLigting Gather\nBilinearinterpolationof 4probes\nPlaneweighting\nVisibility weighting using probe h\nCovert to SH\nShading pixels on surface cache",
+    "reason": "area=169511.0",
+    "bbox": [
+      [
+        5903.0,
+        321.0
+      ],
+      [
+        6406.0,
+        321.0
+      ],
+      [
+        6406.0,
+        658.0
+      ],
+      [
+        5903.0,
+        658.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0012",
+    "text": "Sampling\nImportant Sampling\nPDF计算\nIncoming Radiance\nRadiance\nLast frame' s Screen Space\name’sScreenSpaceProbe‘sradiance\nFallbackto theWorldSpac\ncktotheWorldSpaceProbes\nBRDF",
+    "reason": "area=166290.0",
+    "bbox": [
+      [
+        4417.0,
+        513.0
+      ],
+      [
+        5107.0,
+        513.0
+      ],
+      [
+        5107.0,
+        754.0
+      ],
+      [
+        4417.0,
+        754.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0036",
+    "text": "ENGINE\n离线生成的，并不知道有这些变形\n仅投射刚性网格体的阴影",
+    "reason": "area=327474.0",
+    "bbox": [
+      [
+        6779.0,
+        1180.0
+      ],
+      [
+        7570.0,
+        1180.0
+      ],
+      [
+        7570.0,
+        1594.0
+      ],
+      [
+        6779.0,
+        1594.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0051",
+    "text": "Markedworldprobesforinterpolation\nMarked world\nReuse traces from last frame\nReuse traces f\nAllocatetracesfornewprobes\nRe-trace a subset of cache hits to propagate lighting changes\nRe-trace a sub\nImportance Sampling\nAccumulateBF\nAccumulateBRDFfromScreenProbes\nSupersample near camera\nSpatial filtering\nReuses probe\nReusesprobedepthforocclusiontest\nRay Connecting\nWorld Probe ra\nScreen Probe\nReprojectScre",
+    "reason": "area=474012.0",
+    "bbox": [
+      [
+        4631.0,
+        1389.0
+      ],
+      [
+        5467.0,
+        1389.0
+      ],
+      [
+        5467.0,
+        1956.0
+      ],
+      [
+        4631.0,
+        1956.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0061",
+    "text": "全局距离场是分辨率较低的距离场，跟随\n摄像机的同时，在关卡中使用有向距\n离场遮蔽。这会创建每个Object网格体距离场\n的缓存，然后将它们合成到围绕摄像机的\n若干体积纹理中，称为裁剪图。由于只有新\n的可见区域或受到场景修改影响\n的可见区域才需要更新，合成过程不会有太多消耗。",
+    "reason": "area=174585.0",
+    "bbox": [
+      [
+        6651.0,
+        1637.0
+      ],
+      [
+        7216.0,
+        1637.0
+      ],
+      [
+        7216.0,
+        1946.0
+      ],
+      [
+        6651.0,
+        1946.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0062",
+    "text": "在追踪光线时，通过追踪经过遮挡物\n最近的光线就可以计算\n出近似的锥体交叉点，而不产生额\n外成本。这种近似法可以利用\n这种近似法可以利用\n距离场来实现非常柔和的\n区域阴影和天空遮蔽。\n这个属性是距离场环境光遮\n蔽的关键，因为少量的锥体\n即可为接收器点的整个半\n出柔和的可见性。",
+    "reason": "area=151931.0",
+    "bbox": [
+      [
+        5807.0,
+        1665.0
+      ],
+      [
+        6210.0,
+        1665.0
+      ],
+      [
+        6210.0,
+        2042.0
+      ],
+      [
+        5807.0,
+        2042.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0081",
+    "text": "参与介质中的粒子本身会吸收光能，转换成其\n身会吸收光能，转换成其他形式的能量，这样在传播路径上的光就会衰减\n光遇到粒子时，粒子会分散光的传播方向，因此也会减弱传播路径上的光\n出散射，即光遇到粒子时，粒子会分\n番路径上散射到当前传播路径上的现象，这会加强当前路径上的光的能量\n入散射，从其他传播路径上散射到当前传播\n粒子本身是发光的，这会加强传播路径上的光",
+    "reason": "area=188416.0",
+    "bbox": [
+      [
+        1299.0,
+        2162.0
+      ],
+      [
+        2323.0,
+        2162.0
+      ],
+      [
+        2323.0,
+        2346.0
+      ],
+      [
+        1299.0,
+        2346.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0086",
+    "text": "动画轨道（track）数据之间的差别\n关节动画数据之间的差别\nDoF缩减\n关键帧\n关键帧提取\n浮点数压缩\n四元数压缩\n误差累积\n精读衡量\n误差补偿",
+    "reason": "area=496249.0",
+    "bbox": [
+      [
+        6833.0,
+        2269.0
+      ],
+      [
+        7480.0,
+        2269.0
+      ],
+      [
+        7480.0,
+        3036.0
+      ],
+      [
+        6833.0,
+        3036.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0105",
+    "text": "关节姿势\n旋转Orientation\n位置Position\n缩放Scale\n仿射矩阵\n局部空间到物体空间",
+    "reason": "area=188032.0",
+    "bbox": [
+      [
+        5400.0,
+        2649.0
+      ],
+      [
+        5816.0,
+        2649.0
+      ],
+      [
+        5816.0,
+        3101.0
+      ],
+      [
+        5400.0,
+        3101.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0114",
+    "text": "Fixtexelbudgetperframe(512x512)\nSort by distance to camera\nand GPU feedback\nCopy card capture to surface\ncache and compress\nCardcapture分瓣率\n根据cardbounds最大extent投影\n到屏幕像素的长度决定，\n从8到1024，不一定是正方形，\n根据card的bounds长宽比确定",
+    "reason": "area=194732.0",
+    "bbox": [
+      [
+        4922.0,
+        2884.0
+      ],
+      [
+        5469.0,
+        2884.0
+      ],
+      [
+        5469.0,
+        3240.0
+      ],
+      [
+        4922.0,
+        3240.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0116",
+    "text": "阴影贴图光线追踪\n光线追踪\n一种结合虚拟阴影贴图的采样算\n虚拟阴影贴图的采样算法，能生成\n的柔和阴影和接触硬阴影。对象投\n阴影比近处阴影拥有更柔和的效果\n射的远处阴影比近处阴影拥有更\nNanite Meshe\nBuild Process\nGroup\nMerge\nSimplify\nSplit",
+    "reason": "area=372060.0",
+    "bbox": [
+      [
+        2910.0,
+        2921.0
+      ],
+      [
+        3705.0,
+        2921.0
+      ],
+      [
+        3705.0,
+        3389.0
+      ],
+      [
+        2910.0,
+        3389.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0139",
+    "text": "面部动画\n面部编码系统（FACS）\nAction Unit\nKey Pose Blending\nMorph Target Animation\nUV Texture Facial Animation\nMuscle Model Animation",
+    "reason": "area=297891.0",
+    "bbox": [
+      [
+        6798.0,
+        3484.0
+      ],
+      [
+        7447.0,
+        3484.0
+      ],
+      [
+        7447.0,
+        3943.0
+      ],
+      [
+        6798.0,
+        3943.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0143",
+    "text": "基于物理的渲染（Physicallybased rendering）(PBR)\n意味着表面接近光线在真实世界的表现方式，\n而不是我们直观以为的应有方式。\n相较于完全依赖美术师直觉来设置参数的着色工作流程，\n遵守PBR原则的材质更准确，并且通常看起来更自然。",
+    "reason": "area=226368.0",
+    "bbox": [
+      [
+        169.0,
+        3574.0
+      ],
+      [
+        1033.0,
+        3574.0
+      ],
+      [
+        1033.0,
+        3836.0
+      ],
+      [
+        169.0,
+        3836.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0169",
+    "text": "中的顺序依赖\n万向节死锁\n死锁\n欧拉角的缺点\n的缺点\n衣赖\n顺序依赖\n节死锁\n难以插值、组合等\n四元数\n2D旋转与复数\n四元数的定义\n欧拉角到四元数的转换\n四元数进行旋转\n四元数到旋转矩阵的转换\n给定旋转轴的四元数旋转",
+    "reason": "area=341850.0",
+    "bbox": [
+      [
+        5737.0,
+        4116.0
+      ],
+      [
+        6167.0,
+        4116.0
+      ],
+      [
+        6167.0,
+        4911.0
+      ],
+      [
+        5737.0,
+        4911.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0189",
+    "text": "是低端PC最佳的抗锯齿方案.它对GPU的要求不是很高\n因为它直接平滑屏幕图像而不需要考虑到游戏中的3D模型\n缺点：边缘和纹理会变得有点模糊\n时间性抗锯齿",
+    "reason": "area=121760.0",
+    "bbox": [
+      [
+        244.0,
+        4781.0
+      ],
+      [
+        1005.0,
+        4781.0
+      ],
+      [
+        1005.0,
+        4941.0
+      ],
+      [
+        244.0,
+        4941.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0215",
+    "text": "ENGIN\n贴图压缩\n剪\n可见性裁剪\n视锥裁剪",
+    "reason": "area=331639.0",
+    "bbox": [
+      [
+        2797.0,
+        5334.0
+      ],
+      [
+        3308.0,
+        5334.0
+      ],
+      [
+        3308.0,
+        5983.0
+      ],
+      [
+        2797.0,
+        5983.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0237",
+    "text": "万物皆GameObject\n动态物\n静态物\n环境\n其它",
+    "reason": "area=187264.0",
+    "bbox": [
+      [
+        594.0,
+        5953.0
+      ],
+      [
+        1298.0,
+        5953.0
+      ],
+      [
+        1298.0,
+        6219.0
+      ],
+      [
+        594.0,
+        6219.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0241",
+    "text": "碰撞解决\n惩罚力法\n求解速度约束\n拉格朗日力学\n碰撞约束\n迭代求解\n求解位置约束",
+    "reason": "area=126880.0",
+    "bbox": [
+      [
+        7068.0,
+        6079.0
+      ],
+      [
+        7373.0,
+        6079.0
+      ],
+      [
+        7373.0,
+        6495.0
+      ],
+      [
+        7068.0,
+        6495.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0269",
+    "text": "静态刚体static\n动态刚体dynamic\n触发器(trigger)\n受控刚体kinematic\n刚体PhysicsActor",
+    "reason": "area=130075.0",
+    "bbox": [
+      [
+        4772.0,
+        6608.0
+      ],
+      [
+        5245.0,
+        6608.0
+      ],
+      [
+        5245.0,
+        6883.0
+      ],
+      [
+        4772.0,
+        6883.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0270",
+    "text": "破坏模拟\n概念\n分块层级\n连接图\n连接强度\n计算损伤\n模型破碎算法\n维诺图\n二维\n三维\n不同的破碎图案\n破坏系统\n增加真实感\n破坏系统引入的问题\n常见的破坏SDK",
+    "reason": "area=362148.0",
+    "bbox": [
+      [
+        7128.0,
+        6619.0
+      ],
+      [
+        7540.0,
+        6619.0
+      ],
+      [
+        7540.0,
+        7498.0
+      ],
+      [
+        7128.0,
+        7498.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0285",
+    "text": "本动力学\n刚体动力学\n质点动力学\n刚体动力学\n朝向\n角速度\n角加速度\n转动惯量\n角动量\n扭矩\n应用：",
+    "reason": "area=137016.0",
+    "bbox": [
+      [
+        5818.0,
+        6988.0
+      ],
+      [
+        6082.0,
+        6988.0
+      ],
+      [
+        6082.0,
+        7507.0
+      ],
+      [
+        5818.0,
+        7507.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0288",
+    "text": "转向过度与转向不足\nNGINE\n重量转移\n转向角\nAckermann转向\n轮胎接触\n基于网格的布料模拟\nPBD/XPBD\n物理网格VS.渲染网格\n刷布料约束\n拉格朗日力学约束建模\n布料物理材质\n拉伸约束\n求解\n约束投影\n工作流\nXPBD",
+    "reason": "area=970748.0",
+    "bbox": [
+      [
+        6586.0,
+        7063.0
+      ],
+      [
+        7593.0,
+        7063.0
+      ],
+      [
+        7593.0,
+        8027.0
+      ],
+      [
+        6586.0,
+        8027.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0305",
+    "text": "Unreal并行框架\nNamed Thread与Worker Thread\nThread\nName\nTaskGraph",
+    "reason": "area=146370.0",
+    "bbox": [
+      [
+        1020.0,
+        7796.0
+      ],
+      [
+        1734.0,
+        7796.0
+      ],
+      [
+        1734.0,
+        8001.0
+      ],
+      [
+        1020.0,
+        8001.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0342",
+    "text": "发布-订阅模式\n事件定义\n硬编码\n反射与自动代码生成\n事件回调函数注册\n对象生命周期及回调安全保证\n对象的强引用\n对象的弱引用\n事件分发机制\n立即分发\n延迟分发\n消息队列",
+    "reason": "area=253624.0",
+    "bbox": [
+      [
+        4974.0,
+        8743.0
+      ],
+      [
+        5366.0,
+        8743.0
+      ],
+      [
+        5366.0,
+        9390.0
+      ],
+      [
+        4974.0,
+        9390.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0361",
+    "text": "音效衰减\n衰减函数\n线性\n对数\n反函数\n对数反函数\n自然音效\n自定义\n衰减形状\n球体\n胶囊体\n盒体\n椎体",
+    "reason": "area=162759.0",
+    "bbox": [
+      [
+        7283.0,
+        9236.0
+      ],
+      [
+        7522.0,
+        9236.0
+      ],
+      [
+        7522.0,
+        9917.0
+      ],
+      [
+        7283.0,
+        9917.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0368",
+    "text": "脚本语言的选择\n多种脚本语言的对比\nINE\n可视化脚本",
+    "reason": "area=227760.0",
+    "bbox": [
+      [
+        5889.0,
+        9347.0
+      ],
+      [
+        6473.0,
+        9347.0
+      ],
+      [
+        6473.0,
+        9737.0
+      ],
+      [
+        5889.0,
+        9737.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0375",
+    "text": "如何利用强化学习构建AI\n状态抽象\n长度固定的统计变量\n长度不固定的序列数据\n图像数据\n动作抽象\n奖励设置\nAlphaStar\nOpenAIFive",
+    "reason": "area=159344.0",
+    "bbox": [
+      [
+        4108.0,
+        9613.0
+      ],
+      [
+        4476.0,
+        9613.0
+      ],
+      [
+        4476.0,
+        10046.0
+      ],
+      [
+        4108.0,
+        10046.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0419",
+    "text": "在一个场\n在一个场景内协同编辑\n同步操作\n分布式操作\n分布式操作的一致性问题\n锁\n实例锁\n资产锁\n操作转换\n操作转换(OT)\n无冲突复\n无冲突复制数据类型(CRDT)\n工作流",
+    "reason": "area=242536.0",
+    "bbox": [
+      [
+        3112.0,
+        10903.0
+      ],
+      [
+        3609.0,
+        10903.0
+      ],
+      [
+        3609.0,
+        11391.0
+      ],
+      [
+        3112.0,
+        11391.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0439",
+    "text": "对WorldState中的部分属性做是否满足的判断\n动作集\n前提条件\n动作损耗\n动作影响",
+    "reason": "area=138666.0",
+    "bbox": [
+      [
+        4851.0,
+        11346.0
+      ],
+      [
+        5424.0,
+        11346.0
+      ],
+      [
+        5424.0,
+        11588.0
+      ],
+      [
+        4851.0,
+        11588.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0440",
+    "text": "一个客户端挂掉\n一个客户端挂掉，不影响其他玩家\n不依赖于服务器\n缺点\n易作弊\n需要良好的网络连接\n玩家人数受限",
+    "reason": "area=132014.0",
+    "bbox": [
+      [
+        1559.0,
+        11421.0
+      ],
+      [
+        2002.0,
+        11421.0
+      ],
+      [
+        2002.0,
+        11719.0
+      ],
+      [
+        1559.0,
+        11719.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0446",
+    "text": "CCOLO\n对WorldState的改变描述\nIGINE\n逆向规划\n游戏优化",
+    "reason": "area=773463.0",
+    "bbox": [
+      [
+        4848.0,
+        11563.0
+      ],
+      [
+        5889.0,
+        11563.0
+      ],
+      [
+        5889.0,
+        12306.0
+      ],
+      [
+        4848.0,
+        12306.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0447",
+    "text": "进阶内容：寻路网格生成\n体素化\n区域分割\n分水岭算法\n网格生成\n高级特性\n多边形标记\n分块",
+    "reason": "area=177840.0",
+    "bbox": [
+      [
+        7017.0,
+        11597.0
+      ],
+      [
+        7473.0,
+        11597.0
+      ],
+      [
+        7473.0,
+        11987.0
+      ],
+      [
+        7017.0,
+        11987.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0457",
+    "text": "DN3\n执行节点/叶子节点\n行为节点\n条件节点\n控制节点\n序列节点Sequence\n选择器Selector\n并行节点Parallel\n运行\n实现优化\n装饰节点\n前置条件\n黑板变量",
+    "reason": "area=423912.0",
+    "bbox": [
+      [
+        7270.0,
+        11841.0
+      ],
+      [
+        7678.0,
+        11841.0
+      ],
+      [
+        7678.0,
+        12880.0
+      ],
+      [
+        7270.0,
+        12880.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0474",
+    "text": "CO\n如何解决延迟\n哑客户端（客户端不做预测）\n发出移动请求\n等待服务器回复\n收到服务器回复，并作出移动",
+    "reason": "area=328861.0",
+    "bbox": [
+      [
+        1834.0,
+        12367.0
+      ],
+      [
+        2451.0,
+        12367.0
+      ],
+      [
+        2451.0,
+        12900.0
+      ],
+      [
+        1834.0,
+        12900.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0485",
+    "text": "从开火到命中的流程\n射击指令传输的网络状况\nHitscan\nHitscan Weapons\n瞬时完\n瞬时完成射击操作\nProjectil\nProjectileWeapons\n子弹有\n子弹有弹道距离，重力等因素的影响",
+    "reason": "area=138803.0",
+    "bbox": [
+      [
+        4641.0,
+        12711.0
+      ],
+      [
+        5194.0,
+        12711.0
+      ],
+      [
+        5194.0,
+        12962.0
+      ],
+      [
+        4641.0,
+        12962.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0491",
+    "text": "帧同步需要面对的挑战与解决：多端不一致问题\n浮点数\n随机数\n容器与排序算法等\n数学工具",
+    "reason": "area=215878.0",
+    "bbox": [
+      [
+        178.0,
+        12812.0
+      ],
+      [
+        1052.0,
+        12812.0
+      ],
+      [
+        1052.0,
+        13059.0
+      ],
+      [
+        178.0,
+        13059.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0495",
+    "text": "反作弊\n作弊手段分类\n读取、篡改内存\n读取网络包\nAl Cheat\n修改本地文件，贴图等",
+    "reason": "area=164160.0",
+    "bbox": [
+      [
+        7082.0,
+        12973.0
+      ],
+      [
+        7538.0,
+        12973.0
+      ],
+      [
+        7538.0,
+        13333.0
+      ],
+      [
+        7082.0,
+        13333.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0508",
+    "text": "ENGIN\n掉线重连的基本流程\n掉线\n帧同步的优缺点\n重连\n优点\n接收游戏开始到现在所有请求\n追帧\n低带宽\n开发效率高\n缺点\n大重连（客户端崩溃，内存中无数据）\n通过快照，加速重连\n客户端定时快照，关键帧快照，序列化到磁盘\n服务器做定时快照（更换终端登录，用这种优化）",
+    "reason": "area=635760.0",
+    "bbox": [
+      [
+        225.0,
+        13299.0
+      ],
+      [
+        1108.0,
+        13299.0
+      ],
+      [
+        1108.0,
+        14019.0
+      ],
+      [
+        225.0,
+        14019.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_leaf",
+    "node_id": "node_0516",
+    "text": "反作弊方法\n混淆加密内存\n加壳\n本地文件校验\n网络包加密\n非对称加密分发密钥\n对称加密传输数据\nVAC&EAV\n基于统计数据反作弊\n检测已知的作弊程序",
+    "reason": "area=211451.0",
+    "bbox": [
+      [
+        6949.0,
+        13507.0
+      ],
+      [
+        7308.0,
+        13507.0
+      ],
+      [
+        7308.0,
+        14096.0
+      ],
+      [
+        6949.0,
+        14096.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0000",
+    "text": "NGIN\nGlobalSDFcan'tsamplesurfacecache\nMergeallcardsintoglobalclipmapscenteredaround thecamera\nstructure\nRadiance per 6 directions per voxel\nSample and interpolate 3 directions using normal\nVisibilityBuffer\nTrackobjectupdatesandsetmodifiedbricksonGPU\nVoxelizemodifiedbricksbytracingrays\n6 rays per voxel\nCullobjectsto4^3bricks\nOne thread per mesh SDF per trace\nCachehitsinavisibilitybuffer\nHitT I Mesh Index\nInterlockedMinwritehit tovisibilitybuffer\nUpdating",
+    "reason": "lines=16, height=930.0",
+    "bbox": [
+      [
+        6629.0,
+        19.0
+      ],
+      [
+        7505.0,
+        19.0
+      ],
+      [
+        7505.0,
+        949.0
+      ],
+      [
+        6629.0,
+        949.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0001",
+    "text": "p V2.2\n技术交流群：\n洋：加微信Piccolo0301，回复关键词\n加微信Pic\n]【社区】入群\nShadow Map\nShadow Mapping步骤1：从光源处出发，向光照的方向看去，来构造出光照空间。\n算法流程\n算法济\n然后在光照空间，我们渲染需要产生阴影的物体，\n此时将深度写入到ZBuffer中，得到保存最近处物体的深度值的ShadowMap\n步骤2：然后我们再次正常渲染物体，在渲染时，\n我们根据渲染物体的世界坐标，变换到上一阶段的光照空间坐标，\n再计算出该点在ShadowMap中的深度值并进行比较，\n如果相对光源的距离比ShadowMap中的深度要大，\n就说明该点处在阴影中，否则就说明不在阴影中。\nShadowBias\nCascade Shadow Map\nVarianceShadowMap\nPCF\nPCSS",
+    "reason": "lines=21, height=1236.0",
+    "bbox": [
+      [
+        2861.0,
+        120.0
+      ],
+      [
+        4281.0,
+        120.0
+      ],
+      [
+        4281.0,
+        1356.0
+      ],
+      [
+        2861.0,
+        1356.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0002",
+    "text": "Mindmap\nPiccolo社区 https:/ /www.piccoloengine.com/\nPiccolo\n缺点场景复杂度和光源数量相关\n会有大量的overdraw\nDistance Field Shaodw",
+    "reason": "lines=6, height=614.0",
+    "bbox": [
+      [
+        1548.0,
+        149.0
+      ],
+      [
+        3285.0,
+        149.0
+      ],
+      [
+        3285.0,
+        763.0
+      ],
+      [
+        1548.0,
+        763.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0004",
+    "text": "Spatial Probe Filtering\ncreenSpaceProbe\nFilterwithin theneighborScreenSpaceProbe\nlgnorenormaldifferences,Onlydepthweighting\nOnlydepthweighting\nected neighbor ray hits\nUseAngleerrorfromreprojectedneighborrayh\nClampneighborhitdistancetoourown\ntoour own",
+    "reason": "lines=9, height=217.0",
+    "bbox": [
+      [
+        4181.0,
+        169.0
+      ],
+      [
+        4884.0,
+        169.0
+      ],
+      [
+        4884.0,
+        386.0
+      ],
+      [
+        4181.0,
+        386.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0005",
+    "text": "GAMES104\n4\nGAMES104官网\nhttps://games104.boomingtech.com/\nINE\n半透明渲染\n支持MSAA和半透明渲染\n带宽消耗小",
+    "reason": "lines=8, height=806.0",
+    "bbox": [
+      [
+        135.0,
+        171.0
+      ],
+      [
+        1806.0,
+        171.0
+      ],
+      [
+        1806.0,
+        977.0
+      ],
+      [
+        135.0,
+        977.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0008",
+    "text": "Fixed update budget\nSelect pages to update based on priority\nPriority = LastUsed - LastUpdated\nPriority queue using radix sort\n1024x1024texelsfordirectlighting\n512x512 texels for indirect lighting",
+    "reason": "lines=6, height=293.0",
+    "bbox": [
+      [
+        5002.0,
+        238.0
+      ],
+      [
+        5601.0,
+        238.0
+      ],
+      [
+        5601.0,
+        531.0
+      ],
+      [
+        5002.0,
+        531.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0010",
+    "text": "4x4hemisphericalprobeper4x4tile\nJitterprobeplacementandraydire\nTrace in last frame’ s Voxel Lighting\nLigting Gather\nBilinearinterpolationof 4probes\nPlaneweighting\nVisibility weighting using probe h\nCovert to SH\nShading pixels on surface cache",
+    "reason": "lines=9, height=337.0",
+    "bbox": [
+      [
+        5903.0,
+        321.0
+      ],
+      [
+        6406.0,
+        321.0
+      ],
+      [
+        6406.0,
+        658.0
+      ],
+      [
+        5903.0,
+        658.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0012",
+    "text": "Sampling\nImportant Sampling\nPDF计算\nIncoming Radiance\nRadiance\nLast frame' s Screen Space\name’sScreenSpaceProbe‘sradiance\nFallbackto theWorldSpac\ncktotheWorldSpaceProbes\nBRDF",
+    "reason": "lines=10, height=241.0",
+    "bbox": [
+      [
+        4417.0,
+        513.0
+      ],
+      [
+        5107.0,
+        513.0
+      ],
+      [
+        5107.0,
+        754.0
+      ],
+      [
+        4417.0,
+        754.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0016",
+    "text": "Accumulate the BRDF from\nResampling Rays\nRays\nCalculate PDF = BRDF * Radial\nPDF = BRDF *Radiance\nby PDF\nSort rays by PDF\nFor every 3 rays with PDF belc",
+    "reason": "lines=8, height=201.0",
+    "bbox": [
+      [
+        4432.0,
+        767.0
+      ],
+      [
+        4903.0,
+        767.0
+      ],
+      [
+        4903.0,
+        968.0
+      ],
+      [
+        4432.0,
+        968.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0023",
+    "text": "直接光照\nCull lights to 8x8 tiles\n8x8 tiles\ntsper tile\nSelect first8lightsper tile\n1 bit shadow mask\nowmask\nShadows",
+    "reason": "lines=8, height=203.0",
+    "bbox": [
+      [
+        5659.0,
+        900.0
+      ],
+      [
+        6020.0,
+        900.0
+      ],
+      [
+        6020.0,
+        1103.0
+      ],
+      [
+        5659.0,
+        1103.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0036",
+    "text": "ENGINE\n离线生成的，并不知道有这些变形\n仅投射刚性网格体的阴影",
+    "reason": "lines=3, height=414.0",
+    "bbox": [
+      [
+        6779.0,
+        1180.0
+      ],
+      [
+        7570.0,
+        1180.0
+      ],
+      [
+        7570.0,
+        1594.0
+      ],
+      [
+        6779.0,
+        1594.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0041",
+    "text": "Screen Space Probe\nProbestructure\n8x8OctahedralAtlas\nRadiance and HitDistance\nAdaptive Placement\nuniformly 16x16\nadaptive8x8and4x4\nProbe jittering",
+    "reason": "lines=8, height=409.0",
+    "bbox": [
+      [
+        3975.0,
+        1234.0
+      ],
+      [
+        4393.0,
+        1234.0
+      ],
+      [
+        4393.0,
+        1643.0
+      ],
+      [
+        3975.0,
+        1643.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0043",
+    "text": "FractalBrownianMotion\nDensity-Height Functions\nWeatherTexture\n云层覆盖率\n云层降雨概率\n云层种类",
+    "reason": "lines=6, height=266.0",
+    "bbox": [
+      [
+        240.0,
+        1249.0
+      ],
+      [
+        566.0,
+        1249.0
+      ],
+      [
+        566.0,
+        1515.0
+      ],
+      [
+        240.0,
+        1515.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0045",
+    "text": "Gubffer占用了较大的空间\n写需要大量显存带宽\nGbuffer的读写需要大量显存带宽\n透明物体支持不友好\n对硬件MSAA支持不友好\n需要硬件支持MRT\n对大量自定义Shader支持不友好",
+    "reason": "lines=7, height=259.0",
+    "bbox": [
+      [
+        1374.0,
+        1277.0
+      ],
+      [
+        1750.0,
+        1277.0
+      ],
+      [
+        1750.0,
+        1536.0
+      ],
+      [
+        1374.0,
+        1536.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0047",
+    "text": "在追踪光线时安全地跳过空白空间，因为到\n最近表面的距离已经明确（有时称这种方\n法为球体追踪）。只需区区几步就可以\n判定出交叉点。对距离场进行光线\n追踪将生成可见性效果，\n说如果光线和网格\n，光线就会投射出阴影。",
+    "reason": "lines=7, height=257.0",
+    "bbox": [
+      [
+        5811.0,
+        1365.0
+      ],
+      [
+        6289.0,
+        1365.0
+      ],
+      [
+        6289.0,
+        1622.0
+      ],
+      [
+        5811.0,
+        1622.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0048",
+    "text": "地形材质混合\nTextureSplatting技术\n地表纹理使用多种不同的纹理混合，\n使用一张叫做splatmap的权重图来\n记录这些纹理的权重",
+    "reason": "lines=5, height=240.0",
+    "bbox": [
+      [
+        2040.0,
+        1387.0
+      ],
+      [
+        2515.0,
+        1387.0
+      ],
+      [
+        2515.0,
+        1627.0
+      ],
+      [
+        2040.0,
+        1627.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0051",
+    "text": "Markedworldprobesforinterpolation\nMarked world\nReuse traces from last frame\nReuse traces f\nAllocatetracesfornewprobes\nRe-trace a subset of cache hits to propagate lighting changes\nRe-trace a sub\nImportance Sampling\nAccumulateBF\nAccumulateBRDFfromScreenProbes\nSupersample near camera\nSpatial filtering\nReuses probe\nReusesprobedepthforocclusiontest\nRay Connecting\nWorld Probe ra\nScreen Probe\nReprojectScre",
+    "reason": "lines=18, height=567.0",
+    "bbox": [
+      [
+        4631.0,
+        1389.0
+      ],
+      [
+        5467.0,
+        1389.0
+      ],
+      [
+        5467.0,
+        1956.0
+      ],
+      [
+        4631.0,
+        1956.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0053",
+    "text": "Post\nPost Pass\nOc\nCu\nIns\nHie\nRa\nRasterizer\nSoftware Rasterizer\nHardwareRasterizer\nBu\nBuild Current Frame HZB",
+    "reason": "lines=12, height=418.0",
+    "bbox": [
+      [
+        3242.0,
+        1423.0
+      ],
+      [
+        3613.0,
+        1423.0
+      ],
+      [
+        3613.0,
+        1841.0
+      ],
+      [
+        3242.0,
+        1841.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0061",
+    "text": "全局距离场是分辨率较低的距离场，跟随\n摄像机的同时，在关卡中使用有向距\n离场遮蔽。这会创建每个Object网格体距离场\n的缓存，然后将它们合成到围绕摄像机的\n若干体积纹理中，称为裁剪图。由于只有新\n的可见区域或受到场景修改影响\n的可见区域才需要更新，合成过程不会有太多消耗。",
+    "reason": "lines=7, height=309.0",
+    "bbox": [
+      [
+        6651.0,
+        1637.0
+      ],
+      [
+        7216.0,
+        1637.0
+      ],
+      [
+        7216.0,
+        1946.0
+      ],
+      [
+        6651.0,
+        1946.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0062",
+    "text": "在追踪光线时，通过追踪经过遮挡物\n最近的光线就可以计算\n出近似的锥体交叉点，而不产生额\n外成本。这种近似法可以利用\n这种近似法可以利用\n距离场来实现非常柔和的\n区域阴影和天空遮蔽。\n这个属性是距离场环境光遮\n蔽的关键，因为少量的锥体\n即可为接收器点的整个半\n出柔和的可见性。",
+    "reason": "lines=11, height=377.0",
+    "bbox": [
+      [
+        5807.0,
+        1665.0
+      ],
+      [
+        6210.0,
+        1665.0
+      ],
+      [
+        6210.0,
+        2042.0
+      ],
+      [
+        5807.0,
+        2042.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0072",
+    "text": "会有一个大尺寸Tile判定机制\n会有一个小尺寸Tile（4*4）判定机制\n会有一个2*2的quad作为最小处理单元进行输出\n会有\n目标是为了实现像素的并行计算\n现有\n现有的硬件光栅化对于小三角形并不友好，因为\n硬件光栅化逻辑做了很多在大尺寸面片\n上十分有效但是放到小尺寸面片\n上就会是浪费的工作",
+    "reason": "lines=10, height=363.0",
+    "bbox": [
+      [
+        3279.0,
+        1969.0
+      ],
+      [
+        3818.0,
+        1969.0
+      ],
+      [
+        3818.0,
+        2332.0
+      ],
+      [
+        3279.0,
+        2332.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0079",
+    "text": "Main Pass\nZB\nPrevHZB\nInstance Culling\ning\nHierarchy/Cluster Culling\ning\nRasterizer\nzer\nSoftware Rasterizer\nHardware Rasterizer\nZB\nCurrent Build HZB",
+    "reason": "lines=13, height=368.0",
+    "bbox": [
+      [
+        2779.0,
+        2133.0
+      ],
+      [
+        3173.0,
+        2133.0
+      ],
+      [
+        3173.0,
+        2501.0
+      ],
+      [
+        2779.0,
+        2501.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0086",
+    "text": "动画轨道（track）数据之间的差别\n关节动画数据之间的差别\nDoF缩减\n关键帧\n关键帧提取\n浮点数压缩\n四元数压缩\n误差累积\n精读衡量\n误差补偿",
+    "reason": "lines=10, height=767.0",
+    "bbox": [
+      [
+        6833.0,
+        2269.0
+      ],
+      [
+        7480.0,
+        2269.0
+      ],
+      [
+        7480.0,
+        3036.0
+      ],
+      [
+        6833.0,
+        3036.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0087",
+    "text": "有向距离场（SDF）\n距离最近表面的\n原理：有向距离场在每个点将距离最近表面的\n距离保存到体积纹理中。\n。\n的距离为\n网格体外的每个点保存的距离为\n正值，网格体内的每个点保存的距离为负值\n点保存的距离为负值",
+    "reason": "lines=9, height=246.0",
+    "bbox": [
+      [
+        5497.0,
+        2308.0
+      ],
+      [
+        6110.0,
+        2308.0
+      ],
+      [
+        6110.0,
+        2554.0
+      ],
+      [
+        5497.0,
+        2554.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0090",
+    "text": "色温是指绝对黑体从绝对零度（-273℃）开始加温后所呈现的颜色。\n色温是影响光源颜色的重要属性，是个可选属性，当启用色温时，\n色温也参与了光源颜色的组成部分。\n真实世界环境中，一天不同时段的环境色温也会动态发生变化：\nENG\n认为物体表面由很多凹凸不平的微小镜面组成\n这些具有不同大小、方向的微表面在对入\n射光线进行反射时产生了不同的反射效果\n法线分布函数\n几何遮蔽函数\n菲涅尔方程\n迪士尼原则",
+    "reason": "lines=12, height=860.0",
+    "bbox": [
+      [
+        112.0,
+        2376.0
+      ],
+      [
+        861.0,
+        2376.0
+      ],
+      [
+        861.0,
+        3236.0
+      ],
+      [
+        112.0,
+        3236.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0098",
+    "text": "地球大气的渲染主要包含两种散射，\n瑞利散射以及米氏散射，瑞利散射主要\n构成了天空的颜色变化，而米氏散射则\n造成了太阳周围的光环效果\n相位函数\n瑞利散射\n米氏散射\n几何散射\n单次散射\n多重散射",
+    "reason": "lines=10, height=441.0",
+    "bbox": [
+      [
+        1789.0,
+        2481.0
+      ],
+      [
+        2216.0,
+        2481.0
+      ],
+      [
+        2216.0,
+        2922.0
+      ],
+      [
+        1789.0,
+        2922.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0103",
+    "text": "将材质分类，找出每个材质对应的像素进行Shading\nMaterialID\n表示当前像素属于哪个材质\nMaterial Shading\n正常流程",
+    "reason": "lines=5, height=257.0",
+    "bbox": [
+      [
+        3896.0,
+        2634.0
+      ],
+      [
+        4528.0,
+        2634.0
+      ],
+      [
+        4528.0,
+        2891.0
+      ],
+      [
+        3896.0,
+        2891.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0105",
+    "text": "关节姿势\n旋转Orientation\n位置Position\n缩放Scale\n仿射矩阵\n局部空间到物体空间",
+    "reason": "lines=6, height=452.0",
+    "bbox": [
+      [
+        5400.0,
+        2649.0
+      ],
+      [
+        5816.0,
+        2649.0
+      ],
+      [
+        5816.0,
+        3101.0
+      ],
+      [
+        5400.0,
+        3101.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0111",
+    "text": "MR工作流\nBase\nBase Color\nRoug\nRoughness\nMetallic\nMeta\nNormal\n优点：\n缺点：",
+    "reason": "lines=10, height=295.0",
+    "bbox": [
+      [
+        1674.0,
+        2750.0
+      ],
+      [
+        1877.0,
+        2750.0
+      ],
+      [
+        1877.0,
+        3045.0
+      ],
+      [
+        1674.0,
+        3045.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0114",
+    "text": "Fixtexelbudgetperframe(512x512)\nSort by distance to camera\nand GPU feedback\nCopy card capture to surface\ncache and compress\nCardcapture分瓣率\n根据cardbounds最大extent投影\n到屏幕像素的长度决定，\n从8到1024，不一定是正方形，\n根据card的bounds长宽比确定",
+    "reason": "lines=10, height=356.0",
+    "bbox": [
+      [
+        4922.0,
+        2884.0
+      ],
+      [
+        5469.0,
+        2884.0
+      ],
+      [
+        5469.0,
+        3240.0
+      ],
+      [
+        4922.0,
+        3240.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0115",
+    "text": "为每个材质执行一次全屏渲染\n跳过那些未被当前材质覆盖的像素\n需要对每个材质都执行一遍渲染\n对每个像素都执行一遍是否被材质覆盖的检测，效率较低。\nMaterial Culling\n将MaterialID存成深度值\n将屏幕分成Tlle\n不需要进行一个全屏的材质的绘制\n进行基于tile尺寸的绘制",
+    "reason": "lines=9, height=400.0",
+    "bbox": [
+      [
+        3939.0,
+        2908.0
+      ],
+      [
+        4618.0,
+        2908.0
+      ],
+      [
+        4618.0,
+        3308.0
+      ],
+      [
+        3939.0,
+        3308.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0116",
+    "text": "阴影贴图光线追踪\n光线追踪\n一种结合虚拟阴影贴图的采样算\n虚拟阴影贴图的采样算法，能生成\n的柔和阴影和接触硬阴影。对象投\n阴影比近处阴影拥有更柔和的效果\n射的远处阴影比近处阴影拥有更\nNanite Meshe\nBuild Process\nGroup\nMerge\nSimplify\nSplit",
+    "reason": "lines=13, height=468.0",
+    "bbox": [
+      [
+        2910.0,
+        2921.0
+      ],
+      [
+        3705.0,
+        2921.0
+      ],
+      [
+        3705.0,
+        3389.0
+      ],
+      [
+        2910.0,
+        3389.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0128",
+    "text": "环境光遮蔽\n屏幕空间环境光遮蔽\n光线追踪环境光遮蔽\n水平基准环境光遮蔽\n体素基准环境光遮蔽\nGTAO",
+    "reason": "lines=6, height=281.0",
+    "bbox": [
+      [
+        2205.0,
+        3253.0
+      ],
+      [
+        2535.0,
+        3253.0
+      ],
+      [
+        2535.0,
+        3534.0
+      ],
+      [
+        2205.0,
+        3534.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0130",
+    "text": "SG工作流\nAlbedo\nAlbedo Color\nSpecular Color\nGlossiness\nNormal\n优点：可\n缺点：FO\n因\n但\nRG",
+    "reason": "lines=11, height=405.0",
+    "bbox": [
+      [
+        1652.0,
+        3270.0
+      ],
+      [
+        1881.0,
+        3270.0
+      ],
+      [
+        1881.0,
+        3675.0
+      ],
+      [
+        1652.0,
+        3675.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0135",
+    "text": "在内存中存储骨骼\n蒙皮矩阵调色板\n多骨骼的权重蒙皮\n权重蒙皮的混合\n动画片段（clip）\n姿势的插值\nNLERP的最短路径插值\nSLERP",
+    "reason": "lines=8, height=557.0",
+    "bbox": [
+      [
+        5109.0,
+        3381.0
+      ],
+      [
+        5777.0,
+        3381.0
+      ],
+      [
+        5777.0,
+        3938.0
+      ],
+      [
+        5109.0,
+        3938.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0137",
+    "text": "Two Bone\n多关节IK\n关节纟\n关节约束\n启发式算法\n循环坐标下降算法CCD\nFABRIK\nFABRIK的约束\n多终端效应器难题\n雅可比矩阵法\nIK前沿",
+    "reason": "lines=11, height=619.0",
+    "bbox": [
+      [
+        6057.0,
+        3459.0
+      ],
+      [
+        6453.0,
+        3459.0
+      ],
+      [
+        6453.0,
+        4078.0
+      ],
+      [
+        6057.0,
+        4078.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0139",
+    "text": "面部动画\n面部编码系统（FACS）\nAction Unit\nKey Pose Blending\nMorph Target Animation\nUV Texture Facial Animation\nMuscle Model Animation",
+    "reason": "lines=7, height=459.0",
+    "bbox": [
+      [
+        6798.0,
+        3484.0
+      ],
+      [
+        7447.0,
+        3484.0
+      ],
+      [
+        7447.0,
+        3943.0
+      ],
+      [
+        6798.0,
+        3943.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0141",
+    "text": "Mesh Card\n功能：可以看成是放在6个轴对称方向上的相机，\n可以看成是放\n功能：\n通过正交投影的方式来光栅化Mesh，\n通过正交投\n从而获取Mesh的各种属性\n从而获取Me\n(Albedo, N\n(Albedo, Normal, Depth等等)\n对应surface cache\n对应surfac\n离线生成：Mesh\n离线生成：Mesh-Surfel-Surfel Clusters－Cards\n最多2级LOD",
+    "reason": "lines=15, height=373.0",
+    "bbox": [
+      [
+        4584.0,
+        3497.0
+      ],
+      [
+        5271.0,
+        3497.0
+      ],
+      [
+        5271.0,
+        3870.0
+      ],
+      [
+        4584.0,
+        3870.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0143",
+    "text": "基于物理的渲染（Physicallybased rendering）(PBR)\n意味着表面接近光线在真实世界的表现方式，\n而不是我们直观以为的应有方式。\n相较于完全依赖美术师直觉来设置参数的着色工作流程，\n遵守PBR原则的材质更准确，并且通常看起来更自然。",
+    "reason": "lines=5, height=262.0",
+    "bbox": [
+      [
+        169.0,
+        3574.0
+      ],
+      [
+        1033.0,
+        3574.0
+      ],
+      [
+        1033.0,
+        3836.0
+      ],
+      [
+        169.0,
+        3836.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0145",
+    "text": "Worl\nWorklisk Pass\n构\n构建并Worklist，将屏幕划分成很多tile，根据使用到\n某\n某个MaterialID的tile加到该MaterialID\n的V\n的Worklist里，作为下一步的索引l",
+    "reason": "lines=8, height=180.0",
+    "bbox": [
+      [
+        3243.0,
+        3671.0
+      ],
+      [
+        3887.0,
+        3671.0
+      ],
+      [
+        3887.0,
+        3851.0
+      ],
+      [
+        3243.0,
+        3851.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0146",
+    "text": "粒子常见属性\nAcceleration\nAttraction\nCamera\nCollision\nColor\nLifetime\nLight\nLocation\nOrbit\nOrientation\nRotation\nSize\nSpawn\nVelocity",
+    "reason": "lines=15, height=647.0",
+    "bbox": [
+      [
+        2169.0,
+        3679.0
+      ],
+      [
+        2445.0,
+        3679.0
+      ],
+      [
+        2445.0,
+        4326.0
+      ],
+      [
+        2169.0,
+        4326.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0149",
+    "text": "组件\n系统\n发射器\n模块\n参数",
+    "reason": "lines=5, height=245.0",
+    "bbox": [
+      [
+        1959.0,
+        3767.0
+      ],
+      [
+        2111.0,
+        3767.0
+      ],
+      [
+        2111.0,
+        4012.0
+      ],
+      [
+        1959.0,
+        4012.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0161",
+    "text": "快门速度\n产生运动模糊效果\n光圈\n产生景深效果\n感光度\n产生Grain效果",
+    "reason": "lines=6, height=287.0",
+    "bbox": [
+      [
+        1057.0,
+        4003.0
+      ],
+      [
+        1292.0,
+        4003.0
+      ],
+      [
+        1292.0,
+        4290.0
+      ],
+      [
+        1057.0,
+        4290.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0162",
+    "text": "分离轴定理\n凸性\n相交的必要条件\n分离判据\n二维情形\n三维情形",
+    "reason": "lines=6, height=279.0",
+    "bbox": [
+      [
+        7274.0,
+        4069.0
+      ],
+      [
+        7506.0,
+        4069.0
+      ],
+      [
+        7506.0,
+        4348.0
+      ],
+      [
+        7274.0,
+        4348.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0163",
+    "text": "粒子数据类型\nBill\nBillboard类型数据\nMesh类型数据\n光束类型数据\n条带类型数据",
+    "reason": "lines=6, height=261.0",
+    "bbox": [
+      [
+        1749.0,
+        4070.0
+      ],
+      [
+        2115.0,
+        4070.0
+      ],
+      [
+        2115.0,
+        4331.0
+      ],
+      [
+        1749.0,
+        4331.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0165",
+    "text": "动画混合树\nBlend Tree\nLERP blend node\nadditive blend node\n动画混合树的节点\n动画树的控制信号",
+    "reason": "lines=6, height=386.0",
+    "bbox": [
+      [
+        6599.0,
+        4080.0
+      ],
+      [
+        7047.0,
+        4080.0
+      ],
+      [
+        7047.0,
+        4466.0
+      ],
+      [
+        6599.0,
+        4466.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0168",
+    "text": "之前常见的GI算法\nReflec\nReflective Shadow Map\nLight Propag\nLight PropagationVolume\nSparse Voxel Octree for Real-time Global Il\nal-time Global lllumination\nNG\nVoxelization Based Global llun\nased Global llumination\nScreen Space Global Illumina\ne Global llumination\nGlobal Illumination\nDynamic Diffuse Global lluminati\nRay-tracing based Global Illuminatiol\nlobal llumination\n流程\nSetup",
+    "reason": "lines=18, height=610.0",
+    "bbox": [
+      [
+        4084.0,
+        4114.0
+      ],
+      [
+        5173.0,
+        4114.0
+      ],
+      [
+        5173.0,
+        4724.0
+      ],
+      [
+        4084.0,
+        4724.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0169",
+    "text": "中的顺序依赖\n万向节死锁\n死锁\n欧拉角的缺点\n的缺点\n衣赖\n顺序依赖\n节死锁\n难以插值、组合等\n四元数\n2D旋转与复数\n四元数的定义\n欧拉角到四元数的转换\n四元数进行旋转\n四元数到旋转矩阵的转换\n给定旋转轴的四元数旋转",
+    "reason": "lines=16, height=795.0",
+    "bbox": [
+      [
+        5737.0,
+        4116.0
+      ],
+      [
+        6167.0,
+        4116.0
+      ],
+      [
+        6167.0,
+        4911.0
+      ],
+      [
+        5737.0,
+        4911.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0176",
+    "text": "抗锯齿\n超级采样抗锯齿\n优点：往往能得到最佳的效果\n缺点：它会带来巨大的性能消耗\n多重采样抗锯齿\n图像保真度和性能之间找到最佳的平衡点\n快速近似抗锯齿\n优点：",
+    "reason": "lines=8, height=394.0",
+    "bbox": [
+      [
+        180.0,
+        4417.0
+      ],
+      [
+        759.0,
+        4417.0
+      ],
+      [
+        759.0,
+        4811.0
+      ],
+      [
+        180.0,
+        4811.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0180",
+    "text": "游戏中的3D动画技术\nDoF(Degrees of Freedom)\nRigid Hierarchical Animation\nPer-vertex Animation\nMorph Target Animation\n3D Skinned Animation\n基于物理的动画Physics-basedAnimation\n布娃娃系统Ragdoll\n布料与流体模拟\nIK(lnverse Kinematics)",
+    "reason": "lines=10, height=707.0",
+    "bbox": [
+      [
+        5136.0,
+        4511.0
+      ],
+      [
+        5970.0,
+        4511.0
+      ],
+      [
+        5970.0,
+        5218.0
+      ],
+      [
+        5136.0,
+        5218.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0181",
+    "text": "压缩纹理算法特点\n二\n解压速度\n随机访问\n压缩率和图像质量\n十\n编码速度",
+    "reason": "lines=7, height=257.0",
+    "bbox": [
+      [
+        1766.0,
+        4611.0
+      ],
+      [
+        2158.0,
+        4611.0
+      ],
+      [
+        2158.0,
+        4868.0
+      ],
+      [
+        1766.0,
+        4868.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0184",
+    "text": "EN\n概念\n闵可夫斯基和/差\n凸多\n凸多边形闵可夫斯基和性质\n相交对\n相交对应闵可夫斯基差中的原点",
+    "reason": "lines=7, height=334.0",
+    "bbox": [
+      [
+        6322.0,
+        4629.0
+      ],
+      [
+        6692.0,
+        4629.0
+      ],
+      [
+        6692.0,
+        4963.0
+      ],
+      [
+        6322.0,
+        4963.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0194",
+    "text": "使用png和jpg等\n为什么不使用png和j\n格式\n常见压缩格式\n尽管像jpg、png的压缩率很高，\nng的压缩率很高，但并不适合纹理\n支持像素的随机访问，这对GPU相当不友好，\n主要问题是不支持像素的随机访\n使用需要的纹理部分\nGPU渲染时只使用需要的纹理部",
+    "reason": "lines=10, height=304.0",
+    "bbox": [
+      [
+        1320.0,
+        4939.0
+      ],
+      [
+        2175.0,
+        4939.0
+      ],
+      [
+        2175.0,
+        5243.0
+      ],
+      [
+        1320.0,
+        5243.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0203",
+    "text": "动画状态机\nASM的定\nCross Fades\n分层ASM",
+    "reason": "lines=4, height=262.0",
+    "bbox": [
+      [
+        6162.0,
+        5091.0
+      ],
+      [
+        6466.0,
+        5091.0
+      ],
+      [
+        6466.0,
+        5353.0
+      ],
+      [
+        6162.0,
+        5353.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0204",
+    "text": "BRDF模型\nLambert模型\nPhong模型\nBlinn-Phong模型\nCook-Torrance模型",
+    "reason": "lines=5, height=296.0",
+    "bbox": [
+      [
+        140.0,
+        5093.0
+      ],
+      [
+        542.0,
+        5093.0
+      ],
+      [
+        542.0,
+        5389.0
+      ],
+      [
+        140.0,
+        5389.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0209",
+    "text": "全局光照\n光照探灯\n反射探灯\n预计算光照数据",
+    "reason": "lines=4, height=248.0",
+    "bbox": [
+      [
+        1081.0,
+        5261.0
+      ],
+      [
+        1361.0,
+        5261.0
+      ],
+      [
+        1361.0,
+        5509.0
+      ],
+      [
+        1081.0,
+        5509.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0213",
+    "text": "实现\n蒙皮动画实现\n转换\n坐标空间转换\n结构\n生物的骨骼结构\n骨骼\n关节\n根骨骼\n绑定\n骨骼绑定\n姿势\n绑定姿势\nT-pose\nose\nbose\nA-pose",
+    "reason": "lines=17, height=739.0",
+    "bbox": [
+      [
+        4393.0,
+        5325.0
+      ],
+      [
+        4693.0,
+        5325.0
+      ],
+      [
+        4693.0,
+        6064.0
+      ],
+      [
+        4393.0,
+        6064.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0215",
+    "text": "ENGIN\n贴图压缩\n剪\n可见性裁剪\n视锥裁剪",
+    "reason": "lines=5, height=649.0",
+    "bbox": [
+      [
+        2797.0,
+        5334.0
+      ],
+      [
+        3308.0,
+        5334.0
+      ],
+      [
+        3308.0,
+        5983.0
+      ],
+      [
+        2797.0,
+        5983.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0224",
+    "text": "场景查询\n射线检测 raycast\n形状扫描sweep\n求交overlap\n碰撞组过滤",
+    "reason": "lines=5, height=306.0",
+    "bbox": [
+      [
+        7184.0,
+        5574.0
+      ],
+      [
+        7567.0,
+        5574.0
+      ],
+      [
+        7567.0,
+        5880.0
+      ],
+      [
+        7184.0,
+        5880.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0226",
+    "text": "游戏中的2D\n动画技术\nEN\n精灵动画\nLive2D\n2D Skinned Animation\n动画混合",
+    "reason": "lines=7, height=461.0",
+    "bbox": [
+      [
+        5143.0,
+        5591.0
+      ],
+      [
+        5590.0,
+        5591.0
+      ],
+      [
+        5590.0,
+        6052.0
+      ],
+      [
+        5143.0,
+        6052.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0229",
+    "text": "场景空间管理\n层次包围盒（BVH）\n二元空间分割树（BSPTrees）\n四叉树（Quad Tree）\n八叉树\n(Octree)\n场景图\n(Scene Graphs)\nKD树 (K-Dimensional Tree)",
+    "reason": "lines=9, height=514.0",
+    "bbox": [
+      [
+        3701.0,
+        5657.0
+      ],
+      [
+        4283.0,
+        5657.0
+      ],
+      [
+        4283.0,
+        6171.0
+      ],
+      [
+        3701.0,
+        6171.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0237",
+    "text": "万物皆GameObject\n动态物\n静态物\n环境\n其它",
+    "reason": "lines=5, height=266.0",
+    "bbox": [
+      [
+        594.0,
+        5953.0
+      ],
+      [
+        1298.0,
+        5953.0
+      ],
+      [
+        1298.0,
+        6219.0
+      ],
+      [
+        594.0,
+        6219.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0241",
+    "text": "碰撞解决\n惩罚力法\n求解速度约束\n拉格朗日力学\n碰撞约束\n迭代求解\n求解位置约束",
+    "reason": "lines=7, height=416.0",
+    "bbox": [
+      [
+        7068.0,
+        6079.0
+      ],
+      [
+        7373.0,
+        6079.0
+      ],
+      [
+        7373.0,
+        6495.0
+      ],
+      [
+        7068.0,
+        6495.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0252",
+    "text": "GPU架构\nImmediate Mode Rendering\nTile Based Rendering\nCCO\nTile Based Deferred Rendering\n渲染",
+    "reason": "lines=6, height=612.0",
+    "bbox": [
+      [
+        3182.0,
+        6322.0
+      ],
+      [
+        4191.0,
+        6322.0
+      ],
+      [
+        4191.0,
+        6934.0
+      ],
+      [
+        3182.0,
+        6934.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0264",
+    "text": "顶点着色器\n几何着色器\n光栅化\n像素着色器\n合并阶段",
+    "reason": "lines=5, height=372.0",
+    "bbox": [
+      [
+        2724.0,
+        6487.0
+      ],
+      [
+        2934.0,
+        6487.0
+      ],
+      [
+        2934.0,
+        6859.0
+      ],
+      [
+        2724.0,
+        6859.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0266",
+    "text": "ENI\n渲",
+    "reason": "lines=2, height=412.0",
+    "bbox": [
+      [
+        3111.0,
+        6522.0
+      ],
+      [
+        3329.0,
+        6522.0
+      ],
+      [
+        3329.0,
+        6934.0
+      ],
+      [
+        3111.0,
+        6934.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0268",
+    "text": "载具模拟\n真实感-风格化谱系\n建模\n力",
+    "reason": "lines=4, height=282.0",
+    "bbox": [
+      [
+        6522.0,
+        6551.0
+      ],
+      [
+        6940.0,
+        6551.0
+      ],
+      [
+        6940.0,
+        6833.0
+      ],
+      [
+        6522.0,
+        6833.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0269",
+    "text": "静态刚体static\n动态刚体dynamic\n触发器(trigger)\n受控刚体kinematic\n刚体PhysicsActor",
+    "reason": "lines=5, height=275.0",
+    "bbox": [
+      [
+        4772.0,
+        6608.0
+      ],
+      [
+        5245.0,
+        6608.0
+      ],
+      [
+        5245.0,
+        6883.0
+      ],
+      [
+        4772.0,
+        6883.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0270",
+    "text": "破坏模拟\n概念\n分块层级\n连接图\n连接强度\n计算损伤\n模型破碎算法\n维诺图\n二维\n三维\n不同的破碎图案\n破坏系统\n增加真实感\n破坏系统引入的问题\n常见的破坏SDK",
+    "reason": "lines=15, height=879.0",
+    "bbox": [
+      [
+        7128.0,
+        6619.0
+      ],
+      [
+        7540.0,
+        6619.0
+      ],
+      [
+        7540.0,
+        7498.0
+      ],
+      [
+        7128.0,
+        7498.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0279",
+    "text": "形状\n分类\n球\n胶囊\n方盒\n凸包\n三角网格\n高度场",
+    "reason": "lines=8, height=384.0",
+    "bbox": [
+      [
+        5482.0,
+        6839.0
+      ],
+      [
+        5689.0,
+        6839.0
+      ],
+      [
+        5689.0,
+        7223.0
+      ],
+      [
+        5482.0,
+        7223.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0285",
+    "text": "本动力学\n刚体动力学\n质点动力学\n刚体动力学\n朝向\n角速度\n角加速度\n转动惯量\n角动量\n扭矩\n应用：",
+    "reason": "lines=11, height=519.0",
+    "bbox": [
+      [
+        5818.0,
+        6988.0
+      ],
+      [
+        6082.0,
+        6988.0
+      ],
+      [
+        6082.0,
+        7507.0
+      ],
+      [
+        5818.0,
+        7507.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0288",
+    "text": "转向过度与转向不足\nNGINE\n重量转移\n转向角\nAckermann转向\n轮胎接触\n基于网格的布料模拟\nPBD/XPBD\n物理网格VS.渲染网格\n刷布料约束\n拉格朗日力学约束建模\n布料物理材质\n拉伸约束\n求解\n约束投影\n工作流\nXPBD",
+    "reason": "lines=17, height=964.0",
+    "bbox": [
+      [
+        6586.0,
+        7063.0
+      ],
+      [
+        7593.0,
+        7063.0
+      ],
+      [
+        7593.0,
+        8027.0
+      ],
+      [
+        6586.0,
+        8027.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0294",
+    "text": "Engine\nENGIN\n音效\n音\n复杂的游戏性及\n游戏性及其基本要素",
+    "reason": "lines=6, height=1200.0",
+    "bbox": [
+      [
+        3780.0,
+        7341.0
+      ],
+      [
+        5158.0,
+        7341.0
+      ],
+      [
+        5158.0,
+        8541.0
+      ],
+      [
+        3780.0,
+        8541.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0298",
+    "text": "面回数据编程\n与任务系统\nGINE\n网",
+    "reason": "lines=4, height=673.0",
+    "bbox": [
+      [
+        1751.0,
+        7412.0
+      ],
+      [
+        2524.0,
+        7412.0
+      ],
+      [
+        2524.0,
+        8085.0
+      ],
+      [
+        1751.0,
+        8085.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0306",
+    "text": "角色控制器\n与刚体动力学的差异\n基本组成\n与环境的碰撞\n自动阶跃（autostepping）\n坡度限制与强制滑坡\n更新大小\n推动物体\n移动平台",
+    "reason": "lines=9, height=465.0",
+    "bbox": [
+      [
+        5259.0,
+        7802.0
+      ],
+      [
+        5681.0,
+        7802.0
+      ],
+      [
+        5681.0,
+        8267.0
+      ],
+      [
+        5259.0,
+        8267.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0310",
+    "text": "协程介绍\n协程与线程的对比\n协程实现方式\n有栈协程\n无栈协程",
+    "reason": "lines=5, height=246.0",
+    "bbox": [
+      [
+        142.0,
+        7907.0
+      ],
+      [
+        454.0,
+        7907.0
+      ],
+      [
+        454.0,
+        8153.0
+      ],
+      [
+        142.0,
+        8153.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0312",
+    "text": "布娃娃模拟\n用途\n途\n骨骼与刚体的映射\n人体关节约束\n约束参数\n动画与布娃娃的混合过渡\n富力布娃娃",
+    "reason": "lines=8, height=360.0",
+    "bbox": [
+      [
+        5828.0,
+        7954.0
+      ],
+      [
+        6201.0,
+        7954.0
+      ],
+      [
+        6201.0,
+        8314.0
+      ],
+      [
+        5828.0,
+        8314.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0322",
+    "text": "Job调度\nJob队列\n全局队列\n线程局部队列\n两种访问方式\n先进先出\n后进先出\nJob依赖\nJob Stealing",
+    "reason": "lines=9, height=438.0",
+    "bbox": [
+      [
+        195.0,
+        8208.0
+      ],
+      [
+        435.0,
+        8208.0
+      ],
+      [
+        435.0,
+        8646.0
+      ],
+      [
+        195.0,
+        8646.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0323",
+    "text": "界面\nUI模式\n即时模式（IMGUI）\n保留模式（RMGUI）",
+    "reason": "lines=4, height=248.0",
+    "bbox": [
+      [
+        2717.0,
+        8212.0
+      ],
+      [
+        3077.0,
+        8212.0
+      ],
+      [
+        3077.0,
+        8460.0
+      ],
+      [
+        2717.0,
+        8460.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0335",
+    "text": "GINE\n回顾：基于组件的设计",
+    "reason": "lines=2, height=343.0",
+    "bbox": [
+      [
+        0.0,
+        8627.0
+      ],
+      [
+        626.0,
+        8627.0
+      ],
+      [
+        626.0,
+        8970.0
+      ],
+      [
+        0.0,
+        8970.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0336",
+    "text": "并行\n并行计算问题\n易并\n易并行问题\n不易\n不易并行问题\n解决数据竞争\n阻塞方法\n锁原语\n非阻塞方法\n原子操作\n内存序问题",
+    "reason": "lines=12, height=556.0",
+    "bbox": [
+      [
+        1674.0,
+        8639.0
+      ],
+      [
+        2025.0,
+        8639.0
+      ],
+      [
+        2025.0,
+        9195.0
+      ],
+      [
+        1674.0,
+        9195.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0340",
+    "text": "资产管理\n资产格式\n文本（Text)\n二进制（Binary)",
+    "reason": "lines=4, height=293.0",
+    "bbox": [
+      [
+        2328.0,
+        8681.0
+      ],
+      [
+        2665.0,
+        8681.0
+      ],
+      [
+        2665.0,
+        8974.0
+      ],
+      [
+        2328.0,
+        8974.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0342",
+    "text": "发布-订阅模式\n事件定义\n硬编码\n反射与自动代码生成\n事件回调函数注册\n对象生命周期及回调安全保证\n对象的强引用\n对象的弱引用\n事件分发机制\n立即分发\n延迟分发\n消息队列",
+    "reason": "lines=12, height=647.0",
+    "bbox": [
+      [
+        4974.0,
+        8743.0
+      ],
+      [
+        5366.0,
+        8743.0
+      ],
+      [
+        5366.0,
+        9390.0
+      ],
+      [
+        4974.0,
+        9390.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0346",
+    "text": "声音基础\n声音三要素\n响度\n音高\n音色\n脉冲编码调制\n采样\n量化\n编码",
+    "reason": "lines=9, height=642.0",
+    "bbox": [
+      [
+        6550.0,
+        8763.0
+      ],
+      [
+        6850.0,
+        8763.0
+      ],
+      [
+        6850.0,
+        9405.0
+      ],
+      [
+        6550.0,
+        9405.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0349",
+    "text": "听者几何体\n扬声器几何体\n中央声道\n音频平移\n线性平移\n等功率平移",
+    "reason": "lines=6, height=285.0",
+    "bbox": [
+      [
+        7322.0,
+        8871.0
+      ],
+      [
+        7527.0,
+        8871.0
+      ],
+      [
+        7527.0,
+        9156.0
+      ],
+      [
+        7322.0,
+        9156.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0353",
+    "text": "监督学习\n无监督学习\n半监督学习\n强化学习\n马尔可夫决策过程\n状态\n动作\n奖励",
+    "reason": "lines=8, height=525.0",
+    "bbox": [
+      [
+        4074.0,
+        8996.0
+      ],
+      [
+        4369.0,
+        8996.0
+      ],
+      [
+        4369.0,
+        9521.0
+      ],
+      [
+        4074.0,
+        9521.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0355",
+    "text": "数据定义\n基础元素\n继承\n引用\n两种设计方式\n独立的schema定义文件\nna定义文件\n代码内部定义",
+    "reason": "lines=8, height=398.0",
+    "bbox": [
+      [
+        2814.0,
+        9011.0
+      ],
+      [
+        3188.0,
+        9011.0
+      ],
+      [
+        3188.0,
+        9409.0
+      ],
+      [
+        2814.0,
+        9409.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0359",
+    "text": "Unity DOTS\nUnity ECS\n原型Archetype\n数据排布\n系统实现\nUnityC#任务系统\n原生容器\n安全性系统\nBurst编译器",
+    "reason": "lines=9, height=482.0",
+    "bbox": [
+      [
+        171.0,
+        9210.0
+      ],
+      [
+        514.0,
+        9210.0
+      ],
+      [
+        514.0,
+        9692.0
+      ],
+      [
+        171.0,
+        9692.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0360",
+    "text": "缓存\n局域性\nLRU策略\n缓存行\n缓存行Cacheline\n缓存缺\n缓存缺失Cachemiss",
+    "reason": "lines=7, height=278.0",
+    "bbox": [
+      [
+        1686.0,
+        9234.0
+      ],
+      [
+        2042.0,
+        9234.0
+      ],
+      [
+        2042.0,
+        9512.0
+      ],
+      [
+        1686.0,
+        9512.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0361",
+    "text": "音效衰减\n衰减函数\n线性\n对数\n反函数\n对数反函数\n自然音效\n自定义\n衰减形状\n球体\n胶囊体\n盒体\n椎体",
+    "reason": "lines=13, height=681.0",
+    "bbox": [
+      [
+        7283.0,
+        9236.0
+      ],
+      [
+        7522.0,
+        9236.0
+      ],
+      [
+        7522.0,
+        9917.0
+      ],
+      [
+        7283.0,
+        9917.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0365",
+    "text": "UnrealMass框架\n实体Entity实现\n组件Component实现\n组件C\n碎片 Fragment\n系统System实现\n碎片请求\n执行",
+    "reason": "lines=8, height=368.0",
+    "bbox": [
+      [
+        611.0,
+        9298.0
+      ],
+      [
+        1016.0,
+        9298.0
+      ],
+      [
+        1016.0,
+        9666.0
+      ],
+      [
+        611.0,
+        9666.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0366",
+    "text": "资产结构设计\n资产引用\n资产实例\n数据拷贝\n数据继承",
+    "reason": "lines=5, height=272.0",
+    "bbox": [
+      [
+        2332.0,
+        9317.0
+      ],
+      [
+        2625.0,
+        9317.0
+      ],
+      [
+        2625.0,
+        9589.0
+      ],
+      [
+        2332.0,
+        9589.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0368",
+    "text": "脚本语言的选择\n多种脚本语言的对比\nINE\n可视化脚本",
+    "reason": "lines=4, height=390.0",
+    "bbox": [
+      [
+        5889.0,
+        9347.0
+      ],
+      [
+        6473.0,
+        9347.0
+      ],
+      [
+        6473.0,
+        9737.0
+      ],
+      [
+        5889.0,
+        9737.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0369",
+    "text": "代码分析\n抽象语法树（AST）\nClang\n反射信息收集\nTags\n代码生成\n代码渲染\nMustache",
+    "reason": "lines=8, height=544.0",
+    "bbox": [
+      [
+        3509.0,
+        9392.0
+      ],
+      [
+        3870.0,
+        9392.0
+      ],
+      [
+        3870.0,
+        9936.0
+      ],
+      [
+        3509.0,
+        9936.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0371",
+    "text": "双耳音频空间化\n双耳声级差\n双耳时间延迟\n频谱阴影\n头相关变换函数",
+    "reason": "lines=5, height=262.0",
+    "bbox": [
+      [
+        6751.0,
+        9518.0
+      ],
+      [
+        7057.0,
+        9518.0
+      ],
+      [
+        7057.0,
+        9780.0
+      ],
+      [
+        6751.0,
+        9780.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0375",
+    "text": "如何利用强化学习构建AI\n状态抽象\n长度固定的统计变量\n长度不固定的序列数据\n图像数据\n动作抽象\n奖励设置\nAlphaStar\nOpenAIFive",
+    "reason": "lines=9, height=433.0",
+    "bbox": [
+      [
+        4108.0,
+        9613.0
+      ],
+      [
+        4476.0,
+        9613.0
+      ],
+      [
+        4476.0,
+        10046.0
+      ],
+      [
+        4108.0,
+        10046.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0377",
+    "text": "鲁棒性设计\nCommand模式\n定义\nUID",
+    "reason": "lines=4, height=260.0",
+    "bbox": [
+      [
+        2413.0,
+        9711.0
+      ],
+      [
+        2736.0,
+        9711.0
+      ],
+      [
+        2736.0,
+        9971.0
+      ],
+      [
+        2413.0,
+        9971.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0378",
+    "text": "想\n原则思想\n万物皆数据\n数据\n数据\n指令也是数据\n紧致\n让代码与数据在内存中保持紧致\nGINE\n网络基础\n网络协议",
+    "reason": "lines=11, height=756.0",
+    "bbox": [
+      [
+        1127.0,
+        9744.0
+      ],
+      [
+        1815.0,
+        9744.0
+      ],
+      [
+        1815.0,
+        10500.0
+      ],
+      [
+        1127.0,
+        10500.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0381",
+    "text": "软件架构\n构\none架构\nStand-alone架构\n架构\nIn Game架构\nEditor\nPlay in Editor",
+    "reason": "lines=8, height=296.0",
+    "bbox": [
+      [
+        2874.0,
+        9827.0
+      ],
+      [
+        3225.0,
+        9827.0
+      ],
+      [
+        3225.0,
+        10123.0
+      ],
+      [
+        2874.0,
+        10123.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0382",
+    "text": "性能敏感编程\n减少顺序依赖\nfalse sharing\n分支预测\n基于存在性处理",
+    "reason": "lines=5, height=278.0",
+    "bbox": [
+      [
+        176.0,
+        9980.0
+      ],
+      [
+        490.0,
+        9980.0
+      ],
+      [
+        490.0,
+        10258.0
+      ],
+      [
+        176.0,
+        10258.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0385",
+    "text": "序列化与反序列化\n基础command类型\nAdd\nDelete\nUpdate",
+    "reason": "lines=5, height=257.0",
+    "bbox": [
+      [
+        2467.0,
+        9990.0
+      ],
+      [
+        2771.0,
+        9990.0
+      ],
+      [
+        2771.0,
+        10247.0
+      ],
+      [
+        2467.0,
+        10247.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0390",
+    "text": "常见编辑器\nWorld Editor\n架构\n数据抽象\n布局信息（Layout）\n地形（Terrain）\n环境（Environment）\n多系统间的数据交互(eg.Rule System)",
+    "reason": "lines=8, height=448.0",
+    "bbox": [
+      [
+        3632.0,
+        10153.0
+      ],
+      [
+        4234.0,
+        10153.0
+      ],
+      [
+        4234.0,
+        10601.0
+      ],
+      [
+        3632.0,
+        10601.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0396",
+    "text": "EN\n思考\n选择\nTree Policy\nUCB公式\n平衡开发与探索问题",
+    "reason": "lines=6, height=435.0",
+    "bbox": [
+      [
+        4815.0,
+        10296.0
+      ],
+      [
+        5368.0,
+        10296.0
+      ],
+      [
+        5368.0,
+        10731.0
+      ],
+      [
+        4815.0,
+        10731.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0401",
+    "text": "TCP协议\n面向连接\n可靠、有序\n流控\n拥塞控制",
+    "reason": "lines=5, height=244.0",
+    "bbox": [
+      [
+        169.0,
+        10421.0
+      ],
+      [
+        332.0,
+        10421.0
+      ],
+      [
+        332.0,
+        10665.0
+      ],
+      [
+        169.0,
+        10665.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0404",
+    "text": "协同编辑\n资产拆分\n按逻辑分层\n按位置分块\nOne File\nOne File Per Actor",
+    "reason": "lines=6, height=358.0",
+    "bbox": [
+      [
+        3107.0,
+        10496.0
+      ],
+      [
+        3486.0,
+        10496.0
+      ],
+      [
+        3486.0,
+        10854.0
+      ],
+      [
+        3107.0,
+        10854.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0407",
+    "text": "网络分层\nOSI七层模型\n物理层\n数据链路层\n网络层\n传输层\n会话层\n表示层\n应用层",
+    "reason": "lines=9, height=456.0",
+    "bbox": [
+      [
+        696.0,
+        10616.0
+      ],
+      [
+        928.0,
+        10616.0
+      ],
+      [
+        928.0,
+        11072.0
+      ],
+      [
+        696.0,
+        11072.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0408",
+    "text": "相机（Camera)\n相机的绑定\n弹簧臂\n多种相机效果\n相机抖动\n滤镜\n基于玩家主观感受做优化",
+    "reason": "lines=7, height=338.0",
+    "bbox": [
+      [
+        7182.0,
+        10620.0
+      ],
+      [
+        7518.0,
+        10620.0
+      ],
+      [
+        7518.0,
+        10958.0
+      ],
+      [
+        7182.0,
+        10958.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0418",
+    "text": "从路点到运动\n转向行为\n寻找/逃跑\n速度匹配\n对齐",
+    "reason": "lines=5, height=276.0",
+    "bbox": [
+      [
+        5572.0,
+        10901.0
+      ],
+      [
+        5824.0,
+        10901.0
+      ],
+      [
+        5824.0,
+        11177.0
+      ],
+      [
+        5572.0,
+        11177.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0419",
+    "text": "在一个场\n在一个场景内协同编辑\n同步操作\n分布式操作\n分布式操作的一致性问题\n锁\n实例锁\n资产锁\n操作转换\n操作转换(OT)\n无冲突复\n无冲突复制数据类型(CRDT)\n工作流",
+    "reason": "lines=13, height=488.0",
+    "bbox": [
+      [
+        3112.0,
+        10903.0
+      ],
+      [
+        3609.0,
+        10903.0
+      ],
+      [
+        3609.0,
+        11391.0
+      ],
+      [
+        3112.0,
+        11391.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0420",
+    "text": "同步分类\n同\n快照同步\n帧同步\n状态同步",
+    "reason": "lines=5, height=253.0",
+    "bbox": [
+      [
+        1749.0,
+        10905.0
+      ],
+      [
+        1959.0,
+        10905.0
+      ],
+      [
+        1959.0,
+        11158.0
+      ],
+      [
+        1749.0,
+        11158.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0422",
+    "text": "地图表示\n可通行区域\n形式\n路点网络\n格子\n寻路网格\n凸多边形\n稀疏体素八",
+    "reason": "lines=8, height=398.0",
+    "bbox": [
+      [
+        6140.0,
+        10957.0
+      ],
+      [
+        6393.0,
+        10957.0
+      ],
+      [
+        6393.0,
+        11355.0
+      ],
+      [
+        6140.0,
+        11355.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0423",
+    "text": "快照同步\n全量快照\n增量快照\n带宽对比\n全量快照大\n增量快照小\n快照同步的缺点\n随着游戏复杂，快照越来越大\n带宽浪费\n服务器压力大",
+    "reason": "lines=10, height=611.0",
+    "bbox": [
+      [
+        2572.0,
+        10986.0
+      ],
+      [
+        3122.0,
+        10986.0
+      ],
+      [
+        3122.0,
+        11597.0
+      ],
+      [
+        2572.0,
+        11597.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0426",
+    "text": "网络时间协议（NTP）\n四个对应时间戳以及误差调整\n1.客户端发送时间戳\n2.服务端接收时间戳\n3.服务端发送返回时间戳\n4.客户端接收时间戳\nNTP在计算传输时延的时候\n默认上行延迟和下行延迟相等",
+    "reason": "lines=8, height=394.0",
+    "bbox": [
+      [
+        105.0,
+        11064.0
+      ],
+      [
+        546.0,
+        11064.0
+      ],
+      [
+        546.0,
+        11458.0
+      ],
+      [
+        105.0,
+        11458.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0431",
+    "text": "最优优先算法\nDijkstra算法\nA*算法\n计算开销\n启发函数\n格子情形\n寻路网格情形",
+    "reason": "lines=7, height=338.0",
+    "bbox": [
+      [
+        7233.0,
+        11145.0
+      ],
+      [
+        7508.0,
+        11145.0
+      ],
+      [
+        7508.0,
+        11483.0
+      ],
+      [
+        7233.0,
+        11483.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0436",
+    "text": "群体模拟\n微观模型\n基于规则Boids\n宏观模型\n流场\n介观模型\n碰撞规避\n基于力的模型\n的模型\n基于速度的模型\nVo\nRVO\nORCA",
+    "reason": "lines=13, height=715.0",
+    "bbox": [
+      [
+        5672.0,
+        11304.0
+      ],
+      [
+        6008.0,
+        11304.0
+      ],
+      [
+        6008.0,
+        12019.0
+      ],
+      [
+        5672.0,
+        12019.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0439",
+    "text": "对WorldState中的部分属性做是否满足的判断\n动作集\n前提条件\n动作损耗\n动作影响",
+    "reason": "lines=5, height=242.0",
+    "bbox": [
+      [
+        4851.0,
+        11346.0
+      ],
+      [
+        5424.0,
+        11346.0
+      ],
+      [
+        5424.0,
+        11588.0
+      ],
+      [
+        4851.0,
+        11588.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0440",
+    "text": "一个客户端挂掉\n一个客户端挂掉，不影响其他玩家\n不依赖于服务器\n缺点\n易作弊\n需要良好的网络连接\n玩家人数受限",
+    "reason": "lines=7, height=298.0",
+    "bbox": [
+      [
+        1559.0,
+        11421.0
+      ],
+      [
+        2002.0,
+        11421.0
+      ],
+      [
+        2002.0,
+        11719.0
+      ],
+      [
+        1559.0,
+        11719.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0444",
+    "text": "PICC\n内部信息\n外部信息\n静态空间信息\nNE\n动态空间信息\n经典决策算法\n影响力图\n其他游戏对象\n角色信息\n感知模拟",
+    "reason": "lines=11, height=626.0",
+    "bbox": [
+      [
+        6144.0,
+        11546.0
+      ],
+      [
+        6925.0,
+        11546.0
+      ],
+      [
+        6925.0,
+        12172.0
+      ],
+      [
+        6144.0,
+        12172.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0446",
+    "text": "CCOLO\n对WorldState的改变描述\nIGINE\n逆向规划\n游戏优化",
+    "reason": "lines=5, height=743.0",
+    "bbox": [
+      [
+        4848.0,
+        11563.0
+      ],
+      [
+        5889.0,
+        11563.0
+      ],
+      [
+        5889.0,
+        12306.0
+      ],
+      [
+        4848.0,
+        12306.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0447",
+    "text": "进阶内容：寻路网格生成\n体素化\n区域分割\n分水岭算法\n网格生成\n高级特性\n多边形标记\n分块",
+    "reason": "lines=8, height=390.0",
+    "bbox": [
+      [
+        7017.0,
+        11597.0
+      ],
+      [
+        7473.0,
+        11597.0
+      ],
+      [
+        7473.0,
+        11987.0
+      ],
+      [
+        7017.0,
+        11987.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0453",
+    "text": "游戏响应\n帧同步\n较慢\n状态同步\n较快",
+    "reason": "lines=5, height=243.0",
+    "bbox": [
+      [
+        4243.0,
+        11721.0
+      ],
+      [
+        4419.0,
+        11721.0
+      ],
+      [
+        4419.0,
+        11964.0
+      ],
+      [
+        4243.0,
+        11964.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0457",
+    "text": "DN3\n执行节点/叶子节点\n行为节点\n条件节点\n控制节点\n序列节点Sequence\n选择器Selector\n并行节点Parallel\n运行\n实现优化\n装饰节点\n前置条件\n黑板变量",
+    "reason": "lines=13, height=1039.0",
+    "bbox": [
+      [
+        7270.0,
+        11841.0
+      ],
+      [
+        7678.0,
+        11841.0
+      ],
+      [
+        7678.0,
+        12880.0
+      ],
+      [
+        7270.0,
+        12880.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0461",
+    "text": "跨平台\n帧同步\n相对复杂\n状态同步\n相对简单",
+    "reason": "lines=5, height=250.0",
+    "bbox": [
+      [
+        4263.0,
+        12074.0
+      ],
+      [
+        4431.0,
+        12074.0
+      ],
+      [
+        4431.0,
+        12324.0
+      ],
+      [
+        4263.0,
+        12324.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0464",
+    "text": "网络带宽\n帧同步\n小\n状态同步\n大",
+    "reason": "lines=5, height=253.0",
+    "bbox": [
+      [
+        3371.0,
+        12111.0
+      ],
+      [
+        3540.0,
+        12111.0
+      ],
+      [
+        3540.0,
+        12364.0
+      ],
+      [
+        3371.0,
+        12364.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0466",
+    "text": "支持玩家的数量\n帧同步\n倾向步\n少量玩家\n状态同步\n大量玩家",
+    "reason": "lines=6, height=248.0",
+    "bbox": [
+      [
+        3664.0,
+        12167.0
+      ],
+      [
+        3953.0,
+        12167.0
+      ],
+      [
+        3953.0,
+        12415.0
+      ],
+      [
+        3664.0,
+        12415.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0470",
+    "text": "GIN\nRPC实现通信的基本原理\n1.客户端发起函数调用（Clientfunctions）\n2.客户端通过ClientStub进行消息的封装（序列化）及传输\n3.Server端通过ServerStub(或者叫Skeleton)进行解码\n并找到对应的函数进行相关处理，以及返回处理结果\n4.ClientStub接收消息（反序列化），得到结果",
+    "reason": "lines=7, height=476.0",
+    "bbox": [
+      [
+        163.0,
+        12210.0
+      ],
+      [
+        862.0,
+        12210.0
+      ],
+      [
+        862.0,
+        12686.0
+      ],
+      [
+        163.0,
+        12686.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0471",
+    "text": "帧同步\nNG",
+    "reason": "lines=2, height=279.0",
+    "bbox": [
+      [
+        1590.0,
+        12246.0
+      ],
+      [
+        1791.0,
+        12246.0
+      ],
+      [
+        1791.0,
+        12525.0
+      ],
+      [
+        1590.0,
+        12525.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0474",
+    "text": "CO\n如何解决延迟\n哑客户端（客户端不做预测）\n发出移动请求\n等待服务器回复\n收到服务器回复，并作出移动",
+    "reason": "lines=6, height=533.0",
+    "bbox": [
+      [
+        1834.0,
+        12367.0
+      ],
+      [
+        2451.0,
+        12367.0
+      ],
+      [
+        2451.0,
+        12900.0
+      ],
+      [
+        1834.0,
+        12900.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0479",
+    "text": "回放文件大小\n帧同步\n小\n状态同步\n大",
+    "reason": "lines=5, height=255.0",
+    "bbox": [
+      [
+        3649.0,
+        12529.0
+      ],
+      [
+        3900.0,
+        12529.0
+      ],
+      [
+        3900.0,
+        12784.0
+      ],
+      [
+        3649.0,
+        12784.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0485",
+    "text": "从开火到命中的流程\n射击指令传输的网络状况\nHitscan\nHitscan Weapons\n瞬时完\n瞬时完成射击操作\nProjectil\nProjectileWeapons\n子弹有\n子弹有弹道距离，重力等因素的影响",
+    "reason": "lines=10, height=251.0",
+    "bbox": [
+      [
+        4641.0,
+        12711.0
+      ],
+      [
+        5194.0,
+        12711.0
+      ],
+      [
+        5194.0,
+        12962.0
+      ],
+      [
+        4641.0,
+        12962.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0489",
+    "text": "式系统挑战\n互斥问题\n等性\n故障与部分失效\n不可靠的网络\n分布式问题传染\n一致性和共识算法\n分布式事务",
+    "reason": "lines=8, height=390.0",
+    "bbox": [
+      [
+        5856.0,
+        12771.0
+      ],
+      [
+        6126.0,
+        12771.0
+      ],
+      [
+        6126.0,
+        13161.0
+      ],
+      [
+        5856.0,
+        13161.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0490",
+    "text": "系统举例\n大厅系统\n用户管理系统\n交易系统\n社交系统\n匹配系统\n数据存储举例\nMysql\nMongo\nRedis",
+    "reason": "lines=10, height=683.0",
+    "bbox": [
+      [
+        5198.0,
+        12802.0
+      ],
+      [
+        5539.0,
+        12802.0
+      ],
+      [
+        5539.0,
+        13485.0
+      ],
+      [
+        5198.0,
+        13485.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0491",
+    "text": "帧同步需要面对的挑战与解决：多端不一致问题\n浮点数\n随机数\n容器与排序算法等\n数学工具",
+    "reason": "lines=5, height=247.0",
+    "bbox": [
+      [
+        178.0,
+        12812.0
+      ],
+      [
+        1052.0,
+        12812.0
+      ],
+      [
+        1052.0,
+        13059.0
+      ],
+      [
+        178.0,
+        13059.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0492",
+    "text": "数据压缩\n对象更新频率\n对象相关性\n静态区域\nAOI\n暴力法\n九宫格\n十字链表\nPVS",
+    "reason": "lines=9, height=478.0",
+    "bbox": [
+      [
+        6471.0,
+        12831.0
+      ],
+      [
+        6725.0,
+        12831.0
+      ],
+      [
+        6725.0,
+        13309.0
+      ],
+      [
+        6471.0,
+        13309.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0495",
+    "text": "反作弊\n作弊手段分类\n读取、篡改内存\n读取网络包\nAl Cheat\n修改本地文件，贴图等",
+    "reason": "lines=6, height=360.0",
+    "bbox": [
+      [
+        7082.0,
+        12973.0
+      ],
+      [
+        7538.0,
+        12973.0
+      ],
+      [
+        7538.0,
+        13333.0
+      ],
+      [
+        7082.0,
+        13333.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0508",
+    "text": "ENGIN\n掉线重连的基本流程\n掉线\n帧同步的优缺点\n重连\n优点\n接收游戏开始到现在所有请求\n追帧\n低带宽\n开发效率高\n缺点\n大重连（客户端崩溃，内存中无数据）\n通过快照，加速重连\n客户端定时快照，关键帧快照，序列化到磁盘\n服务器做定时快照（更换终端登录，用这种优化）",
+    "reason": "lines=15, height=720.0",
+    "bbox": [
+      [
+        225.0,
+        13299.0
+      ],
+      [
+        1108.0,
+        13299.0
+      ],
+      [
+        1108.0,
+        14019.0
+      ],
+      [
+        225.0,
+        14019.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0516",
+    "text": "反作弊方法\n混淆加密内存\n加壳\n本地文件校验\n网络包加密\n非对称加密分发密钥\n对称加密传输数据\nVAC&EAV\n基于统计数据反作弊\n检测已知的作弊程序",
+    "reason": "lines=10, height=589.0",
+    "bbox": [
+      [
+        6949.0,
+        13507.0
+      ],
+      [
+        7308.0,
+        13507.0
+      ],
+      [
+        7308.0,
+        14096.0
+      ],
+      [
+        6949.0,
+        14096.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0524",
+    "text": "CCO\nCCC\nENDN\n外插值的使用场景、\nGINE\n典型例子：载具系统，赛车游戏\n算）\n外插值的实现方法（航位推算）\n投影速度混合法\n混合使用\n使用归一化参数平滑运动轨迹\n动轨迹\n对载具系统采用外插值\n外插值的碰撞处理\n对人物采用内插值\n端接管物理模拟\n发生碰撞的时刻让客户端接管物理模拟",
+    "reason": "lines=17, height=515.0",
+    "bbox": [
+      [
+        2754.0,
+        13636.0
+      ],
+      [
+        3834.0,
+        13636.0
+      ],
+      [
+        3834.0,
+        14151.0
+      ],
+      [
+        2754.0,
+        14151.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0530",
+    "text": "立置\n开枪的位置了\n立置做判定\n一切以服务器为准：开枪的时间，回溯到开枪时候敌人的位置，做命中判定\n仓时候敌人的位置，做命中判定\n难点",
+    "reason": "lines=6, height=255.0",
+    "bbox": [
+      [
+        5355.0,
+        13764.0
+      ],
+      [
+        6221.0,
+        13764.0
+      ],
+      [
+        6221.0,
+        14019.0
+      ],
+      [
+        5355.0,
+        14019.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0538",
+    "text": "解决\n添加前摇\n添加特效\n客户端预测命中过程\n不触发命中结果\n命中结果等待服务器返回",
+    "reason": "lines=6, height=285.0",
+    "bbox": [
+      [
+        4813.0,
+        13864.0
+      ],
+      [
+        5156.0,
+        13864.0
+      ],
+      [
+        5156.0,
+        14149.0
+      ],
+      [
+        4813.0,
+        14149.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "oversized_node",
+    "node_id": "node_0547",
+    "text": "BOOMIHG\nTECH\nGINE",
+    "reason": "lines=3, height=432.0",
+    "bbox": [
+      [
+        364.0,
+        14471.0
+      ],
+      [
+        1058.0,
+        14471.0
+      ],
+      [
+        1058.0,
+        14903.0
+      ],
+      [
+        364.0,
+        14903.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0000",
+    "text": "NGIN\nGlobalSDFcan'tsamplesurfacecache\nMergeallcardsintoglobalclipmapscenteredaround thecamera\nstructure\nRadiance per 6 directions per voxel\nSample and interpolate 3 directions using normal\nVisibilityBuffer\nTrackobjectupdatesandsetmodifiedbricksonGPU\nVoxelizemodifiedbricksbytracingrays\n6 rays per voxel\nCullobjectsto4^3bricks\nOne thread per mesh SDF per trace\nCachehitsinavisibilitybuffer\nHitT I Mesh Index\nInterlockedMinwritehit tovisibilitybuffer\nUpdating",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6629.0,
+        19.0
+      ],
+      [
+        7505.0,
+        19.0
+      ],
+      [
+        7505.0,
+        949.0
+      ],
+      [
+        6629.0,
+        949.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0001",
+    "text": "p V2.2\n技术交流群：\n洋：加微信Piccolo0301，回复关键词\n加微信Pic\n]【社区】入群\nShadow Map\nShadow Mapping步骤1：从光源处出发，向光照的方向看去，来构造出光照空间。\n算法流程\n算法济\n然后在光照空间，我们渲染需要产生阴影的物体，\n此时将深度写入到ZBuffer中，得到保存最近处物体的深度值的ShadowMap\n步骤2：然后我们再次正常渲染物体，在渲染时，\n我们根据渲染物体的世界坐标，变换到上一阶段的光照空间坐标，\n再计算出该点在ShadowMap中的深度值并进行比较，\n如果相对光源的距离比ShadowMap中的深度要大，\n就说明该点处在阴影中，否则就说明不在阴影中。\nShadowBias\nCascade Shadow Map\nVarianceShadowMap\nPCF\nPCSS",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2861.0,
+        120.0
+      ],
+      [
+        4281.0,
+        120.0
+      ],
+      [
+        4281.0,
+        1356.0
+      ],
+      [
+        2861.0,
+        1356.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0002",
+    "text": "Mindmap\nPiccolo社区 https:/ /www.piccoloengine.com/\nPiccolo\n缺点场景复杂度和光源数量相关\n会有大量的overdraw\nDistance Field Shaodw",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        1548.0,
+        149.0
+      ],
+      [
+        3285.0,
+        149.0
+      ],
+      [
+        3285.0,
+        763.0
+      ],
+      [
+        1548.0,
+        763.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0003",
+    "text": "Voxel Ligting\n动机",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6595.0,
+        165.0
+      ],
+      [
+        6763.0,
+        165.0
+      ],
+      [
+        6763.0,
+        236.0
+      ],
+      [
+        6595.0,
+        236.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0004",
+    "text": "Spatial Probe Filtering\ncreenSpaceProbe\nFilterwithin theneighborScreenSpaceProbe\nlgnorenormaldifferences,Onlydepthweighting\nOnlydepthweighting\nected neighbor ray hits\nUseAngleerrorfromreprojectedneighborrayh\nClampneighborhitdistancetoourown\ntoour own",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4181.0,
+        169.0
+      ],
+      [
+        4884.0,
+        169.0
+      ],
+      [
+        4884.0,
+        386.0
+      ],
+      [
+        4181.0,
+        386.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0008",
+    "text": "Fixed update budget\nSelect pages to update based on priority\nPriority = LastUsed - LastUpdated\nPriority queue using radix sort\n1024x1024texelsfordirectlighting\n512x512 texels for indirect lighting",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5002.0,
+        238.0
+      ],
+      [
+        5601.0,
+        238.0
+      ],
+      [
+        5601.0,
+        531.0
+      ],
+      [
+        5002.0,
+        531.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0009",
+    "text": "N+2 bounces through feedback\nProbe",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5902.0,
+        244.0
+      ],
+      [
+        6309.0,
+        244.0
+      ],
+      [
+        6309.0,
+        309.0
+      ],
+      [
+        5902.0,
+        309.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0010",
+    "text": "4x4hemisphericalprobeper4x4tile\nJitterprobeplacementandraydire\nTrace in last frame’ s Voxel Lighting\nLigting Gather\nBilinearinterpolationof 4probes\nPlaneweighting\nVisibility weighting using probe h\nCovert to SH\nShading pixels on surface cache",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5903.0,
+        321.0
+      ],
+      [
+        6406.0,
+        321.0
+      ],
+      [
+        6406.0,
+        658.0
+      ],
+      [
+        5903.0,
+        658.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0012",
+    "text": "Sampling\nImportant Sampling\nPDF计算\nIncoming Radiance\nRadiance\nLast frame' s Screen Space\name’sScreenSpaceProbe‘sradiance\nFallbackto theWorldSpac\ncktotheWorldSpaceProbes\nBRDF",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4417.0,
+        513.0
+      ],
+      [
+        5107.0,
+        513.0
+      ],
+      [
+        5107.0,
+        754.0
+      ],
+      [
+        4417.0,
+        754.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0013",
+    "text": "Volumetric Scattering\n被水滴或者其他粒子比如灰尘等所吸收，\n这个过程称为extinction（消散）或者吸收（absorption）\n穿出云层抵达人眼，这个称之为内散射in-scattering\n穿出云层但是并未进入人眼，称为外散射out-scattering",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        750.0,
+        667.0
+      ],
+      [
+        1434.0,
+        667.0
+      ],
+      [
+        1434.0,
+        868.0
+      ],
+      [
+        750.0,
+        868.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0016",
+    "text": "Accumulate the BRDF from\nResampling Rays\nRays\nCalculate PDF = BRDF * Radial\nPDF = BRDF *Radiance\nby PDF\nSort rays by PDF\nFor every 3 rays with PDF belc",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4432.0,
+        767.0
+      ],
+      [
+        4903.0,
+        767.0
+      ],
+      [
+        4903.0,
+        968.0
+      ],
+      [
+        4432.0,
+        968.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0017",
+    "text": "ulate the BRDF from all of the pixels that will use this ScreenProbe after interpolation",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4594.0,
+        771.0
+      ],
+      [
+        5687.0,
+        771.0
+      ],
+      [
+        5687.0,
+        797.0
+      ],
+      [
+        4594.0,
+        797.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0020",
+    "text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        94.0,
+        836.0
+      ],
+      [
+        666.0,
+        836.0
+      ],
+      [
+        666.0,
+        951.0
+      ],
+      [
+        94.0,
+        951.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0023",
+    "text": "直接光照\nCull lights to 8x8 tiles\n8x8 tiles\ntsper tile\nSelect first8lightsper tile\n1 bit shadow mask\nowmask\nShadows",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5659.0,
+        900.0
+      ],
+      [
+        6020.0,
+        900.0
+      ],
+      [
+        6020.0,
+        1103.0
+      ],
+      [
+        5659.0,
+        1103.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0024",
+    "text": "Shadetheentirevisibilitybuffereveryframe\nSamplelightingfromsurfacecache(Final Lighting)",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6666.0,
+        962.0
+      ],
+      [
+        7310.0,
+        962.0
+      ],
+      [
+        7310.0,
+        1035.0
+      ],
+      [
+        6666.0,
+        1035.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0028",
+    "text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        165.0,
+        1031.0
+      ],
+      [
+        592.0,
+        1031.0
+      ],
+      [
+        592.0,
+        1159.0
+      ],
+      [
+        165.0,
+        1159.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0030",
+    "text": "First sample Shadow Map,then trace Offscreen Shadows",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5244.0,
+        1074.0
+      ],
+      [
+        5994.0,
+        1074.0
+      ],
+      [
+        5994.0,
+        1101.0
+      ],
+      [
+        5244.0,
+        1101.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0031",
+    "text": "群组渲染\n优点：相比于Tile的划分，\n进一步剔除了更多无关光源\n缺点：LightCulling流程比较复杂，\n需要多个pass完成",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2081.0,
+        1086.0
+      ],
+      [
+        2509.0,
+        1086.0
+      ],
+      [
+        2509.0,
+        1305.0
+      ],
+      [
+        2081.0,
+        1305.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0034",
+    "text": "World Space Probes and Ray Connecting\nWorld Space\n内容",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4620.0,
+        1155.0
+      ],
+      [
+        5331.0,
+        1155.0
+      ],
+      [
+        5331.0,
+        1245.0
+      ],
+      [
+        4620.0,
+        1245.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0035",
+    "text": "虚拟纹理\nVirtual texture\nPhysical texture\nPage table\n优势",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2591.0,
+        1179.0
+      ],
+      [
+        2841.0,
+        1179.0
+      ],
+      [
+        2841.0,
+        1378.0
+      ],
+      [
+        2591.0,
+        1378.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0038",
+    "text": "Radiance Injection",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5859.0,
+        1202.0
+      ],
+      [
+        6248.0,
+        1202.0
+      ],
+      [
+        6248.0,
+        1245.0
+      ],
+      [
+        5859.0,
+        1245.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0041",
+    "text": "Screen Space Probe\nProbestructure\n8x8OctahedralAtlas\nRadiance and HitDistance\nAdaptive Placement\nuniformly 16x16\nadaptive8x8and4x4\nProbe jittering",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3975.0,
+        1234.0
+      ],
+      [
+        4393.0,
+        1234.0
+      ],
+      [
+        4393.0,
+        1643.0
+      ],
+      [
+        3975.0,
+        1643.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0043",
+    "text": "FractalBrownianMotion\nDensity-Height Functions\nWeatherTexture\n云层覆盖率\n云层降雨概率\n云层种类",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        240.0,
+        1249.0
+      ],
+      [
+        566.0,
+        1249.0
+      ],
+      [
+        566.0,
+        1515.0
+      ],
+      [
+        240.0,
+        1515.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0044",
+    "text": "3dclipmap grie\n3dclipmapgridscenteredaroundcamera\n32x32 Radiance per probe, storing Radiance, TraceDistance\n32x32Radianc\n更新",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4637.0,
+        1258.0
+      ],
+      [
+        5438.0,
+        1258.0
+      ],
+      [
+        5438.0,
+        1374.0
+      ],
+      [
+        4637.0,
+        1374.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0048",
+    "text": "地形材质混合\nTextureSplatting技术\n地表纹理使用多种不同的纹理混合，\n使用一张叫做splatmap的权重图来\n记录这些纹理的权重",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2040.0,
+        1387.0
+      ],
+      [
+        2515.0,
+        1387.0
+      ],
+      [
+        2515.0,
+        1627.0
+      ],
+      [
+        2040.0,
+        1627.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0051",
+    "text": "Markedworldprobesforinterpolation\nMarked world\nReuse traces from last frame\nReuse traces f\nAllocatetracesfornewprobes\nRe-trace a subset of cache hits to propagate lighting changes\nRe-trace a sub\nImportance Sampling\nAccumulateBF\nAccumulateBRDFfromScreenProbes\nSupersample near camera\nSpatial filtering\nReuses probe\nReusesprobedepthforocclusiontest\nRay Connecting\nWorld Probe ra\nScreen Probe\nReprojectScre",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4631.0,
+        1389.0
+      ],
+      [
+        5467.0,
+        1389.0
+      ],
+      [
+        5467.0,
+        1956.0
+      ],
+      [
+        4631.0,
+        1956.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0053",
+    "text": "Post\nPost Pass\nOc\nCu\nIns\nHie\nRa\nRasterizer\nSoftware Rasterizer\nHardwareRasterizer\nBu\nBuild Current Frame HZB",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3242.0,
+        1423.0
+      ],
+      [
+        3613.0,
+        1423.0
+      ],
+      [
+        3613.0,
+        1841.0
+      ],
+      [
+        3242.0,
+        1841.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0055",
+    "text": "Occludedinstances&&OccludedNodesandClusters\nCurrentBuildHZB\nInstance Culling\nHierarchical/Cluster Culling",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3290.0,
+        1485.0
+      ],
+      [
+        3979.0,
+        1485.0
+      ],
+      [
+        3979.0,
+        1660.0
+      ],
+      [
+        3290.0,
+        1660.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0065",
+    "text": "World Probe ray must skip the interpolation footprint\ns  t    n   s\nReprojectScreenProberayintersectionwithWorldProbesphere",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4667.0,
+        1817.0
+      ],
+      [
+        5578.0,
+        1817.0
+      ],
+      [
+        5578.0,
+        1956.0
+      ],
+      [
+        4667.0,
+        1956.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0067",
+    "text": "光通量（LuminousFlux）\n单位流明（Im），单位时间内光源所发出\n或者被照物体所接收的总光能。\n改变光源大小不会影响场景照明效果。",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        819.0,
+        1847.0
+      ],
+      [
+        1357.0,
+        1847.0
+      ],
+      [
+        1357.0,
+        2016.0
+      ],
+      [
+        819.0,
+        2016.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0077",
+    "text": "uild a lot of Probes\nwith Different",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4562.0,
+        2079.0
+      ],
+      [
+        4995.0,
+        2079.0
+      ],
+      [
+        4995.0,
+        2170.0
+      ],
+      [
+        4562.0,
+        2170.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0079",
+    "text": "Main Pass\nZB\nPrevHZB\nInstance Culling\ning\nHierarchy/Cluster Culling\ning\nRasterizer\nzer\nSoftware Rasterizer\nHardware Rasterizer\nZB\nCurrent Build HZB",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2779.0,
+        2133.0
+      ],
+      [
+        3173.0,
+        2133.0
+      ],
+      [
+        3173.0,
+        2501.0
+      ],
+      [
+        2779.0,
+        2501.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0093",
+    "text": "Cullin\nDataflow",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3218.0,
+        2411.0
+      ],
+      [
+        3398.0,
+        2411.0
+      ],
+      [
+        3398.0,
+        2499.0
+      ],
+      [
+        3218.0,
+        2499.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0096",
+    "text": "Rasterization",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3570.0,
+        2434.0
+      ],
+      [
+        3846.0,
+        2434.0
+      ],
+      [
+        3846.0,
+        2475.0
+      ],
+      [
+        3570.0,
+        2475.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0097",
+    "text": "Fast Ray Trace in\nAny Hardware",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4984.0,
+        2447.0
+      ],
+      [
+        5359.0,
+        2447.0
+      ],
+      [
+        5359.0,
+        2541.0
+      ],
+      [
+        4984.0,
+        2541.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0099",
+    "text": "Deferred Material\n思想：",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3830.0,
+        2507.0
+      ],
+      [
+        4204.0,
+        2507.0
+      ],
+      [
+        4204.0,
+        2622.0
+      ],
+      [
+        3830.0,
+        2622.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0101",
+    "text": "Virtual Shadow Map\nadowMape\n目标",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2840.0,
+        2610.0
+      ],
+      [
+        3304.0,
+        2610.0
+      ],
+      [
+        3304.0,
+        2713.0
+      ],
+      [
+        2840.0,
+        2713.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0103",
+    "text": "将材质分类，找出每个材质对应的像素进行Shading\nMaterialID\n表示当前像素属于哪个材质\nMaterial Shading\n正常流程",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3896.0,
+        2634.0
+      ],
+      [
+        4528.0,
+        2634.0
+      ],
+      [
+        4528.0,
+        2891.0
+      ],
+      [
+        3896.0,
+        2891.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0108",
+    "text": "Surface Cache\n5张Altas - Albedo, Normal,\n内容：5\nDepth, Emissive, Opacity\n生成\nTwo Pass\nCard Capture",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4852.0,
+        2664.0
+      ],
+      [
+        5301.0,
+        2664.0
+      ],
+      [
+        5301.0,
+        2880.0
+      ],
+      [
+        4852.0,
+        2880.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0111",
+    "text": "MR工作流\nBase\nBase Color\nRoug\nRoughness\nMetallic\nMeta\nNormal\n优点：\n缺点：",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        1674.0,
+        2750.0
+      ],
+      [
+        1877.0,
+        2750.0
+      ],
+      [
+        1877.0,
+        3045.0
+      ],
+      [
+        1674.0,
+        3045.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0114",
+    "text": "Fixtexelbudgetperframe(512x512)\nSort by distance to camera\nand GPU feedback\nCopy card capture to surface\ncache and compress\nCardcapture分瓣率\n根据cardbounds最大extent投影\n到屏幕像素的长度决定，\n从8到1024，不一定是正方形，\n根据card的bounds长宽比确定",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4922.0,
+        2884.0
+      ],
+      [
+        5469.0,
+        2884.0
+      ],
+      [
+        5469.0,
+        3240.0
+      ],
+      [
+        4922.0,
+        3240.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0115",
+    "text": "为每个材质执行一次全屏渲染\n跳过那些未被当前材质覆盖的像素\n需要对每个材质都执行一遍渲染\n对每个像素都执行一遍是否被材质覆盖的检测，效率较低。\nMaterial Culling\n将MaterialID存成深度值\n将屏幕分成Tlle\n不需要进行一个全屏的材质的绘制\n进行基于tile尺寸的绘制",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3939.0,
+        2908.0
+      ],
+      [
+        4618.0,
+        2908.0
+      ],
+      [
+        4618.0,
+        3308.0
+      ],
+      [
+        3939.0,
+        3308.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0116",
+    "text": "阴影贴图光线追踪\n光线追踪\n一种结合虚拟阴影贴图的采样算\n虚拟阴影贴图的采样算法，能生成\n的柔和阴影和接触硬阴影。对象投\n阴影比近处阴影拥有更柔和的效果\n射的远处阴影比近处阴影拥有更\nNanite Meshe\nBuild Process\nGroup\nMerge\nSimplify\nSplit",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2910.0,
+        2921.0
+      ],
+      [
+        3705.0,
+        2921.0
+      ],
+      [
+        3705.0,
+        3389.0
+      ],
+      [
+        2910.0,
+        3389.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0122",
+    "text": "反向\n反向动力学\nInverse Kinematics\n基础概念\n基础相",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6040.0,
+        3099.0
+      ],
+      [
+        6550.0,
+        3099.0
+      ],
+      [
+        6550.0,
+        3291.0
+      ],
+      [
+        6040.0,
+        3291.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0123",
+    "text": "动画重定向\n重定向流程\nMorphAnimation的重定向",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6773.0,
+        3139.0
+      ],
+      [
+        7366.0,
+        3139.0
+      ],
+      [
+        7366.0,
+        3334.0
+      ],
+      [
+        6773.0,
+        3334.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0130",
+    "text": "SG工作流\nAlbedo\nAlbedo Color\nSpecular Color\nGlossiness\nNormal\n优点：可\n缺点：FO\n因\n但\nRG",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        1652.0,
+        3270.0
+      ],
+      [
+        1881.0,
+        3270.0
+      ],
+      [
+        1881.0,
+        3675.0
+      ],
+      [
+        1652.0,
+        3675.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0134",
+    "text": "Surface Cache Altas size: 4096x4096\n4096\nPysical Page size:128x128\nVirutal page机制分配空间，通过\npage table进行物理地址映射",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4916.0,
+        3307.0
+      ],
+      [
+        5415.0,
+        3307.0
+      ],
+      [
+        5415.0,
+        3450.0
+      ],
+      [
+        4916.0,
+        3450.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0136",
+    "text": "流程\nVisib\nVisibilityPass\n对\n对场景进行光栅化，将PrimitiveID和\nMa\nMaterial ID保存到visibility buffer中",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3212.0,
+        3409.0
+      ],
+      [
+        3720.0,
+        3409.0
+      ],
+      [
+        3720.0,
+        3623.0
+      ],
+      [
+        3212.0,
+        3623.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0137",
+    "text": "Two Bone\n多关节IK\n关节纟\n关节约束\n启发式算法\n循环坐标下降算法CCD\nFABRIK\nFABRIK的约束\n多终端效应器难题\n雅可比矩阵法\nIK前沿",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6057.0,
+        3459.0
+      ],
+      [
+        6453.0,
+        3459.0
+      ],
+      [
+        6453.0,
+        4078.0
+      ],
+      [
+        6057.0,
+        4078.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0138",
+    "text": "Virtualized\nGeometry\nNanite",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3804.0,
+        3474.0
+      ],
+      [
+        4088.0,
+        3474.0
+      ],
+      [
+        4088.0,
+        3645.0
+      ],
+      [
+        3804.0,
+        3645.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0139",
+    "text": "面部动画\n面部编码系统（FACS）\nAction Unit\nKey Pose Blending\nMorph Target Animation\nUV Texture Facial Animation\nMuscle Model Animation",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6798.0,
+        3484.0
+      ],
+      [
+        7447.0,
+        3484.0
+      ],
+      [
+        7447.0,
+        3943.0
+      ],
+      [
+        6798.0,
+        3943.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0141",
+    "text": "Mesh Card\n功能：可以看成是放在6个轴对称方向上的相机，\n可以看成是放\n功能：\n通过正交投影的方式来光栅化Mesh，\n通过正交投\n从而获取Mesh的各种属性\n从而获取Me\n(Albedo, N\n(Albedo, Normal, Depth等等)\n对应surface cache\n对应surfac\n离线生成：Mesh\n离线生成：Mesh-Surfel-Surfel Clusters－Cards\n最多2级LOD",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4584.0,
+        3497.0
+      ],
+      [
+        5271.0,
+        3497.0
+      ],
+      [
+        5271.0,
+        3870.0
+      ],
+      [
+        4584.0,
+        3870.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0142",
+    "text": "三角形剔除\nBackface Culling\nSmall Triangle Culling\nOcclusion Culling",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2657.0,
+        3498.0
+      ],
+      [
+        3011.0,
+        3498.0
+      ],
+      [
+        3011.0,
+        3673.0
+      ],
+      [
+        2657.0,
+        3673.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0143",
+    "text": "基于物理的渲染（Physicallybased rendering）(PBR)\n意味着表面接近光线在真实世界的表现方式，\n而不是我们直观以为的应有方式。\n相较于完全依赖美术师直觉来设置参数的着色工作流程，\n遵守PBR原则的材质更准确，并且通常看起来更自然。",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        169.0,
+        3574.0
+      ],
+      [
+        1033.0,
+        3574.0
+      ],
+      [
+        1033.0,
+        3836.0
+      ],
+      [
+        169.0,
+        3836.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0145",
+    "text": "Worl\nWorklisk Pass\n构\n构建并Worklist，将屏幕划分成很多tile，根据使用到\n某\n某个MaterialID的tile加到该MaterialID\n的V\n的Worklist里，作为下一步的索引l",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3243.0,
+        3671.0
+      ],
+      [
+        3887.0,
+        3671.0
+      ],
+      [
+        3887.0,
+        3851.0
+      ],
+      [
+        3243.0,
+        3851.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0146",
+    "text": "粒子常见属性\nAcceleration\nAttraction\nCamera\nCollision\nColor\nLifetime\nLight\nLocation\nOrbit\nOrientation\nRotation\nSize\nSpawn\nVelocity",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2169.0,
+        3679.0
+      ],
+      [
+        2445.0,
+        3679.0
+      ],
+      [
+        2445.0,
+        4326.0
+      ],
+      [
+        2169.0,
+        4326.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0148",
+    "text": "Surface Caching",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4168.0,
+        3748.0
+      ],
+      [
+        4523.0,
+        3748.0
+      ],
+      [
+        4523.0,
+        3801.0
+      ],
+      [
+        4168.0,
+        3801.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0152",
+    "text": "Material Batch\nIndirect Draw\nTexture Batch\nVirtual Texture\nBindless Texture",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2771.0,
+        3861.0
+      ],
+      [
+        3008.0,
+        3861.0
+      ],
+      [
+        3008.0,
+        4054.0
+      ],
+      [
+        2771.0,
+        4054.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0154",
+    "text": "Shading Passes\n拿到几何和材质信息，对表面着色",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3245.0,
+        3900.0
+      ],
+      [
+        3677.0,
+        3900.0
+      ],
+      [
+        3677.0,
+        3984.0
+      ],
+      [
+        3245.0,
+        3984.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0157",
+    "text": "Shading Full\nPixels with\nScreen Space\nProbes",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4065.0,
+        3943.0
+      ],
+      [
+        4369.0,
+        3943.0
+      ],
+      [
+        4369.0,
+        4142.0
+      ],
+      [
+        4065.0,
+        4142.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0160",
+    "text": "Reinhard Tone Mapping\nFilmic Tone Mapping\nACES",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        373.0,
+        3984.0
+      ],
+      [
+        780.0,
+        3984.0
+      ],
+      [
+        780.0,
+        4127.0
+      ],
+      [
+        373.0,
+        4127.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0163",
+    "text": "粒子数据类型\nBill\nBillboard类型数据\nMesh类型数据\n光束类型数据\n条带类型数据",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        1749.0,
+        4070.0
+      ],
+      [
+        2115.0,
+        4070.0
+      ],
+      [
+        2115.0,
+        4331.0
+      ],
+      [
+        1749.0,
+        4331.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0165",
+    "text": "动画混合树\nBlend Tree\nLERP blend node\nadditive blend node\n动画混合树的节点\n动画树的控制信号",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6599.0,
+        4080.0
+      ],
+      [
+        7047.0,
+        4080.0
+      ],
+      [
+        7047.0,
+        4466.0
+      ],
+      [
+        6599.0,
+        4466.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0168",
+    "text": "之前常见的GI算法\nReflec\nReflective Shadow Map\nLight Propag\nLight PropagationVolume\nSparse Voxel Octree for Real-time Global Il\nal-time Global lllumination\nNG\nVoxelization Based Global llun\nased Global llumination\nScreen Space Global Illumina\ne Global llumination\nGlobal Illumination\nDynamic Diffuse Global lluminati\nRay-tracing based Global Illuminatiol\nlobal llumination\n流程\nSetup",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4084.0,
+        4114.0
+      ],
+      [
+        5173.0,
+        4114.0
+      ],
+      [
+        5173.0,
+        4724.0
+      ],
+      [
+        4084.0,
+        4724.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0177",
+    "text": "GPU Driven\nen\npeline\nRender Pipeline",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2803.0,
+        4425.0
+      ],
+      [
+        3222.0,
+        4425.0
+      ],
+      [
+        3222.0,
+        4538.0
+      ],
+      [
+        2803.0,
+        4538.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0180",
+    "text": "游戏中的3D动画技术\nDoF(Degrees of Freedom)\nRigid Hierarchical Animation\nPer-vertex Animation\nMorph Target Animation\n3D Skinned Animation\n基于物理的动画Physics-basedAnimation\n布娃娃系统Ragdoll\n布料与流体模拟\nIK(lnverse Kinematics)",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5136.0,
+        4511.0
+      ],
+      [
+        5970.0,
+        4511.0
+      ],
+      [
+        5970.0,
+        5218.0
+      ],
+      [
+        5136.0,
+        5218.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0206",
+    "text": "Block Compression",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2419.0,
+        5135.0
+      ],
+      [
+        2931.0,
+        5135.0
+      ],
+      [
+        2931.0,
+        5186.0
+      ],
+      [
+        2419.0,
+        5186.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0211",
+    "text": "Ericsson Texture Compression\nEricsson T",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        1526.0,
+        5295.0
+      ],
+      [
+        2342.0,
+        5295.0
+      ],
+      [
+        2342.0,
+        5351.0
+      ],
+      [
+        1526.0,
+        5351.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0213",
+    "text": "实现\n蒙皮动画实现\n转换\n坐标空间转换\n结构\n生物的骨骼结构\n骨骼\n关节\n根骨骼\n绑定\n骨骼绑定\n姿势\n绑定姿势\nT-pose\nose\nbose\nA-pose",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4393.0,
+        5325.0
+      ],
+      [
+        4693.0,
+        5325.0
+      ],
+      [
+        4693.0,
+        6064.0
+      ],
+      [
+        4393.0,
+        6064.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0217",
+    "text": "Pre-filtered Environment Map\nBrdf Lut\nDiffuse\nIrradiance Map",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        596.0,
+        5353.0
+      ],
+      [
+        1013.0,
+        5353.0
+      ],
+      [
+        1013.0,
+        5539.0
+      ],
+      [
+        596.0,
+        5539.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0218",
+    "text": "动态BVH树\n排序与扫描SortandSweep\n排序与扫描：\n粗阶段",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6190.0,
+        5392.0
+      ],
+      [
+        6644.0,
+        5392.0
+      ],
+      [
+        6644.0,
+        5546.0
+      ],
+      [
+        6190.0,
+        5546.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0221",
+    "text": "动画捕捉\nMotion Capture",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5193.0,
+        5413.0
+      ],
+      [
+        5464.0,
+        5413.0
+      ],
+      [
+        5464.0,
+        5500.0
+      ],
+      [
+        5193.0,
+        5500.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0222",
+    "text": "tive Scalable Texture Compression\nAdaptive Scala",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        1399.0,
+        5428.0
+      ],
+      [
+        2475.0,
+        5428.0
+      ],
+      [
+        2475.0,
+        5481.0
+      ],
+      [
+        1399.0,
+        5481.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0226",
+    "text": "游戏中的2D\n动画技术\nEN\n精灵动画\nLive2D\n2D Skinned Animation\n动画混合",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5143.0,
+        5591.0
+      ],
+      [
+        5590.0,
+        5591.0
+      ],
+      [
+        5590.0,
+        6052.0
+      ],
+      [
+        5143.0,
+        6052.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0229",
+    "text": "场景空间管理\n层次包围盒（BVH）\n二元空间分割树（BSPTrees）\n四叉树（Quad Tree）\n八叉树\n(Octree)\n场景图\n(Scene Graphs)\nKD树 (K-Dimensional Tree)",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3701.0,
+        5657.0
+      ],
+      [
+        4283.0,
+        5657.0
+      ],
+      [
+        4283.0,
+        6171.0
+      ],
+      [
+        3701.0,
+        6171.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0234",
+    "text": "部混合SkeletonMaskedBlending\n叠加混合AdditiveBlending",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5846.0,
+        5771.0
+      ],
+      [
+        6575.0,
+        5771.0
+      ],
+      [
+        6575.0,
+        5891.0
+      ],
+      [
+        5846.0,
+        5891.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0239",
+    "text": "Potential Visibility Set\net",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2646.0,
+        6030.0
+      ],
+      [
+        3107.0,
+        6030.0
+      ],
+      [
+        3107.0,
+        6069.0
+      ],
+      [
+        2646.0,
+        6069.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0252",
+    "text": "GPU架构\nImmediate Mode Rendering\nTile Based Rendering\nCCO\nTile Based Deferred Rendering\n渲染",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3182.0,
+        6322.0
+      ],
+      [
+        4191.0,
+        6322.0
+      ],
+      [
+        4191.0,
+        6934.0
+      ],
+      [
+        3182.0,
+        6934.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0269",
+    "text": "静态刚体static\n动态刚体dynamic\n触发器(trigger)\n受控刚体kinematic\n刚体PhysicsActor",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4772.0,
+        6608.0
+      ],
+      [
+        5245.0,
+        6608.0
+      ],
+      [
+        5245.0,
+        6883.0
+      ],
+      [
+        4772.0,
+        6883.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0303",
+    "text": "Threadfork-join\ntaroikjon",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        140.0,
+        7629.0
+      ],
+      [
+        580.0,
+        7629.0
+      ],
+      [
+        580.0,
+        7680.0
+      ],
+      [
+        140.0,
+        7680.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0305",
+    "text": "Unreal并行框架\nNamed Thread与Worker Thread\nThread\nName\nTaskGraph",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        1020.0,
+        7796.0
+      ],
+      [
+        1734.0,
+        7796.0
+      ],
+      [
+        1734.0,
+        8001.0
+      ],
+      [
+        1020.0,
+        8001.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0306",
+    "text": "角色控制器\n与刚体动力学的差异\n基本组成\n与环境的碰撞\n自动阶跃（autostepping）\n坡度限制与强制滑坡\n更新大小\n推动物体\n移动平台",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5259.0,
+        7802.0
+      ],
+      [
+        5681.0,
+        7802.0
+      ],
+      [
+        5681.0,
+        8267.0
+      ],
+      [
+        5259.0,
+        8267.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0311",
+    "text": "PBD (Position Based Dynamics)\n自碰撞",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6717.0,
+        7927.0
+      ],
+      [
+        7126.0,
+        7927.0
+      ],
+      [
+        7126.0,
+        8012.0
+      ],
+      [
+        6717.0,
+        8012.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0351",
+    "text": "Machine Learning\n（机器学习：ML）",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3523.0,
+        8983.0
+      ],
+      [
+        4007.0,
+        8983.0
+      ],
+      [
+        4007.0,
+        9122.0
+      ],
+      [
+        3523.0,
+        9122.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0359",
+    "text": "Unity DOTS\nUnity ECS\n原型Archetype\n数据排布\n系统实现\nUnityC#任务系统\n原生容器\n安全性系统\nBurst编译器",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        171.0,
+        9210.0
+      ],
+      [
+        514.0,
+        9210.0
+      ],
+      [
+        514.0,
+        9692.0
+      ],
+      [
+        171.0,
+        9692.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0370",
+    "text": "不同场景下的引擎数据\n引擎数据\nRuntime\nStorage\nTools",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2856.0,
+        9467.0
+      ],
+      [
+        3191.0,
+        9467.0
+      ],
+      [
+        3191.0,
+        9679.0
+      ],
+      [
+        2856.0,
+        9679.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0375",
+    "text": "如何利用强化学习构建AI\n状态抽象\n长度固定的统计变量\n长度不固定的序列数据\n图像数据\n动作抽象\n奖励设置\nAlphaStar\nOpenAIFive",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4108.0,
+        9613.0
+      ],
+      [
+        4476.0,
+        9613.0
+      ],
+      [
+        4476.0,
+        10046.0
+      ],
+      [
+        4108.0,
+        10046.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0381",
+    "text": "软件架构\n构\none架构\nStand-alone架构\n架构\nIn Game架构\nEditor\nPlay in Editor",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2874.0,
+        9827.0
+      ],
+      [
+        3225.0,
+        9827.0
+      ],
+      [
+        3225.0,
+        10123.0
+      ],
+      [
+        2874.0,
+        10123.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0382",
+    "text": "性能敏感编程\n减少顺序依赖\nfalse sharing\n分支预测\n基于存在性处理",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        176.0,
+        9980.0
+      ],
+      [
+        490.0,
+        9980.0
+      ],
+      [
+        490.0,
+        10258.0
+      ],
+      [
+        176.0,
+        10258.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0384",
+    "text": "Monte Carlo Tree Search\n（蒙特卡洛树搜索；MCTS）",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4862.0,
+        9986.0
+      ],
+      [
+        5396.0,
+        9986.0
+      ],
+      [
+        5396.0,
+        10091.0
+      ],
+      [
+        4862.0,
+        10091.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0385",
+    "text": "序列化与反序列化\n基础command类型\nAdd\nDelete\nUpdate",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2467.0,
+        9990.0
+      ],
+      [
+        2771.0,
+        9990.0
+      ],
+      [
+        2771.0,
+        10247.0
+      ],
+      [
+        2467.0,
+        10247.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0388",
+    "text": "网络设计\nMLP\nCNN\nLSTM\nTransformer",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4170.0,
+        10089.0
+      ],
+      [
+        4365.0,
+        10089.0
+      ],
+      [
+        4365.0,
+        10285.0
+      ],
+      [
+        4170.0,
+        10285.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0396",
+    "text": "EN\n思考\n选择\nTree Policy\nUCB公式\n平衡开发与探索问题",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4815.0,
+        10296.0
+      ],
+      [
+        5368.0,
+        10296.0
+      ],
+      [
+        5368.0,
+        10731.0
+      ],
+      [
+        4815.0,
+        10731.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0398",
+    "text": "DefaultPolicy\n最保守的选择\n最佳的选择\n最鲁棒的选择\n最激进的选择",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5280.0,
+        10320.0
+      ],
+      [
+        5490.0,
+        10320.0
+      ],
+      [
+        5490.0,
+        10549.0
+      ],
+      [
+        5280.0,
+        10549.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0402",
+    "text": "Plugin Manager\nInterfaces\nSDK\n版本控制",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2745.0,
+        10434.0
+      ],
+      [
+        3021.0,
+        10434.0
+      ],
+      [
+        3021.0,
+        10646.0
+      ],
+      [
+        2745.0,
+        10646.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0404",
+    "text": "协同编辑\n资产拆分\n按逻辑分层\n按位置分块\nOne File\nOne File Per Actor",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3107.0,
+        10496.0
+      ],
+      [
+        3486.0,
+        10496.0
+      ],
+      [
+        3486.0,
+        10854.0
+      ],
+      [
+        3107.0,
+        10854.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0412",
+    "text": "拓展\n仿真+评估\nRollout Policy\n评估函数\n反向传播",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5036.0,
+        10740.0
+      ],
+      [
+        5254.0,
+        10740.0
+      ],
+      [
+        5254.0,
+        10954.0
+      ],
+      [
+        5036.0,
+        10954.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0414",
+    "text": "Hierarchical Tasks Network\n（分层任务网络：HTN）",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4012.0,
+        10774.0
+      ],
+      [
+        4594.0,
+        10774.0
+      ],
+      [
+        4594.0,
+        10867.0
+      ],
+      [
+        4012.0,
+        10867.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0429",
+    "text": "Goal-Orientated Action Planner\n（目标导向的动作规划器；GOAP）",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4785.0,
+        11132.0
+      ],
+      [
+        5452.0,
+        11132.0
+      ],
+      [
+        5452.0,
+        11231.0
+      ],
+      [
+        4785.0,
+        11231.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0438",
+    "text": "稀疏体素八叉树SparseVoxelOctree",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        6254.0,
+        11321.0
+      ],
+      [
+        6704.0,
+        11321.0
+      ],
+      [
+        6704.0,
+        11357.0
+      ],
+      [
+        6254.0,
+        11357.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0470",
+    "text": "GIN\nRPC实现通信的基本原理\n1.客户端发起函数调用（Clientfunctions）\n2.客户端通过ClientStub进行消息的封装（序列化）及传输\n3.Server端通过ServerStub(或者叫Skeleton)进行解码\n并找到对应的函数进行相关处理，以及返回处理结果\n4.ClientStub接收消息（反序列化），得到结果",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        163.0,
+        12210.0
+      ],
+      [
+        862.0,
+        12210.0
+      ],
+      [
+        862.0,
+        12686.0
+      ],
+      [
+        163.0,
+        12686.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0472",
+    "text": "流程的阶段拆分\nAuthorized\neg.开火",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        2685.0,
+        12300.0
+      ],
+      [
+        2976.0,
+        12300.0
+      ],
+      [
+        2976.0,
+        12471.0
+      ],
+      [
+        2685.0,
+        12471.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0476",
+    "text": "Bucket\nSynchronization",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        945.0,
+        12452.0
+      ],
+      [
+        1281.0,
+        12452.0
+      ],
+      [
+        1281.0,
+        12546.0
+      ],
+      [
+        945.0,
+        12546.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0485",
+    "text": "从开火到命中的流程\n射击指令传输的网络状况\nHitscan\nHitscan Weapons\n瞬时完\n瞬时完成射击操作\nProjectil\nProjectileWeapons\n子弹有\n子弹有弹道距离，重力等因素的影响",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4641.0,
+        12711.0
+      ],
+      [
+        5194.0,
+        12711.0
+      ],
+      [
+        5194.0,
+        12962.0
+      ],
+      [
+        4641.0,
+        12962.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0487",
+    "text": "Deterministic\nLockstep",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        1546.0,
+        12731.0
+      ],
+      [
+        1824.0,
+        12731.0
+      ],
+      [
+        1824.0,
+        12825.0
+      ],
+      [
+        1546.0,
+        12825.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0490",
+    "text": "系统举例\n大厅系统\n用户管理系统\n交易系统\n社交系统\n匹配系统\n数据存储举例\nMysql\nMongo\nRedis",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5198.0,
+        12802.0
+      ],
+      [
+        5539.0,
+        12802.0
+      ],
+      [
+        5539.0,
+        13485.0
+      ],
+      [
+        5198.0,
+        13485.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0514",
+    "text": "发现\n服务发现\nEtcd\nZookeeper",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        5794.0,
+        13457.0
+      ],
+      [
+        6044.0,
+        13457.0
+      ],
+      [
+        6044.0,
+        13619.0
+      ],
+      [
+        5794.0,
+        13619.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0521",
+    "text": "延迟补偿的问题\n拐角问题\n拐角\n进入拐角问题\nPeekerandholder问题（探头打人）",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        4758.0,
+        13612.0
+      ],
+      [
+        5282.0,
+        13612.0
+      ],
+      [
+        5282.0,
+        13806.0
+      ],
+      [
+        4758.0,
+        13806.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0547",
+    "text": "BOOMIHG\nTECH\nGINE",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        364.0,
+        14471.0
+      ],
+      [
+        1058.0,
+        14471.0
+      ],
+      [
+        1058.0,
+        14903.0
+      ],
+      [
+        364.0,
+        14903.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "text_outlier",
+    "node_id": "node_0550",
+    "text": "PICCOLO\nENGINE",
+    "reason": "suspicious long token or unbroken text",
+    "bbox": [
+      [
+        3487.0,
+        14514.0
+      ],
+      [
+        4056.0,
+        14514.0
+      ],
+      [
+        4056.0,
+        14681.0
+      ],
+      [
+        3487.0,
+        14681.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0004",
+    "text": "Spatial Probe Filtering\ncreenSpaceProbe\nFilterwithin theneighborScreenSpaceProbe\nlgnorenormaldifferences,Onlydepthweighting\nOnlydepthweighting\nected neighbor ray hits\nUseAngleerrorfromreprojectedneighborrayh\nClampneighborhitdistancetoourown\ntoour own",
+    "reason": "parent=node_0001, score=0.357",
+    "bbox": [
+      [
+        4181.0,
+        169.0
+      ],
+      [
+        4884.0,
+        169.0
+      ],
+      [
+        4884.0,
+        386.0
+      ],
+      [
+        4181.0,
+        386.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0012",
+    "text": "Sampling\nImportant Sampling\nPDF计算\nIncoming Radiance\nRadiance\nLast frame' s Screen Space\name’sScreenSpaceProbe‘sradiance\nFallbackto theWorldSpac\ncktotheWorldSpaceProbes\nBRDF",
+    "reason": "parent=node_0001, score=0.447",
+    "bbox": [
+      [
+        4417.0,
+        513.0
+      ],
+      [
+        5107.0,
+        513.0
+      ],
+      [
+        5107.0,
+        754.0
+      ],
+      [
+        4417.0,
+        754.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0210",
+    "text": "动画内容制作\nDCC",
+    "reason": "parent=node_0207, score=0.527",
+    "bbox": [
+      [
+        5139.0,
+        5267.0
+      ],
+      [
+        5389.0,
+        5267.0
+      ],
+      [
+        5389.0,
+        5400.0
+      ],
+      [
+        5139.0,
+        5400.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0221",
+    "text": "动画捕捉\nMotion Capture",
+    "reason": "parent=node_0225, score=0.536",
+    "bbox": [
+      [
+        5193.0,
+        5413.0
+      ],
+      [
+        5464.0,
+        5413.0
+      ],
+      [
+        5464.0,
+        5500.0
+      ],
+      [
+        5193.0,
+        5500.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0257",
+    "text": "专山\n动画技术基础\n术基础",
+    "reason": "parent=node_0229, score=0.511",
+    "bbox": [
+      [
+        4380.0,
+        6360.0
+      ],
+      [
+        4770.0,
+        6360.0
+      ],
+      [
+        4770.0,
+        6426.0
+      ],
+      [
+        4380.0,
+        6426.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0283",
+    "text": "动画系统",
+    "reason": "parent=node_0252, score=0.460",
+    "bbox": [
+      [
+        4142.0,
+        6956.0
+      ],
+      [
+        4646.0,
+        6956.0
+      ],
+      [
+        4646.0,
+        7059.0
+      ],
+      [
+        4142.0,
+        7059.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0294",
+    "text": "Engine\nENGIN\n音效\n音\n复杂的游戏性及\n游戏性及其基本要素",
+    "reason": "parent=node_0304, score=0.541",
+    "bbox": [
+      [
+        3780.0,
+        7341.0
+      ],
+      [
+        5158.0,
+        7341.0
+      ],
+      [
+        5158.0,
+        8541.0
+      ],
+      [
+        3780.0,
+        8541.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0295",
+    "text": "Gal\niame",
+    "reason": "parent=node_0313, score=0.473",
+    "bbox": [
+      [
+        2944.0,
+        7347.0
+      ],
+      [
+        3687.0,
+        7347.0
+      ],
+      [
+        3687.0,
+        7578.0
+      ],
+      [
+        2944.0,
+        7578.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0306",
+    "text": "角色控制器\n与刚体动力学的差异\n基本组成\n与环境的碰撞\n自动阶跃（autostepping）\n坡度限制与强制滑坡\n更新大小\n推动物体\n移动平台",
+    "reason": "parent=node_0294, score=0.543",
+    "bbox": [
+      [
+        5259.0,
+        7802.0
+      ],
+      [
+        5681.0,
+        7802.0
+      ],
+      [
+        5681.0,
+        8267.0
+      ],
+      [
+        5259.0,
+        8267.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0337",
+    "text": "如何编码游戏逻辑",
+    "reason": "parent=node_0306, score=0.534",
+    "bbox": [
+      [
+        5807.0,
+        8666.0
+      ],
+      [
+        6195.0,
+        8666.0
+      ],
+      [
+        6195.0,
+        8706.0
+      ],
+      [
+        5807.0,
+        8706.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0341",
+    "text": "事件机制",
+    "reason": "parent=node_0353, score=0.512",
+    "bbox": [
+      [
+        4710.0,
+        8743.0
+      ],
+      [
+        4903.0,
+        8743.0
+      ],
+      [
+        4903.0,
+        8790.0
+      ],
+      [
+        4710.0,
+        8790.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0377",
+    "text": "鲁棒性设计\nCommand模式\n定义\nUID",
+    "reason": "parent=node_0360, score=0.461",
+    "bbox": [
+      [
+        2413.0,
+        9711.0
+      ],
+      [
+        2736.0,
+        9711.0
+      ],
+      [
+        2736.0,
+        9971.0
+      ],
+      [
+        2413.0,
+        9971.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0550",
+    "text": "PICCOLO\nENGINE",
+    "reason": "parent=node_0549, score=0.433",
+    "bbox": [
+      [
+        3487.0,
+        14514.0
+      ],
+      [
+        4056.0,
+        14514.0
+      ],
+      [
+        4056.0,
+        14681.0
+      ],
+      [
+        3487.0,
+        14681.0
+      ]
+    ]
+  },
+  {
+    "issue_type": "weak_edge",
+    "node_id": "node_0551",
+    "text": "LME\nt0",
+    "reason": "parent=node_0552, score=0.515",
+    "bbox": [
+      [
+        7278.0,
+        14520.0
+      ],
+      [
+        7328.0,
+        14520.0
+      ],
+      [
+        7328.0,
+        14559.0
+      ],
+      [
+        7278.0,
+        14559.0
+      ]
+    ]
+  }
+]

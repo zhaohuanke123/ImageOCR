@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baseline Editor</title>
+  <style>
+    :root {
+      --bg: #f4efe5;
+      --panel: #fffdf8;
+      --line: #d8d1c1;
+      --text: #201b16;
+      --muted: #75695f;
+      --accent: #0f766e;
+      --danger: #b91c1c;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", "PingFang SC", sans-serif; background: var(--bg); color: var(--text); }
+    .layout { display: grid; grid-template-columns: 320px 1fr 360px; height: 100vh; }
+    .panel { overflow: auto; background: var(--panel); border-right: 1px solid var(--line); padding: 16px; }
+    .panel:last-child { border-right: 0; border-left: 1px solid var(--line); }
+    .viewer { position: relative; overflow: hidden; background: linear-gradient(180deg, #d7e2de, #c2d0cb); }
+    h1 { margin: 0 0 8px; font-size: 22px; }
+    h2 { margin: 18px 0 8px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .toolbar, .form, .node-list, .edge-list { display: grid; gap: 8px; }
+    .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    button { border: 1px solid var(--line); border-radius: 10px; background: #fff; padding: 8px 10px; cursor: pointer; }
+    button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    button.danger { background: var(--danger); color: #fff; border-color: var(--danger); }
+    input, textarea, select { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: #fff; }
+    textarea { min-height: 140px; resize: vertical; }
+    .shell { position: absolute; inset: 0; overflow: auto; cursor: grab; }
+    .shell.dragging { cursor: grabbing; }
+    .stage { position: relative; transform-origin: top left; }
+    .stage img { display: block; max-width: none; user-select: none; -webkit-user-drag: none; }
+    .overlay { position: absolute; inset: 0; }
+    .item { border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: #fff; cursor: pointer; }
+    .item.active { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.08); }
+    .tiny { font-size: 12px; color: var(--muted); }
+    .status.dirty { color: var(--danger); }
+    .status.clean { color: var(--accent); }
+    .handle { fill: #fff; stroke: #0f766e; stroke-width: 2; cursor: nwse-resize; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="panel">
+      <h1>区域编辑器</h1>
+      <div class="tiny">region_01</div>
+      <div id="dirty" class="status clean">No unsaved changes</div>
+      <h2>操作</h2>
+      <div class="toolbar">
+        <div class="btn-row">
+          <button id="new-node">New Node</button>
+          <button id="delete-node" class="danger">Delete Node</button>
+        </div>
+        <div class="btn-row">
+          <button id="merge-node">Merge Node</button>
+          <button id="set-parent">Set Parent</button>
+          <button id="delete-edge">Delete Edge</button>
+        </div>
+        <div class="btn-row">
+          <button id="undo">Undo</button>
+          <button id="reset">Reset</button>
+          <button id="export" class="primary">Export JSON</button>
+        </div>
+      </div>
+      <h2>搜索</h2>
+      <input id="search" type="search" placeholder="搜索节点文本">
+      <h2>节点</h2>
+      <div class="node-list" id="node-list"></div>
+      <h2>连接</h2>
+      <div class="edge-list" id="edge-list"></div>
+    </aside>
+    <main class="viewer">
+      <div style="position:absolute;top:12px;left:12px;z-index:10;background:#fffdf8;border:1px solid #d8d1c1;border-radius:12px;padding:10px;">
+        <label>缩放 <input id="zoom" type="range" min="20" max="200" value="80"></label>
+      </div>
+      <div id="shell" class="shell">
+        <div id="stage" class="stage">
+          <img id="image" alt="region">
+          <svg id="overlay" class="overlay"></svg>
+        </div>
+      </div>
+    </main>
+    <aside class="panel">
+      <h2>当前节点</h2>
+      <div class="form">
+        <input id="node-id" readonly>
+        <textarea id="node-text" placeholder="节点文本"></textarea>
+        <label>Parent
+          <select id="parent-select"></select>
+        </label>
+        <div class="tiny">拖动框移动，拖动四角调整大小。按 Export JSON 导出修订后的 region 文件。</div>
+      </div>
+      <h2>当前边</h2>
+      <div id="edge-detail" class="tiny">未选中</div>
+    </aside>
+  </div>
+  <script id="editor-data" type="application/json">{"region": {"region_id": "region_01", "image_path": "baseline\\GameEngine\\region_01.jpg", "crop_bbox": [0, 584, 1147, 1191], "expected_blocks": [{"text": "Volumetric Scattering", "bbox": [750, 83, 1028, 116]}, {"text": "Beer's Law", "bbox": [506, 117, 649, 144]}, {"text": "被水滴或者其他粒子比如灰尘等所吸收，", "bbox": [788, 121, 1219, 147]}, {"text": "用于描述光线穿过一个材质后的衰减作用", "bbox": [141, 160, 587, 187]}, {"text": "这个过程称为extinction（消散）或者吸收（absorption）", "bbox": [788, 162, 1434, 189]}, {"text": "穿出云层抵达人眼，这个称之为内散射in-scattering", "bbox": [784, 205, 1374, 241]}, {"text": "穿出云层但是并未进入人眼，称为外散射out-scattering", "bbox": [784, 248, 1419, 284]}, {"text": "Henyey-GreensteinPhase Function", "bbox": [214, 252, 666, 278]}, {"text": "用于模拟光线与星际尘云交互后各个方向上", "bbox": [94, 295, 566, 320]}, {"text": "散射强度与入射光方向夹角的依赖规律", "bbox": [144, 340, 566, 367]}], "expected_nodes": [{"id": "node_0013", "text": "Volumetric Scattering\n被水滴或者其他粒子比如灰尘等所吸收，\n这个过程称为extinction（消散）或者吸收（absorption）\n穿出云层抵达人眼，这个称之为内散射in-scattering\n穿出云层但是并未进入人眼，称为外散射out-scattering", "bbox": [753, 83, 1437, 284], "lines": ["Volumetric Scattering", "被水滴或者其他粒子比如灰尘等所吸收，", "这个过程称为extinction（消散）或者吸收（absorption）", "穿出云层抵达人眼，这个称之为内散射in-scattering", "穿出云层但是并未进入人眼，称为外散射out-scattering"]}, {"id": "node_0014", "text": "Beer's Law\n用于描述光线穿过一个材质后的衰减作用", "bbox": [141, 117, 649, 187], "lines": ["Beer's Law", "用于描述光线穿过一个材质后的衰减作用"]}, {"id": "node_0020", "text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律", "bbox": [98, 249, 670, 364], "lines": ["Henyey-GreensteinPhase Function", "用于模拟光线与星际尘云交互后各个方向上", "散射强度与入射光方向夹角的依赖规律"]}, {"id": "node_0027", "text": "云层光照计算", "bbox": [851, 443, 1001, 470], "lines": ["云层光照计算"]}, {"id": "node_0028", "text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果", "bbox": [165, 447, 592, 575], "lines": ["In-ScatteringProbabilityFunction", "模拟当观察方向与太阳光方向", "一致时的in-scattering效果"]}, {"id": "manual_node_090418", "text": "云层渲染", "bbox": [664, 508, 767, 545], "lines": ["云层渲染"]}], "expected_edges": [{"parent_id": "manual_node_090418", "child_id": "node_0028", "parent_text": "云层渲染", "child_text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果"}, {"parent_id": "manual_node_090418", "child_id": "node_0020", "parent_text": "云层渲染", "child_text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律"}, {"parent_id": "manual_node_090418", "child_id": "node_0013", "parent_text": "云层渲染", "child_text": "Volumetric Scattering\n被水滴或者其他粒子比如灰尘等所吸收，\n这个过程称为extinction（消散）或者吸收（absorption）\n穿出云层抵达人眼，这个称之为内散射in-scattering\n穿出云层但是并未进入人眼，称为外散射out-scattering"}, {"parent_id": "manual_node_090418", "child_id": "node_0014", "parent_text": "云层渲染", "child_text": "Beer's Law\n用于描述光线穿过一个材质后的衰减作用"}], "seed_source": "current_prediction", "needs_review": true, "source_path": "baseline\\GameEngine\\region_01.json"}, "image_src": "file:///D:/zhk02/Desktop/OCR/baseline/GameEngine/region_01.jpg", "image_width": 1147, "image_height": 607}</script>
+  <script>
+    const initial = JSON.parse(document.getElementById("editor-data").textContent);
+    const image = document.getElementById("image");
+    const overlay = document.getElementById("overlay");
+    const stage = document.getElementById("stage");
+    const shell = document.getElementById("shell");
+    const nodeList = document.getElementById("node-list");
+    const edgeList = document.getElementById("edge-list");
+    const nodeIdInput = document.getElementById("node-id");
+    const nodeTextInput = document.getElementById("node-text");
+    const parentSelect = document.getElementById("parent-select");
+    const dirtyStatus = document.getElementById("dirty");
+    const edgeDetail = document.getElementById("edge-detail");
+    const searchInput = document.getElementById("search");
+
+    const state = {
+      scale: 0.8,
+      selectedNodeId: null,
+      selectedEdgeKey: null,
+      drag: null,
+      creatingNode: false,
+      settingParent: false,
+      mergingNode: false,
+      dirty: false,
+      search: "",
+      history: [],
+      region: structuredClone(initial.region),
+    };
+
+    function snapshot() {
+      state.history.push(JSON.stringify(state.region));
+      if (state.history.length > 50) state.history.shift();
+    }
+
+    function markDirty(flag) {
+      state.dirty = flag;
+      dirtyStatus.textContent = flag ? "Unsaved changes" : "No unsaved changes";
+      dirtyStatus.className = flag ? "status dirty" : "status clean";
+    }
+
+    function ensureNodeLines(node) {
+      node.lines = node.text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+      if (node.lines.length === 0) node.lines = [node.text];
+    }
+
+    function nodeById(id) {
+      return state.region.expected_nodes.find((node) => node.id === id);
+    }
+
+    function nodeCenter(node) {
+      const [left, top, right, bottom] = node.bbox;
+      return [(left + right) / 2, (top + bottom) / 2];
+    }
+
+    function edgeKey(edge) {
+      return `${edge.parent_id}->${edge.child_id}`;
+    }
+
+    function syncEdgeTexts() {
+      const nodes = Object.fromEntries(state.region.expected_nodes.map((node) => [node.id, node]));
+      for (const edge of state.region.expected_edges) {
+        edge.parent_text = nodes[edge.parent_id]?.text ?? edge.parent_text ?? "";
+        edge.child_text = nodes[edge.child_id]?.text ?? edge.child_text ?? "";
+      }
+    }
+
+    function renderNodeList() {
+      const items = state.region.expected_nodes.filter((node) => !state.search || node.text.toLowerCase().includes(state.search.toLowerCase()));
+      nodeList.innerHTML = items.map((node) => `
+        <div class="item ${state.selectedNodeId === node.id ? "active" : ""}" data-node-id="${node.id}">
+          <div><strong>${node.id}</strong></div>
+          <div class="tiny">${node.text.slice(0, 120)}</div>
+        </div>
+      `).join("");
+      for (const el of nodeList.querySelectorAll("[data-node-id]")) {
+        el.addEventListener("click", () => selectNode(el.dataset.nodeId));
+      }
+    }
+
+    function renderEdgeList() {
+      edgeList.innerHTML = state.region.expected_edges.map((edge) => `
+        <div class="item ${state.selectedEdgeKey === edgeKey(edge) ? "active" : ""}" data-edge-key="${edgeKey(edge)}">
+          <div><strong>${edge.parent_id}</strong> -> <strong>${edge.child_id}</strong></div>
+          <div class="tiny">${edge.parent_text || ""} -> ${edge.child_text || ""}</div>
+        </div>
+      `).join("");
+      for (const el of edgeList.querySelectorAll("[data-edge-key]")) {
+        el.addEventListener("click", () => {
+          state.selectedEdgeKey = el.dataset.edgeKey;
+          edgeDetail.textContent = el.dataset.edgeKey;
+          renderEdgeList();
+          renderOverlay();
+        });
+      }
+    }
+
+    function renderParentOptions() {
+      const summarize = (text) => text.replace(/\s+/g, " ").trim().slice(0, 48);
+      const options = [`<option value="">(none)</option>`].concat(
+        state.region.expected_nodes
+          .filter((node) => node.id !== state.selectedNodeId)
+          .map((node) => `<option value="${node.id}">${node.id} | ${summarize(node.text)}</option>`)
+      );
+      parentSelect.innerHTML = options.join("");
+      const edge = state.region.expected_edges.find((item) => item.child_id === state.selectedNodeId);
+      parentSelect.value = edge?.parent_id || "";
+    }
+
+    function renderSelection() {
+      const node = nodeById(state.selectedNodeId);
+      if (!node) {
+        nodeIdInput.value = "";
+        nodeTextInput.value = "";
+        renderParentOptions();
+        return;
+      }
+      nodeIdInput.value = node.id;
+      nodeTextInput.value = node.text;
+      renderParentOptions();
+    }
+
+    function applyScale() {
+      stage.style.transform = `scale(${state.scale})`;
+    }
+
+    function toPath(bbox) {
+      const [left, top, right, bottom] = bbox;
+      return `M${left},${top} L${right},${top} L${right},${bottom} L${left},${bottom} Z`;
+    }
+
+    function handleMarkup(node) {
+      if (node.id !== state.selectedNodeId) return "";
+      const [left, top, right, bottom] = node.bbox;
+      const points = [
+        ["nw", left, top],
+        ["ne", right, top],
+        ["sw", left, bottom],
+        ["se", right, bottom],
+      ];
+      return points.map(([name, x, y]) => `<circle class="handle" data-handle="${name}" cx="${x}" cy="${y}" r="7"></circle>`).join("");
+    }
+
+    function renderOverlay() {
+      const nodes = Object.fromEntries(state.region.expected_nodes.map((node) => [node.id, node]));
+      const parts = [];
+      for (const edge of state.region.expected_edges) {
+        const parent = nodes[edge.parent_id];
+        const child = nodes[edge.child_id];
+        if (!parent || !child) continue;
+        const [px, py] = nodeCenter(parent);
+        const [cx, cy] = nodeCenter(child);
+        const active = state.selectedEdgeKey === edgeKey(edge);
+        parts.push(`<line data-edge-key="${edgeKey(edge)}" x1="${px}" y1="${py}" x2="${cx}" y2="${cy}" stroke="${active ? "#f59e0b" : "rgba(22,163,74,.75)"}" stroke-width="${active ? 4 : 2}"></line>`);
+      }
+      for (const node of state.region.expected_nodes) {
+        const active = node.id === state.selectedNodeId;
+        parts.push(`<path data-node-id="${node.id}" d="${toPath(node.bbox)}" fill="${active ? "rgba(245,158,11,.25)" : "rgba(220,38,38,.08)"}" stroke="${active ? "#f59e0b" : "rgba(220,38,38,.85)"}" stroke-width="${active ? 4 : 2}"></path>`);
+        parts.push(handleMarkup(node));
+      }
+      overlay.innerHTML = parts.join("");
+      for (const el of overlay.querySelectorAll("[data-node-id]")) {
+        el.addEventListener("click", (event) => {
+          event.stopPropagation();
+          if (state.settingParent && state.selectedNodeId && el.dataset.nodeId !== state.selectedNodeId) {
+            setParent(state.selectedNodeId, el.dataset.nodeId);
+            state.settingParent = false;
+            return;
+          }
+          if (state.mergingNode && state.selectedNodeId && el.dataset.nodeId !== state.selectedNodeId) {
+            mergeIntoTarget(state.selectedNodeId, el.dataset.nodeId);
+            return;
+          }
+          selectNode(el.dataset.nodeId);
+        });
+        el.addEventListener("mousedown", (event) => startDrag(event, el.dataset.nodeId, "move"));
+      }
+      for (const el of overlay.querySelectorAll("[data-handle]")) {
+        el.addEventListener("mousedown", (event) => {
+          event.stopPropagation();
+          startDrag(event, state.selectedNodeId, el.dataset.handle);
+        });
+      }
+      for (const el of overlay.querySelectorAll("[data-edge-key]")) {
+        el.addEventListener("click", (event) => {
+          event.stopPropagation();
+          state.selectedEdgeKey = el.dataset.edgeKey;
+          edgeDetail.textContent = el.dataset.edgeKey;
+          renderEdgeList();
+          renderOverlay();
+        });
+      }
+    }
+
+    function selectNode(id) {
+      state.selectedNodeId = id;
+      state.selectedEdgeKey = null;
+      renderNodeList();
+      renderEdgeList();
+      renderSelection();
+      renderOverlay();
+    }
+
+    function updateNodeText(text) {
+      const node = nodeById(state.selectedNodeId);
+      if (!node) return;
+      snapshot();
+      node.text = text;
+      ensureNodeLines(node);
+      syncEdgeTexts();
+      markDirty(true);
+      renderNodeList();
+      renderEdgeList();
+    }
+
+    function setParent(childId, parentId) {
+      if (!childId) return;
+      snapshot();
+      state.region.expected_edges = state.region.expected_edges.filter((edge) => edge.child_id !== childId);
+        if (parentId) {
+          const parent = nodeById(parentId);
+          const child = nodeById(childId);
+          state.region.expected_edges.push({
+            parent_id: parentId,
+            child_id: childId,
+            parent_text: parent?.text || "",
+            child_text: child?.text || "",
+          });
+        }
+      syncEdgeTexts();
+      markDirty(true);
+      renderEdgeList();
+      renderSelection();
+      renderOverlay();
+    }
+
+    function mergeIntoTarget(targetId, sourceId) {
+      if (!targetId || !sourceId || targetId === sourceId) return;
+      const target = nodeById(targetId);
+      const source = nodeById(sourceId);
+      if (!target || !source) return;
+      snapshot();
+      const mergedLines = []
+        .concat(target.lines || [])
+        .concat(source.lines || [])
+        .map((line) => line.trim())
+        .filter(Boolean);
+      const uniqueLines = [...new Set(mergedLines)];
+      target.lines = uniqueLines;
+      target.text = uniqueLines.join("\n");
+      target.bbox = [
+        Math.min(target.bbox[0], source.bbox[0]),
+        Math.min(target.bbox[1], source.bbox[1]),
+        Math.max(target.bbox[2], source.bbox[2]),
+        Math.max(target.bbox[3], source.bbox[3]),
+      ];
+      const nextEdges = [];
+      const seen = new Set();
+      for (const edge of state.region.expected_edges) {
+        let parentId = edge.parent_id;
+        let childId = edge.child_id;
+        if (parentId === sourceId) parentId = targetId;
+        if (childId === sourceId) childId = targetId;
+        if (parentId === childId) continue;
+        const key = `${parentId}->${childId}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        nextEdges.push({
+          parent_id: parentId,
+          child_id: childId,
+          parent_text: edge.parent_text || "",
+          child_text: edge.child_text || "",
+        });
+      }
+      state.region.expected_edges = nextEdges;
+      state.region.expected_nodes = state.region.expected_nodes.filter((node) => node.id !== sourceId);
+      state.selectedNodeId = targetId;
+      state.selectedEdgeKey = null;
+      state.mergingNode = false;
+      syncEdgeTexts();
+      markDirty(true);
+      renderNodeList();
+      renderEdgeList();
+      renderSelection();
+      renderOverlay();
+    }
+
+    function deleteNode() {
+      if (!state.selectedNodeId) return;
+      snapshot();
+      state.region.expected_nodes = state.region.expected_nodes.filter((node) => node.id !== state.selectedNodeId);
+      state.region.expected_edges = state.region.expected_edges.filter((edge) => edge.parent_id !== state.selectedNodeId && edge.child_id !== state.selectedNodeId);
+      state.selectedNodeId = null;
+      state.selectedEdgeKey = null;
+      markDirty(true);
+      renderNodeList();
+      renderEdgeList();
+      renderSelection();
+      renderOverlay();
+    }
+
+    function deleteEdge() {
+      if (!state.selectedEdgeKey) return;
+      snapshot();
+      state.region.expected_edges = state.region.expected_edges.filter((edge) => edgeKey(edge) !== state.selectedEdgeKey);
+      state.selectedEdgeKey = null;
+      edgeDetail.textContent = "未选中";
+      markDirty(true);
+      renderEdgeList();
+      renderSelection();
+      renderOverlay();
+    }
+
+    function newNode() {
+      snapshot();
+      const id = `manual_node_${String(Date.now()).slice(-6)}`;
+      const node = { id, text: "New Node", bbox: [100, 100, 260, 180], lines: ["New Node"] };
+      state.region.expected_nodes.push(node);
+      markDirty(true);
+      renderNodeList();
+      selectNode(id);
+    }
+
+    function startDrag(event, nodeId, mode) {
+      event.preventDefault();
+      const node = nodeById(nodeId);
+      if (!node) return;
+      state.drag = {
+        nodeId,
+        mode,
+        startX: event.clientX,
+        startY: event.clientY,
+        bbox: [...node.bbox],
+      };
+      shell.classList.add("dragging");
+    }
+
+    function updateDrag(event) {
+      if (!state.drag) return;
+      const node = nodeById(state.drag.nodeId);
+      if (!node) return;
+      const dx = (event.clientX - state.drag.startX) / state.scale;
+      const dy = (event.clientY - state.drag.startY) / state.scale;
+      const [left, top, right, bottom] = state.drag.bbox;
+      let next = [left, top, right, bottom];
+      if (state.drag.mode === "move") next = [left + dx, top + dy, right + dx, bottom + dy];
+      if (state.drag.mode === "nw") next = [left + dx, top + dy, right, bottom];
+      if (state.drag.mode === "ne") next = [left, top + dy, right + dx, bottom];
+      if (state.drag.mode === "sw") next = [left + dx, top, right, bottom + dy];
+      if (state.drag.mode === "se") next = [left, top, right + dx, bottom + dy];
+      next[2] = Math.max(next[2], next[0] + 20);
+      next[3] = Math.max(next[3], next[1] + 20);
+      node.bbox = next.map((value) => Math.round(value));
+      markDirty(true);
+      renderOverlay();
+      renderNodeList();
+      renderSelection();
+    }
+
+    function endDrag() {
+      if (state.drag) snapshot();
+      state.drag = null;
+      shell.classList.remove("dragging");
+    }
+
+    function resetState() {
+      state.region = structuredClone(initial.region);
+      state.selectedNodeId = null;
+      state.selectedEdgeKey = null;
+      state.history = [];
+      markDirty(false);
+      renderNodeList();
+      renderEdgeList();
+      renderSelection();
+      renderOverlay();
+    }
+
+    function undo() {
+      const last = state.history.pop();
+      if (!last) return;
+      state.region = JSON.parse(last);
+      markDirty(true);
+      renderNodeList();
+      renderEdgeList();
+      renderSelection();
+      renderOverlay();
+    }
+
+    function exportJson() {
+      syncEdgeTexts();
+      const [offsetX, offsetY] = state.region.crop_bbox;
+      const payloadRegion = structuredClone(state.region);
+      for (const node of payloadRegion.expected_nodes) {
+        ensureNodeLines(node);
+        node.bbox = [
+          node.bbox[0] + offsetX,
+          node.bbox[1] + offsetY,
+          node.bbox[2] + offsetX,
+          node.bbox[3] + offsetY,
+        ];
+      }
+      for (const block of payloadRegion.expected_blocks) {
+        block.bbox = [
+          block.bbox[0] + offsetX,
+          block.bbox[1] + offsetY,
+          block.bbox[2] + offsetX,
+          block.bbox[3] + offsetY,
+        ];
+      }
+      const payload = JSON.stringify(payloadRegion, null, 2);
+      const blob = new Blob([payload], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${state.region.region_id}.json`;
+      link.click();
+      URL.revokeObjectURL(url);
+      markDirty(false);
+    }
+
+    image.src = initial.image_src;
+    image.width = initial.image_width;
+    image.height = initial.image_height;
+    overlay.setAttribute("viewBox", `0 0 ${initial.image_width} ${initial.image_height}`);
+    overlay.setAttribute("width", initial.image_width);
+    overlay.setAttribute("height", initial.image_height);
+    stage.style.width = `${initial.image_width}px`;
+    stage.style.height = `${initial.image_height}px`;
+
+    document.getElementById("new-node").addEventListener("click", newNode);
+    document.getElementById("delete-node").addEventListener("click", deleteNode);
+    document.getElementById("merge-node").addEventListener("click", () => { state.mergingNode = !!state.selectedNodeId; state.settingParent = false; });
+    document.getElementById("set-parent").addEventListener("click", () => { state.settingParent = !!state.selectedNodeId; state.mergingNode = false; });
+    document.getElementById("delete-edge").addEventListener("click", deleteEdge);
+    document.getElementById("undo").addEventListener("click", undo);
+    document.getElementById("reset").addEventListener("click", resetState);
+    document.getElementById("export").addEventListener("click", exportJson);
+    document.getElementById("zoom").addEventListener("input", (event) => { state.scale = Number(event.target.value) / 100; applyScale(); });
+    nodeTextInput.addEventListener("input", (event) => updateNodeText(event.target.value));
+    parentSelect.addEventListener("change", (event) => setParent(state.selectedNodeId, event.target.value));
+    searchInput.addEventListener("input", (event) => { state.search = event.target.value; renderNodeList(); });
+    shell.addEventListener("mousemove", updateDrag);
+    window.addEventListener("mouseup", endDrag);
+    window.addEventListener("beforeunload", (event) => {
+      if (!state.dirty) return;
+      event.preventDefault();
+      event.returnValue = "";
+    });
+
+    renderNodeList();
+    renderEdgeList();
+    renderSelection();
+    renderOverlay();
+    applyScale();
+  </script>
+</body>
+</html>

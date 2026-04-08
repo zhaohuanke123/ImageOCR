@@ -1,0 +1,220 @@
+{
+  "region_id": "region_01",
+  "image_path": "baseline\\GameEngine\\region_01.jpg",
+  "crop_bbox": [
+    0,
+    584,
+    1147,
+    1191
+  ],
+  "expected_blocks": [
+    {
+      "text": "Volumetric Scattering",
+      "bbox": [
+        750,
+        667,
+        1028,
+        700
+      ]
+    },
+    {
+      "text": "Beer's Law",
+      "bbox": [
+        506,
+        701,
+        649,
+        728
+      ]
+    },
+    {
+      "text": "被水滴或者其他粒子比如灰尘等所吸收，",
+      "bbox": [
+        788,
+        705,
+        1219,
+        731
+      ]
+    },
+    {
+      "text": "用于描述光线穿过一个材质后的衰减作用",
+      "bbox": [
+        141,
+        744,
+        587,
+        771
+      ]
+    },
+    {
+      "text": "这个过程称为extinction（消散）或者吸收（absorption）",
+      "bbox": [
+        788,
+        746,
+        1434,
+        773
+      ]
+    },
+    {
+      "text": "穿出云层抵达人眼，这个称之为内散射in-scattering",
+      "bbox": [
+        784,
+        789,
+        1374,
+        825
+      ]
+    },
+    {
+      "text": "穿出云层但是并未进入人眼，称为外散射out-scattering",
+      "bbox": [
+        784,
+        832,
+        1419,
+        868
+      ]
+    },
+    {
+      "text": "Henyey-GreensteinPhase Function",
+      "bbox": [
+        214,
+        836,
+        666,
+        862
+      ]
+    },
+    {
+      "text": "用于模拟光线与星际尘云交互后各个方向上",
+      "bbox": [
+        94,
+        879,
+        566,
+        904
+      ]
+    },
+    {
+      "text": "散射强度与入射光方向夹角的依赖规律",
+      "bbox": [
+        144,
+        924,
+        566,
+        951
+      ]
+    }
+  ],
+  "expected_nodes": [
+    {
+      "id": "node_0013",
+      "text": "Volumetric Scattering\n被水滴或者其他粒子比如灰尘等所吸收，\n这个过程称为extinction（消散）或者吸收（absorption）\n穿出云层抵达人眼，这个称之为内散射in-scattering\n穿出云层但是并未进入人眼，称为外散射out-scattering",
+      "bbox": [
+        753,
+        667,
+        1437,
+        868
+      ],
+      "lines": [
+        "Volumetric Scattering",
+        "被水滴或者其他粒子比如灰尘等所吸收，",
+        "这个过程称为extinction（消散）或者吸收（absorption）",
+        "穿出云层抵达人眼，这个称之为内散射in-scattering",
+        "穿出云层但是并未进入人眼，称为外散射out-scattering"
+      ]
+    },
+    {
+      "id": "node_0014",
+      "text": "Beer's Law\n用于描述光线穿过一个材质后的衰减作用",
+      "bbox": [
+        141,
+        701,
+        649,
+        771
+      ],
+      "lines": [
+        "Beer's Law",
+        "用于描述光线穿过一个材质后的衰减作用"
+      ]
+    },
+    {
+      "id": "node_0020",
+      "text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律",
+      "bbox": [
+        98,
+        833,
+        670,
+        948
+      ],
+      "lines": [
+        "Henyey-GreensteinPhase Function",
+        "用于模拟光线与星际尘云交互后各个方向上",
+        "散射强度与入射光方向夹角的依赖规律"
+      ]
+    },
+    {
+      "id": "node_0027",
+      "text": "云层光照计算",
+      "bbox": [
+        851,
+        1027,
+        1001,
+        1054
+      ],
+      "lines": [
+        "云层光照计算"
+      ]
+    },
+    {
+      "id": "node_0028",
+      "text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+      "bbox": [
+        165,
+        1031,
+        592,
+        1159
+      ],
+      "lines": [
+        "In-ScatteringProbabilityFunction",
+        "模拟当观察方向与太阳光方向",
+        "一致时的in-scattering效果"
+      ]
+    },
+    {
+      "id": "manual_node_090418",
+      "text": "云层渲染",
+      "bbox": [
+        664,
+        1092,
+        767,
+        1129
+      ],
+      "lines": [
+        "云层渲染"
+      ]
+    }
+  ],
+  "expected_edges": [
+    {
+      "parent_id": "manual_node_090418",
+      "child_id": "node_0028",
+      "parent_text": "云层渲染",
+      "child_text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果"
+    },
+    {
+      "parent_id": "manual_node_090418",
+      "child_id": "node_0020",
+      "parent_text": "云层渲染",
+      "child_text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律"
+    },
+    {
+      "parent_id": "manual_node_090418",
+      "child_id": "node_0013",
+      "parent_text": "云层渲染",
+      "child_text": "Volumetric Scattering\n被水滴或者其他粒子比如灰尘等所吸收，\n这个过程称为extinction（消散）或者吸收（absorption）\n穿出云层抵达人眼，这个称之为内散射in-scattering\n穿出云层但是并未进入人眼，称为外散射out-scattering"
+    },
+    {
+      "parent_id": "manual_node_090418",
+      "child_id": "node_0014",
+      "parent_text": "云层渲染",
+      "child_text": "Beer's Law\n用于描述光线穿过一个材质后的衰减作用"
+    }
+  ],
+  "seed_source": "current_prediction",
+  "needs_review": true,
+  "source_path": "baseline\\GameEngine\\region_01.json"
+}
