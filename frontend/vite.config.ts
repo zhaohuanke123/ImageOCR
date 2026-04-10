@@ -6,6 +6,10 @@ import fs from 'fs'
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    host: '0.0.0.0', // Listen on all addresses
+    port: 5173,
+  },
   plugins: [
     react(),
     tailwindcss(),

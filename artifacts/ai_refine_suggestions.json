@@ -1,0 +1,3697 @@
+{
+  "generated_at": "2026-04-10",
+  "total_nodes": 369,
+  "processed": 369,
+  "suggestions": [
+    {
+      "node_id": "node_0401",
+      "parent_id": "node_0400",
+      "parent_text": "Socket套接字",
+      "original_text": "TCP协议\n面向连接\n可靠、有序\n流控\n拥塞控制",
+      "suggested_text": "TCP协议\n- 面向连接\n- 可靠、有序\n- 流控\n- 拥塞控制",
+      "reason": "添加列表格式，使层级关系更清晰。TCP协议是标题，其他是特性列表",
+      "confidence": 0.9994,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0310",
+      "parent_id": "node_0308",
+      "parent_text": "Job System",
+      "original_text": "协程介绍\n协程与线程的对比\n协程实现方式\n有栈协程\n无栈协程",
+      "suggested_text": "协程介绍\n- 协程与线程的对比\n- 协程实现方式\n  - 有栈协程\n  - 无栈协程",
+      "reason": "添加层级结构：有栈协程和无栈协程是协程实现方式的子项，使用缩进表示",
+      "confidence": 0.999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0254",
+      "parent_id": "node_0262",
+      "parent_text": "核心层",
+      "original_text": "数学计算库\n数据结构与容器\n内存管理",
+      "suggested_text": "核心层功能\n- 数学计算库\n- 数据结构与容器\n- 内存管理",
+      "reason": "添加标题说明，使内容更清晰",
+      "confidence": 0.9987,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0335",
+      "parent_id": "merged_1775783117647",
+      "parent_text": "实体-组件-系统 ECS",
+      "original_text": "回顾：基于组件的设计",
+      "suggested_text": "回顾：基于组件的设计",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0322",
+      "parent_id": "node_0316",
+      "parent_text": "基于Fiber的JobSystem",
+      "original_text": "Job调度\nJob队列\n全局队列\n线程局部队列\n两种访问方式\n先进先出\n后进先出\nJob依赖\nJob Stealing",
+      "suggested_text": "Job调度\n- Job队列\n  - 全局队列\n  - 线程局部队列\n- 访问方式\n  - 先进先出\n  - 后进先出\n- Job依赖\n- Job Stealing",
+      "reason": "整理层级结构：Job队列包含全局和线程局部两种；访问方式包含FIFO和LIFO",
+      "confidence": 0.9993,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0506",
+      "parent_id": "node_0471",
+      "parent_text": "帧同步",
+      "original_text": "掉线与重连问题",
+      "suggested_text": "掉线与重连问题",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9968,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0426",
+      "parent_id": "node_0433",
+      "parent_text": "时钟同步",
+      "original_text": "网络时间协议（NTP）\n四个对应时间戳以及误差调整\n1.客户端发送时间戳\n2.服务端接收时间戳\n3.服务端发送返回时间戳\n4.客户端接收时间戳\nNTP在计算传输时延的时候\n默认上行延迟和下行延迟相等",
+      "suggested_text": "网络时间协议（NTP）\n- 四个时间戳及误差调整\n  1. 客户端发送时间戳\n  2. 服务端接收时间戳\n  3. 服务端发送返回时间戳\n  4. 客户端接收时间戳\n- 计算传输时延：默认上行延迟和下行延迟相等",
+      "reason": "整理格式，使层级结构更清晰",
+      "confidence": 0.9966,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0382",
+      "parent_id": "node_0356",
+      "parent_text": "面向数据编程",
+      "original_text": "性能敏感编程\n减少顺序依赖\nfalse sharing\n分支预测\n基于存在性处理",
+      "suggested_text": "性能敏感编程\n- 减少顺序依赖\n- 避免false sharing\n- 分支预测优化\n- 基于存在性处理",
+      "reason": "添加列表格式，使内容更清晰",
+      "confidence": 0.9995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0204",
+      "parent_id": "node_0198",
+      "parent_text": "光照",
+      "original_text": "BRDF模型\nLambert模型\nPhong模型\nBlinn-Phong模型\nCook-Torrance模型",
+      "suggested_text": "BRDF模型\n- Lambert模型\n- Phong模型\n- Blinn-Phong模型\n- Cook-Torrance模型",
+      "reason": "添加列表格式，Lambert、Phong等是BRDF模型的具体实现",
+      "confidence": 0.9977,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0463",
+      "parent_id": "node_0459",
+      "parent_text": "RPC",
+      "original_text": "Socket编程所面临的诸多问题\n消息格式不统\n封包和解包\n消息分发处理\n不是一种自然的编程模型",
+      "suggested_text": "Socket编程面临的诸多问题\n- 消息格式不统一\n- 封包和解包\n- 消息分发处理\n- 不是一种自然的编程模型",
+      "reason": "修正错字：'不统'应为'不统一'；添加列表格式",
+      "confidence": 0.9976,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0359",
+      "parent_id": "node_0358",
+      "parent_text": "实现举例",
+      "original_text": "Unity DOTS\nUnity ECS\n原型Archetype\n数据排布\n系统实现\nUnityC#任务系统\n原生容器\n安全性系统\nBurst编译器",
+      "suggested_text": "Unity DOTS\n- Unity ECS\n  - 原型Archetype\n  - 数据排布\n  - 系统实现\n- Unity C#任务系统\n  - 原生容器\n  - 安全性系统\n- Burst编译器",
+      "reason": "整理层级结构：ECS和任务系统是DOTS的主要组成部分",
+      "confidence": 0.998,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0455",
+      "parent_id": "node_0450",
+      "parent_text": "通信方式",
+      "original_text": "NetMessage\n传统的消息机制\n通常是异步通信",
+      "suggested_text": "NetMessage\n- 传统的消息机制\n- 通常是异步通信",
+      "reason": "添加列表格式",
+      "confidence": 0.9956,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0303",
+      "parent_id": "node_0301",
+      "parent_text": "游戏引擎并行框架",
+      "original_text": "Threadfork-join\ntaroikjon",
+      "suggested_text": "Thread fork-join\n- taroikjon",
+      "reason": "修正格式：'Threadfork-join'应为'Thread fork-join'；'taroikjon'可能是乱码或OCR错误，建议核实",
+      "confidence": 0.8403,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0028",
+      "parent_id": "node_0032",
+      "parent_text": "云层渲染",
+      "original_text": "In-ScatteringProbabilityFunction\n模拟当观察方向与太阳光方向\n一致时的in-scattering效果",
+      "suggested_text": "In-Scattering Probability Function\n- 模拟当观察方向与太阳光方向一致时的in-scattering效果",
+      "reason": "修正英文格式：添加空格；整理列表结构",
+      "confidence": 0.9933,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0020",
+      "parent_id": "node_0032",
+      "parent_text": "云层渲染",
+      "original_text": "Henyey-GreensteinPhase Function\n用于模拟光线与星际尘云交互后各个方向上\n散射强度与入射光方向夹角的依赖规律",
+      "suggested_text": "Henyey-Greenstein Phase Function\n- 用于模拟光线与星际尘云交互后各个方向上散射强度与入射光方向夹角的依赖规律",
+      "reason": "修正英文格式：添加空格；整理列表结构",
+      "confidence": 0.9894,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0043",
+      "parent_id": "node_0039",
+      "parent_text": "云层建模",
+      "original_text": "FractalBrownianMotion\nDensity-Height Functions\nWeatherTexture\n云层覆盖率\n云层降雨概率\n云层种类",
+      "suggested_text": "云层建模方法\n- Fractal Brownian Motion\n- Density-Height Functions\n- Weather Texture\n  - 云层覆盖率\n  - 云层降雨概率\n  - 云层种类",
+      "reason": "添加中文标题；修正英文格式；整理层级结构：覆盖率、降雨概率、种类是Weather Texture的属性",
+      "confidence": 0.9949,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0443",
+      "parent_id": "node_0433",
+      "parent_text": "时钟同步",
+      "original_text": "基于流的消除高阶的时间同步协议\n游戏开始的时候直接进行类似NTP的对时操作\n利用多次对时消除误差过大项来达到时间差校准",
+      "suggested_text": "基于流的消除高阶的时间同步协议\n- 游戏开始时直接进行类似NTP的对时操作\n- 利用多次对时消除误差过大项来达到时间差校准",
+      "reason": "添加列表格式；精简语句",
+      "confidence": 0.9968,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0300",
+      "parent_id": "node_0301",
+      "parent_text": "游戏引擎并行框架",
+      "original_text": "Fixed-thread",
+      "suggested_text": "Fixed-thread",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0410",
+      "parent_id": "node_0400",
+      "parent_text": "Socket套接字",
+      "original_text": "UDP协议\n无连接\n不可靠\n无流控\n无拥塞控制",
+      "suggested_text": "UDP协议\n- 无连接\n- 不可靠\n- 无流控\n- 无拥塞控制",
+      "reason": "添加列表格式，与TCP协议节点保持一致",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0262",
+      "parent_id": "node_0281",
+      "parent_text": "游戏引擎的分层架构",
+      "original_text": "核心层",
+      "suggested_text": "核心层",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9997,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0039",
+      "parent_id": "node_0046",
+      "parent_text": "体积云",
+      "original_text": "云层建模",
+      "suggested_text": "云层建模",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9973,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0358",
+      "parent_id": "merged_1775783117647",
+      "parent_text": "实体-组件-系统 ECS",
+      "original_text": "实现举例",
+      "suggested_text": "实现举例",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0143",
+      "parent_id": "node_0171",
+      "parent_text": "基于物理渲染",
+      "original_text": "基于物理的渲染（Physicallybased rendering）(PBR)\n意味着表面接近光线在真实世界的表现方式，\n而不是我们直观以为的应有方式。\n相较于完全依赖美术师直觉来设置参数的着色工作流程，\n遵守PBR原则的材质更准确，并且通常看起来更自然。",
+      "suggested_text": "基于物理的渲染（Physically Based Rendering, PBR）\n- 意味着表面接近光线在真实世界的表现方式，而不是我们直观以为的应有方式\n- 相较于完全依赖美术师直觉来设置参数的着色工作流程，遵守PBR原则的材质更准确，并且通常看起来更自然",
+      "reason": "修正英文：'Physicallybased'应为'Physically Based'；添加列表格式",
+      "confidence": 0.9852,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0491",
+      "parent_id": "node_0471",
+      "parent_text": "帧同步",
+      "original_text": "帧同步需要面对的挑战与解决：多端不一致问题\n浮点数\n随机数\n容器与排序算法等\n数学工具",
+      "suggested_text": "帧同步挑战：多端不一致问题\n- 浮点数\n- 随机数\n- 容器与排序算法等\n- 数学工具",
+      "reason": "简化标题；添加列表格式",
+      "confidence": 0.9986,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0330",
+      "parent_id": "node_0316",
+      "parent_text": "基于Fiber的JobSystem",
+      "original_text": "Job系统的利弊分析",
+      "suggested_text": "Job系统的利弊分析",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9502,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0400",
+      "parent_id": "ocr_manual_1775783089376_t3f90l4rl",
+      "parent_text": "网络协议",
+      "original_text": "Socket套接字",
+      "suggested_text": "Socket套接字",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9949,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0379",
+      "parent_id": "node_0356",
+      "parent_text": "面向数据编程",
+      "original_text": "性能敏感数据排布\n减少内存依赖\nAOS vS. SOA",
+      "suggested_text": "性能敏感数据排布\n- 减少内存依赖\n- AOS vs. SOA",
+      "reason": "修正格式：'vS.'应为'vs.'；添加列表格式",
+      "confidence": 0.9846,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0274",
+      "parent_id": "node_0281",
+      "parent_text": "游戏引擎的分层架构",
+      "original_text": "资源层",
+      "suggested_text": "资源层",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9988,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0308",
+      "parent_id": "node_0301",
+      "parent_text": "游戏引擎并行框架",
+      "original_text": "Job System",
+      "suggested_text": "Job System",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9935,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0032",
+      "parent_id": "node_0046",
+      "parent_text": "体积云",
+      "original_text": "云层渲染",
+      "suggested_text": "云层渲染",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9537,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0459",
+      "parent_id": "node_0450",
+      "parent_text": "通信方式",
+      "original_text": "RPC",
+      "suggested_text": "RPC",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9982,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0316",
+      "parent_id": "node_0308",
+      "parent_text": "Job System",
+      "original_text": "基于Fiber的JobSystem",
+      "suggested_text": "基于Fiber的JobSystem",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9974,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0407",
+      "parent_id": "ocr_manual_1775783089376_t3f90l4rl",
+      "parent_text": "网络协议",
+      "original_text": "网络分层\nOSI七层模型\n物理层\n数据链路层\n网络层\n传输层\n会话层\n表示层\n应用层",
+      "suggested_text": "网络分层\n- OSI七层模型\n  - 物理层\n  - 数据链路层\n  - 网络层\n  - 传输层\n  - 会话层\n  - 表示层\n  - 应用层",
+      "reason": "整理层级结构：七层模型是网络分层的具体内容",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0365",
+      "parent_id": "node_0358",
+      "parent_text": "实现举例",
+      "original_text": "UnrealMass框架\n实体Entity实现\n组件Component实现\n组件C\n碎片 Fragment\n系统System实现\n碎片请求\n执行",
+      "suggested_text": "Unreal Mass框架\n- 实体Entity实现\n- 组件Component实现\n- 组件碎片Fragment\n- 系统System实现\n  - 碎片请求\n  - 执行",
+      "reason": "修正英文：'UnrealMass'应为'Unreal Mass'；整理层级结构；'组件C'疑似OCR错误，应为'组件碎片Fragment'",
+      "confidence": 0.9876,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0255",
+      "parent_id": "node_0253",
+      "parent_text": "平台层",
+      "original_text": "硬件架构\n图形API概念",
+      "suggested_text": "平台层内容\n- 硬件架构\n- 图形API概念",
+      "reason": "添加标题说明；添加列表格式",
+      "confidence": 0.9986,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0433",
+      "parent_id": "ocr_manual_1775783085372_1sl38dj8y",
+      "parent_text": "网络基础",
+      "original_text": "时钟同步",
+      "suggested_text": "时钟同步",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9974,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0469",
+      "parent_id": "node_0459",
+      "parent_text": "RPC",
+      "original_text": "使用RPC的好处\n集中式代码\n易于编程\n通信透明",
+      "suggested_text": "使用RPC的好处\n- 集中式代码\n- 易于编程\n- 通信透明",
+      "reason": "添加列表格式",
+      "confidence": 0.9991,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0328",
+      "parent_id": "node_0316",
+      "parent_text": "基于Fiber的JobSystem",
+      "original_text": "WorkThread数量与CPU核数匹配",
+      "suggested_text": "WorkThread数量与CPU核数匹配",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9951,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0450",
+      "parent_id": "ocr_manual_1775783085372_1sl38dj8y",
+      "parent_text": "网络基础",
+      "original_text": "通信方式",
+      "suggested_text": "通信方式",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9973,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0080",
+      "parent_id": "node_0102",
+      "parent_text": "基于物理光照",
+      "original_text": "光学度量单位",
+      "suggested_text": "光学度量单位",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9997,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0389",
+      "parent_id": "ocr_manual_1775783089376_t3f90l4rl",
+      "parent_text": "网络协议",
+      "original_text": "基于UDP的可靠实时通信实现\n自动重传(ARQ)\n前向纠错(FEC)",
+      "suggested_text": "基于UDP的可靠实时通信实现\n- 自动重传(ARQ)\n- 前向纠错(FEC)",
+      "reason": "添加列表格式",
+      "confidence": 0.9971,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0290",
+      "parent_id": "node_0281",
+      "parent_text": "游戏引擎的分层架构",
+      "original_text": "功能层",
+      "suggested_text": "功能层",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9998,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0027",
+      "parent_id": "node_0046",
+      "parent_text": "体积云",
+      "original_text": "云层光照计算",
+      "suggested_text": "云层光照计算",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0352",
+      "parent_id": "merged_1775783117647",
+      "parent_text": "实体-组件-系统 ECS",
+      "original_text": "概念\n实体Entity\n组件 Component\n系统System",
+      "suggested_text": "ECS概念\n- 实体Entity\n- 组件Component\n- 系统System",
+      "reason": "添加标题；修正格式：'组件 Component'应为'组件Component'（去掉多余空格）",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0320",
+      "parent_id": "node_0316",
+      "parent_text": "基于Fiber的JobSystem",
+      "original_text": "基本构成\nJob为实际任务\nFiber提供任务执行的上下文\nWorkThread是实际执行的单元",
+      "suggested_text": "基本构成\n- Job为实际任务\n- Fiber提供任务执行的上下文\n- WorkThread是实际执行的单元",
+      "reason": "添加列表格式",
+      "confidence": 0.9978,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0102",
+      "parent_id": "node_0171",
+      "parent_text": "基于物理渲染",
+      "original_text": "基于物理光照",
+      "suggested_text": "基于物理光照",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0046",
+      "parent_id": "node_0056",
+      "parent_text": "云",
+      "original_text": "体积云",
+      "suggested_text": "体积云",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0253",
+      "parent_id": "node_0281",
+      "parent_text": "游戏引擎的分层架构",
+      "original_text": "平台层",
+      "suggested_text": "平台层",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9997,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0376",
+      "parent_id": "node_0356",
+      "parent_text": "面向数据编程",
+      "original_text": "SIMD",
+      "suggested_text": "SIMD",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9679,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0301",
+      "parent_id": "node_0298",
+      "parent_text": "面向数据编程与任务系统",
+      "original_text": "游戏引擎并行框架",
+      "suggested_text": "游戏引擎并行框架",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9922,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0067",
+      "parent_id": "node_0080",
+      "parent_text": "光学度量单位",
+      "original_text": "光通量（LuminousFlux）\n单位流明（Im），单位时间内光源所发出\n或者被照物体所接收的总光能。\n改变光源大小不会影响场景照明效果。",
+      "suggested_text": "光通量（Luminous Flux）\n- 单位：流明（lm）\n- 定义：单位时间内光源所发出或者被照物体所接收的总光能\n- 特性：改变光源大小不会影响场景照明效果",
+      "reason": "修正英文：'LuminousFlux'应为'Luminous Flux'；修正单位：'Im'应为'lm'；添加列表格式",
+      "confidence": 0.9894,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0013",
+      "parent_id": "node_0032",
+      "parent_text": "云层渲染",
+      "original_text": "Volumetric Scattering\n被水滴或者其他粒子比如灰尘等所吸收，\n这个过程称为extinction（消散）或者吸收（absorption）\n穿出云层抵达人眼，这个称之为内散射in-scattering\n穿出云层但是并未进入人眼，称为外散射out-scattering",
+      "suggested_text": "Volumetric Scattering（体积散射）\n- extinction（消散/吸收）：被水滴或其他粒子吸收\n- in-scattering（内散射）：穿出云层抵达人眼\n- out-scattering（外散射）：穿出云层但未进入人眼",
+      "reason": "添加中文翻译；整理列表格式；简化描述",
+      "confidence": 0.9917,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0040",
+      "parent_id": "node_0056",
+      "parent_text": "云",
+      "original_text": "面片云",
+      "suggested_text": "面片云",
+      "reason": "原文正确，无需修改",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0182",
+      "parent_id": "node_0175",
+      "parent_text": "后处理",
+      "original_text": "颜色校正",
+      "suggested_text": "颜色校正",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9985,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0085",
+      "parent_id": "node_0102",
+      "parent_text": "基于物理光照",
+      "original_text": "常见光源类型\n平行光\n球面光\n聚光灯\n环境光",
+      "suggested_text": "常见光源类型\n- 平行光\n- 球面光\n- 聚光灯\n- 环境光",
+      "reason": "添加列表格式",
+      "confidence": 0.9994,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0476",
+      "parent_id": "node_0471",
+      "parent_text": "帧同步",
+      "original_text": "Bucket\nSynchronization",
+      "suggested_text": "Bucket Synchronization",
+      "reason": "合并为一行，这是帧同步的一种算法名称",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0198",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "光照",
+      "suggested_text": "光照",
+      "reason": "原文正确，无需修改",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0286",
+      "parent_id": "node_0281",
+      "parent_text": "游戏引擎的分层架构",
+      "original_text": "工具层",
+      "suggested_text": "工具层",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0442",
+      "parent_id": "node_0417",
+      "parent_text": "网络拓扑",
+      "original_text": "DS\n特点",
+      "suggested_text": "DS（Dedicated Server）特点",
+      "reason": "DS是Dedicated Server的缩写，添加完整名称；'特点'是子节点标题，应合并",
+      "confidence": 0.9995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0497",
+      "parent_id": "node_0471",
+      "parent_text": "帧同步",
+      "original_text": "作弊问题\n多人PVP\n双人PVP\n帧同步本地有全部数据，透视外挂等",
+      "suggested_text": "作弊问题\n- 多人PVP\n- 双人PVP\n- 帧同步本地有全部数据，透视外挂等",
+      "reason": "添加列表格式",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0025",
+      "parent_id": "node_0056",
+      "parent_text": "云",
+      "original_text": "基于公告板云",
+      "suggested_text": "基于公告板的云",
+      "reason": "修正表述：添加'的'使语句更通顺",
+      "confidence": 0.9986,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0209",
+      "parent_id": "node_0198",
+      "parent_text": "光照",
+      "original_text": "全局光照\n光照探灯\n反射探灯\n预计算光照数据",
+      "suggested_text": "全局光照\n- 光照探灯\n- 反射探灯\n- 预计算光照数据",
+      "reason": "添加列表格式",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0109",
+      "parent_id": "node_0119",
+      "parent_text": "金属和非金属",
+      "original_text": "金属有良好的导热和导电性。\n导电金属中的电场为零，\n当由组成光波的电磁场碰到金属表面时，\n一部分光波被反射，\n而折射的部分全部被吸收。",
+      "suggested_text": "金属特性\n- 良好的导热和导电性\n- 导电金属中的电场为零\n- 光波碰到金属表面时：一部分被反射，折射部分全部被吸收",
+      "reason": "添加标题；整理列表格式；简化描述",
+      "confidence": 0.9949,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0364",
+      "parent_id": "node_0356",
+      "parent_text": "面向数据编程",
+      "original_text": "其他编程范式\n面向过程编程\n面向对象编程\n在游戏引擎中的问题",
+      "suggested_text": "其他编程范式\n- 面向过程编程\n- 面向对象编程\n- 在游戏引擎中的问题",
+      "reason": "添加列表格式",
+      "confidence": 0.9987,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0126",
+      "parent_id": "node_0144",
+      "parent_text": "基于物理材质",
+      "original_text": "基于物理相机\n快门速度：产生运动模糊效果\n光圈：产生景深效果\n感光度：产生Grain效果",
+      "suggested_text": "基于物理相机\n- 快门速度：产生运动模糊效果\n- 光圈：产生景深效果\n- 感光度：产生Grain效果",
+      "reason": "添加列表格式",
+      "confidence": 0.9978,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0338",
+      "parent_id": "node_0321",
+      "parent_text": "并行编程基础知识",
+      "original_text": "多任务的类型\n抢占式\n非抢占式",
+      "suggested_text": "多任务的类型\n- 抢占式\n- 非抢占式",
+      "reason": "添加列表格式",
+      "confidence": 0.992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0056",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "云",
+      "suggested_text": "云",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9538,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0175",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "后处理",
+      "suggested_text": "后处理",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9998,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0541",
+      "parent_id": "node_0471",
+      "parent_text": "帧同步",
+      "original_text": "逻辑和渲染分离",
+      "suggested_text": "逻辑和渲染分离",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9617,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0305",
+      "parent_id": "node_0301",
+      "parent_text": "游戏引擎并行框架",
+      "original_text": "Unreal并行框架\nNamed Thread与Worker Thread\nThread\nName\nTaskGraph",
+      "suggested_text": "Unreal并行框架\n- Named Thread与Worker Thread\n- Thread Name\n- TaskGraph",
+      "reason": "整理格式：'Thread Name'应为一行；添加列表格式",
+      "confidence": 0.995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0543",
+      "parent_id": "node_0541",
+      "parent_text": "逻辑和渲染分离",
+      "original_text": "不同帧率，独立运行\n运行\n独立运行\n服务器可以跑逻辑帧\n辑帧\n断线重连加速\n一定程度上防作弊",
+      "suggested_text": "逻辑和渲染分离的优势\n- 不同帧率，独立运行\n- 服务器可以跑逻辑帧\n- 断线重连加速\n- 一定程度上防作弊",
+      "reason": "修正OCR错误：删除重复内容'运行''独立运行''辑帧'；添加标题和列表格式",
+      "confidence": 0.9867,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0092",
+      "parent_id": "node_0119",
+      "parent_text": "金属和非金属",
+      "original_text": "非金属（绝缘体）的导电性能很差。\n对于绝缘体，折射光会被散射和\n吸收（有的会重新透出物体表面），\n所以反射光线的量远小于金属，\n而且有漫反射颜色。",
+      "suggested_text": "非金属（绝缘体）特性\n- 导电性能很差\n- 折射光会被散射和吸收（有的会重新透出物体表面）\n- 反射光线的量远小于金属\n- 有漫反射颜色",
+      "reason": "添加标题；整理列表格式",
+      "confidence": 0.9984,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0144",
+      "parent_id": "node_0171",
+      "parent_text": "基于物理渲染",
+      "original_text": "基于物理材质\n质",
+      "suggested_text": "基于物理材质",
+      "reason": "修正OCR错误：删除多余的'质'字",
+      "confidence": 0.999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0119",
+      "parent_id": "node_0144",
+      "parent_text": "基于物理材质",
+      "original_text": "金属和非金属",
+      "suggested_text": "金属和非金属",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9994,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0378",
+      "parent_id": "node_0356",
+      "parent_text": "面向数据编程",
+      "original_text": "原则思想\n万物皆数据\n指令也是数据\n让代码与数据在内存中保持紧致",
+      "suggested_text": "原则思想\n- 万物皆数据\n- 指令也是数据\n- 让代码与数据在内存中保持紧致",
+      "reason": "添加列表格式",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0327",
+      "parent_id": "node_0321",
+      "parent_text": "并行编程基础知识",
+      "original_text": "行支持\n操作系统的并行支持\n程与线程\n下文切换\n线程的上下文切换",
+      "suggested_text": "操作系统的并行支持\n- 进程与线程\n- 线程的上下文切换",
+      "reason": "修正OCR错误：'行支持'应为'操作系统的并行支持'的一部分；'程与线程'应为'进程与线程'；'下文切换'应为'上下文切换'；整理列表格式",
+      "confidence": 0.9979,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0231",
+      "parent_id": "node_0213",
+      "parent_text": "如何构建游戏世界",
+      "original_text": "界动起来\n如何让游戏世界动起来",
+      "suggested_text": "如何让游戏世界动起来",
+      "reason": "修正OCR错误：删除多余的'界动起来'",
+      "confidence": 0.9978,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0356",
+      "parent_id": "node_0298",
+      "parent_text": "面向数据编程与任务系统",
+      "original_text": "居编程\n面向数据编程",
+      "suggested_text": "面向数据编程",
+      "reason": "修正OCR错误：'居编程'是乱码，应删除",
+      "confidence": 0.9968,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0417",
+      "parent_id": "ocr_manual_1775783085372_1sl38dj8y",
+      "parent_text": "网络基础",
+      "original_text": "拓扑\n网络拓扑",
+      "suggested_text": "网络拓扑",
+      "reason": "修正格式：删除多余的'拓扑'",
+      "confidence": 0.9982,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0242",
+      "parent_id": "node_0213",
+      "parent_text": "如何构建游戏世界",
+      "original_text": "bject组成\nGameopjec\n组件化\n继承",
+      "suggested_text": "GameObject组成\n- 组件化\n- 继承",
+      "reason": "修正OCR错误：'bject组成'和'Gameopjec'应为'GameObject组成'；添加列表格式",
+      "confidence": 0.975,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0171",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "基于物理渲染",
+      "suggested_text": "基于物理渲染",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9845,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0430",
+      "parent_id": "node_0417",
+      "parent_text": "网络拓扑",
+      "original_text": "P2P\n特点",
+      "suggested_text": "P2P（Peer-to-Peer）特点",
+      "reason": "P2P是Peer-to-Peer的缩写，添加完整名称；'特点'是子节点标题，应合并",
+      "confidence": 0.9997,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0063",
+      "parent_id": "node_0070",
+      "parent_text": "雾效",
+      "original_text": "高度雾：\n在地图上较低位置处密度较大\n指数高度雾在地图上较低位置处\n置处密度较小。其过渡十分平滑，\n而在较高位置处密度较小。其过渡\n随着海拔升高，也不会出",
+      "suggested_text": "高度雾\n- 在地图上较低位置处密度较大\n- 在较高位置处密度较小，过渡平滑\n- 随着海拔升高，密度逐渐降低",
+      "reason": "修正OCR错误：删除重复和乱码内容；整理列表格式",
+      "confidence": 0.988,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0151",
+      "parent_id": "node_0171",
+      "parent_text": "基于物理渲染",
+      "original_text": "能量守恒\n出射光线的能量\n永远不能大于\n入射光线的能量",
+      "suggested_text": "能量守恒\n- 出射光线的能量永远不能大于入射光线的能量",
+      "reason": "整理列表格式；合并为一行更清晰",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0501",
+      "parent_id": "node_0471",
+      "parent_text": "帧同步",
+      "original_text": "带后和延迟问题\n滞后和延达\n缓冲池",
+      "suggested_text": "滞后和延迟问题\n- 缓冲池",
+      "reason": "修正OCR错误：'带后和延迟问题'应为'滞后和延迟问题'；'滞后和延达'是重复内容；添加列表格式",
+      "confidence": 0.9423,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0487",
+      "parent_id": "node_0471",
+      "parent_text": "帧同步",
+      "original_text": "Deterministic\nLockstep",
+      "suggested_text": "Deterministic Lockstep",
+      "reason": "合并为一行，这是帧同步的一种算法名称",
+      "confidence": 0.9997,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0471",
+      "parent_id": "node_0405",
+      "parent_text": "网络同步",
+      "original_text": "帧同步\nNG",
+      "suggested_text": "帧同步",
+      "reason": "修正OCR错误：删除多余的'NG'",
+      "confidence": 0.8914,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0194",
+      "parent_id": "node_0180",
+      "parent_text": "贴图压缩",
+      "original_text": "使用png和jpg等\n为什么不使用png和j\n格式\n常见压缩格式\n尽管像jpg、png的压缩率很高，\nng的压缩率很高，但并不适合纹理\n支持像素的随机访问，这对...",
+      "suggested_text": "为什么不使用png和jpg格式\n- 尽管jpg、png的压缩率很高，但并不适合纹理\n- 不支持像素的随机访问，这对GPU不友好\n- GPU渲染时只使用需要的纹理部分",
+      "reason": "修正OCR错误：删除重复和乱码内容；整理列表格式",
+      "confidence": 0.9913,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0281",
+      "parent_id": "node_0289",
+      "parent_text": "基础架构",
+      "original_text": "戏引擎的分层架构\n游戏引擎的",
+      "suggested_text": "游戏引擎的分层架构",
+      "reason": "修正OCR错误：'戏引擎的分层架构'应为'游戏引擎的分层架构'；删除多余的'游戏引擎的'",
+      "confidence": 0.9968,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0373",
+      "parent_id": "node_0356",
+      "parent_text": "面向数据编程",
+      "original_text": "硬件环境\n处理器-内存性能差距",
+      "suggested_text": "硬件环境\n- 处理器-内存性能差距",
+      "reason": "添加列表格式",
+      "confidence": 0.998,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0071",
+      "parent_id": "node_0070",
+      "parent_text": "雾效",
+      "original_text": "体积雾：\n在摄像机视锥的每个点上都计\n算参与媒介\n算参与媒介的密度和光照",
+      "suggested_text": "体积雾\n- 在摄像机视锥的每个点上都计算参与媒介的密度和光照",
+      "reason": "修正OCR错误：删除重复内容'算参与媒介'；整理列表格式",
+      "confidence": 0.9928,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0021",
+      "parent_id": "node_0052",
+      "parent_text": "渲染管线",
+      "original_text": "正向\n正向渲染",
+      "suggested_text": "正向渲染",
+      "reason": "修正格式：删除多余的'正向'",
+      "confidence": 0.9859,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0336",
+      "parent_id": "node_0321",
+      "parent_text": "并行编程基础知识",
+      "original_text": "并行\n并行计算问题\n易并\n易并行问题\n不易\n不易并行问题\n解决数据竞争\n阻塞方法\n锁原语\n非阻塞方法\n原子操作\n内存序问题",
+      "suggested_text": "并行计算问题\n- 易并行问题\n- 不易并行问题\n- 解决数据竞争\n  - 阻塞方法：锁原语\n  - 非阻塞方法：原子操作\n- 内存序问题",
+      "reason": "修正OCR错误：删除多余的'并行''易并''不易'；整理层级结构",
+      "confidence": 0.9978,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0420",
+      "parent_id": "node_0405",
+      "parent_text": "网络同步",
+      "original_text": "同步分类\n同\n快照同步\n帧同步\n状态同步",
+      "suggested_text": "同步分类\n- 快照同步\n- 帧同步\n- 状态同步",
+      "reason": "修正OCR错误：删除多余的'同'；添加列表格式",
+      "confidence": 0.9963,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0360",
+      "parent_id": "node_0356",
+      "parent_text": "面向数据编程",
+      "original_text": "缓存\n局域性\nLRU策略\n缓存行\n缓存行Cacheline\n缓存缺\n缓存缺失Cachemiss",
+      "suggested_text": "缓存\n- 局域性\n- LRU策略\n- 缓存行（Cacheline）\n- 缓存缺失（Cache miss）",
+      "reason": "修正OCR错误：删除重复内容'缓存行''缓存缺'；添加英文对照；整理列表格式",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0052",
+      "parent_id": "node_0056",
+      "parent_text": "云",
+      "original_text": "渲染管线",
+      "suggested_text": "渲染管线",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9605,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0163",
+      "parent_id": "node_0174",
+      "parent_text": "视效",
+      "original_text": "粒子数据类型\nBill\nBillboard类型数据\nMesh类型数据\n光束类型数据\n条带类型数据",
+      "suggested_text": "粒子数据类型\n- Billboard类型数据\n- Mesh类型数据\n- 光束类型数据\n- 条带类型数据",
+      "reason": "修正OCR错误：删除多余的'Bill'；添加列表格式",
+      "confidence": 0.9909,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0211",
+      "parent_id": "node_0180",
+      "parent_text": "贴图压缩",
+      "original_text": "Ericsson Texture Compression\nEricsson T",
+      "suggested_text": "Ericsson Texture Compression (ETC)",
+      "reason": "修正格式：合并为一行；添加缩写ETC",
+      "confidence": 0.988,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0222",
+      "parent_id": "node_0180",
+      "parent_text": "贴图压缩",
+      "original_text": "tive Scalable Texture Compression\nAdaptive Scala",
+      "suggested_text": "Adaptive Scalable Texture Compression (ASTC)",
+      "reason": "修正OCR错误：'tive'应为'Adaptive'；'Scala'应为'Scalable'；合并为一行；添加缩写ASTC",
+      "confidence": 0.9919,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0181",
+      "parent_id": "node_0180",
+      "parent_text": "贴图压缩",
+      "original_text": "压缩纹理算法特点\n二\n解压速度\n随机访问\n压缩率和图像质量\n十\n编码速度",
+      "suggested_text": "压缩纹理算法特点\n- 解压速度\n- 随机访问\n- 压缩率和图像质量\n- 编码速度",
+      "reason": "修正OCR错误：删除多余的'二''十'；添加列表格式",
+      "confidence": 0.9038,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0321",
+      "parent_id": "node_0298",
+      "parent_text": "面向数据编程与任务系统",
+      "original_text": "并行编程基础知识",
+      "suggested_text": "并行编程基础知识",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9961,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0405",
+      "parent_id": "node_0233",
+      "parent_text": "网络",
+      "original_text": "网络同步",
+      "suggested_text": "网络同步",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9946,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0149",
+      "parent_id": "node_0174",
+      "parent_text": "视效",
+      "original_text": "组件\n系统\n发射器\n模块\n参数",
+      "suggested_text": "粒子系统组成\n- 组件\n- 系统\n- 发射器\n- 模块\n- 参数",
+      "reason": "添加标题；添加列表格式",
+      "confidence": 0.9998,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0467",
+      "parent_id": "node_0452",
+      "parent_text": "状态同步",
+      "original_text": "状态分类\n属性（血量，攻击力，地图坐标...）\n事件（开火，移动..）",
+      "suggested_text": "状态分类\n- 属性（血量、攻击力、地图坐标等）\n- 事件（开火、移动等）",
+      "reason": "修正标点符号；添加列表格式",
+      "confidence": 0.9803,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0298",
+      "parent_id": "node_0001",
+      "parent_text": "Game Engine",
+      "original_text": "面回数据编程\n与任务系统",
+      "suggested_text": "面向数据编程与任务系统",
+      "reason": "修正OCR错误：'面回'应为'面向'；删除多余的换行",
+      "confidence": 0.97,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0228",
+      "parent_id": "node_0213",
+      "parent_text": "如何构建游戏世界",
+      "original_text": "游戏场景管理",
+      "suggested_text": "游戏场景管理",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9967,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0174",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "视效",
+      "suggested_text": "视效",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0265",
+      "parent_id": "node_0289",
+      "parent_text": "基础架构",
+      "original_text": "如何构建游戏世界",
+      "suggested_text": "如何构建游戏世界",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9915,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0048",
+      "parent_id": "node_0047",
+      "parent_text": "地形",
+      "original_text": "地形材质混合\nTextureSplatting技术\n地表纹理使用多种不同的纹理混合，\n使用一张叫做splatmap的权重图来\n记录这些纹理的权重",
+      "suggested_text": "地形材质混合\n- Texture Splatting技术\n- 地表纹理使用多种不同的纹理混合\n- 使用splatmap权重图记录纹理权重",
+      "reason": "修正英文格式：'TextureSplatting'应为'Texture Splatting'；添加列表格式",
+      "confidence": 0.9978,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0031",
+      "parent_id": "node_0052",
+      "parent_text": "渲染管线",
+      "original_text": "群组渲染\n优点：相比于Tile的划分，\n进一步剔除了更多无关光源\n缺点：LightCulling流程比较复杂，\n需要多个pass完成",
+      "suggested_text": "群组渲染\n- 优点：相比于Tile的划分，进一步剔除了更多无关光源\n- 缺点：Light Culling流程比较复杂，需要多个pass完成",
+      "reason": "修正英文格式：'LightCulling'应为'Light Culling'；添加列表格式",
+      "confidence": 0.9798,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0146",
+      "parent_id": "node_0174",
+      "parent_text": "视效",
+      "original_text": "粒子常见属性\nAcceleration\nAttraction\nCamera\nCollision\nColor\nLifetime\nLight\nLocation\nOr...",
+      "suggested_text": "粒子常见属性\n- Acceleration（加速度）\n- Attraction（吸引力）\n- Camera（相机）\n- Collision（碰撞）\n- Color（颜色）\n- Lifetime（生命周期）\n- Light（光照）\n- Location（位置）\n- Orbit（轨道）\n- Orientation（朝向）\n- Rotation（旋转）\n- Size（大小）\n- Spawn（生成）\n- Velocity（速度）",
+      "reason": "添加中文翻译；补全被截断的属性列表",
+      "confidence": 0.9979,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0452",
+      "parent_id": "node_0405",
+      "parent_text": "网络同步",
+      "original_text": "状态同步",
+      "suggested_text": "状态同步",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9983,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0128",
+      "parent_id": null,
+      "parent_text": null,
+      "original_text": "环境光遮蔽\n屏幕空间环境光遮蔽\n光线追踪环境光遮蔽\n水平基准环境光遮蔽\n体素基准环境光遮蔽\nGTAO",
+      "suggested_text": "环境光遮蔽（AO）\n- 屏幕空间环境光遮蔽（SSAO）\n- 光线追踪环境光遮蔽（RTAO）\n- 水平基准环境光遮蔽（HBAO）\n- 体素基准环境光遮蔽（VXAO）\n- GTAO（Ground Truth Ambient Occlusion）",
+      "reason": "添加英文缩写对照；添加列表格式",
+      "confidence": 0.999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0070",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "雾效",
+      "suggested_text": "雾效",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0232",
+      "parent_id": "node_0228",
+      "parent_text": "游戏场景管理",
+      "original_text": "空间数据结构\nGameObject检索",
+      "suggested_text": "空间数据结构\n- GameObject检索",
+      "reason": "添加列表格式",
+      "confidence": 0.9958,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0002",
+      "parent_id": "node_0021",
+      "parent_text": "正向渲染",
+      "original_text": "Mindmap\nPiccolo社区 https:/ /www.piccoloengine.com/\nPiccolo\n缺点场景复杂度和光源数量相关\n会有大量的ov...",
+      "suggested_text": "Mindmap - Piccolo社区\n- 网址：https://www.piccoloengine.com/\n- 缺点：场景复杂度和光源数量相关，会有大量的overdraw",
+      "reason": "整理格式；修正URL；补全被截断的内容",
+      "confidence": 0.9823,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0289",
+      "parent_id": "node_0298",
+      "parent_text": "面向数据编程与任务系统",
+      "original_text": "基础架构",
+      "suggested_text": "基础架构",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9943,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0510",
+      "parent_id": "node_0266",
+      "parent_text": "必要性",
+      "original_text": "远程客户端发送来的同步数据存在传输延迟\n受机器性能影响，远程客户端的数据同步频率低于渲染帧率\n网络包到达时间会受网络抖动影响导致间隔不一致",
+      "suggested_text": "插值的必要性\n- 远程客户端发送来的同步数据存在传输延迟\n- 受机器性能影响，远程客户端的数据同步频率低于渲染帧率\n- 网络包到达时间会受网络抖动影响导致间隔不一致",
+      "reason": "添加标题；添加列表格式",
+      "confidence": 0.9905,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0411",
+      "parent_id": "node_0405",
+      "parent_text": "网络同步",
+      "original_text": "同步的效果\n多端一致",
+      "suggested_text": "同步的效果\n- 多端一致",
+      "reason": "添加列表格式",
+      "confidence": 0.9995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0100",
+      "parent_id": "node_0113",
+      "parent_text": "大气",
+      "original_text": "参与介质",
+      "suggested_text": "参与介质",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9985,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0113",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "大气",
+      "suggested_text": "大气",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0188",
+      "parent_id": "node_0180",
+      "parent_text": "贴图压缩",
+      "original_text": "为什么我们需要\n纹理压缩格式\n内存\n带宽",
+      "suggested_text": "为什么我们需要纹理压缩格式\n- 内存\n- 带宽",
+      "reason": "整理格式；添加列表格式",
+      "confidence": 0.9987,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0313",
+      "parent_id": "node_0001",
+      "parent_text": "Game Engine",
+      "original_text": "网络",
+      "suggested_text": "网络",
+      "reason": "原文正确，无需修改",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0166",
+      "parent_id": "node_0177",
+      "parent_text": "GPU Driven Render Pipeline",
+      "original_text": "Culling",
+      "suggested_text": "Culling（剔除）",
+      "reason": "添加中文翻译",
+      "confidence": 0.9588,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0206",
+      "parent_id": "node_0180",
+      "parent_text": "贴图压缩",
+      "original_text": "Block Compression",
+      "suggested_text": "Block Compression（块压缩）",
+      "reason": "添加中文翻译",
+      "confidence": 0.9893,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0540",
+      "parent_id": "node_0520",
+      "parent_text": "插值",
+      "original_text": "外插值",
+      "suggested_text": "外插值",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9997,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0066",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "地形",
+      "suggested_text": "地形",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0507",
+      "parent_id": "node_0504",
+      "parent_text": "角色位移同步",
+      "original_text": "必要性",
+      "suggested_text": "必要性",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9998,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0142",
+      "parent_id": "node_0166",
+      "parent_text": "Culling",
+      "original_text": "三角形剔除\nBackface Culling\nSmall Triangle Culling\nOcclusion Culling",
+      "suggested_text": "三角形剔除\n- Backface Culling（背面剔除）\n- Small Triangle Culling（小三角形剔除）\n- Occlusion Culling（遮挡剔除）",
+      "reason": "添加中文翻译；添加列表格式",
+      "confidence": 0.975,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0423",
+      "parent_id": "node_0411",
+      "parent_text": "同步的效果",
+      "original_text": "快照同步\n全量快照\n增量快照\n带宽对比\n全量快照大\n增量快照小\n快照同步的缺点\n随着游戏复杂，快照越来越大\n带宽浪费\n服务器压力大",
+      "suggested_text": "快照同步\n- 全量快照\n- 增量快照\n- 带宽对比\n  - 全量快照大\n  - 增量快照小\n- 快照同步的缺点\n  - 随着游戏复杂，快照越来越大\n  - 带宽浪费\n  - 服务器压力大",
+      "reason": "整理层级结构；添加列表格式",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0147",
+      "parent_id": "node_0166",
+      "parent_text": "Culling",
+      "original_text": "Cluster 剔除（Coarse）",
+      "suggested_text": "Cluster剔除（Coarse/粗粒度）",
+      "reason": "修正格式：添加空格；添加完整翻译",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0057",
+      "parent_id": "node_0066",
+      "parent_text": "地形",
+      "original_text": "地形几何\n网格\n高度图",
+      "suggested_text": "地形几何\n- 网格\n- 高度图",
+      "reason": "添加列表格式",
+      "confidence": 0.9997,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0079",
+      "parent_id": "node_0093",
+      "parent_text": "Culling Dataflow",
+      "original_text": "Main Pass\nZB\nPrevHZB\nInstance Culling\ning\nHierarchy/Cluster Culling\ning\nRasteriz...",
+      "suggested_text": "Main Pass流程\n- ZB PrevHZB\n- Instance Culling\n- Hierarchy/Cluster Culling\n- Rasterizer\n  - Software Rasterizer\n  - Hardware Rasterizer\n- Build HZB",
+      "reason": "修正OCR错误：删除多余的'ing'；补全被截断的内容；整理列表格式",
+      "confidence": 0.9899,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0454",
+      "parent_id": "node_0405",
+      "parent_text": "网络同步",
+      "original_text": "步的对比\n状态同步和顿同步的对比",
+      "suggested_text": "状态同步和帧同步的对比",
+      "reason": "修正OCR错误：'步的对比'是乱码；'顿同步'应为'帧同步'",
+      "confidence": 0.9767,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0193",
+      "parent_id": "node_0266",
+      "parent_text": "渲染",
+      "original_text": "渲染系统",
+      "suggested_text": "渲染系统",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9724,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0167",
+      "parent_id": "node_0177",
+      "parent_text": "GPU Driven Render Pipeline",
+      "original_text": "目标：\nGPU承担\n更多的\n提交和剔除\n工作",
+      "suggested_text": "目标：GPU承担更多的提交和剔除工作",
+      "reason": "整理格式；合并为一行更清晰",
+      "confidence": 0.9991,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0177",
+      "parent_id": "node_0190",
+      "parent_text": "Nanite",
+      "original_text": "GPU Driven\nen\npeline\nRender Pipeline",
+      "suggested_text": "GPU Driven Render Pipeline",
+      "reason": "修正OCR错误：'en'和'peline'是乱码，应删除；合并为一行",
+      "confidence": 0.9967,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0520",
+      "parent_id": "node_0504",
+      "parent_text": "角色位移同步",
+      "original_text": "插值\n内插值&外插值",
+      "suggested_text": "插值\n- 内插值\n- 外插值",
+      "reason": "整理格式；添加列表格式",
+      "confidence": 0.9972,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0381",
+      "parent_id": "node_0314",
+      "parent_text": "工具链",
+      "original_text": "软件架构\n构\none架构\nStand-alone架构\n架构\nIn Game架构\nEditor\nPlay in Editor",
+      "suggested_text": "软件架构\n- Stand-alone架构\n- In Game架构\n- Editor\n- Play in Editor",
+      "reason": "修正OCR错误：删除多余的'构''one架构''架构'；添加列表格式",
+      "confidence": 0.9916,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0215",
+      "parent_id": "node_0266",
+      "parent_text": "渲染",
+      "original_text": "贴图压缩",
+      "suggested_text": "贴图压缩",
+      "reason": "原文正确，无需修改",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0054",
+      "parent_id": "node_0193",
+      "parent_text": "渲染系统",
+      "original_text": "阴影\n月影",
+      "suggested_text": "阴影",
+      "reason": "修正OCR错误：'月影'是乱码，应删除",
+      "confidence": 0.9854,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0441",
+      "parent_id": "node_0423",
+      "parent_text": "快照同步",
+      "original_text": "越大",
+      "suggested_text": "快照越来越大",
+      "reason": "修正OCR错误：'越大'是快照同步缺点的一部分，应补充完整",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0164",
+      "parent_id": "node_0190",
+      "parent_text": "Nanite",
+      "original_text": "Visibility Buffer",
+      "suggested_text": "Visibility Buffer（可见性缓冲）",
+      "reason": "添加中文翻译",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0266",
+      "parent_id": "node_0001",
+      "parent_text": "Game Engine",
+      "original_text": "渲染",
+      "suggested_text": "渲染",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0314",
+      "parent_id": "node_0001",
+      "parent_text": "Game Engine",
+      "original_text": "工具链",
+      "suggested_text": "工具链",
+      "reason": "原文正确，无需修改",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0029",
+      "parent_id": "node_0054",
+      "parent_text": "阴影",
+      "original_text": "阴影组成\n全影\n半影",
+      "suggested_text": "阴影组成\n- 全影\n- 半影",
+      "reason": "添加列表格式",
+      "confidence": 0.9979,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0504",
+      "parent_id": "node_0488",
+      "parent_text": "游戏同步举例",
+      "original_text": "角色位移同步",
+      "suggested_text": "角色位移同步",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9982,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0190",
+      "parent_id": "node_0266",
+      "parent_text": "渲染",
+      "original_text": "Nanite",
+      "suggested_text": "Nanite",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9988,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0093",
+      "parent_id": "node_0190",
+      "parent_text": "Nanite",
+      "original_text": "Cullin\nDataflow",
+      "suggested_text": "Culling Dataflow",
+      "reason": "修正OCR错误：'Cullin'应为'Culling'；合并为一行",
+      "confidence": 0.9696,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0488",
+      "parent_id": "node_0405",
+      "parent_text": "网络同步",
+      "original_text": "游戏\n游戏同步举例",
+      "suggested_text": "游戏同步举例",
+      "reason": "修正OCR错误：删除多余的'游戏'",
+      "confidence": 0.9979,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0464",
+      "parent_id": "node_0454",
+      "parent_text": "状态同步和帧同步的对比",
+      "original_text": "网络带宽\n帧同步\n小\n状态同步\n大",
+      "suggested_text": "网络带宽\n- 帧同步：小\n- 状态同步：大",
+      "reason": "整理格式；添加列表格式",
+      "confidence": 0.9965,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0201",
+      "parent_id": "node_0266",
+      "parent_text": "渲染",
+      "original_text": "Lumen",
+      "suggested_text": "Lumen",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9948,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0001",
+      "parent_id": "node_0054",
+      "parent_text": "阴影",
+      "original_text": "Shadow Map\n算法流程\nShadow Mapping步骤1：从光源处出发，向光照的方向看去，来构造出光照空间。\n然后在光照空间，我们渲染需要产生阴影的物...",
+      "suggested_text": "Shadow Map算法流程\n- 步骤1：从光源处出发，向光照的方向看去，构造光照空间，渲染需要产生阴影的物体，将深度写入ZBuffer\n- 步骤2：正常渲染物体，根据世界坐标变换到光照空间坐标，计算该点在Shadow Map中的深度值并比较\n- 相关技术：Shadow Bias、Cascade Shadow Map、Variance Shadow Map、PCF、PCSS",
+      "reason": "补全被截断的内容；整理列表格式",
+      "confidence": 0.97,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0252",
+      "parent_id": "node_0266",
+      "parent_text": "渲染",
+      "original_text": "GPU架构\nImmediate Mode Rendering\nTile Based Rendering\nTile Based Deferred Renderin...",
+      "suggested_text": "GPU架构\n- Immediate Mode Rendering（立即模式渲染）\n- Tile Based Rendering（基于Tile的渲染）\n- Tile Based Deferred Rendering（基于Tile的延迟渲染）",
+      "reason": "添加中文翻译；补全被截断的内容；添加列表格式",
+      "confidence": 0.97,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0096",
+      "parent_id": "node_0190",
+      "parent_text": "Nanite",
+      "original_text": "Rasterization",
+      "suggested_text": "Rasterization（光栅化）",
+      "reason": "添加中文翻译",
+      "confidence": 0.9995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0498",
+      "parent_id": "node_0488",
+      "parent_text": "游戏同步举例",
+      "original_text": "命中判定",
+      "suggested_text": "命中判定",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9998,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0178",
+      "parent_id": "node_0201",
+      "parent_text": "Lumen",
+      "original_text": "Lumen流程",
+      "suggested_text": "Lumen流程",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9988,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0351",
+      "parent_id": "node_0203",
+      "parent_text": "构建高级的AI系统",
+      "original_text": "Machine Learning\n（机器学习：ML）",
+      "suggested_text": "Machine Learning（机器学习，ML）",
+      "reason": "修正格式：合并为一行",
+      "confidence": 0.9564,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0409",
+      "parent_id": "node_0408",
+      "parent_text": "HTN",
+      "original_text": "Sequencer\n数据绑定\n关键帧\n插值",
+      "suggested_text": "Sequencer\n- 数据绑定\n- 关键帧\n- 插值",
+      "reason": "添加列表格式",
+      "confidence": 0.9925,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0479",
+      "parent_id": "node_0454",
+      "parent_text": "状态同步和帧同步的对比",
+      "original_text": "回放文件大小\n帧同步\n小\n状态同步\n大",
+      "suggested_text": "回放文件大小\n- 帧同步：小\n- 状态同步：大",
+      "reason": "整理格式；添加列表格式",
+      "confidence": 0.9956,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0466",
+      "parent_id": "node_0454",
+      "parent_text": "状态同步和帧同步的对比",
+      "original_text": "支持玩家的数量\n帧同步\n倾向步\n少量玩家\n状态同步\n大量玩家",
+      "suggested_text": "支持玩家的数量\n- 帧同步：倾向少量玩家\n- 状态同步：大量玩家",
+      "reason": "修正OCR错误：'倾向步'应为'倾向'；整理格式；添加列表格式",
+      "confidence": 0.9422,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0445",
+      "parent_id": "node_0454",
+      "parent_text": "状态同步和帧同步的对比",
+      "original_text": "开发效率\n帧同步",
+      "suggested_text": "开发效率\n- 帧同步",
+      "reason": "添加列表格式",
+      "confidence": 0.9878,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0333",
+      "parent_id": "node_0315",
+      "parent_text": "GamePlay",
+      "original_text": "构建高级的AI系统",
+      "suggested_text": "构建高级的AI系统",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9717,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0390",
+      "parent_id": "node_0314",
+      "parent_text": "工具链",
+      "original_text": "常见编辑器\nWorld Editor\n架构\n数据抽象\n布局信息（Layout）\n地形（Terrain）\n环境（Environment）\n多系统间的数据交互(eg...",
+      "suggested_text": "常见编辑器 - World Editor\n- 架构\n- 数据抽象\n  - 布局信息（Layout）\n  - 地形（Terrain）\n  - 环境（Environment）\n- 多系统间的数据交互",
+      "reason": "整理层级结构；补全被截断的内容；添加列表格式",
+      "confidence": 0.9869,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0138",
+      "parent_id": "node_0190",
+      "parent_text": "Nanite",
+      "original_text": "Virtualized\nGeometry\nNanite",
+      "suggested_text": "Virtualized Geometry Nanite",
+      "reason": "修正格式：合并为一行",
+      "confidence": 0.9993,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0229",
+      "parent_id": null,
+      "parent_text": null,
+      "original_text": "场景空间管理\n层次包围盒（BVH）\n二元空间分割树（BSPTrees）\n四叉树（Quad Tree）\n八叉树\n(Octree)\n场景图\n(Scene Graph...",
+      "suggested_text": "场景空间管理\n- 层次包围盒（BVH）\n- 二元空间分割树（BSP Trees）\n- 四叉树（Quad Tree）\n- 八叉树（Octree）\n- 场景图（Scene Graphs）\n- KD树（K-Dimensional Tree）",
+      "reason": "修正英文格式：'BSPTrees'应为'BSP Trees'；修正OCR错误：删除多余的换行；补全被截断的内容；添加列表格式",
+      "confidence": 0.9827,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0451",
+      "parent_id": "node_0445",
+      "parent_text": "开发效率",
+      "original_text": "开发较快，debug较困难\n状态同步\n较慢",
+      "suggested_text": "开发效率对比\n- 帧同步：开发较快，debug较困难\n- 状态同步：较慢",
+      "reason": "添加标题；整理格式；添加列表格式",
+      "confidence": 0.9995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0315",
+      "parent_id": "node_0001",
+      "parent_text": "Game Engine",
+      "original_text": "GamePlay",
+      "suggested_text": "GamePlay",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9895,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0041",
+      "parent_id": "node_0077",
+      "parent_text": "Build a lot of Probes with Different",
+      "original_text": "Screen Space Probe\nProbestructure\n8x8OctahedralAtlas\nRadiance and HitDistance\nAd...",
+      "suggested_text": "Screen Space Probe\n- Probe structure\n  - 8x8 Octahedral Atlas\n  - Radiance and HitDistance\n- Adaptive Placement",
+      "reason": "修正OCR错误：'Probestructure'应为'Probe structure'；修正英文格式；补全被截断的内容；整理层级结构",
+      "confidence": 0.9889,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0477",
+      "parent_id": "node_0454",
+      "parent_text": "状态同步和帧同步的对比",
+      "original_text": "作弊\n帧同步",
+      "suggested_text": "作弊\n- 帧同步",
+      "reason": "添加列表格式",
+      "confidence": 0.9545,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0509",
+      "parent_id": "node_0498",
+      "parent_text": "命中判定",
+      "original_text": "如何做判定",
+      "suggested_text": "如何做判定",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9977,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0157",
+      "parent_id": "node_0178",
+      "parent_text": "Lumen流程",
+      "original_text": "Shading Full\nPixels with\nScreen Space\nProbes",
+      "suggested_text": "Shading Full Pixels with Screen Space Probes",
+      "reason": "修正格式：合并为一行",
+      "confidence": 0.9883,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0493",
+      "parent_id": "node_0498",
+      "parent_text": "命中判定",
+      "original_text": "复杂性",
+      "suggested_text": "复杂性",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0481",
+      "parent_id": "node_0477",
+      "parent_text": "作弊",
+      "original_text": "部分作弊较难避免，如透视\n状态同步\n可以对作做多种优化",
+      "suggested_text": "作弊问题\n- 帧同步：部分作弊较难避免，如透视\n- 状态同步：可以对作弊做多种优化",
+      "reason": "修正OCR错误：'对作做'应为'对作弊做'；添加标题；整理列表格式",
+      "confidence": 0.9848,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0453",
+      "parent_id": "node_0454",
+      "parent_text": "状态同步和帧同步的对比",
+      "original_text": "游戏响应\n帧同步\n较慢\n状态同步\n较快",
+      "suggested_text": "游戏响应\n- 帧同步：较慢\n- 状态同步：较快",
+      "reason": "整理格式；添加列表格式",
+      "confidence": 0.9924,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0148",
+      "parent_id": "node_0178",
+      "parent_text": "Lumen流程",
+      "original_text": "Surface Caching",
+      "suggested_text": "Surface Caching（表面缓存）",
+      "reason": "添加中文翻译",
+      "confidence": 0.9967,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0461",
+      "parent_id": "node_0454",
+      "parent_text": "状态同步和帧同步的对比",
+      "original_text": "跨平台\n帧同步\n相对复杂\n状态同步\n相对简单",
+      "suggested_text": "跨平台\n- 帧同步：相对复杂\n- 状态同步：相对简单",
+      "reason": "整理格式；添加列表格式",
+      "confidence": 0.9946,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0283",
+      "parent_id": "node_0001",
+      "parent_text": "Game Engine",
+      "original_text": "动画系统",
+      "suggested_text": "动画系统",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9977,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0004",
+      "parent_id": "node_0077",
+      "parent_text": "Build a lot of Probes with Different",
+      "original_text": "Spatial Probe Filtering\ncreenSpaceProbe\nFilterwithin theneighborScreenSpaceProbe...",
+      "suggested_text": "Spatial Probe Filtering\n- Screen Space Probe Filter within the neighbor Screen Space Probe\n- Ignore normal differences, Only depth weighting\n- Use Angle error from reprojected neighbor ray hits",
+      "reason": "修正OCR错误：'creenSpaceProbe'应为'Screen Space Probe'；补全被截断的内容；整理列表格式",
+      "confidence": 0.9806,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0257",
+      "parent_id": "node_0283",
+      "parent_text": "动画系统",
+      "original_text": "专山\n动画技术基础\n术基础",
+      "suggested_text": "动画技术基础",
+      "reason": "修正OCR错误：'专山'和'术基础'是乱码，应删除",
+      "confidence": 0.8857,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0282",
+      "parent_id": "node_0283",
+      "parent_text": "动画系统",
+      "original_text": "充",
+      "suggested_text": "补充",
+      "reason": "修正OCR错误：'充'应为'补充'",
+      "confidence": 0.9692,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0168",
+      "parent_id": "node_0201",
+      "parent_text": "Lumen",
+      "original_text": "之前常见的GI算法\nReflec\nReflective Shadow Map\nLight PropagationVolume\nSparse Voxel Octr...",
+      "suggested_text": "之前常见的GI算法\n- Reflective Shadow Map\n- Light Propagation Volume\n- Sparse Voxel Octree for Real-time Global Illumination\n- Voxelization Based Global Illumination\n- Screen Space Global Illumination\n- Dynamic Diffuse Global Illumination\n- Ray-tracing based Global Illumination",
+      "reason": "修正OCR错误：'Reflec'是乱码；'PropagationVolume'应为'Propagation Volume'；补全被截断的内容；添加列表格式",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0374",
+      "parent_id": "node_0315",
+      "parent_text": "GamePlay",
+      "original_text": "AI Planning",
+      "suggested_text": "AI Planning（AI规划）",
+      "reason": "添加中文翻译",
+      "confidence": 0.9476,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0502",
+      "parent_id": "node_0493",
+      "parent_text": "复杂性",
+      "original_text": "敌人的位置\n故入的位直\n收入位：\n你看到的敌人的位置\n服务器中敌人的位置\n敌人客户端真实的位置",
+      "suggested_text": "敌人的位置\n- 你看到的敌人的位置\n- 服务器中敌人的位置\n- 敌人客户端真实的位置",
+      "reason": "修正OCR错误：'故入的位直'和'收入位'是乱码，应删除；整理列表格式",
+      "confidence": 0.8871,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0077",
+      "parent_id": "node_0178",
+      "parent_text": "Lumen流程",
+      "original_text": "uild a lot of Probes\nwith Different",
+      "suggested_text": "Build a lot of Probes with Different",
+      "reason": "修正OCR错误：'uild'应为'Build'；合并为一行",
+      "confidence": 0.9896,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0513",
+      "parent_id": "node_0509",
+      "parent_text": "如何做判定",
+      "original_text": "延迟补偿（服务器判定）",
+      "suggested_text": "延迟补偿（服务器判定）",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9979,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0473",
+      "parent_id": "node_0313",
+      "parent_text": "网络",
+      "original_text": "服务\n服务器架构",
+      "suggested_text": "服务器架构",
+      "reason": "修正OCR错误：删除多余的'服务'",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0485",
+      "parent_id": "node_0493",
+      "parent_text": "复杂性",
+      "original_text": "从开火到命中的流程\n射击指令传输的网络状况\nHitscan\nHitscan Weapons\n瞬时完\n瞬时完成射击操作\nProjectil\nProjectileW...",
+      "suggested_text": "从开火到命中的流程\n- 射击指令传输的网络状况\n- Hitscan Weapons（瞬时完成射击操作）\n- Projectile Weapons（子弹有弹道距离、重力等因素影响）",
+      "reason": "修正OCR错误：'瞬时完'是重复内容；'Projectil'应为'Projectile'；补全被截断的内容；整理列表格式",
+      "confidence": 0.994,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0141",
+      "parent_id": "node_0148",
+      "parent_text": "Surface Caching",
+      "original_text": "Mesh Card\n功能：可以看成是放在6个轴对称方向上的相机，\n可以看成是放\n功能：\n通过正交投影的方式来光栅化Mesh，\n通过正交投\n从而获取Mesh的各种...",
+      "suggested_text": "Mesh Card\n- 功能：可以看成是放在6个轴对称方向上的相机\n- 通过正交投影的方式来光栅化Mesh\n- 从而获取Mesh的各种属性（Albedo, Normal, Depth等）\n- 对应surface cache",
+      "reason": "修正OCR错误：删除重复内容；补全被截断的内容；整理列表格式",
+      "confidence": 0.9912,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0269",
+      "parent_id": "node_0287",
+      "parent_text": "物理系统基础概念",
+      "original_text": "静态刚体static\n动态刚体dynamic\n触发器(trigger)\n受控刚体kinematic\n刚体PhysicsActor",
+      "suggested_text": "刚体类型\n- 静态刚体（static）\n- 动态刚体（dynamic）\n- 触发器（trigger）\n- 受控刚体（kinematic）\n- 刚体PhysicsActor",
+      "reason": "添加标题；修正格式；添加列表格式",
+      "confidence": 0.9935,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0293",
+      "parent_id": "node_0001",
+      "parent_text": "Game Engine",
+      "original_text": "物理系统",
+      "suggested_text": "物理系统",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9964,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0429",
+      "parent_id": "node_0374",
+      "parent_text": "AI Planning",
+      "original_text": "Goal-Orientated Action Planner\n（目标导向的动作规划器；GOAP）",
+      "suggested_text": "Goal-Orientated Action Planner（目标导向的动作规划器，GOAP）",
+      "reason": "修正格式：合并为一行",
+      "confidence": 0.9893,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0287",
+      "parent_id": "node_0293",
+      "parent_text": "物理系统",
+      "original_text": "物理系统基础概念",
+      "suggested_text": "物理系统基础概念",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9939,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0384",
+      "parent_id": "node_0374",
+      "parent_text": "AI Planning",
+      "original_text": "Monte Carlo Tree Search\n（蒙特卡洛树搜索；MCTS）",
+      "suggested_text": "Monte Carlo Tree Search（蒙特卡洛树搜索，MCTS）",
+      "reason": "修正格式：合并为一行",
+      "confidence": 0.9681,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0097",
+      "parent_id": "node_0178",
+      "parent_text": "Lumen流程",
+      "original_text": "Fast Ray Trace in\nAny Hardware",
+      "suggested_text": "Fast Ray Trace in Any Hardware",
+      "reason": "修正格式：合并为一行",
+      "confidence": 0.993,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0391",
+      "parent_id": "node_0384",
+      "parent_text": "MCTS",
+      "original_text": "决策",
+      "suggested_text": "决策",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0261",
+      "parent_id": "node_0283",
+      "parent_text": "动画系统",
+      "original_text": "动画技术进阶",
+      "suggested_text": "动画技术进阶",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0302",
+      "parent_id": "node_0293",
+      "parent_text": "物理系统",
+      "original_text": "物理系统应用",
+      "suggested_text": "物理系统应用",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9988,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0226",
+      "parent_id": "node_0257",
+      "parent_text": "动画技术基础",
+      "original_text": "游戏中的2D\n动画技术\nEN\n精灵动画\nLive2D\n2D Skinned Animation\n动画混合",
+      "suggested_text": "游戏中的2D动画技术\n- 精灵动画\n- Live2D\n- 2D Skinned Animation\n- 动画混合",
+      "reason": "修正OCR错误：'EN'是乱码，应删除；整理格式；添加列表格式",
+      "confidence": 0.9971,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0490",
+      "parent_id": "node_0473",
+      "parent_text": "服务器架构",
+      "original_text": "系统举例\n大厅系统\n用户管理系统\n交易系统\n社交系统\n匹配系统\n数据存储举例\nMysql\nMongo\nRedis",
+      "suggested_text": "系统举例\n- 大厅系统\n- 用户管理系统\n- 交易系统\n- 社交系统\n- 匹配系统\n- 数据存储举例\n  - MySQL\n  - MongoDB\n  - Redis",
+      "reason": "修正英文：'Mysql'应为'MySQL'；整理层级结构；添加列表格式",
+      "confidence": 0.9984,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0243",
+      "parent_id": "node_0261",
+      "parent_text": "动画技术进阶",
+      "original_text": "动画混合\nLERP\nLCNF\n混合权重的计算\n混合时间轴对齐",
+      "suggested_text": "动画混合\n- LERP\n- LCNF\n- 混合权重的计算\n- 混合时间轴对齐",
+      "reason": "添加列表格式",
+      "confidence": 0.88,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0398",
+      "parent_id": "node_0391",
+      "parent_text": "决策",
+      "original_text": "DefaultPolicy\n最保守的选择\n最佳的选择\n最鲁棒的选择\n最激进的选择",
+      "suggested_text": "Default Policy\n- 最保守的选择\n- 最佳的选择\n- 最鲁棒的选择\n- 最激进的选择",
+      "reason": "修正英文格式：'DefaultPolicy'应为'Default Policy'；添加列表格式",
+      "confidence": 0.999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0306",
+      "parent_id": "node_0302",
+      "parent_text": "物理系统应用",
+      "original_text": "角色控制器\n与刚体动力学的差异\n基本组成\n与环境的碰撞\n自动阶跃（autostepping）\n坡度限制与强制滑坡\n更新大小\n推动物体\n移动平台",
+      "suggested_text": "角色控制器\n- 与刚体动力学的差异\n- 基本组成\n- 与环境的碰撞\n- 自动阶跃（autostepping）\n- 坡度限制与强制滑坡\n- 更新大小\n- 推动物体\n- 移动平台",
+      "reason": "添加列表格式",
+      "confidence": 0.9986,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0173",
+      "parent_id": "node_0257",
+      "parent_text": "动画技术基础",
+      "original_text": "2D旋转中的数学",
+      "suggested_text": "2D旋转中的数学",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9994,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0380",
+      "parent_id": "node_0315",
+      "parent_text": "GamePlay",
+      "original_text": "基础AI系统",
+      "suggested_text": "基础AI系统",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9739,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0271",
+      "parent_id": "node_0287",
+      "parent_text": "物理系统基础概念",
+      "original_text": "运动",
+      "suggested_text": "运动",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0087",
+      "parent_id": "node_0097",
+      "parent_text": "Fast Ray Trace in Any Hardware",
+      "original_text": "有向距离场（SDF）\n距离最近表面的\n原理：有向距离场在每个点将距离最近表面的\n距离保存到体积纹理中。\n。\n的距离为\n网格体外的每个点保存的距离为\n正值，网格体...",
+      "suggested_text": "有向距离场（SDF）\n- 原理：有向距离场在每个点将距离最近表面的距离保存到体积纹理中\n- 网格体外的每个点保存的距离为正值，网格体内的每个点保存的距离为负值",
+      "reason": "修正OCR错误：删除重复和乱码内容；整理列表格式",
+      "confidence": 0.965,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0484",
+      "parent_id": "node_0473",
+      "parent_text": "服务器架构",
+      "original_text": "分布式系统",
+      "suggested_text": "分布式系统",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9972,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0258",
+      "parent_id": "node_0271",
+      "parent_text": "运动",
+      "original_text": "顿定律\n第二牛顿定律\n不变外力下的运动\n运动\n运动\n变化外力下的运动",
+      "suggested_text": "牛顿定律\n- 第一牛顿定律\n- 第二牛顿定律\n- 不变外力下的运动\n- 变化外力下的运动",
+      "reason": "修正OCR错误：'顿定律'应为'牛顿定律'；删除重复内容'运动'；添加列表格式",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0436",
+      "parent_id": "node_0380",
+      "parent_text": "基础AI系统",
+      "original_text": "群体模拟\n微观模型\n基于规则Boids\n宏观模型\n流场\n介观模型\n碰撞规避\n基于力的模型\n的模型\n基于速度的模型\nVo\nRVO\nORCA",
+      "suggested_text": "群体模拟\n- 微观模型：基于规则Boids\n- 宏观模型：流场\n- 介观模型\n  - 碰撞规避\n  - 基于力的模型\n  - 基于速度的模型\n    - VO\n    - RVO\n    - ORCA",
+      "reason": "修正OCR错误：'的模型'是乱码；'Vo'应为'VO'；整理层级结构；添加列表格式",
+      "confidence": 0.9693,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0197",
+      "parent_id": "node_0226",
+      "parent_text": "游戏中的2D动画技术",
+      "original_text": "ation",
+      "suggested_text": "Animation",
+      "reason": "修正OCR错误：'ation'应为'Animation'",
+      "confidence": 0.9956,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0392",
+      "parent_id": "node_0380",
+      "parent_text": "基础AI系统",
+      "original_text": "寻路",
+      "suggested_text": "寻路",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9993,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0312",
+      "parent_id": "node_0302",
+      "parent_text": "物理系统应用",
+      "original_text": "布娃娃模拟\n用途\n途\n骨骼与刚体的映射\n人体关节约束\n约束参数\n动画与布娃娃的混合过渡\n富力布娃娃",
+      "suggested_text": "布娃娃模拟\n- 用途\n- 骨骼与刚体的映射\n- 人体关节约束\n- 约束参数\n- 动画与布娃娃的混合过渡\n- 富力布娃娃",
+      "reason": "修正OCR错误：删除多余的'途'；添加列表格式",
+      "confidence": 0.9809,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0038",
+      "parent_id": "node_0178",
+      "parent_text": "Lumen流程",
+      "original_text": "Radiance Injection",
+      "suggested_text": "Radiance Injection（辐射注入）",
+      "reason": "添加中文翻译",
+      "confidence": 0.9877,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0413",
+      "parent_id": "node_0392",
+      "parent_text": "寻路",
+      "original_text": "路径平滑\n漏斗算法",
+      "suggested_text": "路径平滑\n- 漏斗算法",
+      "reason": "添加列表格式",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0307",
+      "parent_id": "node_0302",
+      "parent_text": "物理系统应用",
+      "original_text": "布料模拟",
+      "suggested_text": "布料模拟",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0263",
+      "parent_id": "node_0271",
+      "parent_text": "运动",
+      "original_text": "第一牛顿定律",
+      "suggested_text": "第一牛顿定律",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9985,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0387",
+      "parent_id": "node_0386",
+      "parent_text": "可视化脚本",
+      "original_text": "可视化脚本是一种编程语言\n编程语言的要素及相应可",
+      "suggested_text": "可视化脚本是一种编程语言\n- 编程语言的要素及相应可视化表示",
+      "reason": "补全被截断的内容；添加列表格式",
+      "confidence": 0.9969,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0276",
+      "parent_id": "node_0287",
+      "parent_text": "物理系统基础概念",
+      "original_text": "力与冲量",
+      "suggested_text": "力与冲量",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0203",
+      "parent_id": "node_0261",
+      "parent_text": "动画技术进阶",
+      "original_text": "动画状态机\nASM的定\nCross Fades\n分层ASM",
+      "suggested_text": "动画状态机\n- ASM的定义\n- Cross Fades\n- 分层ASM",
+      "reason": "修正OCR错误：'ASM的定'应为'ASM的定义'；添加列表格式",
+      "confidence": 0.9973,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0317",
+      "parent_id": "node_0307",
+      "parent_text": "布料模拟",
+      "original_text": "方法",
+      "suggested_text": "方法",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0218",
+      "parent_id": "node_0236",
+      "parent_text": "碰撞检测",
+      "original_text": "动态BVH树\n排序与扫描SortandSweep\n排序与扫描：\n粗阶段",
+      "suggested_text": "粗阶段\n- 动态BVH树\n- 排序与扫描（Sort and Sweep）",
+      "reason": "修正英文格式：'SortandSweep'应为'Sort and Sweep'；整理格式；添加列表格式",
+      "confidence": 0.9934,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0249",
+      "parent_id": "node_0271",
+      "parent_text": "运动",
+      "original_text": "运动状态",
+      "suggested_text": "运动状态",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9993,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0406",
+      "parent_id": "node_0392",
+      "parent_text": "寻路",
+      "original_text": "工作流",
+      "suggested_text": "工作流",
+      "reason": "原文正确，无需修改",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0395",
+      "parent_id": "node_0386",
+      "parent_text": "可视化脚本",
+      "original_text": "可视化脚本的问题\n可\n不便于合并\n需要良好的布局规范",
+      "suggested_text": "可视化脚本的问题\n- 不便于合并\n- 需要良好的布局规范",
+      "reason": "修正OCR错误：删除多余的'可'；添加列表格式",
+      "confidence": 0.9963,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0184",
+      "parent_id": "node_0214",
+      "parent_text": "精细阶段",
+      "original_text": "EN\n概念\n闵可夫斯基和/差\n凸多\n凸多边形闵可夫斯基和性质\n相交对\n相交对应闵可夫斯基差中的原点",
+      "suggested_text": "闵可夫斯基和/差\n- 概念\n- 凸多边形闵可夫斯基和性质\n- 相交对应闵可夫斯基差中的原点",
+      "reason": "修正OCR错误：'EN'和'凸多'是乱码，应删除；添加列表格式",
+      "confidence": 0.989,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0486",
+      "parent_id": "node_0313",
+      "parent_text": "网络",
+      "original_text": "带宽优化",
+      "suggested_text": "带宽优化",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9985,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0444",
+      "parent_id": "node_0380",
+      "parent_text": "基础AI系统",
+      "original_text": "感知\n内部信息\n外部信息\n静态空间信息\n动态空间信息\n经典决策算法\n影响力图\n其他游戏对象\n角色信息\n感知模拟",
+      "suggested_text": "感知\n- 内部信息\n- 外部信息\n  - 静态空间信息\n  - 动态空间信息\n- 经典决策算法\n  - 影响力图\n- 其他游戏对象\n- 角色信息\n- 感知模拟",
+      "reason": "整理层级结构；添加列表格式",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0492",
+      "parent_id": "node_0486",
+      "parent_text": "带宽优化",
+      "original_text": "数据压缩\n对象更新频率\n对象相关性\n静态区域\nAOI\n暴力法\n九宫格\n十字链表\nPVS",
+      "suggested_text": "带宽优化方法\n- 数据压缩\n- 对象更新频率\n- 对象相关性\n- 静态区域\n- AOI（Area of Interest）\n  - 暴力法\n  - 九宫格\n  - 十字链表\n- PVS（Potential Visibility Set）",
+      "reason": "添加标题；添加AOI全称；整理层级结构；添加列表格式",
+      "confidence": 0.9914,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0236",
+      "parent_id": "node_0287",
+      "parent_text": "物理系统基础概念",
+      "original_text": "碰撞检测",
+      "suggested_text": "碰撞检测",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9989,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0415",
+      "parent_id": "node_0392",
+      "parent_text": "寻路",
+      "original_text": "路径发现",
+      "suggested_text": "路径发现",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9998,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0346",
+      "parent_id": "node_0331",
+      "parent_text": "音效",
+      "original_text": "声音基础\n声音三要素\n响度\n音高\n音色\n脉冲编码调制\n采样\n量化\n编码",
+      "suggested_text": "声音基础\n- 声音三要素\n  - 响度\n  - 音高\n  - 音色\n- 脉冲编码调制\n  - 采样\n  - 量化\n  - 编码",
+      "reason": "整理层级结构；添加列表格式",
+      "confidence": 0.9994,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0331",
+      "parent_id": "node_0330",
+      "parent_text": "音效",
+      "original_text": "音频",
+      "suggested_text": "音频",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9994,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0427",
+      "parent_id": "node_0415",
+      "parent_text": "路径发现",
+      "original_text": "数学抽象\n图搜索算法",
+      "suggested_text": "数学抽象\n- 图搜索算法",
+      "reason": "添加列表格式",
+      "confidence": 0.9991,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0165",
+      "parent_id": "node_0261",
+      "parent_text": "动画技术进阶",
+      "original_text": "动画混合树\nBlend Tree\nLERP blend node\nadditive blend node\n动画混合树的节点\n动画树的控制信号",
+      "suggested_text": "动画混合树\n- Blend Tree\n  - LERP blend node\n  - additive blend node\n- 动画混合树的节点\n- 动画树的控制信号",
+      "reason": "整理层级结构；添加列表格式",
+      "confidence": 0.9935,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0214",
+      "parent_id": "node_0236",
+      "parent_text": "碰撞检测",
+      "original_text": "精细阶段",
+      "suggested_text": "精细阶段",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9987,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0183",
+      "parent_id": "node_0214",
+      "parent_text": "精细阶段",
+      "original_text": "基于闵可夫斯基差的方法",
+      "suggested_text": "基于闵可夫斯基差的方法",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9984,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0403",
+      "parent_id": "node_0388",
+      "parent_text": "3C",
+      "original_text": "控制（Control）\n控制手感优化\n辅助瞄准\n基于游戏环境做控制调整",
+      "suggested_text": "控制（Control）\n- 控制手感优化\n- 辅助瞄准\n- 基于游戏环境做控制调整",
+      "reason": "添加列表格式",
+      "confidence": 0.995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0371",
+      "parent_id": "node_0332",
+      "parent_text": "空间化音频",
+      "original_text": "双耳音频空间化\n双耳声级差\n双耳时间延迟\n频谱阴影\n头相关变换函数",
+      "suggested_text": "双耳音频空间化\n- 双耳声级差\n- 双耳时间延迟\n- 频谱阴影\n- 头相关变换函数（HRTF）",
+      "reason": "添加英文缩写HRTF；添加列表格式",
+      "confidence": 0.9953,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0475",
+      "parent_id": "node_0444",
+      "parent_text": "经典决策算法",
+      "original_text": "有限状态机\n层级有限状态机",
+      "suggested_text": "有限状态机\n- 层级有限状态机",
+      "reason": "添加列表格式",
+      "confidence": 0.999,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0397",
+      "parent_id": "node_0386",
+      "parent_text": "可视化脚本",
+      "original_text": "3C",
+      "suggested_text": "3C",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9921,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0437",
+      "parent_id": "node_0415",
+      "parent_text": "路径发现",
+      "original_text": "广度优先搜索",
+      "suggested_text": "广度优先搜索",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0325",
+      "parent_id": "node_0317",
+      "parent_text": "方法",
+      "original_text": "基于刚体的布料模拟",
+      "suggested_text": "基于刚体的布料模拟",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0339",
+      "parent_id": "node_0331",
+      "parent_text": "音频",
+      "original_text": "空间化音频",
+      "suggested_text": "空间化音频",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9988,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0187",
+      "parent_id": "node_0214",
+      "parent_text": "精细阶段",
+      "original_text": "基础形状求交检测\n球-球求交\n球-胶囊求交\n胶囊-胶囊求交",
+      "suggested_text": "基础形状求交检测\n- 球-球求交\n- 球-胶囊求交\n- 胶囊-胶囊求交",
+      "reason": "添加列表格式",
+      "confidence": 0.9992,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0516",
+      "parent_id": "node_0313",
+      "parent_text": "网络",
+      "original_text": "反作弊方法\n混淆加密内存\n加壳\n本地文件校验\n网络包加密\n非对称加密分发密钥\n对称加密传输数据\nVAC&EAV\n基于统计数据反作弊\n检测已知的作弊程序",
+      "suggested_text": "反作弊方法\n- 混淆加密内存\n- 加壳\n- 本地文件校验\n- 网络包加密\n  - 非对称加密分发密钥\n  - 对称加密传输数据\n- VAC&EAV\n- 基于统计数据反作弊\n- 检测已知的作弊程序",
+      "reason": "整理层级结构；添加列表格式",
+      "confidence": 0.9868,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0424",
+      "parent_id": "node_0415",
+      "parent_text": "路径发现",
+      "original_text": "深度优先搜索",
+      "suggested_text": "深度优先搜索",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9989,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0386",
+      "parent_id": "node_0387",
+      "parent_text": "可视化脚本",
+      "original_text": "提供用户友好型的交互方式\n启发式的节点创建\n便捷的调试工具",
+      "suggested_text": "提供用户友好型的交互方式\n- 启发式的节点创建\n- 便捷的调试工具",
+      "reason": "添加列表格式",
+      "confidence": 0.9983,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0241",
+      "parent_id": "node_0249",
+      "parent_text": "运动状态",
+      "original_text": "碰撞解决\n惩罚力法\n求解速度约束\n拉格朗日力学\n碰撞约束\n迭代求解\n求解位置约束",
+      "suggested_text": "碰撞解决\n- 惩罚力法\n- 求解速度约束\n- 拉格朗日力学\n- 碰撞约束\n- 迭代求解\n- 求解位置约束",
+      "reason": "添加列表格式",
+      "confidence": 0.9886,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0329",
+      "parent_id": "node_0331",
+      "parent_text": "音频",
+      "original_text": "声障",
+      "suggested_text": "声障",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9996,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0318",
+      "parent_id": "node_0317",
+      "parent_text": "方法",
+      "original_text": "基于动画的布料表现",
+      "suggested_text": "基于动画的布料表现",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9997,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0495",
+      "parent_id": "node_0313",
+      "parent_text": "网络",
+      "original_text": "反作弊\n作弊手段分类\n读取、篡改内存\n读取网络包\nAl Cheat\n修改本地文件，贴图等",
+      "suggested_text": "反作弊\n- 作弊手段分类\n  - 读取、篡改内存\n  - 读取网络包\n  - AI Cheat\n  - 修改本地文件、贴图等",
+      "reason": "修正OCR错误：'Al Cheat'应为'AI Cheat'；整理层级结构；添加列表格式",
+      "confidence": 0.9716,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0270",
+      "parent_id": "node_0302",
+      "parent_text": "物理系统应用",
+      "original_text": "破坏模拟\n概念\n分块层级\n连接图\n连接强度\n计算损伤\n模型破碎算法\n维诺图\n二维\n三维\n不同的破碎图案\n破坏系统\n增加真实感\n破坏系统引入的问题\n常见的破坏SD...",
+      "suggested_text": "破坏模拟\n- 概念\n  - 分块层级\n  - 连接图\n  - 连接强度\n  - 计算损伤\n- 模型破碎算法\n  - 维诺图（Voronoi）\n    - 二维\n    - 三维\n  - 不同的破碎图案\n- 破坏系统\n  - 增加真实感\n  - 破坏系统引入的问题\n  - 常见的破坏SDK",
+      "reason": "修正OCR错误：'维诺图'应为'维诺图（Voronoi）'；补全被截断的内容；整理层级结构；添加列表格式",
+      "confidence": 0.9986,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0394",
+      "parent_id": "node_0397",
+      "parent_text": "3C",
+      "original_text": "角色（Character）\n角色的移动\n多种移动方式\n与其他系统协作\n移动状态机",
+      "suggested_text": "角色（Character）\n- 角色的移动\n  - 多种移动方式\n  - 与其他系统协作\n  - 移动状态机",
+      "reason": "整理层级结构；添加列表格式",
+      "confidence": 0.9971,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0408",
+      "parent_id": "node_0397",
+      "parent_text": "3C",
+      "original_text": "相机（Camera)\n相机的绑定\n弹簧臂\n多种相机效果\n相机抖动\n滤镜\n基于玩家主观感受做优化",
+      "suggested_text": "相机（Camera）\n- 相机的绑定\n- 弹簧臂\n- 多种相机效果\n  - 相机抖动\n  - 滤镜\n- 基于玩家主观感受做优化",
+      "reason": "修正格式：'Camera)'应为'Camera）'；整理层级结构；添加列表格式",
+      "confidence": 0.9911,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0179",
+      "parent_id": "node_0183",
+      "parent_text": "基于闵可夫斯基差的方法",
+      "original_text": "GJK算法\n分离情形\n相交情形",
+      "suggested_text": "GJK算法\n- 分离情形\n- 相交情形",
+      "reason": "添加列表格式",
+      "confidence": 0.9995,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0431",
+      "parent_id": "node_0415",
+      "parent_text": "路径发现",
+      "original_text": "最优优先算法\nDijkstra算法\nA*算法\n计算开销\n启发函数\n格子情形\n寻路网格情形",
+      "suggested_text": "最优优先算法\n- Dijkstra算法\n- A*算法\n  - 计算开销\n  - 启发函数\n  - 格子情形\n  - 寻路网格情形",
+      "reason": "整理层级结构；添加列表格式",
+      "confidence": 0.9989,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0224",
+      "parent_id": "node_0287",
+      "parent_text": "物理系统基础概念",
+      "original_text": "场景查询\n射线检测 raycast\n形状扫描sweep\n求交overlap\n碰撞组过滤",
+      "suggested_text": "场景查询\n- 射线检测（raycast）\n- 形状扫描（sweep）\n- 求交（overlap）\n- 碰撞组过滤",
+      "reason": "修正英文格式；添加列表格式",
+      "confidence": 0.9903,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0162",
+      "parent_id": "node_0183",
+      "parent_text": "基于闵可夫斯基差的方法",
+      "original_text": "分离轴定理\n凸性\n相交的必要条件\n分离判据\n二维情形\n三维情形",
+      "suggested_text": "分离轴定理\n- 凸性\n- 相交的必要条件\n- 分离判据\n- 二维情形\n- 三维情形",
+      "reason": "添加列表格式",
+      "confidence": 0.9993,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0361",
+      "parent_id": "node_0339",
+      "parent_text": "空间化音频",
+      "original_text": "音效衰减\n衰减函数\n线性\n对数\n反函数\n对数反函数\n自然音效\n自定义\n衰减形状\n球体\n胶囊体\n盒体\n椎体",
+      "suggested_text": "音效衰减\n- 衰减函数\n  - 线性\n  - 对数\n  - 反函数\n  - 对数反函数\n  - 自然音效\n  - 自定义\n- 衰减形状\n  - 球体\n  - 胶囊体\n  - 盒体\n  - 椎体",
+      "reason": "整理层级结构；添加列表格式",
+      "confidence": 0.9988,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0334",
+      "parent_id": "node_0331",
+      "parent_text": "音频",
+      "original_text": "声笼",
+      "suggested_text": "声笼",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.9998,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775743697545",
+      "parent_id": "node_0021",
+      "parent_text": "正向渲染",
+      "original_text": "优点\n实现简单\n支持MSAA和半透明渲染\n带宽消耗小\n",
+      "suggested_text": "正向渲染优点\n- 实现简单\n- 支持MSAA和半透明渲染\n- 带宽消耗小",
+      "reason": "添加标题；删除多余空行；添加列表格式",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775743841446",
+      "parent_id": "node_0093",
+      "parent_text": "Culling Dataflow",
+      "original_text": "Post Pass\nOccluded instances && Occluded Nodes and Clusters\nCurrentBuildHZB\nInst...",
+      "suggested_text": "Post Pass\n- Occluded instances && Occluded Nodes and Clusters\n- CurrentBuildHZB\n- Instance Culling\n- Hierarchical/Cluster Culling\n- Rasterizer",
+      "reason": "补全被截断的内容；添加列表格式",
+      "confidence": 0.9708,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775745601123",
+      "parent_id": "node_0032",
+      "parent_text": "云层渲染",
+      "original_text": "Beer's Law\n用于描述光线穿过一个材质后的衰减作用",
+      "suggested_text": "Beer's Law（比尔定律）\n- 用于描述光线穿过一个材质后的衰减作用",
+      "reason": "添加中文翻译；添加列表格式",
+      "confidence": 0.9931,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775745781438",
+      "parent_id": "node_0052",
+      "parent_text": "渲染管线",
+      "original_text": "延迟渲染\n优点\n渲染性能不再与场景复杂度耦合\n避免了overdraw\n缺点\nGubffer占用了较大的空间\nGbuffer的读写需要大量显存带宽\n对半透明物体支...",
+      "suggested_text": "延迟渲染（Deferred Rendering）\n- 优点\n  - 渲染性能不再与场景复杂度耦合\n  - 避免了overdraw\n- 缺点\n  - GBuffer占用了较大的空间\n  - GBuffer的读写需要大量显存带宽\n  - 对半透明物体支持不友好",
+      "reason": "修正OCR错误：'Gubffer'应为'GBuffer'；补全被截断的内容；整理层级结构；添加列表格式",
+      "confidence": 0.9864,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775745815575",
+      "parent_id": "node_0021",
+      "parent_text": "正向渲染",
+      "original_text": "分块渲染\n优点：减少了部分无关光源的计算\n缺点：需要维护光源列表信息，并维护，带来了一定的性能开销\n基于屏幕的Tile划分还是比较粗糙，没有考虑深度值",
+      "suggested_text": "分块渲染（Tile-based Rendering）\n- 优点：减少了部分无关光源的计算\n- 缺点\n  - 需要维护光源列表信息，带来了一定的性能开销\n  - 基于屏幕的Tile划分还是比较粗糙，没有考虑深度值",
+      "reason": "添加英文翻译；整理层级结构；添加列表格式",
+      "confidence": 0.9939,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775745870795",
+      "parent_id": "node_0066",
+      "parent_text": "地形",
+      "original_text": "虚拟纹理\nVirtual texture\nPhysical texture\nPage table\n优势\n可以把多层地形\n材质实时混合好\n可以Instancing...",
+      "suggested_text": "虚拟纹理（Virtual Texture）\n- Virtual texture\n- Physical texture\n- Page table\n- 优势\n  - 可以把多层地形材质实时混合好\n  - 可以Instancing/GPU Driven",
+      "reason": "补全被截断的内容；整理层级结构；添加列表格式",
+      "confidence": 0.9976,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746100085",
+      "parent_id": "node_0080",
+      "parent_text": "光学度量单位",
+      "original_text": "照度（lluminance）\n单位勒克斯（lux或Ix），每单位面积所接收到的光通量。\n该值受光的传播距离影响，对于同样光源而言\n当光源的距离为原先的两倍时，照...",
+      "suggested_text": "照度（Illuminance）\n- 单位：勒克斯（lux或lx）\n- 定义：每单位面积所接收到的光通量\n- 特性：受光的传播距离影响，对于同样光源而言，当光源的距离为原先的两倍时，照度减为原先的四分之一",
+      "reason": "修正OCR错误：'lluminance'应为'Illuminance'；'Ix'应为'lx'；补全被截断的内容；整理列表格式",
+      "confidence": 0.9855,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746108056",
+      "parent_id": "node_0080",
+      "parent_text": "光学度量单位",
+      "original_text": "亮度（Luminance）\n单位坎德拉每平方米（cd/m2），\n单位面积光源在给定方向上\n在每单位面积内所发出的总光通量。\n改变光源大小会影响场景照明效果。",
+      "suggested_text": "亮度（Luminance）\n- 单位：坎德拉每平方米（cd/m²）\n- 定义：单位面积光源在给定方向上，在每单位面积内所发出的总光通量\n- 特性：改变光源大小会影响场景照明效果",
+      "reason": "修正格式：'cd/m2'应为'cd/m²'；整理列表格式",
+      "confidence": 0.9982,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746370306",
+      "parent_id": null,
+      "parent_text": null,
+      "original_text": "Game\nEngine",
+      "suggested_text": "Game Engine",
+      "reason": "修正格式：合并为一行",
+      "confidence": 0.995,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746429955",
+      "parent_id": "node_0213",
+      "parent_text": "如何构建游戏世界",
+      "original_text": "复杂情况处理\n组件间的依赖关系\nGameObject间的依赖关系\n事件的处理时机",
+      "suggested_text": "复杂情况处理\n- 组件间的依赖关系\n- GameObject间的依赖关系\n- 事件的处理时机",
+      "reason": "添加列表格式",
+      "confidence": 0.9973,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746483641",
+      "parent_id": "node_0266",
+      "parent_text": "渲染",
+      "original_text": "可见性裁剪\n视锥裁剪\nPotential Visibility Set\n遮挡剔除\n入口裁剪",
+      "suggested_text": "可见性裁剪\n- 视锥裁剪\n- Potential Visibility Set（PVS）\n- 遮挡剔除\n- 入口裁剪",
+      "reason": "添加英文缩写PVS；添加列表格式",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746506460",
+      "parent_id": "node_0266",
+      "parent_text": "渲染",
+      "original_text": "Frame Graph",
+      "suggested_text": "Frame Graph（帧图）",
+      "reason": "添加中文翻译",
+      "confidence": 1.0,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746564620",
+      "parent_id": "node_0164",
+      "parent_text": "Visibility Buffer",
+      "original_text": "流程\nVisibilityPass\n\n对场景进行光栅化，将PrimitiveID和\n\nMaterial ID保存到visibility buffer中\n\nWor...",
+      "suggested_text": "Visibility Buffer流程\n- Visibility Pass：对场景进行光栅化，将PrimitiveID和Material ID保存到visibility buffer中\n- Worklist Pass：构建Worklist，将屏幕划分成很多tile\n- Shading Passes：拿到几何和材质信息，对表面着色",
+      "reason": "补全被截断的内容；整理列表格式",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746584421",
+      "parent_id": "node_0164",
+      "parent_text": "Visibility Buffer",
+      "original_text": "解决了延迟渲染的问题\n带宽高\n渲染性能与场景复杂度\n绑定，容易造成overdraw\n对MSAA支持不友好",
+      "suggested_text": "解决了延迟渲染的问题\n- 带宽高\n- 渲染性能与场景复杂度绑定，容易造成overdraw\n- 对MSAA支持不友好",
+      "reason": "整理列表格式",
+      "confidence": 0.9912,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746675547",
+      "parent_id": "node_0138",
+      "parent_text": "Nanite",
+      "original_text": "Nanite\nMesh\nBuild Process\nGroup\nMerge\nSimplify\nSplit",
+      "suggested_text": "Nanite Mesh Build Process\n- Group\n- Merge\n- Simplify\n- Split",
+      "reason": "整理格式；添加列表格式",
+      "confidence": 0.983,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746766213",
+      "parent_id": "node_0077",
+      "parent_text": "Build a lot of Probes with Different",
+      "original_text": "World Space Probes and Ray Connecting\n内容\n3d clipmap grids centered around camera...",
+      "suggested_text": "World Space Probes and Ray Connecting\n- 内容：3D clipmap grids centered around camera\n- 32x32 Radiance per probe\n- 更新策略",
+      "reason": "补全被截断的内容；添加列表格式",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746815954",
+      "parent_id": "node_0097",
+      "parent_text": "Fast Ray Trace in Any Hardware",
+      "original_text": "实用属性\n在追踪光线时安全地跳过空白空间，因为到\n最近表面的距离已经明确（有时称这种方\n法为球体追踪）。只需区区几步就可以\n判定出交叉点。对距离场进行光线\n追踪...",
+      "suggested_text": "SDF实用属性\n- 在追踪光线时安全地跳过空白空间（球体追踪）\n- 只需区区几步就可以判定出交叉点\n- 对距离场进行光线追踪将生成可见性效果\n- 可以计算出近似的锥体交叉点，实现柔和阴影",
+      "reason": "添加标题；补全被截断的内容；整理列表格式",
+      "confidence": 0.9934,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746860783",
+      "parent_id": "node_0097",
+      "parent_text": "Fast Ray Trace in Any Hardware",
+      "original_text": "局限性\n通过全局位置偏移或置换使网格\n体变形的材质可能会导致自阴影\n失真，因为距离场表达是\n离线生成的，并不知道有这些变形\n仅投射刚性网格体的阴影",
+      "suggested_text": "SDF局限性\n- 通过全局位置偏移或置换使网格体变形的材质可能会导致自阴影失真\n- 因为距离场表达是离线生成的，并不知道有这些变形\n- 仅投射刚性网格体的阴影",
+      "reason": "添加标题；整理列表格式",
+      "confidence": 0.9946,
+      "status": "pending"
+    },
+    {
+      "node_id": "node_0470",
+      "parent_id": "node_0459",
+      "parent_text": "RPC",
+      "original_text": "GIN\nRPC实现通信的基本原理\n1.客户端发起函数调用（Clientfunctions）\n2.客户端通过ClientStub进行消息的封装（序列化）及传输\n3.Server端通过ServerStub(或者叫Skeleton)进行解码\n并找到对应的函数进行相关处理，以及返回处理结果\n4.ClientStub接收消息（反序列化），得到结果",
+      "suggested_text": "RPC实现通信的基本原理\n- 客户端发起函数调用（Client Functions）\n- 客户端通过ClientStub进行消息的封装（序列化）及传输\n- Server端通过ServerStub（Skeleton）进行解码并找到对应函数处理，返回结果\n- ClientStub接收消息（反序列化），得到结果",
+      "reason": "移除开头的\"GIN\"（OCR误识别），整理编号格式为列表形式，修正大小写",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746867257",
+      "parent_id": "node_0097",
+      "parent_text": "Fast Ray Trace in Any Hardware",
+      "original_text": "全局距离场\n全局距离场是分辨率较低的距离场，跟随\n摄像机的同时，在关卡中使用有向距\n离场遮蔽。这会创建每个Object网格体距离场\n的缓存，然后将它们合成到围绕摄像机的\n若干体积纹理中，称为裁剪图。由于只有新\n的可见区域或受到场景修改影响\n的可见区域才需要更新，合成过程不会有太多消耗。",
+      "suggested_text": "全局距离场\n- 分辨率较低的距离场，跟随摄像机\n- 在关卡中使用有向距离场遮蔽\n- 创建每个Object网格体距离场的缓存\n- 合成到围绕摄像机的若干体积纹理中（裁剪图）\n- 只有新的可见区域或受场景修改影响的区域才需更新",
+      "reason": "整理长段落为列表格式，修正换行问题，使内容更清晰",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746883825",
+      "parent_id": "node_0257",
+      "parent_text": "动画技术基础",
+      "original_text": "动画DCC流程\n网格制作\n网格调整\n骨骼绑定\n添加Game\n添加GamePlay关节\n添加根骨骼\n蒙皮\n动画制作\n动画导出",
+      "suggested_text": "动画DCC流程\n- 网格制作\n- 网格调整\n- 骨骼绑定\n- 添加GamePlay关节\n- 添加根骨骼\n- 蒙皮\n- 动画制作\n- 动画导出",
+      "reason": "添加列表格式，修正\"添加Game\"为\"添加GamePlay关节\"（重复内容合并）",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775746913581",
+      "parent_id": "node_0261",
+      "parent_text": "动画技术进阶",
+      "original_text": "反向\n反向动力学\nInverse Kinematics\n基础概念\n基础相\n终端效应器End-Effectors\n终端效应器End-\nIK\nFK\nTwo Bone\n多关节IK\n关节纟\n关节约束\n启发式算法\n循环坐标下降算法CCD\nFABRIK\nFABRIK的约束\n多终端效应器难题\n雅可比矩阵法\nIK前沿",
+      "suggested_text": "反向动力学（Inverse Kinematics）\n- 基础概念\n  - 终端效应器（End-Effectors）\n- IK vs FK\n- Two Bone IK\n- 多关节IK\n  - 关节约束\n- 启发式算法\n  - 循环坐标下降算法（CCD）\n  - FABRIK\n  - FABRIK的约束\n- 多终端效应器难题\n- 雅可比矩阵法\n- IK前沿",
+      "reason": "整理层级结构，修正OCR错误（\"反向\"重复、\"基础相\"误识别、\"关节纟\"应为\"关节约束\"），添加英文对照",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747126021",
+      "parent_id": "node_0266",
+      "parent_text": "渲染",
+      "original_text": "GPU渲染管线\n顶点着色器\n几何着色器\n光栅化\n像素着色器\n合并阶段",
+      "suggested_text": "GPU渲染管线\n- 顶点着色器\n- 几何着色器\n- 光栅化\n- 像素着色器\n- 合并阶段",
+      "reason": "添加列表格式，使渲染管线各阶段更清晰",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747195695",
+      "parent_id": "node_0198",
+      "parent_text": "光照",
+      "original_text": "IBL\nSpecular\nPre-filtered Environment Map\nBrdf Lut\nDiffuse\nIrradiance Map",
+      "suggested_text": "IBL（Image-Based Lighting）\n- Specular\n  - Pre-filtered Environment Map\n  - BRDF LUT\n- Diffuse\n  - Irradiance Map",
+      "reason": "添加列表格式和层级结构，Specular和Diffuse是IBL的两个主要部分",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747233436",
+      "parent_id": "node_0175",
+      "parent_text": "后处理",
+      "original_text": "抗锯齿\n超级采样抗锯齿\n优点：往往能得到最佳的效果\n缺点：它会带来巨大的性能消耗\n多重采样抗锯齿\n图像保真度和性能之间找到最佳的平衡点\n快速近似抗锯齿\n优点：\n是低端PC最佳的抗锯齿方案.它对GPU的要求不是很高\n因为它直接平滑屏幕图像而不需要考虑到游戏中的3D模型\n缺点：边缘和纹理会变得有点模糊\n时间性抗锯齿\n综合历史帧的数据来实现抗锯齿，这样会将每个像素点的多\n次采样均摊到多个帧中，相对的开销要小得多",
+      "suggested_text": "抗锯齿\n- 超级采样抗锯齿（SSAA）\n  - 优点：往往能得到最佳的效果\n  - 缺点：带来巨大的性能消耗\n- 多重采样抗锯齿（MSAA）\n  - 图像保真度和性能之间找到最佳平衡点\n- 快速近似抗锯齿（FXAA）\n  - 优点：低端PC最佳方案，GPU要求不高\n  - 缺点：边缘和纹理会变得有点模糊\n- 时间性抗锯齿（TAA）\n  - 综合历史帧数据实现抗锯齿，开销较小",
+      "reason": "整理层级结构，每种抗锯齿方法包含其优缺点，修正换行问题",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747355367",
+      "parent_id": "node_0171",
+      "parent_text": "基于物理渲染",
+      "original_text": "快门速度\n产生运动模糊效果\n光圈\n产生景深效果\n感光度\n产生Grain效果\n基于物理相机",
+      "suggested_text": "基于物理相机参数\n- 快门速度：产生运动模糊效果\n- 光圈：产生景深效果\n- 感光度：产生Grain效果",
+      "reason": "整理为列表格式，将\"基于物理相机\"作为标题，各参数与效果对应",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747399732",
+      "parent_id": "node_0171",
+      "parent_text": "基于物理渲染",
+      "original_text": "微表面模型\n认为物体表面由很多凹凸不平的微小镜面组成\n这些具有不同大小、方向的微表面在对入\n射光线进行反射时产生了不同的反射效果\n法线分布函数\n几何遮蔽函数\n菲涅尔方程\n迪士尼原则\n应使用直观的参数，而不是物理类的晦涩参数\n参数应当尽可能的少\n参数在其合理范围内应该为0到1\n允许参数在有意义时超出正常的合理范围\n所有参数组合应当尽可能健壮和合理",
+      "suggested_text": "微表面模型\n- 物体表面由很多凹凸不平的微小镜面组成\n- 不同大小、方向的微表面产生不同反射效果\n- 核心函数\n  - 法线分布函数\n  - 几何遮蔽函数\n  - 菲涅尔方程\n- 迪士尼原则\n  - 使用直观的参数，而非物理类晦涩参数\n  - 参数应当尽可能少\n  - 参数合理范围内应为0到1\n  - 允许参数在有意义时超出正常范围\n  - 所有参数组合应尽可能健壮合理",
+      "reason": "整理层级结构，修正换行问题，将核心函数和迪士尼原则分组",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747438284",
+      "parent_id": "node_0102",
+      "parent_text": "基于物理光照",
+      "original_text": "色温\n色温是指绝对黑体从绝对零度（-273℃）开始加温后所呈现的颜色。\n色温是影响光源颜色的重要属性，是个可选属性，当启用色温时，\n色温也参与了光源颜色的组成部分。\n真实世界环境中，一天不同时段的环境色温也会动态发生变化：",
+      "suggested_text": "色温\n- 定义：绝对黑体从绝对零度（-273℃）开始加温后所呈现的颜色\n- 是影响光源颜色的重要属性（可选）\n- 真实世界中，一天不同时段的环境色温动态变化",
+      "reason": "整理为列表格式，移除重复内容，使定义更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747460887",
+      "parent_id": "node_0100",
+      "parent_text": "参与介质",
+      "original_text": "大气散射\n地球大气的渲染主要包含两种散射，\n瑞利散射以及米氏散射，瑞利散射主要\n构成了天空的颜色变化，而米氏散射则\n造成了太阳周围的光环效果\n相位函数\n瑞利散射\n米氏散射\n几何散射\n单次散射\n多重散射",
+      "suggested_text": "大气散射\n- 地球大气渲染包含两种散射\n  - 瑞利散射：构成天空颜色变化\n  - 米氏散射：造成太阳周围光环效果\n- 相位函数\n- 几何散射\n  - 单次散射\n  - 多重散射",
+      "reason": "整理层级结构，修正换行问题，瑞利散射和米氏散射在相位函数下重复出现，简化结构",
+      "confidence": 0.93,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747476286",
+      "parent_id": "node_0144",
+      "parent_text": "基于物理材质",
+      "original_text": "SG工作流\nAlbedo\nAlbedo Color\nSpecular Color\nGlossiness\nNormal\n优点：可以自己控制非金属F0值\n缺点：FO可能用错从而导致破坏PBR原则\n因为工作流程有些名词和传统的工作流太相似，\n但实际对应的数据可能是不一样的。\nRGB贴图多，占用内存多。",
+      "suggested_text": "SG工作流（Specular-Glossiness）\n- Albedo Color\n- Specular Color\n- Glossiness\n- Normal\n- 优点：可以自己控制非金属F0值\n- 缺点\n  - F0可能用错导致破坏PBR原则\n  - 名词与传统工作流相似但数据不同\n  - RGB贴图多，占用内存多",
+      "reason": "添加工作流全称，整理层级结构，修正\"FO\"为\"F0\"，将优缺点分组",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747489762",
+      "parent_id": "node_0144",
+      "parent_text": "基于物理材质",
+      "original_text": "FO\n当光线笔直或垂直（以0度角）撞击表面时\n该光线的一部分会被反射为镜面反射。\n使用表面的折射率（IOR)，可以推导出反射量。这被称为FO。",
+      "suggested_text": "F0（菲涅尔反射率）\n- 当光线垂直（0度角）撞击表面时的镜面反射量\n- 使用表面折射率（IOR）可以推导出反射量",
+      "reason": "修正\"FO\"为\"F0\"（菲涅尔反射率），整理为列表格式，简化表述",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747503776",
+      "parent_id": "node_0144",
+      "parent_text": "基于物理材质",
+      "original_text": "MR工作流\nBase\nBase Color\nRoug\nRoughness\nMetallic\nMeta\nNormal\n优点：\n缺点：\n优点：纹理占用内存少，因为金属和粗糙度贴图都是灰度图（单通道）\n缺点：F0不容易自己指定",
+      "suggested_text": "MR工作流（Metallic-Roughness）\n- Base Color\n- Roughness\n- Metallic\n- Normal\n- 优点：纹理占用内存少（金属和粗糙度贴图都是灰度图）\n- 缺点：F0不容易自己指定",
+      "reason": "添加工作流全称，修正OCR错误（\"Roug\"、\"Meta\"），整理层级结构，移除空的优缺点行",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775747964991",
+      "parent_id": "node_0100",
+      "parent_text": "参与介质",
+      "original_text": "介质传播特性\n参与介质中的粒子本身会吸收光能，转换成其\n身会吸收光能，转换成其他形式的能量，这样在传播路径上的光就会衰减\n光遇到粒子时，粒子会分散光的传播方向，因此也会减弱传播路径上的光\n出散射，即光遇到粒子时，粒子会分\n番路径上散射到当前传播路径上的现象，这会加强当前路径上的光的能量\n入散射，从其他传播路径上散射到当前传播\n粒子本身是发光的，这会加强传播路径上的光",
+      "suggested_text": "介质传播特性\n- 吸收：粒子吸收光能转换成其他能量，导致光衰减\n- 出散射：光遇到粒子时被分散，减弱传播路径上的光\n- 入散射：从其他路径散射到当前路径，增强光的能量\n- 自发光：粒子本身发光，增强传播路径上的光",
+      "reason": "整理为列表格式，修正OCR错误和换行问题，使四种传播特性更清晰",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775748022224",
+      "parent_id": "node_0267",
+      "parent_text": "Culling",
+      "original_text": "提交\nMaterial Batch\nIndirect Draw\nTexture Batch\nVirtual Texture\nBindless Texture",
+      "suggested_text": "提交优化\n- Material Batch\n- Indirect Draw\n- Texture Batch\n- Virtual Texture\n- Bindless Texture",
+      "reason": "添加标题说明，整理为列表格式",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775748572248",
+      "parent_id": "node_0257",
+      "parent_text": "动画技术基础",
+      "original_text": "实现\n蒙皮动画实现\n转换\n坐标空间转换\n结构\n生物的骨骼结构\n骨骼\n关节\n根骨骼\n绑定\n骨骼绑定\n姿势\n绑定姿势\nT-pose\nose\nbose\nA-pose",
+      "suggested_text": "蒙皮动画实现\n- 坐标空间转换\n- 生物的骨骼结构\n  - 骨骼\n  - 关节\n  - 根骨骼\n- 骨骼绑定\n- 姿势\n  - 绑定姿势\n  - T-pose\n  - A-pose",
+      "reason": "整理层级结构，修正OCR错误（\"ose\"、\"bose\"是T-pose/A-pose的重复识别），移除\"实现\"重复标题",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775748581975",
+      "parent_id": "node_0268",
+      "parent_text": "Frame Graph",
+      "original_text": "目标\n单一实现，与图形API无关\n简化渲染管线配置\n简化异步渲染和资源屏障\n支持多GPU渲染，可指定调度策略",
+      "suggested_text": "Frame Graph目标\n- 单一实现，与图形API无关\n- 简化渲染管线配置\n- 简化异步渲染和资源屏障\n- 支持多GPU渲染，可指定调度策略",
+      "reason": "添加标题说明，整理为列表格式",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775748622759_rouoiu67c",
+      "parent_id": "node_0268",
+      "parent_text": "Frame Graph",
+      "original_text": "流程\nSetup\n在这个阶段并不产生任何GPU命令\n所有的资源都是虚拟的\nCompile\n剔除所有没有被引l用的Resources和Passes\n计算资源的生命周期",
+      "suggested_text": "Frame Graph流程\n- Setup阶段\n  - 不产生任何GPU命令\n  - 所有资源都是虚拟的\n- Compile阶段\n  - 剔除所有没有被引用的Resources和Passes\n  - 计算资源的生命周期",
+      "reason": "整理层级结构，修正\"引l用\"为\"引用\"，使流程更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775779509973",
+      "parent_id": "node_0257",
+      "parent_text": "动画技术基础",
+      "original_text": "游戏中的3D动画技术\nDoF(Degrees of Freedom)\nRigid Hierarchical Animation\nPer-vertex Anima",
+      "suggested_text": "游戏中的3D动画技术\n- DoF（Degrees of Freedom）\n- Rigid Hierarchical Animation\n- Per-vertex Animation",
+      "reason": "整理为列表格式，修正\"Anima\"为\"Animation\"",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775779534013",
+      "parent_id": "node_0258",
+      "parent_text": "运动",
+      "original_text": "游戏中对运动离散模拟\n时间积分\n欧拉法\n前向欧拉法/显式欧拉法\n后向欧拉法/隐式欧拉法\n半隐式欧拉法",
+      "suggested_text": "游戏中对运动离散模拟\n- 时间积分\n- 欧拉法\n  - 前向欧拉法/显式欧拉法\n  - 后向欧拉法/隐式欧拉法\n  - 半隐式欧拉法",
+      "reason": "整理层级结构，欧拉法包含三种具体方法",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775779556481",
+      "parent_id": "node_0261",
+      "parent_text": "动画技术进阶",
+      "original_text": "混合空间BlendSpace\n1D混合空间\n2D混合空间\n部混合SkeletonMaskedBlending\n叠加混合AdditiveBlending",
+      "suggested_text": "混合空间（BlendSpace）\n- 1D混合空间\n- 2D混合空间\n- 局部混合（Skeleton Masked Blending）\n- 叠加混合（Additive Blending）",
+      "reason": "整理为列表格式，修正\"部混合\"为\"局部混合\"，添加英文对照",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775779610777",
+      "parent_id": "node_0270",
+      "parent_text": "Radiance Injection",
+      "original_text": "直接光照\nCull lights to 8x8 tiles\n8x8 tiles\ntsper tile\nSelect first8lightsper tile\n1",
+      "suggested_text": "直接光照\n- Cull lights to 8x8 tiles\n- Select first 8 lights per tile",
+      "reason": "整理为列表格式，移除OCR误识别的重复内容和乱码",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775779698487_r2p8kxkrs",
+      "parent_id": "node_0270",
+      "parent_text": "Radiance Injection",
+      "original_text": "VoxelLigting\n动机\nGlobal SDF can't sample surface cache\nMerge all cards into globa",
+      "suggested_text": "Voxel Lighting\n- 动机：Global SDF无法采样surface cache\n- 解决方案：Merge all cards into global",
+      "reason": "修正\"VoxelLigting\"为\"Voxel Lighting\"，整理为列表格式",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775779713336",
+      "parent_id": "node_0270",
+      "parent_text": "Radiance Injection",
+      "original_text": "间接光照\nN+2 bounces through feedback\nProbe\n4x4hemisphericalprobeper4x4tile\nJitterpr",
+      "suggested_text": "间接光照\n- N+2 bounces through feedback\n- Probe\n  - 4x4 hemispherical probe per 4x4 tile\n  - Jitter pattern",
+      "reason": "整理层级结构，修正OCR换行问题",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775779719975",
+      "parent_id": "node_0270",
+      "parent_text": "Radiance Injection",
+      "original_text": "更新策略\nFixed update budget\nSelect pages to update based on priority\nPriority = Las",
+      "suggested_text": "更新策略\n- Fixed update budget\n- Select pages to update based on priority",
+      "reason": "整理为列表格式，移除不完整的OCR内容",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780190841",
+      "parent_id": "node_0175",
+      "parent_text": "后处理",
+      "original_text": "色调映射\nReinhard Tone Mapping\nFilmic Tone Mapping\nACES\nACES是一个开放的色彩管理和交换系统\n是编码和交换数据",
+      "suggested_text": "色调映射\n- Reinhard Tone Mapping\n- Filmic Tone Mapping\n- ACES\n  - 开放的色彩管理和交换系统\n  - 用于编码和交换数据",
+      "reason": "整理层级结构，ACES的描述作为子项",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775780225404_zj301rtxc",
+      "parent_id": "node_0175",
+      "parent_text": "后处理",
+      "original_text": "泛光",
+      "suggested_text": "泛光（Bloom）",
+      "reason": "添加英文对照，原文正确",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780413937",
+      "parent_id": "node_0271",
+      "parent_text": "Virtualized Geometry - Nanite",
+      "original_text": "Deferred Material\n思想：\n将材质分类，找出每个材质对应的像素进行Shading\nMaterialID\n表示当前像素属于哪个材质\nMateria",
+      "suggested_text": "Deferred Material\n- 思想：将材质分类，找出每个材质对应的像素进行Shading\n- MaterialID：表示当前像素属于哪个材质",
+      "reason": "整理为列表格式，移除OCR误识别的重复内容",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780437756",
+      "parent_id": "node_0271",
+      "parent_text": "Virtualized Geometry - Nanite",
+      "original_text": "Virtual Shadow Map\nadowMape\n目标\n显著提升阴影分辨率，以便配合\n十阴影分辨率，以便配合拥有高度\n细节内容的Nanite几何体\n以合理",
+      "suggested_text": "Virtual Shadow Map\n- 目标：显著提升阴影分辨率\n- 配合拥有高度细节内容的Nanite几何体\n- 以合理的性能开销实现高质量阴影",
+      "reason": "整理为列表格式，修正OCR错误（\"adowMape\"、\"十阴影\"），移除重复内容",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780469599",
+      "parent_id": "node_0272",
+      "parent_text": "Surface Caching",
+      "original_text": "Surface Cache\n5张Altas - Albedo, Normal,\n内容：5\nDepth, Emissive, Opacity\n生成\nTwo Pass\nCard Capture\nFixte",
+      "suggested_text": "Surface Cache\n- 5张Atlas\n  - Albedo\n  - Normal\n  - Depth\n  - Emissive\n  - Opacity\n- 生成方式\n  - Two Pass\n  - Card Capture",
+      "reason": "整理层级结构，修正\"Altas\"为\"Atlas\"，移除OCR误识别内容",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780628209",
+      "parent_id": "node_0273",
+      "parent_text": "如何构建游戏世界",
+      "original_text": "游戏世界组成\n万物皆GameObject\n动态物\n静态物\n环境\n其它",
+      "suggested_text": "游戏世界组成\n- 万物皆GameObject\n- 动态物\n- 静态物\n- 环境\n- 其它",
+      "reason": "添加列表格式，使内容更清晰",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775780726940_56dlakpst",
+      "parent_id": "node_0274",
+      "parent_text": "阴影",
+      "original_text": "DistanceFieldShaodw",
+      "suggested_text": "Distance Field Shadow",
+      "reason": "修正拼写错误\"Shaodw\"为\"Shadow\"",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780762673",
+      "parent_id": "node_0275",
+      "parent_text": "Rasterization",
+      "original_text": "软件光栅化\n顶点处理阶段，这里每个顶点对应\n一个线程，如果ClusterVB中的顶点\n数超出128，那么还可以再启动\n-个Group，最大支持256\n面片处理阶段，在这个阶段每个线程\n负责一个三角形，",
+      "suggested_text": "软件光栅化\n- 顶点处理阶段\n  - 每个顶点对应一个线程\n  - ClusterVB顶点数超出128可再启动一个Group\n  - 最大支持256顶点\n- 面片处理阶段\n  - 每个线程负责一个三角形",
+      "reason": "整理层级结构，修正\"-个\"为\"一个\"，使流程更清晰",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780784434",
+      "parent_id": "node_0275",
+      "parent_text": "Rasterization",
+      "original_text": "现代GPU光栅化组件流程\n会有一个大尺寸Tile判定机制\n会有一个小尺寸Tile（4*4）判定机制\n会有一个2*2的quad作为最小处理单元进行输出\n会有\n目标是为了实现像素的并行计算\n现有\n现有的硬",
+      "suggested_text": "现代GPU光栅化流程\n- 大尺寸Tile判定机制\n- 小尺寸Tile（4x4）判定机制\n- 2x2的quad作为最小处理单元\n- 目标：实现像素的并行计算",
+      "reason": "整理为列表格式，移除OCR误识别的重复和不完整内容",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780805838",
+      "parent_id": "node_0276",
+      "parent_text": "Build a lot of Probes with Different",
+      "original_text": "Sampling\nImportant Sampling\nPDF计算\nIncoming Radiance\nRadiance\nLast frame' s Screen Space\name'sScreenS",
+      "suggested_text": "Sampling\n- Important Sampling\n- PDF计算\n- Incoming Radiance\n- Last frame's Screen Space Radiance",
+      "reason": "整理为列表格式，修正OCR换行错误，移除重复内容",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775780873244",
+      "parent_id": "node_0257",
+      "parent_text": "动画技术基础",
+      "original_text": "(Joint Pose)\n关节姿势\n旋转Orientation\n位置Position\n缩放Scale\n仿射矩阵\n局部空间到物体空间\n插值\n单关节蒙皮\n蒙皮矩阵\n在内存中存储骨骼\n蒙皮矩阵调色板\n多骨骼",
+      "suggested_text": "关节姿势（Joint Pose）\n- 旋转（Orientation）\n- 位置（Position）\n- 缩放（Scale）\n- 仿射矩阵：局部空间到物体空间\n- 插值\n- 蒙皮\n  - 单关节蒙皮\n  - 蒙皮矩阵\n  - 蒙皮矩阵调色板\n  - 多骨骼\n- 在内存中存储骨骼",
+      "reason": "整理层级结构，添加中文对照，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781066821",
+      "parent_id": "node_0257",
+      "parent_text": "动画技术基础",
+      "original_text": "3D旋转中的数学\n欧拉角\n中的顺序依赖\n万向节死锁\n死锁\n欧拉角的缺点\n的缺点\n衣赖\n顺序依赖\n节死锁\n难以插值、组合等\n四元数\n2D旋转与复数\n四元数的定义\n欧拉角到四元数的转换\n四元数进行旋转\n四",
+      "suggested_text": "3D旋转中的数学\n- 欧拉角\n  - 顺序依赖\n  - 万向节死锁\n  - 难以插值、组合\n- 四元数\n  - 2D旋转与复数\n  - 四元数的定义\n  - 欧拉角到四元数的转换\n  - 四元数进行旋转",
+      "reason": "整理层级结构，移除OCR误识别的重复内容（\"死锁\"、\"的缺点\"、\"衣赖\"等）",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781193529",
+      "parent_id": "node_0277",
+      "parent_text": "物理系统基础概念",
+      "original_text": "本动力学\n刚体动力学\n质点动力学\n刚体动力学\n朝向\n角速度\n角加速度\n转动惯量\n角动量\n扭矩\n应用：\n台球动力学",
+      "suggested_text": "刚体动力学\n- 质点动力学\n- 刚体动力学\n  - 朝向\n  - 角速度\n  - 角加速度\n  - 转动惯量\n  - 角动量\n  - 扭矩\n- 应用：台球动力学",
+      "reason": "修正\"本动力学\"为\"刚体动力学\"，整理层级结构",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781226146",
+      "parent_id": "node_0277",
+      "parent_text": "物理系统基础概念",
+      "original_text": "形状\n分类\n球\n胶囊\n方盒\n凸包\n三角网格\n高度场\n碰撞体制作标准\n属性\n质量与密度\n质心(COM)\n摩擦系数\n回弹系数",
+      "suggested_text": "碰撞形状\n- 分类\n  - 球\n  - 胶囊\n  - 方盒\n  - 凸包\n  - 三角网格\n  - 高度场\n- 碰撞体制作标准\n- 属性\n  - 质量与密度\n  - 质心（COM）\n  - 摩擦系数\n  - 回弹系数",
+      "reason": "添加标题说明，整理层级结构",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781335117",
+      "parent_id": "node_0277",
+      "parent_text": "物理系统基础概念",
+      "original_text": "性能、精度与确定性\n模拟岛\n休眠\n连续碰撞检测\n冲击时间-保守步进法\n确定性模拟",
+      "suggested_text": "性能、精度与确定性\n- 模拟岛\n- 休眠\n- 连续碰撞检测\n  - 冲击时间-保守步进法\n- 确定性模拟",
+      "reason": "整理层级结构，连续碰撞检测包含具体方法",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775781397335_oit4rlkex",
+      "parent_id": "node_0278",
+      "parent_text": "物理系统应用",
+      "original_text": "载具模拟\n真实感-风格化谱系\n建模\n力\n牵引力\n弹簧力\n轮胎力\n质心\n转向过度与转向不足\n重量转移\n转向角\nAckermann转向\n轮胎接触",
+      "suggested_text": "载具模拟\n- 真实感-风格化谱系\n- 建模\n- 力\n  - 牵引力\n  - 弹簧力\n  - 轮胎力\n- 质心\n- 转向过度与转向不足\n- 重量转移\n- 转向角\n  - Ackermann转向\n- 轮胎接触",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775781433805_ikz01abuj",
+      "parent_id": "node_0279",
+      "parent_text": "方法",
+      "original_text": "基于网格的布料模拟\n物理网格VS.渲染网格\n刷布料约束\n布料物理材质\n求解\n弹簧-质点系统\nVerlet积分\nPBD(Position Based Dynamics)\n自碰撞",
+      "suggested_text": "基于网格的布料模拟\n- 物理网格VS.渲染网格\n- 布料约束\n- 布料物理材质\n- 求解方法\n  - 弹簧-质点系统\n  - Verlet积分\n  - PBD（Position Based Dynamics）\n- 自碰撞",
+      "reason": "整理层级结构，修正\"刷布料约束\"为\"布料约束\"",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775781458638_cgsgp9fo8",
+      "parent_id": "node_0278",
+      "parent_text": "物理系统应用",
+      "original_text": "PBD/XPBD\n拉格朗日力学约束建模\n拉伸约束\n约束投影\n工作流\nXPBD",
+      "suggested_text": "PBD/XPBD\n- 拉格朗日力学约束建模\n- 拉伸约束\n- 约束投影\n- 工作流\n- XPBD",
+      "reason": "整理为列表格式，使内容更清晰",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775781475128_vz42fesem",
+      "parent_id": "node_0280",
+      "parent_text": "Game Engine",
+      "original_text": "音效",
+      "suggested_text": "音效",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781546090",
+      "parent_id": "node_0281",
+      "parent_text": "空间化音频",
+      "original_text": "平移\n听者几何体\n扬声器几何体\n中央声道\n音频平移\n线性平移\n等功率平移",
+      "suggested_text": "音频平移\n- 听者几何体\n- 扬声器几何体\n- 中央声道\n- 平移方式\n  - 线性平移\n  - 等功率平移",
+      "reason": "整理层级结构，平移方式作为子项",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775781566317_t1nhly4jz",
+      "parent_id": "node_0282",
+      "parent_text": "GamePlay",
+      "original_text": "复杂的游戏性及其基本要素",
+      "suggested_text": "复杂的游戏性及其基本要素",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781611547",
+      "parent_id": "ocr_manual_1775781566317_t1nhly4jz",
+      "parent_text": "复杂的游戏性及其基本要素",
+      "original_text": "如何编码游戏逻辑\n脚本语言的优点及工作原理\n对象生命周期管理\n在原生引擎代码中管理对象生命周期\n在脚本中管理对象生命周期\n脚本系统运行框架\n由原生引擎代码支配游戏世界\n脚本扩展原生引擎功能\n由脚本支配",
+      "suggested_text": "如何编码游戏逻辑\n- 脚本语言的优点及工作原理\n- 对象生命周期管理\n  - 在原生引擎代码中管理\n  - 在脚本中管理\n- 脚本系统运行框架\n  - 由原生引擎代码支配游戏世界\n  - 脚本扩展原生引擎功能\n  - 由脚本支配",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775781621407_p55mmyagc",
+      "parent_id": "ocr_manual_1775781566317_t1nhly4jz",
+      "parent_text": "复杂的游戏性及其基本要素",
+      "original_text": "可视化脚本",
+      "suggested_text": "可视化脚本",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781636866",
+      "parent_id": "ocr_manual_1775781566317_t1nhly4jz",
+      "parent_text": "复杂的游戏性及其基本要素",
+      "original_text": "事件机制\n发布-订阅模式\n事件定义\n硬编码\n反射与自动代码生成\n事件回调函数注册\n对象生命周期及回调安全保证\n对象的强引用\n对象的弱引用\n事件分发机制\n立即分发\n延迟分发\n消息队列",
+      "suggested_text": "事件机制\n- 发布-订阅模式\n- 事件定义\n  - 硬编码\n  - 反射与自动代码生成\n- 事件回调函数注册\n- 对象生命周期及回调安全保证\n  - 对象的强引用\n  - 对象的弱引用\n- 事件分发机制\n  - 立即分发\n  - 延迟分发\n  - 消息队列",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781690043",
+      "parent_id": "node_0283",
+      "parent_text": "寻路",
+      "original_text": "地图表示\n可通行区域\n形式\n路点网络\n格子\n寻路网格\n凸多边形\n稀疏体素八叉树SparseVoxelOctree",
+      "suggested_text": "地图表示\n- 可通行区域形式\n  - 路点网络\n  - 格子\n  - 寻路网格\n  - 凸多边形\n  - 稀疏体素八叉树（Sparse Voxel Octree）",
+      "reason": "整理层级结构，添加英文对照",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781704258",
+      "parent_id": "node_0284",
+      "parent_text": "基础AI系统",
+      "original_text": "转向\n从路点到运动\n转向行为\n寻找/逃跑\n速度匹配\n对齐",
+      "suggested_text": "转向行为\n- 从路点到运动\n- 转向行为类型\n  - 寻找/逃跑\n  - 速度匹配\n  - 对齐",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775781774635_l44yr54yz",
+      "parent_id": "node_0284",
+      "parent_text": "基础AI系统",
+      "original_text": "经典决策算法",
+      "suggested_text": "经典决策算法",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781803455",
+      "parent_id": "ocr_manual_1775781774635_l44yr54yz",
+      "parent_text": "经典决策算法",
+      "original_text": "行为树\nDN3\n执行节点/叶子节点\n行为节点\n条件节点\n控制节点\n序列节点Sequence\n选择器Selector\n并行节点Parallel\n运行\n实现优化\n装饰节点\n前置条件\n黑板变量",
+      "suggested_text": "行为树\n- 执行节点/叶子节点\n  - 行为节点\n  - 条件节点\n- 控制节点\n  - 序列节点（Sequence）\n  - 选择器（Selector）\n  - 并行节点（Parallel）\n- 实现优化\n  - 装饰节点\n  - 前置条件\n  - 黑板变量",
+      "reason": "整理层级结构，修正\"DN3\"为OCR误识别，添加英文对照",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781817252",
+      "parent_id": "node_0283",
+      "parent_text": "寻路",
+      "original_text": "进阶内容：寻路网格生成\n体素化\n区域分割\n分水岭算法\n网格生成\n高级特性\n多边形标记\n分块\n网格外链接Off-mesh link",
+      "suggested_text": "进阶：寻路网格生成\n- 体素化\n- 区域分割\n  - 分水岭算法\n- 网格生成\n- 高级特性\n  - 多边形标记\n  - 分块\n  - 网格外链接（Off-mesh link）",
+      "reason": "整理层级结构，添加英文对照",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781937231",
+      "parent_id": "node_0285",
+      "parent_text": "工具链",
+      "original_text": "界面(GUI)\nUI模式\n即时模式（IMGUI）\n保留模式（RMGUI）\n\n架构模式\nMVC\nMVP\nMVVM",
+      "suggested_text": "界面（GUI）\n- UI模式\n  - 即时模式（IMGUI）\n  - 保留模式（RMGUI）\n- 架构模式\n  - MVC\n  - MVP\n  - MVVM",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775781961092",
+      "parent_id": "node_0285",
+      "parent_text": "工具链",
+      "original_text": "C++代码反射\n代码分析\n抽象语法树（AST）\nClang\n反射信息收集\nTags\n代码生成\n代码渲染\nMustache\n运行时反射信息注册",
+      "suggested_text": "C++代码反射\n- 代码分析\n  - 抽象语法树（AST）\n  - Clang\n- 反射信息收集\n  - Tags\n- 代码生成\n  - 代码渲染\n  - Mustache\n- 运行时反射信息注册",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782035467",
+      "parent_id": "node_0285",
+      "parent_text": "工具链",
+      "original_text": "插件\n架构\nPlugin Manager\nInterfaces\nSDK\n版本控制",
+      "suggested_text": "插件系统\n- 架构\n  - Plugin Manager\n  - Interfaces\n  - SDK\n- 版本控制",
+      "reason": "添加标题说明，整理层级结构",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782041861",
+      "parent_id": "node_0285",
+      "parent_text": "工具链",
+      "original_text": "鲁棒性设计\nCommand模式\n定义\nUID\n序列化与反序列化\n基础command类型\nAdd\nDelete\nUpdate",
+      "suggested_text": "鲁棒性设计\n- Command模式\n  - 定义\n  - UID\n  - 序列化与反序列化\n- 基础Command类型\n  - Add\n  - Delete\n  - Update",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782058942",
+      "parent_id": "node_0285",
+      "parent_text": "工具链",
+      "original_text": "协同编辑\n资产拆分\n按逻辑分层\n按位置分块\nOne File\nOne File Per Actor\n在一个场\n在一个场景内协同编辑\n同步操作\n分布式操作\n分布式操作的一致性问题\n锁\n实例锁\n资产锁\n操",
+      "suggested_text": "协同编辑\n- 资产拆分\n  - 按逻辑分层\n  - 按位置分块\n  - One File\n  - One File Per Actor\n- 在一个场景内协同编辑\n- 同步操作\n- 分布式操作\n  - 一致性问题\n  - 锁\n    - 实例锁\n    - 资产锁",
+      "reason": "整理层级结构，移除OCR误识别的不完整内容",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782099914",
+      "parent_id": "node_0286",
+      "parent_text": "Machine Learning（机器学习：ML）",
+      "original_text": "监督学习\n无监督学习\n半监督学习\n强化学习\n马尔可夫决策过程\n状态\n动作\n奖励\n累计奖励最大\n如何利用强化学习构建AI\n状态抽象\n长度固定的统计变量\n长度不固定的序列数据\n图像数据\n动作抽象\n奖励设置",
+      "suggested_text": "机器学习类型\n- 监督学习\n- 无监督学习\n- 半监督学习\n- 强化学习\n  - 马尔可夫决策过程\n    - 状态\n    - 动作\n    - 奖励\n    - 累计奖励最大\n  - 如何利用强化学习构建AI\n    - 状态抽象\n    - 动作抽象\n    - 奖励设置",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782147517",
+      "parent_id": "node_0287",
+      "parent_text": "Monte Carlo Tree Search（蒙特卡洛树搜索；MCTS）",
+      "original_text": "EN\n思考\n选择\nTree Policy\nUCB公式\n平衡开发与探索问题\n拓展\n仿真+评估\nRollout Policy\n评估函数\n反向传播",
+      "suggested_text": "MCTS流程\n- 选择（Selection）\n  - Tree Policy\n  - UCB公式\n  - 平衡开发与探索问题\n- 拓展（Expansion）\n- 仿真+评估（Simulation）\n  - Rollout Policy\n  - 评估函数\n- 反向传播（Backpropagation）",
+      "reason": "修正\"EN\"为MCTS流程标题，整理四个步骤的层级结构",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782189944",
+      "parent_id": "node_0288",
+      "parent_text": "Goal-Orientated Action Planner（目标导向的动作规划器；GOAP）",
+      "original_text": "目标集\n对WorldState中的部分属性做是否满足的判断\n动作集\n前提条件\n动作损耗\n动作影响\n对WorldState的改变描述\n逆向规划",
+      "suggested_text": "GOAP（目标导向动作规划器）\n- 目标集\n  - 对WorldState中的部分属性做是否满足的判断\n- 动作集\n  - 前提条件\n  - 动作损耗\n  - 动作影响\n  - 对WorldState的改变描述\n- 逆向规划",
+      "reason": "添加标题缩写，整理层级结构",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782204258",
+      "parent_id": "node_0289",
+      "parent_text": "AI Planning",
+      "original_text": "Hierarchical Tasks Network\n（分层任务网络：HTN）\n原子任务\n前提条件\n动作影响\n对WorldState的改变描述\n复合任务\n前提条件\n拆分方法",
+      "suggested_text": "HTN（分层任务网络）\n- 原子任务\n  - 前提条件\n  - 动作影响\n  - 对WorldState的改变描述\n- 复合任务\n  - 前提条件\n  - 拆分方法",
+      "reason": "简化标题，整理层级结构",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782308962",
+      "parent_id": "node_0285",
+      "parent_text": "工具链",
+      "original_text": "设计\n数据结构设计\n数据定义 (Schema)\n基础元素\n继承\n引用\n两种设计方式\n独立的schema定义文件\nna定义文件\n代码内部定义\n不同场景下的引擎数据\n引擎数据\nRuntime\nStorag",
+      "suggested_text": "数据结构设计\n- 数据定义（Schema）\n  - 基础元素\n  - 继承\n  - 引用\n- 两种设计方式\n  - 独立的schema定义文件\n  - 代码内部定义\n- 不同场景下的引擎数据\n  - Runtime\n  - Storage",
+      "reason": "整理层级结构，修正OCR错误（\"na定义文件\"、\"Storag\"），移除重复标题",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782413243",
+      "parent_id": "node_0290",
+      "parent_text": "状态同步",
+      "original_text": "流程的阶段拆分\nAuthorized\neg.开火\nServer\n收到开火请求，同步给玩家\nReplicated\n模拟Authorized开火",
+      "suggested_text": "流程的阶段拆分\n- Authorized\n  - eg. 开火\n- Server\n  - 收到开火请求，同步给玩家\n- Replicated\n  - 模拟Authorized开火",
+      "reason": "整理层级结构，使流程更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782457130",
+      "parent_id": "node_0285",
+      "parent_text": "工具链",
+      "original_text": "资产管理\n资产格式\n文本（Text)\n二进制（Binary)\n资产加载\n序列化与反序列化\n版本兼容\n资产结构设计\n资产引用\n资产实例\n数据拷贝\n数据继承",
+      "suggested_text": "资产管理\n- 资产格式\n  - 文本（Text）\n  - 二进制（Binary）\n- 资产加载\n  - 序列化与反序列化\n  - 版本兼容\n- 资产结构设计\n  - 资产引用\n  - 资产实例\n  - 数据拷贝\n  - 数据继承",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782545407",
+      "parent_id": "node_0291",
+      "parent_text": "插值、内插值&外插值",
+      "original_text": "内插值\n实现方法\n缓存玩家位置\n利用缓存之间的位置进行插值\n问题\n物体移动速度较大时容易产生结果判断不一致",
+      "suggested_text": "内插值\n- 实现方法\n  - 缓存玩家位置\n  - 利用缓存之间的位置进行插值\n- 问题\n  - 物体移动速度较大时容易产生结果判断不一致",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782594322",
+      "parent_id": "node_0292",
+      "parent_text": "如何做判定",
+      "original_text": "客户端判定\n基本流程\n洁果\n客户端判定命中结果\n服务器做命中的校验\n交验\n优势\n命中位置精准，像素级\n象素级\n问题\n容易作",
+      "suggested_text": "客户端判定\n- 基本流程\n  - 客户端判定命中结果\n  - 服务器做命中的校验\n- 优势\n  - 命中位置精准，像素级\n- 问题\n  - 容易作弊",
+      "reason": "整理层级结构，修正OCR错误（\"洁果\"、\"交验\"、\"象素级\"、\"容易作\"）",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782629128",
+      "parent_id": "node_0293",
+      "parent_text": "延迟补偿（服务器判定）",
+      "original_text": "延迟补偿\n原因\n因为有延迟，也就是开枪打中了敌人过去的位置\n等到开枪事件到达服务器上，敌人已经不再开枪的位置了\n在服务器上，回溯到你开枪时候敌人的真实位置做判定\n一切以服务器为准：开枪的时间，回溯到开",
+      "suggested_text": "延迟补偿\n- 原因\n  - 有延迟时，开枪打中了敌人过去的位置\n  - 开枪事件到达服务器时，敌人已不在开枪位置\n- 解决方案\n  - 在服务器上回溯到开枪时敌人的真实位置做判定\n  - 一切以服务器为准",
+      "reason": "整理层级结构，修正表述，移除不完整的OCR内容",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782695777",
+      "parent_id": "node_0293",
+      "parent_text": "延迟补偿（服务器判定）",
+      "original_text": "延迟补偿的问题\n拐角问题\n拐角\n进入拐角问题\nPeekerandholder问题（探头打人）\n解决（能够减缓，不能消除）\n添加前摇\n添加特效\n客户端预测命中过程\n不触发命中结果\n命中结果等待服务器返回",
+      "suggested_text": "延迟补偿的问题\n- 拐角问题\n  - Peeker's Advantage（探头打人）\n- 解决方案（能够减缓，不能消除）\n  - 添加前摇\n  - 添加特效\n  - 客户端预测命中过程\n  - 命中结果等待服务器返回",
+      "reason": "整理层级结构，修正\"Peekerandholder\"为\"Peeker's Advantage\"",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782759484",
+      "parent_id": "node_0294",
+      "parent_text": "角色位移同步",
+      "original_text": "内插值和外插值的使用场景\n内插值的使用场景\n角色的移动不符合真实世界的物理模型加速度非常大\n对于角色位置的精度要求很高\n典型例子：FPS类游戏\n外插值的使用场景、\n游戏对象的移动遵守物理规则，加速度不",
+      "suggested_text": "内插值和外插值的使用场景\n- 内插值使用场景\n  - 角色移动不符合真实物理模型，加速度大\n  - 对角色位置精度要求高\n  - 典型例子：FPS类游戏\n- 外插值使用场景\n  - 游戏对象移动遵守物理规则",
+      "reason": "整理层级结构，移除不完整的OCR内容",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775782770536_jkqfwchu6",
+      "parent_id": "node_0295",
+      "parent_text": "外插值",
+      "original_text": "外插值的实现方法（航位推算）\n投影速度混合法\n使用归一化参数平滑运动轨迹\n外插值的碰撞处理\n发生碰撞的时刻让客户端接管物理模拟",
+      "suggested_text": "外插值实现方法（航位推算）\n- 投影速度混合法\n- 使用归一化参数平滑运动轨迹\n- 外插值的碰撞处理\n  - 发生碰撞时让客户端接管物理模拟",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782800750",
+      "parent_id": "node_0290",
+      "parent_text": "状态同步",
+      "original_text": "CO\n如何解决延迟\n哑客户端（客户端不做预测）\n发出移动请求\n等待服务器回复\n收到服务器回复，并作出移动\n解决\n客户端预测\n客户端发送移动请求后，在收到服务器回复之前，就根据现有状态对未来的移动做出预",
+      "suggested_text": "如何解决延迟\n- 哑客户端（客户端不做预测）\n  - 发出移动请求\n  - 等待服务器回复\n  - 收到服务器回复后移动\n- 客户端预测\n  - 发送移动请求后，在收到服务器回复前，根据现有状态预测未来移动",
+      "reason": "移除\"CO\"误识别，整理层级结构，补全被截断的内容",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782833059",
+      "parent_id": "node_0296",
+      "parent_text": "帧同步",
+      "original_text": "不一致问题的定位方法\n定时上传游戏数据checksum\n定时上传游戏\n如果不同玩家\n如果不同玩家checksun不一致\n上传游戏玩家\n上传游戏玩家最近一段时间的游戏日志\n通过对比进行定位",
+      "suggested_text": "不一致问题的定位方法\n- 定时上传游戏数据checksum\n- 如果不同玩家checksum不一致\n  - 上传玩家最近一段时间的游戏日志\n  - 通过对比进行定位",
+      "reason": "整理层级结构，修正\"checksun\"为\"checksum\"，移除重复内容",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782936219",
+      "parent_id": "node_0296",
+      "parent_text": "帧同步",
+      "original_text": "顿同步的优缺点\n优点\n低带宽\n开发效率高\n缺点\n确定性实现困难\n作弊（全图挂）问题较难避免\n断线重连需要优化",
+      "suggested_text": "帧同步的优缺点\n- 优点\n  - 低带宽\n  - 开发效率高\n- 缺点\n  - 确定性实现困难\n  - 作弊（全图挂）问题较难避免\n  - 断线重连需要优化",
+      "reason": "修正\"顿同步\"为\"帧同步\"，整理层级结构",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775782988112",
+      "parent_id": "node_0506",
+      "parent_text": "掉线与重连问题",
+      "original_text": "掉线重连的基本流程\n掉线\n重连\n接收游戏开始到现在所有请求\n追帧\n重连的问题：耗时\n重连的优化\n大重连（客户端崩溃，内存中无数据）\n通过快照，加速重连\n客户端定时快照，关键帧快照，序列化到磁盘\n服务器",
+      "suggested_text": "掉线重连的基本流程\n- 掉线\n- 重连\n  - 接收游戏开始到现在所有请求\n  - 追帧\n- 重连的问题：耗时\n- 重连的优化\n  - 大重连（客户端崩溃）\n  - 通过快照加速重连\n  - 客户端定时快照，序列化到磁盘",
+      "reason": "整理层级结构，移除不完整的OCR内容",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775783085372_1sl38dj8y",
+      "parent_id": "node_0297",
+      "parent_text": "网络",
+      "original_text": "网络基础",
+      "suggested_text": "网络基础",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775783089376_t3f90l4rl",
+      "parent_id": "ocr_manual_1775783085372_1sl38dj8y",
+      "parent_text": "网络基础",
+      "original_text": "网络协议",
+      "suggested_text": "网络协议",
+      "reason": "原文正确，无需修改",
+      "confidence": 0.99,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775783117647",
+      "parent_id": "node_0298",
+      "parent_text": "面向数据编程与任务系统",
+      "original_text": "实体-组件-系统\nECS",
+      "suggested_text": "实体-组件-系统（ECS）",
+      "reason": "添加英文缩写格式",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775783174893",
+      "parent_id": "node_0299",
+      "parent_text": "P2P特点",
+      "original_text": "客户端之间互相通信\n客户端承担游戏\n优点\n一个客户端挂掉\r\n一个客户端挂掉，不影响其他玩家\n不依赖于服务器\n缺点\n易作弊\n需要良好的网络连接\n玩家人数受限",
+      "suggested_text": "P2P模式\n- 客户端之间互相通信\n- 客户端承担游戏逻辑\n- 优点\n  - 一个客户端挂掉不影响其他玩家\n  - 不依赖于服务器\n- 缺点\n  - 易作弊\n  - 需要良好的网络连接\n  - 玩家人数受限",
+      "reason": "整理层级结构，移除重复内容",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775783186347",
+      "parent_id": "node_0300",
+      "parent_text": "DS特点",
+      "original_text": "具有权威性\n负责模拟整个游戏世界\n负责分发数据给每个玩家\n具备高性能\n优点\n反作弊易实现\n能让更多的玩家一同游戏\n网络状态\n游戏响应不取决于每个玩家的网络状态\n缺点\n服务器花费较高\n服务端承担更多的逻",
+      "suggested_text": "专用服务器（DS）特点\n- 具有权威性\n- 负责模拟整个游戏世界\n- 负责分发数据给每个玩家\n- 优点\n  - 反作弊易实现\n  - 能让更多玩家一同游戏\n  - 游戏响应不取决于每个玩家的网络状态\n- 缺点\n  - 服务器花费较高\n  - 服务端承担更多逻辑",
+      "reason": "添加标题说明，整理层级结构，移除不完整的OCR内容",
+      "confidence": 0.92,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775783215897_9hj5q821f",
+      "parent_id": "node_0297",
+      "parent_text": "网络",
+      "original_text": "游戏优化",
+      "suggested_text": "游戏网络优化",
+      "reason": "补充完整标题",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775783266727",
+      "parent_id": "node_0301",
+      "parent_text": "分布式系统",
+      "original_text": "分式系统挑战\n互斥问题\n等性\n故障与部分失效\n不可靠的网络\n分布式问题传染\n一致性和共识算法\n分布式事务\n均衡\n负载均衡\n直机\n随机\n仑询\n轮询\n一致性哈希\n发现\n服务发现\nEtcd\nZookeepe",
+      "suggested_text": "分布式系统挑战\n- 互斥问题\n- 故障与部分失效\n- 不可靠的网络\n- 一致性和共识算法\n- 分布式事务\n- 负载均衡\n  - 随机\n  - 轮询\n  - 一致性哈希\n- 服务发现\n  - Etcd\n  - Zookeeper",
+      "reason": "修正\"分式系统\"为\"分布式系统\"，整理层级结构，修正OCR错误（\"等性\"、\"直机\"、\"仑询\"、\"Zookeepe\"）",
+      "confidence": 0.88,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775783277511",
+      "parent_id": "node_0302",
+      "parent_text": "服务器架构",
+      "original_text": "可扩展\n可扩展游戏世界\n实\n实现方案\nZoning\n在大世界中将大量玩家分布\n分布可能不是很均匀\nInstancing\n独立运行大量的游戏区域\n减少拥挤、竞争\nReplication\n允许大量玩家高度",
+      "suggested_text": "可扩展游戏世界\n- Zoning\n  - 在大世界中将大量玩家分布\n  - 分布可能不均匀\n- Instancing\n  - 独立运行大量游戏区域\n  - 减少拥挤、竞争\n- Replication\n  - 允许大量玩家高度互动",
+      "reason": "整理层级结构，移除OCR误识别内容，补全被截断的内容",
+      "confidence": 0.9,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775783398340",
+      "parent_id": "node_0303",
+      "parent_text": "如何让游戏世界动起来",
+      "original_text": "基于对象的更新Object-basedtick\n基于组件的更新Component-basedtick\n事件机制\n（基本概念）",
+      "suggested_text": "游戏更新方式\n- 基于对象的更新（Object-based tick）\n- 基于组件的更新（Component-based tick）\n- 事件机制（基本概念）",
+      "reason": "添加标题说明，整理格式，添加英文对照",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "ocr_manual_1775783446775_5pkan6mqs",
+      "parent_id": "node_0304",
+      "parent_text": "游戏引擎的分层架构",
+      "original_text": "为什么要分层\n减少耦合，降低复杂度\n上层无需知道下层的具体实现\n应对不同的需求变化",
+      "suggested_text": "为什么要分层\n- 减少耦合，降低复杂度\n- 上层无需知道下层的具体实现\n- 应对不同的需求变化",
+      "reason": "整理为列表格式",
+      "confidence": 0.98,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775783456190",
+      "parent_id": "node_0305",
+      "parent_text": "功能层",
+      "original_text": "GameTick控制各系统周期性更新\n为游戏引擎提供核心功能模块\n多核多线程架构趋势",
+      "suggested_text": "功能层职责\n- GameTick控制各系统周期性更新\n- 为游戏引擎提供核心功能模块\n- 多核多线程架构趋势",
+      "reason": "添加标题说明，整理为列表格式",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775783467953",
+      "parent_id": "node_0306",
+      "parent_text": "资源层",
+      "original_text": "GUID\n运行时资源管理\n虚拟文件系统\nHandle\n资源生命周期\n不同资源有不同的生命周期\n尽可能减少资源的内存申请与释放\n垃圾回收",
+      "suggested_text": "资源层\n- GUID\n- 运行时资源管理\n- 虚拟文件系统\n- Handle\n- 资源生命周期\n  - 不同资源有不同生命周期\n  - 尽可能减少资源的内存申请与释放\n- 垃圾回收",
+      "reason": "整理层级结构，使内容更清晰",
+      "confidence": 0.95,
+      "status": "pending"
+    },
+    {
+      "node_id": "merged_1775790301402",
+      "parent_id": "node_0257",
+      "parent_text": "动画技术基础",
+      "original_text": "动画压缩\n动画片段存储\n动画数据尺寸\n动画轨道（track）数据之间的差别\n关节动画数据之间的差别\nDoF缩减\n关键帧\n关键帧提取\n浮点数压缩\n四元数压缩\n误差累积\n精读衡量\n误差补偿\n动画重定向\n重",
+      "suggested_text": "动画压缩\n- 动画片段存储\n  - 动画数据尺寸\n  - 动画轨道（track）数据之间的差别\n  - 关节动画数据之间的差别\n- DoF缩减\n- 关键帧\n  - 关键帧提取\n  - 浮点数压缩\n  - 四元数压缩\n- 误差处理\n  - 误差累积\n  - 精度衡量\n  - 误差补偿\n- 动画重定向",
+      "reason": "整理层级结构，修正\"精读\"为\"精度\"，移除不完整的OCR内容",
+      "confidence": 0.92,
+      "status": "pending"
+    }
+  ]
+}

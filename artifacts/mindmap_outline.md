@@ -1,362 +1,1371 @@
 - Game Engine
   - 动画系统
-    - 充
-    - 专山 动画技术基础 术基础
-      - 游戏中的2D 动画技术 EN 精灵动画 Live2D 2D Skinned Animation 动画混合
-      - 游戏中的3D动画技术 DoF(Degrees of Freedom) Rigid Hierarchical Animation Per-vertex Animation Morph Target Animation 3D Skinned Animation 基于物理的动画Physics-basedAnimation 布娃娃系统Ragdoll 布料与流体模拟 IK(lnverse Kinematics) 动画内容制作 DCC 动画捕捉 Motion Capture
-        - ation
+    - 动画技术基础
+      - 游戏中的2D动画技术
+        - 精灵动画
+        - Live2D
+        - 2D Skinned Animation
+        - 动画混合
+      - 游戏中的3D动画技术
+        - DoF（Degrees of Freedom）
+        - Rigid Hierarchical Animation
+        - Per-vertex Animation
       - 2D旋转中的数学
-      - (Joint Pose) 关节姿势 旋转Orientation 位置Position 缩放Scale 仿射矩阵 局部空间到物体空间 插值 单关节蒙皮 蒙皮矩阵 在内存中存储骨骼 蒙皮矩阵调色板 多骨骼的权重蒙皮 权重蒙皮的混合 动画片段（clip） 姿势的插值 NLERP的最短路径插值 SLERP 简单动画的运行时管线
-      - 实现 蒙皮动画实现 转换 坐标空间转换 结构 生物的骨骼结构 骨骼 关节 根骨骼 绑定 骨骼绑定 姿势 绑定姿势 T-pose ose bose A-pose 游戏中的人形骨骼 GamePlay相关的关节 姿势 骨骼姿势 月航安
-      - 动画DCC流程 网格制作 网格调整 骨骼绑定 添加Game 添加GamePlay关节 添加根骨骼 蒙皮 动画制作 动画导出
-      - 3D旋转中的数学 欧拉角 中的顺序依赖 万向节死锁 死锁 欧拉角的缺点 的缺点 衣赖 顺序依赖 节死锁 难以插值、组合等 四元数 2D旋转与复数 四元数的定义 欧拉角到四元数的转换 四元数进行旋转 四元数到旋转矩阵的转换 给定旋转轴的四元数旋转
-      - 动画压缩 动画片段存储 动画数据尺寸 动画轨道（track）数据之间的差别 关节动画数据之间的差别 DoF缩减 关键帧 关键帧提取 浮点数压缩 四元数压缩 误差累积 精读衡量 误差补偿 动画重定向 重定向流程 MorphAnimation的重定向 面部动画 面部编码系统（FACS） Action Unit Key Pose Blending Morph Target Animation UV Texture Facial Animation Muscle Model Animation
+      - 关节姿势（Joint Pose）
+        - 旋转（Orientation）
+        - 位置（Position）
+        - 缩放（Scale）
+        - 仿射矩阵：局部空间到物体空间
+        - 插值
+        - 蒙皮
+          - 单关节蒙皮
+          - 蒙皮矩阵
+          - 蒙皮矩阵调色板
+          - 多骨骼
+        - 在内存中存储骨骼
+      - 蒙皮动画实现
+        - 坐标空间转换
+        - 生物的骨骼结构
+          - 骨骼
+          - 关节
+          - 根骨骼
+        - 骨骼绑定
+        - 姿势
+          - 绑定姿势
+          - T-pose
+          - A-pose
+      - 动画DCC流程
+        - 网格制作
+        - 网格调整
+        - 骨骼绑定
+        - 添加GamePlay关节
+        - 添加根骨骼
+        - 蒙皮
+        - 动画制作
+        - 动画导出
+      - 3D旋转中的数学
+        - 欧拉角
+          - 顺序依赖
+          - 万向节死锁
+          - 难以插值、组合
+        - 四元数
+          - 2D旋转与复数
+          - 四元数的定义
+          - 欧拉角到四元数的转换
+          - 四元数进行旋转
+      - 动画压缩
+        - 动画片段存储
+          - 动画数据尺寸
+          - 动画轨道（track）数据之间的差别
+          - 关节动画数据之间的差别
+        - DoF缩减
+        - 关键帧
+          - 关键帧提取
+          - 浮点数压缩
+          - 四元数压缩
+        - 误差处理
+          - 误差累积
+          - 精度衡量
+          - 误差补偿
+        - 动画重定向
     - 动画技术进阶
-      - 动画混合 LERP LCNF 混合权重的计算 混合时间轴对齐
-      - 混合空间BlendSpace 1D混合空间 2D混合空间 部混合SkeletonMaskedBlending 叠加混合AdditiveBlending
-      - 动画状态机 ASM的定 Cross Fades 分层ASM
-      - 动画混合树 Blend Tree LERP blend node additive blend node 动画混合树的节点 动画树的控制信号
-      - 反向 反向动力学 Inverse Kinematics 基础概念 基础相 终端效应器End-Effectors 终端效应器End- IK FK Two Bone 多关节IK 关节纟 关节约束 启发式算法 循环坐标下降算法CCD FABRIK FABRIK的约束 多终端效应器难题 雅可比矩阵法 IK前沿
+      - 动画混合
+        - LERP
+        - LCNF
+        - 混合权重的计算
+        - 混合时间轴对齐
+      - 混合空间（BlendSpace）
+        - 1D混合空间
+        - 2D混合空间
+        - 局部混合（Skeleton Masked Blending）
+        - 叠加混合（Additive Blending）
+      - 动画状态机
+        - ASM的定义
+        - Cross Fades
+        - 分层ASM
+      - 动画混合树
+        - Blend Tree
+          - LERP blend node
+          - additive blend node
+        - 动画混合树的节点
+        - 动画树的控制信号
+      - 反向动力学（Inverse Kinematics）
+        - 基础概念
+          - 终端效应器（End-Effectors）
+        - IK vs FK
+        - Two Bone IK
+        - 多关节IK
+          - 关节约束
+        - 启发式算法
+          - 循环坐标下降算法（CCD）
+          - FABRIK
+          - FABRIK的约束
+        - 多终端效应器难题
+        - 雅可比矩阵法
+        - IK前沿
   - 渲染
-    - GPU架构 Immediate Mode Rendering Tile Based Rendering Tile Based Deferred Rendering
-    - 可见性裁剪 视锥裁剪 Potential Visibility Set 遮挡剔除 入口裁剪
+    - GPU架构
+      - Immediate Mode Rendering（立即模式渲染）
+      - Tile Based Rendering（基于Tile的渲染）
+      - Tile Based Deferred Rendering（基于Tile的延迟渲染）
+    - 可见性裁剪
+      - 视锥裁剪
+      - Potential Visibility Set（PVS）
+      - 遮挡剔除
+      - 入口裁剪
     - 贴图压缩
-      - Block Compression
-      - Ericsson Texture Compression Ericsson T
-      - tive Scalable Texture Compression Adaptive Scala
-      - 使用png和jpg等 为什么不使用png和j 格式 常见压缩格式 尽管像jpg、png的压缩率很高， ng的压缩率很高，但并不适合纹理 支持像素的随机访问，这对GPU相当不友好， 主要问题是不支持像素的随机访 使用需要的纹理部分 GPU渲染时只使用需要的纹理部
-      - 压缩纹理算法特点 二 解压速度 随机访问 压缩率和图像质量 十 编码速度
-      - 为什么我们需要 纹理压缩格式 内存 带宽
-    - Frame Graph
-      - 场景空间管理 层次包围盒（BVH） 二元空间分割树（BSPTrees） 四叉树（Quad Tree） 八叉树 (Octree) 场景图 (Scene Graphs) KD树 (K-Dimensional Tree)
-      - 目标 单一实现，与图形API无关 简化渲染管线配置 简化异步渲染和资源屏障 支持多GPU渲染，可指定调度策略
-      - 流程 Setup 在这个阶段并不产生任何GPU命令 所有的资源都是虚拟的 Compile 剔除所有没有被引l用的Resources和Passes 计算资源的生命周期 根据资源的用途创建实际的GPU资源 Execute 简单地顺序遍历所有真正需要绘制的PaSS
-    - GPU渲染管线 顶点着色器 几何着色器 光栅化 像素着色器 合并阶段
+      - Block Compression（块压缩）
+      - Ericsson Texture Compression (ETC)
+      - Adaptive Scalable Texture Compression (ASTC)
+      - 为什么不使用png和jpg格式
+        - 尽管jpg、png的压缩率很高，但并不适合纹理
+        - 不支持像素的随机访问，这对GPU不友好
+        - GPU渲染时只使用需要的纹理部分
+      - 压缩纹理算法特点
+        - 解压速度
+        - 随机访问
+        - 压缩率和图像质量
+        - 编码速度
+      - 为什么我们需要纹理压缩格式
+        - 内存
+        - 带宽
+    - Frame Graph（帧图）
+      - 场景空间管理
+        - 层次包围盒（BVH）
+        - 二元空间分割树（BSP Trees）
+        - 四叉树（Quad Tree）
+        - 八叉树（Octree）
+        - 场景图（Scene Graphs）
+        - KD树（K-Dimensional Tree）
+      - Frame Graph目标
+        - 单一实现，与图形API无关
+        - 简化渲染管线配置
+        - 简化异步渲染和资源屏障
+        - 支持多GPU渲染，可指定调度策略
+      - Frame Graph流程
+        - Setup阶段
+          - 不产生任何GPU命令
+          - 所有资源都是虚拟的
+        - Compile阶段
+          - 剔除所有没有被引用的Resources和Passes
+          - 计算资源的生命周期
     - Lumen
       - Lumen流程
         - Shading Full Pixels with Screen Space Probes
-        - Surface Caching
-          - Mesh Card 功能：可以看成是放在6个轴对称方向上的相机， 可以看成是放 功能： 通过正交投影的方式来光栅化Mesh， 通过正交投 从而获取Mesh的各种属性 从而获取Me (Albedo, N (Albedo, Normal, Depth等等) 对应surface cache 对应surfac 离线生成：Mesh 离线生成：Mesh-Surfel-Surfel Clusters－Cards 最多2级LOD
-          - Surface Cache 5张Altas - Albedo, Normal, 内容：5 Depth, Emissive, Opacity 生成 Two Pass Card Capture Fixtexelbudgetperframe(512x512) Sort by distance to camera and GPU feedback Copy card capture to surface cache and compress Cardcapture分瓣率 根据cardbounds最大extent投影 到屏幕像素的长度决定， 从8到1024，不一定是正方形， 根据card的bounds长宽比确定 管理 Surface Cache Altas size: 4096x4096 4096 Pysical Page size:128x128 Virutal page机制分配空间，通过 page table进行物理地址映射
+        - Surface Caching（表面缓存）
+          - Mesh Card
+            - 功能：可以看成是放在6个轴对称方向上的相机
+            - 通过正交投影的方式来光栅化Mesh
+            - 从而获取Mesh的各种属性（Albedo, Normal, Depth等）
+            - 对应surface cache
+          - Surface Cache
+            - 5张Atlas
+              - Albedo
+              - Normal
+              - Depth
+              - Emissive
+              - Opacity
+            - 生成方式
+              - Two Pass
+              - Card Capture
         - Fast Ray Trace in Any Hardware
-          - 有向距离场（SDF） 距离最近表面的 原理：有向距离场在每个点将距离最近表面的 距离保存到体积纹理中。 。 的距离为 网格体外的每个点保存的距离为 正值，网格体内的每个点保存的距离为负值 点保存的距离为负值
-          - 实用属性 在追踪光线时安全地跳过空白空间，因为到 最近表面的距离已经明确（有时称这种方 法为球体追踪）。只需区区几步就可以 判定出交叉点。对距离场进行光线 追踪将生成可见性效果， 说如果光线和网格 ，光线就会投射出阴影。 在追踪光线时，通过追踪经过遮挡物 最近的光线就可以计算 出近似的锥体交叉点，而不产生额 外成本。这种近似法可以利用 这种近似法可以利用 距离场来实现非常柔和的 区域阴影和天空遮蔽。 这个属性是距离场环境光遮 蔽的关键，因为少量的锥体 即可为接收器点的整个半 出柔和的可见性。
-          - 全局距离场 全局距离场是分辨率较低的距离场，跟随 摄像机的同时，在关卡中使用有向距 离场遮蔽。这会创建每个Object网格体距离场 的缓存，然后将它们合成到围绕摄像机的 若干体积纹理中，称为裁剪图。由于只有新 的可见区域或受到场景修改影响 的可见区域才需要更新，合成过程不会有太多消耗。
-          - 局限性 通过全局位置偏移或置换使网格 体变形的材质可能会导致自阴影 失真，因为距离场表达是 离线生成的，并不知道有这些变形 仅投射刚性网格体的阴影
-        - Radiance Injection
-          - VoxelLigting 动机 Global SDF can't sample surface cache Merge all cards into global clipmaps centered around the camera structure 4 clipmaps of 64x64x64 voxels Radianceper6directionspervoxel Sampleand interpolate3directionsusingnormal VisibilityBuffer Trackobject updates and setmodified bricks on GPU Voxelize modified bricks by tracing rays 6 rays per voxel Cullobjectsto4^3bricks One thread per mesh SDF per trace Cache hits in a visibility buffer HitT| MeshIndex InterlockedMin write hit to visibility buffer Updating Shadethe entirevisibilitybuffer everyframe Sample lighting from surface cache(Final Lighting)
-          - 间接光照 N+2 bounces through feedback Probe 4x4hemisphericalprobeper4x4tile Jitterprobeplacementandraydire Trace in last frame’ s Voxel Lighting Ligting Gather Bilinearinterpolationof 4probes Planeweighting Visibility weighting using probe h Covert to SH Shading pixels on surface cache
-          - 更新策略 Fixed update budget Select pages to update based on priority Priority = LastUsed - LastUpdated Priority queue using radix sort 1024x1024texelsfordirectlighting 512x512 texels for indirect lighting
-          - 直接光照 Cull lights to 8x8 tiles 8x8 tiles tsper tile Select first8lightsper tile 1 bit shadow mask First sample Shadow Map,then trace Offscreen Shadows
-        - uild a lot of Probes with Different
-          - Screen Space Probe Probestructure 8x8OctahedralAtlas Radiance and HitDistance Adaptive Placement uniformly 16x16 adaptive8x8and4x4 Probe jittering
-          - World Space Probes and Ray Connecting 内容 3d clipmap grids centered around camera 32x32 Radiance per probe, storing Radiance, TraceDistance 更新 Marked world probes for interpolation Reuse traces from last frame Allocatetraces fornewprobes Re-trace a subset of cache hits to propagate lighting changes Importance Sampling Accumulate BRDFfromScreen Probes Supersample near camera Spatial filtering Reuses probe depth for occlusion test Ray Connecting World Probe ray must skip the interpolation footprint Screen Probe ray must cover interpolation footprint + skipped distance ReproiectScreenProberayinterse ction with World Probe sphere
-          - Sampling Important Sampling PDF计算 Incoming Radiance Radiance Last frame' s Screen Space ame’sScreenSpaceProbe‘sradiance Fallbackto theWorldSpac cktotheWorldSpaceProbes BRDF AccumulatetheBRDFfromallofthepixelsthatwillusethisScreenProbeafterinterpolation ResamplingRays CalculatePDF=BRDF*Radiance SortraysbyPDF For every 3 rays with PDF below cull threshold, supersamplematching high PDF ray
-          - Spatial Probe Filtering creenSpaceProbe Filterwithin theneighborScreenSpaceProbe lgnorenormaldifferences,Onlydepthweighting Onlydepthweighting ected neighbor ray hits UseAngleerrorfromreprojectedneighborrayh Clampneighborhitdistancetoourown toour own
-      - 之前常见的GI算法 Reflec Reflective Shadow Map Light PropagationVolume Sparse Voxel Octree for Real-time Global Il al-time Global lllumination NG Voxelization Based Global llun ased Global llumination Screen Space Global Illumina e Global llumination Global Illumination Dynamic Diffuse Global lluminati Ray-tracing based Global Illuminatiol
+          - 有向距离场（SDF）
+            - 原理：有向距离场在每个点将距离最近表面的距离保存到体积纹理中
+            - 网格体外的每个点保存的距离为正值，网格体内的每个点保存的距离为负值
+          - SDF实用属性
+            - 在追踪光线时安全地跳过空白空间（球体追踪）
+            - 只需区区几步就可以判定出交叉点
+            - 对距离场进行光线追踪将生成可见性效果
+            - 可以计算出近似的锥体交叉点，实现柔和阴影
+          - 全局距离场
+            - 分辨率较低的距离场，跟随摄像机
+            - 在关卡中使用有向距离场遮蔽
+            - 创建每个Object网格体距离场的缓存
+            - 合成到围绕摄像机的若干体积纹理中（裁剪图）
+            - 只有新的可见区域或受场景修改影响的区域才需更新
+          - SDF局限性
+            - 通过全局位置偏移或置换使网格体变形的材质可能会导致自阴影失真
+            - 因为距离场表达是离线生成的，并不知道有这些变形
+            - 仅投射刚性网格体的阴影
+        - Radiance Injection（辐射注入）
+          - Voxel Lighting
+            - 动机：Global SDF无法采样surface cache
+            - 解决方案：Merge all cards into global
+          - 间接光照
+            - N+2 bounces through feedback
+            - Probe
+              - 4x4 hemispherical probe per 4x4 tile
+              - Jitter pattern
+          - 更新策略
+            - Fixed update budget
+            - Select pages to update based on priority
+          - 直接光照
+            - Cull lights to 8x8 tiles
+            - Select first 8 lights per tile
+        - Build a lot of Probes with Different
+          - Screen Space Probe
+            - Probe structure
+              - 8x8 Octahedral Atlas
+              - Radiance and HitDistance
+            - Adaptive Placement
+          - World Space Probes and Ray Connecting
+            - 内容：3D clipmap grids centered around camera
+            - 32x32 Radiance per probe
+            - 更新策略
+          - Sampling
+            - Important Sampling
+            - PDF计算
+            - Incoming Radiance
+            - Last frame's Screen Space Radiance
+          - Spatial Probe Filtering
+            - Screen Space Probe Filter within the neighbor Screen Space Probe
+            - Ignore normal differences, Only depth weighting
+            - Use Angle error from reprojected neighbor ray hits
+      - 之前常见的GI算法
+        - Reflective Shadow Map
+        - Light Propagation Volume
+        - Sparse Voxel Octree for Real-time Global Illumination
+        - Voxelization Based Global Illumination
+        - Screen Space Global Illumination
+        - Dynamic Diffuse Global Illumination
+        - Ray-tracing based Global Illumination
     - Nanite
-      - GPU Driven en peline Render Pipeline
-        - Culling
-          - 提交 Material Batch Indirect Draw Texture Batch Virtual Texture Bindless Texture
-          - Cluster 剔除（Coarse）
-          - 三角形剔除 Backface Culling Small Triangle Culling Occlusion Culling
-        - 目标： GPU承担 更多的 提交和剔除 工作
-      - Visibility Buffer
-        - 流程 VisibilityPass 对场景进行光栅化，将PrimitiveID和 Material ID保存到visibility buffer中 Worklisk Pass 构建并Worklist，将屏幕划分成很多tile，根据使用到 某个MaterialID的tile加到该MaterialID 的Worklist里，作为下一步的索引l Shading Passes 拿到几何和材质信息，对表面着色
-        - 解决了延迟渲染的问题 带宽高 渲染性能与场景复杂度 绑定，容易造成overdraw 对MSAA支持不友好
+      - GPU Driven Render Pipeline
+        - Culling（剔除）
+          - 提交优化
+            - Material Batch
+            - Indirect Draw
+            - Texture Batch
+            - Virtual Texture
+            - Bindless Texture
+          - Cluster剔除（Coarse/粗粒度）
+          - 三角形剔除
+            - Backface Culling（背面剔除）
+            - Small Triangle Culling（小三角形剔除）
+            - Occlusion Culling（遮挡剔除）
+        - 目标：GPU承担更多的提交和剔除工作
+      - Visibility Buffer（可见性缓冲）
+        - Visibility Buffer流程
+          - Visibility Pass：对场景进行光栅化，将PrimitiveID和Material ID保存到visibility buffer中
+          - Worklist Pass：构建Worklist，将屏幕划分成很多tile
+          - Shading Passes：拿到几何和材质信息，对表面着色
+        - 解决了延迟渲染的问题
+          - 带宽高
+          - 渲染性能与场景复杂度绑定，容易造成overdraw
+          - 对MSAA支持不友好
       - Virtualized Geometry Nanite
-        - Deferred Material 思想： 将材质分类，找出每个材质对应的像素进行Shading MaterialID 表示当前像素属于哪个材质 Material Shading 正常流程 为每个材质执行一次全屏渲染 跳过那些未被当前材质覆盖的像素 需要对每个材质都执行一遍渲染 对每个像素都执行一遍是否被材质覆盖的检测，效率较低。 Material Culling 将MaterialID存成深度值 将屏幕分成Tlle 不需要进行一个全屏的材质的绘制 进行基于tile尺寸的绘制
-        - Nanite Mesh Build Process Group Merge Simplify Split
-        - Rasterization
-          - 软件光栅化 顶点处理阶段，这里每个顶点对应 一个线程，如果ClusterVB中的顶点 数超出128，那么还可以再启动 -个Group，最大支持256 面片处理阶段，在这个阶段每个线程 负责一个三角形，先读取相关顶 点属性完成相应的插值计算， 并完成后面的光栅化工作 大尺寸面片的光栅化逻辑 还是走硬件，这样性能更高， 采用硬光栅还是软光栅 是以cluster为单位进行的
-          - 现代GPU光栅化组件流程 会有一个大尺寸Tile判定机制 会有一个小尺寸Tile（4*4）判定机制 会有一个2*2的quad作为最小处理单元进行输出 会有 目标是为了实现像素的并行计算 现有 现有的硬件光栅化对于小三角形并不友好，因为 硬件光栅化逻辑做了很多在大尺寸面片 上十分有效但是放到小尺寸面片 上就会是浪费的工作
-        - Cullin Dataflow
-          - Main Pass ZB PrevHZB Instance Culling ing Hierarchy/Cluster Culling ing Rasterizer zer Software Rasterizer Hardware Rasterizer ZB Current Build HZB
-          - Post Pass Occluded instances && Occluded Nodes and Clusters CurrentBuildHZB Instance Culling Hierarchical/ClusterCulling Rasterizer SoftwareRasterizer Hardware Rasterizer BuildCurrentFrameHZB
-        - Virtual Shadow Map adowMape 目标 显著提升阴影分辨率，以便配合 十阴影分辨率，以便配合拥有高度 细节内容的Nanite几何体 以合理、可控的性能开销，获得！ 可控的性能开销，获得真实的柔和阴影 统一的方法替代各种固定光源阴影技术 用单一、统一的方法替代各种固 阴影贴图光线追踪 光线追踪 一种结合虚拟阴影贴图的采样算 虚拟阴影贴图的采样算法，能生成 的柔和阴影和接触硬阴影。对象投 射的远处阴影比近处阴影拥有更柔和的效果
+        - Deferred Material
+          - 思想：将材质分类，找出每个材质对应的像素进行Shading
+          - MaterialID：表示当前像素属于哪个材质
+        - Nanite Mesh Build Process
+          - Group
+          - Merge
+          - Simplify
+          - Split
+        - Rasterization（光栅化）
+          - 软件光栅化
+            - 顶点处理阶段
+              - 每个顶点对应一个线程
+              - ClusterVB顶点数超出128可再启动一个Group
+              - 最大支持256顶点
+            - 面片处理阶段
+              - 每个线程负责一个三角形
+          - 现代GPU光栅化流程
+            - 大尺寸Tile判定机制
+            - 小尺寸Tile（4x4）判定机制
+            - 2x2的quad作为最小处理单元
+            - 目标：实现像素的并行计算
+        - Culling Dataflow
+          - Main Pass流程
+            - ZB PrevHZB
+            - Instance Culling
+            - Hierarchy/Cluster Culling
+            - Rasterizer
+              - Software Rasterizer
+              - Hardware Rasterizer
+            - Build HZB
+          - Post Pass
+            - Occluded instances && Occluded Nodes and Clusters
+            - CurrentBuildHZB
+            - Instance Culling
+            - Hierarchical/Cluster Culling
+            - Rasterizer
+        - Virtual Shadow Map
+          - 目标：显著提升阴影分辨率
+          - 配合拥有高度细节内容的Nanite几何体
+          - 以合理的性能开销实现高质量阴影
     - 渲染系统
       - 视效
-        - 粒子常见属性 Acceleration Attraction Camera Collision Color Lifetime Light Location Orbit Orientation Rotation Size Spawn Velocity
-        - 组件 系统 发射器 模块 参数
-        - 粒子数据类型 Bill Billboard类型数据 Mesh类型数据 光束类型数据 条带类型数据
+        - 粒子常见属性
+          - Acceleration（加速度）
+          - Attraction（吸引力）
+          - Camera（相机）
+          - Collision（碰撞）
+          - Color（颜色）
+          - Lifetime（生命周期）
+          - Light（光照）
+          - Location（位置）
+          - Orbit（轨道）
+          - Orientation（朝向）
+          - Rotation（旋转）
+          - Size（大小）
+          - Spawn（生成）
+          - Velocity（速度）
+        - 粒子系统组成
+          - 组件
+          - 系统
+          - 发射器
+          - 模块
+          - 参数
+        - 粒子数据类型
+          - Billboard类型数据
+          - Mesh类型数据
+          - 光束类型数据
+          - 条带类型数据
       - 后处理
         - 颜色校正
-        - 抗锯齿 超级采样抗锯齿 优点：往往能得到最佳的效果 缺点：它会带来巨大的性能消耗 多重采样抗锯齿 图像保真度和性能之间找到最佳的平衡点 快速近似抗锯齿 优点： 是低端PC最佳的抗锯齿方案.它对GPU的要求不是很高 因为它直接平滑屏幕图像而不需要考虑到游戏中的3D模型 缺点：边缘和纹理会变得有点模糊 时间性抗锯齿 综合历史帧的数据来实现抗锯齿，这样会将每个像素点的多 次采样均摊到多个帧中，相对的开销要小得多
-          - 光照
-            - 全局光照 光照探灯 反射探灯 预计算光照数据
-            - IBL Specular Pre-filtered Environment Map Brdf Lut Diffuse Irradiance Map
-            - BRDF模型 Lambert模型 Phong模型 Blinn-Phong模型 Cook-Torrance模型
-        - 泛光
-        - 色调映射 Reinhard Tone Mapping Filmic Tone Mapping ACES ACES是一个开放的色彩管理和交换系统 是编码和交换数据的规则集合， 它也包含了一系列的开发工具， 将数据规格集成到软硬件中
+        - 抗锯齿
+          - 超级采样抗锯齿（SSAA）
+            - 优点：往往能得到最佳的效果
+            - 缺点：带来巨大的性能消耗
+          - 多重采样抗锯齿（MSAA）
+            - 图像保真度和性能之间找到最佳平衡点
+          - 快速近似抗锯齿（FXAA）
+            - 优点：低端PC最佳方案，GPU要求不高
+            - 缺点：边缘和纹理会变得有点模糊
+          - 时间性抗锯齿（TAA）
+            - 综合历史帧数据实现抗锯齿，开销较小
+        - 泛光（Bloom）
+        - 色调映射
+          - Reinhard Tone Mapping
+          - Filmic Tone Mapping
+          - ACES
+            - 开放的色彩管理和交换系统
+            - 用于编码和交换数据
+      - 光照
+        - 全局光照
+          - 光照探灯
+          - 反射探灯
+          - 预计算光照数据
+        - IBL（Image-Based Lighting）
+          - Specular
+            - Pre-filtered Environment Map
+            - BRDF LUT
+          - Diffuse
+            - Irradiance Map
+        - BRDF模型
+          - Lambert模型
+          - Phong模型
+          - Blinn-Phong模型
+          - Cook-Torrance模型
       - 大气
         - 参与介质
-          - 介质传播特性 参与介质中的粒子本身会吸收光能，转换成其 身会吸收光能，转换成其他形式的能量，这样在传播路径上的光就会衰减 光遇到粒子时，粒子会分散光的传播方向，因此也会减弱传播路径上的光 出散射，即光遇到粒子时，粒子会分 番路径上散射到当前传播路径上的现象，这会加强当前路径上的光的能量 入散射，从其他传播路径上散射到当前传播 粒子本身是发光的，这会加强传播路径上的光
-          - 大气散射 地球大气的渲染主要包含两种散射， 瑞利散射以及米氏散射，瑞利散射主要 构成了天空的颜色变化，而米氏散射则 造成了太阳周围的光环效果 相位函数 瑞利散射 米氏散射 几何散射 单次散射 多重散射
+          - 介质传播特性
+            - 吸收：粒子吸收光能转换成其他能量，导致光衰减
+            - 出散射：光遇到粒子时被分散，减弱传播路径上的光
+            - 入散射：从其他路径散射到当前路径，增强光的能量
+            - 自发光：粒子本身发光，增强传播路径上的光
       - 基于物理渲染
-        - 能量守恒 出射光线的能量 永远不能大于 入射光线的能量
-        - 基于物理材质 质
-          - 基于物理相机 快门速度：产生运动模糊效果 光圈：产生景深效果 感光度：产生Grain效果
+        - 能量守恒
+          - 出射光线的能量永远不能大于入射光线的能量
+        - 基于物理材质
+          - 基于物理相机
+            - 快门速度：产生运动模糊效果
+            - 光圈：产生景深效果
+            - 感光度：产生Grain效果
           - 金属和非金属
-            - 金属有良好的导热和导电性。 导电金属中的电场为零， 当由组成光波的电磁场碰到金属表面时， 一部分光波被反射， 而折射的部分全部被吸收。
-            - 非金属（绝缘体）的导电性能很差。 对于绝缘体，折射光会被散射和 吸收（有的会重新透出物体表面）， 所以反射光线的量远小于金属， 而且有漫反射颜色。
-          - SG工作流 Albedo Albedo Color Specular Color Glossiness Normal 优点：可以自己控制非金属F0值 缺点：FO可能用错从而导致破坏PBR原则 因为工作流程有些名词和传统的工作流太相似， 但实际对应的数据可能是不一样的。 RGB贴图多，占用内存多。
-            - 环境光遮蔽 屏幕空间环境光遮蔽 光线追踪环境光遮蔽 水平基准环境光遮蔽 体素基准环境光遮蔽 GTAO
-          - FO 当光线笔直或垂直（以0度角）撞击表面时 该光线的一部分会被反射为镜面反射。 使用表面的折射率（IOR)，可以推导出反射量。这被称为FO。
-          - MR工作流 Base Base Color Roug Roughness Metallic Meta Normal 优点： 缺点： 优点：纹理占用内存少，因为金属和粗糙度贴图都是灰度图（单通道） 缺点：F0不容易自己指定
+            - 金属特性
+              - 良好的导热和导电性
+              - 导电金属中的电场为零
+              - 光波碰到金属表面时：一部分被反射，折射部分全部被吸收
+            - 非金属（绝缘体）特性
+              - 导电性能很差
+              - 折射光会被散射和吸收（有的会重新透出物体表面）
+              - 反射光线的量远小于金属
+              - 有漫反射颜色
+          - SG工作流（Specular-Glossiness）
+            - Albedo Color
+            - Specular Color
+            - Glossiness
+            - Normal
+            - 优点：可以自己控制非金属F0值
+            - 缺点
+              - F0可能用错导致破坏PBR原则
+              - 名词与传统工作流相似但数据不同
+              - RGB贴图多，占用内存多
+          - F0（菲涅尔反射率）
+            - 当光线垂直（0度角）撞击表面时的镜面反射量
+            - 使用表面折射率（IOR）可以推导出反射量
+          - MR工作流（Metallic-Roughness）
+            - Base Color
+            - Roughness
+            - Metallic
+            - Normal
+            - 优点：纹理占用内存少（金属和粗糙度贴图都是灰度图）
+            - 缺点：F0不容易自己指定
         - 基于物理光照
-          - 常见光源类型 平行光 球面光 聚光灯 环境光
-          - 色温 色温是指绝对黑体从绝对零度（-273℃）开始加温后所呈现的颜色。 色温是影响光源颜色的重要属性，是个可选属性，当启用色温时， 色温也参与了光源颜色的组成部分。 真实世界环境中，一天不同时段的环境色温也会动态发生变化：
-            - 光学度量单位
-              - 光通量（LuminousFlux） 单位流明（Im），单位时间内光源所发出 或者被照物体所接收的总光能。 改变光源大小不会影响场景照明效果。
-              - 照度（lluminance） 单位勒克斯（lux或Ix），每单位面积所接收到的光通量。 该值受光的传播距离影响，对于同样光源而言 当光源的距离为原先的两倍时，照度减为原先的四分之一， 呈平方反比关系。
-                - 高度雾： 在地图上较低位置处密度较大 指数高度雾在地图上较低位置处 置处密度较小。其过渡十分平滑， 而在较高位置处密度较小。其过渡 随着海拔升高，也不会出
-              - 亮度（Luminance） 单位坎德拉每平方米（cd/m2）， 单位面积光源在给定方向上 在每单位面积内所发出的总光通量。 改变光源大小会影响场景照明效果。
-        - 微表面模型 认为物体表面由很多凹凸不平的微小镜面组成 这些具有不同大小、方向的微表面在对入 射光线进行反射时产生了不同的反射效果 法线分布函数 几何遮蔽函数 菲涅尔方程 迪士尼原则 应使用直观的参数，而不是物理类的晦涩参数 参数应当尽可能的少 参数在其合理范围内应该为0到1 允许参数在有意义时超出正常的合理范围 所有参数组合应当尽可能健壮和合理
-        - 基于物理的渲染（Physicallybased rendering）(PBR) 意味着表面接近光线在真实世界的表现方式， 而不是我们直观以为的应有方式。 相较于完全依赖美术师直觉来设置参数的着色工作流程， 遵守PBR原则的材质更准确，并且通常看起来更自然。
-        - 快门速度 产生运动模糊效果 光圈 产生景深效果 感光度 产生Grain效果 基于物理相机
+          - 常见光源类型
+            - 平行光
+            - 球面光
+            - 聚光灯
+            - 环境光
+          - 色温
+            - 定义：绝对黑体从绝对零度（-273℃）开始加温后所呈现的颜色
+            - 是影响光源颜色的重要属性（可选）
+            - 真实世界中，一天不同时段的环境色温动态变化
+          - 光学度量单位
+            - 光通量（Luminous Flux）
+              - 单位：流明（lm）
+              - 定义：单位时间内光源所发出或者被照物体所接收的总光能
+              - 特性：改变光源大小不会影响场景照明效果
+            - 照度（Illuminance）
+              - 单位：勒克斯（lux或lx）
+              - 定义：每单位面积所接收到的光通量
+              - 特性：受光的传播距离影响，对于同样光源而言，当光源的距离为原先的两倍时，照度减为原先的四分之一
+            - 亮度（Luminance）
+              - 单位：坎德拉每平方米（cd/m²）
+              - 定义：单位面积光源在给定方向上，在每单位面积内所发出的总光通量
+              - 特性：改变光源大小会影响场景照明效果
+        - 微表面模型
+          - 物体表面由很多凹凸不平的微小镜面组成
+          - 不同大小、方向的微表面产生不同反射效果
+          - 核心函数
+            - 法线分布函数
+            - 几何遮蔽函数
+            - 菲涅尔方程
+          - 迪士尼原则
+            - 使用直观的参数，而非物理类晦涩参数
+            - 参数应当尽可能少
+            - 参数合理范围内应为0到1
+            - 允许参数在有意义时超出正常范围
+            - 所有参数组合应尽可能健壮合理
+        - 基于物理的渲染（Physically Based Rendering, PBR）
+          - 意味着表面接近光线在真实世界的表现方式，而不是我们直观以为的应有方式
+          - 相较于完全依赖美术师直觉来设置参数的着色工作流程，遵守PBR原则的材质更准确，并且通常看起来更自然
       - 雾效
-        - 体积雾： 在摄像机视锥的每个点上都计 算参与媒介 算参与媒介的密度和光照
+        - 体积雾
+          - 在摄像机视锥的每个点上都计算参与媒介的密度和光照
+        - 高度雾
+          - 在地图上较低位置处密度较大
+          - 在较高位置处密度较小，过渡平滑
+          - 随着海拔升高，密度逐渐降低
       - 云
-        - 基于公告板云
+        - 基于公告板的云
         - 面片云
         - 体积云
           - 云层渲染
-            - Henyey-GreensteinPhase Function 用于模拟光线与星际尘云交互后各个方向上 散射强度与入射光方向夹角的依赖规律
-            - In-ScatteringProbabilityFunction 模拟当观察方向与太阳光方向 一致时的in-scattering效果
-            - Volumetric Scattering 被水滴或者其他粒子比如灰尘等所吸收， 这个过程称为extinction（消散）或者吸收（absorption） 穿出云层抵达人眼，这个称之为内散射in-scattering 穿出云层但是并未进入人眼，称为外散射out-scattering
-            - Beer's Law 用于描述光线穿过一个材质后的衰减作用
+            - Henyey-Greenstein Phase Function
+              - 用于模拟光线与星际尘云交互后各个方向上散射强度与入射光方向夹角的依赖规律
+            - In-Scattering Probability Function
+              - 模拟当观察方向与太阳光方向一致时的in-scattering效果
+            - Volumetric Scattering（体积散射）
+              - extinction（消散/吸收）：被水滴或其他粒子吸收
+              - in-scattering（内散射）：穿出云层抵达人眼
+              - out-scattering（外散射）：穿出云层但未进入人眼
+            - Beer's Law（比尔定律）
+              - 用于描述光线穿过一个材质后的衰减作用
           - 云层光照计算
           - 云层建模
-            - FractalBrownianMotion Density-Height Functions WeatherTexture 云层覆盖率 云层降雨概率 云层种类
+            - 云层建模方法
+              - Fractal Brownian Motion
+              - Density-Height Functions
+              - Weather Texture
+                - 云层覆盖率
+                - 云层降雨概率
+                - 云层种类
       - 地形
-        - 地形几何 网格 高度图
-        - 地形材质混合 TextureSplatting技术 地表纹理使用多种不同的纹理混合， 使用一张叫做splatmap的权重图来 记录这些纹理的权重
-        - 虚拟纹理 Virtual texture Physical texture Page table 优势 可以把多层地形 材质实时混合好 可以Instancing/GpuDriven
-      - 阴影 月影
-        - 阴影组成 全影 半影
-        - DistanceFieldShaodw
-        - Shadow Map 算法流程 Shadow Mapping步骤1：从光源处出发，向光照的方向看去，来构造出光照空间。 然后在光照空间，我们渲染需要产生阴影的物体， 此时将深度写入到ZBuffer中，得到保存最近处物体的深度值的ShadowMap 步骤2：然后我们再次正常渲染物体，在渲染时， 我们根据渲染物体的世界坐标，变换到上一阶段的光照空间坐标， 再计算出该点在ShadowMap中的深度值并进行比较， 如果相对光源的距离比ShadowMap中的深度要大， 就说明该点处在阴影中，否则就说明不在阴影中。 ShadowBias Cascade Shadow Map VarianceShadowMap PCF PCSS
+        - 地形几何
+          - 网格
+          - 高度图
+        - 地形材质混合
+          - Texture Splatting技术
+          - 地表纹理使用多种不同的纹理混合
+          - 使用splatmap权重图记录纹理权重
+        - 虚拟纹理（Virtual Texture）
+          - Virtual texture
+          - Physical texture
+          - Page table
+          - 优势
+            - 可以把多层地形材质实时混合好
+            - 可以Instancing/GPU Driven
+      - 阴影
+        - 阴影组成
+          - 全影
+          - 半影
+        - Distance Field Shadow
+        - Shadow Map算法流程
+          - 步骤1：从光源处出发，向光照的方向看去，构造光照空间，渲染需要产生阴影的物体，将深度写入ZBuffer
+          - 步骤2：正常渲染物体，根据世界坐标变换到光照空间坐标，计算该点在Shadow Map中的深度值并比较
+          - 相关技术：Shadow Bias、Cascade Shadow Map、Variance Shadow Map、PCF、PCSS
   - 物理系统
     - 物理系统应用
-      - 角色控制器 与刚体动力学的差异 基本组成 与环境的碰撞 自动阶跃（autostepping） 坡度限制与强制滑坡 更新大小 推动物体 移动平台
-      - 布娃娃模拟 用途 途 骨骼与刚体的映射 人体关节约束 约束参数 动画与布娃娃的混合过渡 富力布娃娃
+      - 角色控制器
+        - 与刚体动力学的差异
+        - 基本组成
+        - 与环境的碰撞
+        - 自动阶跃（autostepping）
+        - 坡度限制与强制滑坡
+        - 更新大小
+        - 推动物体
+        - 移动平台
+      - 布娃娃模拟
+        - 用途
+        - 骨骼与刚体的映射
+        - 人体关节约束
+        - 约束参数
+        - 动画与布娃娃的混合过渡
+        - 富力布娃娃
       - 布料模拟
         - 方法
           - 基于动画的布料表现
           - 基于刚体的布料模拟
-          - 基于网格的布料模拟 物理网格VS.渲染网格 刷布料约束 布料物理材质 求解 弹簧-质点系统 Verlet积分 PBD(Position Based Dynamics) 自碰撞
-      - 载具模拟 真实感-风格化谱系 建模 力 牵引力 弹簧力 轮胎力 质心 转向过度与转向不足 重量转移 转向角 Ackermann转向 轮胎接触
-      - 破坏模拟 概念 分块层级 连接图 连接强度 计算损伤 模型破碎算法 维诺图 二维 三维 不同的破碎图案 破坏系统 增加真实感 破坏系统引入的问题 常见的破坏SDK
-      - PBD/XPBD 拉格朗日力学约束建模 拉伸约束 约束投影 工作流 XPBD
+          - 基于网格的布料模拟
+            - 物理网格VS.渲染网格
+            - 布料约束
+            - 布料物理材质
+            - 求解方法
+              - 弹簧-质点系统
+              - Verlet积分
+              - PBD（Position Based Dynamics）
+            - 自碰撞
+      - 载具模拟
+        - 真实感-风格化谱系
+        - 建模
+        - 力
+          - 牵引力
+          - 弹簧力
+          - 轮胎力
+        - 质心
+        - 转向过度与转向不足
+        - 重量转移
+        - 转向角
+          - Ackermann转向
+        - 轮胎接触
+      - 破坏模拟
+        - 概念
+          - 分块层级
+          - 连接图
+          - 连接强度
+          - 计算损伤
+        - 模型破碎算法
+          - 维诺图（Voronoi）
+          - 二维
+          - 三维
+          - 不同的破碎图案
+        - 破坏系统
+          - 增加真实感
+          - 破坏系统引入的问题
+          - 常见的破坏SDK
+      - PBD/XPBD
+        - 拉格朗日力学约束建模
+        - 拉伸约束
+        - 约束投影
+        - 工作流
+        - XPBD
     - 物理系统基础概念
-      - 静态刚体static 动态刚体dynamic 触发器(trigger) 受控刚体kinematic 刚体PhysicsActor
+      - 刚体类型
+        - 静态刚体（static）
+        - 动态刚体（dynamic）
+        - 触发器（trigger）
+        - 受控刚体（kinematic）
+        - 刚体PhysicsActor
       - 运动
         - 第一牛顿定律
-        - 顿定律 第二牛顿定律 不变外力下的运动 运动 运动 变化外力下的运动
-        - 游戏中对运动离散模拟 时间积分 欧拉法 前向欧拉法/显式欧拉法 后向欧拉法/隐式欧拉法 半隐式欧拉法
+        - 牛顿定律
+          - 第一牛顿定律
+          - 第二牛顿定律
+          - 不变外力下的运动
+          - 变化外力下的运动
+        - 游戏中对运动离散模拟
+          - 时间积分
+          - 欧拉法
+            - 前向欧拉法/显式欧拉法
+            - 后向欧拉法/隐式欧拉法
+            - 半隐式欧拉法
         - 运动状态
-          - 碰撞解决 惩罚力法 求解速度约束 拉格朗日力学 碰撞约束 迭代求解 求解位置约束
+          - 碰撞解决
+            - 惩罚力法
+            - 求解速度约束
+            - 拉格朗日力学
+            - 碰撞约束
+            - 迭代求解
+            - 求解位置约束
       - 力与冲量
-      - 本动力学 刚体动力学 质点动力学 刚体动力学 朝向 角速度 角加速度 转动惯量 角动量 扭矩 应用： 台球动力学
-      - 形状 分类 球 胶囊 方盒 凸包 三角网格 高度场 碰撞体制作标准 属性 质量与密度 质心(COM) 摩擦系数 回弹系数
+      - 刚体动力学
+        - 质点动力学
+        - 刚体动力学
+          - 朝向
+          - 角速度
+          - 角加速度
+          - 转动惯量
+          - 角动量
+          - 扭矩
+        - 应用：台球动力学
+      - 碰撞形状
+        - 分类
+          - 球
+          - 胶囊
+          - 方盒
+          - 凸包
+          - 三角网格
+          - 高度场
+        - 碰撞体制作标准
+        - 属性
+          - 质量与密度
+          - 质心（COM）
+          - 摩擦系数
+          - 回弹系数
       - 碰撞检测
-        - 动态BVH树 排序与扫描SortandSweep 排序与扫描： 粗阶段
+        - 粗阶段
+          - 动态BVH树
+          - 排序与扫描（Sort and Sweep）
         - 精细阶段
           - 基于闵可夫斯基差的方法
-            - GJK算法 分离情形 相交情形
-            - 分离轴定理 凸性 相交的必要条件 分离判据 二维情形 三维情形
-          - EN 概念 闵可夫斯基和/差 凸多 凸多边形闵可夫斯基和性质 相交对 相交对应闵可夫斯基差中的原点
-          - 基础形状求交检测 球-球求交 球-胶囊求交 胶囊-胶囊求交
-      - 场景查询 射线检测 raycast 形状扫描sweep 求交overlap 碰撞组过滤
-      - 性能、精度与确定性 模拟岛 休眠 连续碰撞检测 冲击时间-保守步进法 确定性模拟
+            - GJK算法
+              - 分离情形
+              - 相交情形
+            - 分离轴定理
+              - 凸性
+              - 相交的必要条件
+              - 分离判据
+              - 二维情形
+              - 三维情形
+          - 闵可夫斯基和/差
+            - 概念
+            - 凸多边形闵可夫斯基和性质
+            - 相交对应闵可夫斯基差中的原点
+          - 基础形状求交检测
+            - 球-球求交
+            - 球-胶囊求交
+            - 胶囊-胶囊求交
+      - 场景查询
+        - 射线检测（raycast）
+        - 形状扫描（sweep）
+        - 求交（overlap）
+        - 碰撞组过滤
+      - 性能、精度与确定性
+        - 模拟岛
+        - 休眠
+        - 连续碰撞检测
+          - 冲击时间-保守步进法
+        - 确定性模拟
   - 音效
     - 音频
       - 空间化音频
-        - 双耳音频空间化 双耳声级差 双耳时间延迟 频谱阴影 头相关变换函数
-        - 音效衰减 衰减函数 线性 对数 反函数 对数反函数 自然音效 自定义 衰减形状 球体 胶囊体 盒体 椎体
-        - 平移 听者几何体 扬声器几何体 中央声道 音频平移 线性平移 等功率平移
+        - 双耳音频空间化
+          - 双耳声级差
+          - 双耳时间延迟
+          - 频谱阴影
+          - 头相关变换函数（HRTF）
+        - 音效衰减
+          - 衰减函数
+            - 线性
+            - 对数
+            - 反函数
+            - 对数反函数
+            - 自然音效
+            - 自定义
+          - 衰减形状
+            - 球体
+            - 胶囊体
+            - 盒体
+            - 椎体
+        - 音频平移
+          - 听者几何体
+          - 扬声器几何体
+          - 中央声道
+          - 平移方式
+            - 线性平移
+            - 等功率平移
       - 声障
       - 声笼
-    - 声音基础 声音三要素 响度 音高 音色 脉冲编码调制 采样 量化 编码
+    - 声音基础
+      - 声音三要素
+        - 响度
+        - 音高
+        - 音色
+      - 脉冲编码调制
+        - 采样
+        - 量化
+        - 编码
   - GamePlay
     - 复杂的游戏性及其基本要素
       - 可视化脚本
-        - 可视化脚本是一种编程语言 编程语言的要素及相应可
-        - 可视化脚本的问题 可 不便于合并 需要良好的布局规范
+        - 可视化脚本是一种编程语言
+          - 编程语言的要素及相应可视化表示
+        - 可视化脚本的问题
+          - 不便于合并
+          - 需要良好的布局规范
         - 3C
-          - 角色（Character） 角色的移动 多种移动方式 与其他系统协作 移动状态机
-          - 相机（Camera) 相机的绑定 弹簧臂 多种相机效果 相机抖动 滤镜 基于玩家主观感受做优化
-          - 控制（Control） 控制手感优化 辅助瞄准 基于游戏环境做控制调整
-        - 提供用户友好型的交互方式 启发式的节点创建 便捷的调试工具
-      - 事件机制 发布-订阅模式 事件定义 硬编码 反射与自动代码生成 事件回调函数注册 对象生命周期及回调安全保证 对象的强引用 对象的弱引用 事件分发机制 立即分发 延迟分发 消息队列
-      - 如何编码游戏逻辑 脚本语言的优点及工作原理 对象生命周期管理 在原生引擎代码中管理对象生命周期 在脚本中管理对象生命周期 脚本系统运行框架 由原生引擎代码支配游戏世界 脚本扩展原生引擎功能 由脚本支配游戏世界 脚本实现绝大部分游戏逻辑 脚本热更新 脚本语言的选择 多种脚本语言的对比
-    - AI Planning
-      - Monte Carlo Tree Search （蒙特卡洛树搜索；MCTS）
+          - 角色（Character）
+            - 角色的移动
+              - 多种移动方式
+              - 与其他系统协作
+              - 移动状态机
+          - 相机（Camera）
+            - 相机的绑定
+            - 弹簧臂
+            - 多种相机效果
+              - 相机抖动
+              - 滤镜
+            - 基于玩家主观感受做优化
+          - 控制（Control）
+            - 控制手感优化
+            - 辅助瞄准
+            - 基于游戏环境做控制调整
+        - 提供用户友好型的交互方式
+          - 启发式的节点创建
+          - 便捷的调试工具
+      - 事件机制
+        - 发布-订阅模式
+        - 事件定义
+          - 硬编码
+          - 反射与自动代码生成
+        - 事件回调函数注册
+        - 对象生命周期及回调安全保证
+          - 对象的强引用
+          - 对象的弱引用
+        - 事件分发机制
+          - 立即分发
+          - 延迟分发
+          - 消息队列
+      - 如何编码游戏逻辑
+        - 脚本语言的优点及工作原理
+        - 对象生命周期管理
+          - 在原生引擎代码中管理
+          - 在脚本中管理
+        - 脚本系统运行框架
+          - 由原生引擎代码支配游戏世界
+          - 脚本扩展原生引擎功能
+          - 由脚本支配
+    - AI Planning（AI规划）
+      - Monte Carlo Tree Search（蒙特卡洛树搜索，MCTS）
         - 决策
-          - DefaultPolicy 最保守的选择 最佳的选择 最鲁棒的选择 最激进的选择
-        - EN 思考 选择 Tree Policy UCB公式 平衡开发与探索问题 拓展 仿真+评估 Rollout Policy 评估函数 反向传播
-      - Goal-Orientated Action Planner （目标导向的动作规划器；GOAP）
-        - 目标集 对WorldState中的部分属性做是否满足的判断 动作集 前提条件 动作损耗 动作影响 对WorldState的改变描述 逆向规划
-      - Hierarchical Tasks Network （分层任务网络：HTN） 原子任务 前提条件 动作影响 对WorldState的改变描述 复合任务 前提条件 拆分方法
-        - Sequencer 数据绑定 关键帧 插值
+          - Default Policy
+            - 最保守的选择
+            - 最佳的选择
+            - 最鲁棒的选择
+            - 最激进的选择
+        - MCTS流程
+          - 选择（Selection）
+            - Tree Policy
+            - UCB公式
+            - 平衡开发与探索问题
+          - 拓展（Expansion）
+          - 仿真+评估（Simulation）
+            - Rollout Policy
+            - 评估函数
+          - 反向传播（Backpropagation）
+      - Goal-Orientated Action Planner（目标导向的动作规划器，GOAP）
+        - GOAP（目标导向动作规划器）
+          - 目标集
+            - 对WorldState中的部分属性做是否满足的判断
+          - 动作集
+            - 前提条件
+            - 动作损耗
+            - 动作影响
+            - 对WorldState的改变描述
+          - 逆向规划
+      - HTN（分层任务网络）
+        - 原子任务
+          - 前提条件
+          - 动作影响
+          - 对WorldState的改变描述
+        - 复合任务
+          - 前提条件
+          - 拆分方法
     - 构建高级的AI系统
-      - Machine Learning （机器学习：ML）
-        - 监督学习 无监督学习 半监督学习 强化学习 马尔可夫决策过程 状态 动作 奖励 累计奖励最大 如何利用强化学习构建AI 状态抽象 长度固定的统计变量 长度不固定的序列数据 图像数据 动作抽象 奖励设置 AlphaStar OpenAIFive 网络设计 MLP CNN LSTM Transformer 训练策略 监督学习 强化学习 自博弈 群体演化
+      - Machine Learning（机器学习，ML）
+        - 机器学习类型
+          - 监督学习
+          - 无监督学习
+          - 半监督学习
+          - 强化学习
+            - 马尔可夫决策过程
+            - 状态
+            - 动作
+            - 奖励
+            - 累计奖励最大
+            - 如何利用强化学习构建AI
+            - 状态抽象
+            - 动作抽象
+            - 奖励设置
     - 基础AI系统
       - 寻路
-        - 路径平滑 漏斗算法
+        - 路径平滑
+          - 漏斗算法
         - 工作流
         - 路径发现
-          - 数学抽象 图搜索算法
+          - 数学抽象
+            - 图搜索算法
           - 深度优先搜索
           - 广度优先搜索
-          - 最优优先算法 Dijkstra算法 A*算法 计算开销 启发函数 格子情形 寻路网格情形
-        - 地图表示 可通行区域 形式 路点网络 格子 寻路网格 凸多边形 稀疏体素八叉树SparseVoxelOctree
-        - 进阶内容：寻路网格生成 体素化 区域分割 分水岭算法 网格生成 高级特性 多边形标记 分块 网格外链接Off-mesh link
-      - 群体模拟 微观模型 基于规则Boids 宏观模型 流场 介观模型 碰撞规避 基于力的模型 的模型 基于速度的模型 Vo RVO ORCA
-      - 转向 从路点到运动 转向行为 寻找/逃跑 速度匹配 对齐
-      - 感知 内部信息 外部信息 静态空间信息 动态空间信息 经典决策算法 影响力图 其他游戏对象 角色信息 感知模拟
+          - 最优优先算法
+            - Dijkstra算法
+            - A*算法
+              - 计算开销
+              - 启发函数
+              - 格子情形
+              - 寻路网格情形
+        - 地图表示
+          - 可通行区域形式
+            - 路点网络
+            - 格子
+            - 寻路网格
+            - 凸多边形
+            - 稀疏体素八叉树（Sparse Voxel Octree）
+        - 进阶：寻路网格生成
+          - 体素化
+          - 区域分割
+            - 分水岭算法
+          - 网格生成
+          - 高级特性
+            - 多边形标记
+            - 分块
+            - 网格外链接（Off-mesh link）
+      - 群体模拟
+        - 微观模型：基于规则Boids
+        - 宏观模型：流场
+        - 介观模型
+          - 碰撞规避
+          - 基于力的模型
+          - 基于速度的模型
+          - VO
+          - RVO
+          - ORCA
+      - 转向行为
+        - 从路点到运动
+        - 转向行为类型
+          - 寻找/逃跑
+          - 速度匹配
+          - 对齐
+      - 感知
+        - 内部信息
+        - 外部信息
+          - 静态空间信息
+          - 动态空间信息
+        - 经典决策算法
+          - 影响力图
+        - 其他游戏对象
+        - 角色信息
+        - 感知模拟
       - 经典决策算法
-        - 有限状态机 层级有限状态机
-        - 行为树 DN3 执行节点/叶子节点 行为节点 条件节点 控制节点 序列节点Sequence 选择器Selector 并行节点Parallel 运行 实现优化 装饰节点 前置条件 黑板变量
+        - 有限状态机
+          - 层级有限状态机
+        - 行为树
+          - 执行节点/叶子节点
+            - 行为节点
+            - 条件节点
+          - 控制节点
+            - 序列节点（Sequence）
+            - 选择器（Selector）
+            - 并行节点（Parallel）
+          - 实现优化
+            - 装饰节点
+            - 前置条件
+            - 黑板变量
   - 工具链
-    - 界面(GUI) UI模式 即时模式（IMGUI） 保留模式（RMGUI） 架构模式 MVC MVP MVVM
-    - C++代码反射 代码分析 抽象语法树（AST） Clang 反射信息收集 Tags 代码生成 代码渲染 Mustache 运行时反射信息注册
-    - 常见编辑器 World Editor 架构 数据抽象 布局信息（Layout） 地形（Terrain） 环境（Environment） 多系统间的数据交互(eg.Rule System)
-    - 鲁棒性设计 Command模式 定义 UID 序列化与反序列化 基础command类型 Add Delete Update
-    - 软件架构 构 one架构 Stand-alone架构 架构 In Game架构 Editor Play in Editor
-    - 插件 架构 Plugin Manager Interfaces SDK 版本控制
-    - 设计 数据结构设计 数据定义 (Schema) 基础元素 继承 引用 两种设计方式 独立的schema定义文件 na定义文件 代码内部定义 不同场景下的引擎数据 引擎数据 Runtime Storage Tools
-    - 资产管理 资产格式 文本（Text) 二进制（Binary) 资产加载 序列化与反序列化 版本兼容 资产结构设计 资产引用 资产实例 数据拷贝 数据继承
-    - 协同编辑 资产拆分 按逻辑分层 按位置分块 One File One File Per Actor 在一个场 在一个场景内协同编辑 同步操作 分布式操作 分布式操作的一致性问题 锁 实例锁 资产锁 操作转换 操作转换(OT) 无冲突复 无冲突复制数据类型(CRDT) 工作流
+    - 界面（GUI）
+      - UI模式
+        - 即时模式（IMGUI）
+        - 保留模式（RMGUI）
+      - 架构模式
+        - MVC
+        - MVP
+        - MVVM
+    - C++代码反射
+      - 代码分析
+        - 抽象语法树（AST）
+        - Clang
+      - 反射信息收集
+        - Tags
+      - 代码生成
+        - 代码渲染
+        - Mustache
+      - 运行时反射信息注册
+    - 常见编辑器 - World Editor
+      - 架构
+      - 数据抽象
+        - 布局信息（Layout）
+        - 地形（Terrain）
+        - 环境（Environment）
+      - 多系统间的数据交互
+    - 鲁棒性设计
+      - Command模式
+        - 定义
+        - UID
+        - 序列化与反序列化
+      - 基础Command类型
+        - Add
+        - Delete
+        - Update
+    - 软件架构
+      - Stand-alone架构
+      - In Game架构
+      - Editor
+      - Play in Editor
+    - 插件系统
+      - 架构
+        - Plugin Manager
+        - Interfaces
+        - SDK
+      - 版本控制
+    - 数据结构设计
+      - 数据定义（Schema）
+        - 基础元素
+        - 继承
+        - 引用
+      - 两种设计方式
+        - 独立的schema定义文件
+        - 代码内部定义
+      - 不同场景下的引擎数据
+        - Runtime
+        - Storage
+    - 资产管理
+      - 资产格式
+        - 文本（Text）
+        - 二进制（Binary）
+      - 资产加载
+        - 序列化与反序列化
+        - 版本兼容
+      - 资产结构设计
+        - 资产引用
+        - 资产实例
+        - 数据拷贝
+        - 数据继承
+    - 协同编辑
+      - 资产拆分
+        - 按逻辑分层
+        - 按位置分块
+        - One File
+        - One File Per Actor
+      - 在一个场景内协同编辑
+      - 同步操作
+      - 分布式操作
+        - 一致性问题
+        - 锁
+        - 实例锁
+        - 资产锁
   - 网络
     - 网络同步
-      - 同步的效果 多端一致
-        - 快照同步 全量快照 增量快照 带宽对比 全量快照大 增量快照小 快照同步的缺点 随着游戏复杂，快照越来越大 带宽浪费 服务器压力大
-          - 越大
-      - 步的对比 状态同步和顿同步的对比
-        - 开发效率 帧同步
-          - 开发较快，debug较困难 状态同步 较慢
-        - 游戏响应 帧同步 较慢 状态同步 较快
-        - 跨平台 帧同步 相对复杂 状态同步 相对简单
-        - 网络带宽 帧同步 小 状态同步 大
-        - 支持玩家的数量 帧同步 倾向步 少量玩家 状态同步 大量玩家
-        - 作弊 帧同步
-          - 部分作弊较难避免，如透视 状态同步 可以对作做多种优化
-        - 回放文件大小 帧同步 小 状态同步 大
+      - 同步的效果
+        - 多端一致
+      - 状态同步和帧同步的对比
+        - 开发效率
+          - 帧同步
+        - 游戏响应
+          - 帧同步：较慢
+          - 状态同步：较快
+        - 跨平台
+          - 帧同步：相对复杂
+          - 状态同步：相对简单
+        - 网络带宽
+          - 帧同步：小
+          - 状态同步：大
+        - 支持玩家的数量
+          - 帧同步：倾向少量玩家
+          - 状态同步：大量玩家
+        - 作弊
+          - 帧同步
+        - 回放文件大小
+          - 帧同步：小
+          - 状态同步：大
       - 状态同步
-        - 流程的阶段拆分 Authorized eg.开火 Server 收到开火请求，同步给玩家 Replicated 模拟Authorized开火
-        - 状态分类 属性（血量，攻击力，地图坐标...） 事件（开火，移动..）
-        - CO 如何解决延迟 哑客户端（客户端不做预测） 发出移动请求 等待服务器回复 收到服务器回复，并作出移动 解决 客户端预测 客户端发送移动请求后，在收到服务器回复之前，就根据现有状态对未来的移动做出预测 收到服务器的包，预测是对的； 在收到服务器包后，什么也不用做，已经在正确的位置上了 预测错误 服务器和解
-      - 游戏 游戏同步举例
+        - 流程的阶段拆分
+          - Authorized
+            - eg. 开火
+          - Server
+            - 收到开火请求，同步给玩家
+          - Replicated
+            - 模拟Authorized开火
+        - 状态分类
+          - 属性（血量、攻击力、地图坐标等）
+          - 事件（开火、移动等）
+        - 如何解决延迟
+          - 哑客户端（客户端不做预测）
+            - 发出移动请求
+            - 等待服务器回复
+            - 收到服务器回复后移动
+          - 客户端预测
+            - 发送移动请求后，在收到服务器回复前，根据现有状态预测未来移动
+      - 游戏同步举例
         - 命中判定
           - 如何做判定
             - 延迟补偿（服务器判定）
-              - 延迟补偿 原因 因为有延迟，也就是开枪打中了敌人过去的位置 等到开枪事件到达服务器上，敌人已经不再开枪的位置了 在服务器上，回溯到你开枪时候敌人的真实位置做判定 一切以服务器为准：开枪的时间，回溯到开枪时候敌人的位 难点 如何回溯，回溯多久
-              - 延迟补偿的问题 拐角问题 拐角 进入拐角问题 Peekerandholder问题（探头打人） 解决（能够减缓，不能消除） 添加前摇 添加特效 客户端预测命中过程 不触发命中结果 命中结果等待服务器返回
-            - 客户端判定 基本流程 洁果 客户端判定命中结果 服务器做命中的校验 交验 优势 命中位置精准，像素级 象素级 问题 容易作
+              - 延迟补偿
+                - 原因
+                  - 有延迟时，开枪打中了敌人过去的位置
+                  - 开枪事件到达服务器时，敌人已不在开枪位置
+                - 解决方案
+                  - 在服务器上回溯到开枪时敌人的真实位置做判定
+                  - 一切以服务器为准
+              - 延迟补偿的问题
+                - 拐角问题
+                  - Peeker's Advantage（探头打人）
+                - 解决方案（能够减缓，不能消除）
+                  - 添加前摇
+                  - 添加特效
+                  - 客户端预测命中过程
+                  - 命中结果等待服务器返回
+            - 客户端判定
+              - 基本流程
+                - 客户端判定命中结果
+                - 服务器做命中的校验
+              - 优势
+                - 命中位置精准，像素级
+              - 问题
+                - 容易作弊
           - 复杂性
-            - 从开火到命中的流程 射击指令传输的网络状况 Hitscan Hitscan Weapons 瞬时完 瞬时完成射击操作 Projectil ProjectileWeapons 子弹有 子弹有弹道距离，重力等因素的影响
-            - 敌人的位置 故入的位直 收入位： 你看到的敌人的位置 服务器中敌人的位置 敌人客户端真实的位置
+            - 从开火到命中的流程
+              - 射击指令传输的网络状况
+              - Hitscan Weapons（瞬时完成射击操作）
+              - Projectile Weapons（子弹有弹道距离、重力等因素影响）
+            - 敌人的位置
+              - 你看到的敌人的位置
+              - 服务器中敌人的位置
+              - 敌人客户端真实的位置
         - 角色位移同步
-          - 插值 内插值&外插值
+          - 插值
+            - 内插值
             - 外插值
-              - 外插值的实现方法（航位推算） 投影速度混合法 使用归一化参数平滑运动轨迹 外插值的碰撞处理 发生碰撞的时刻让客户端接管物理模拟
-            - 内插值 实现方法 缓存玩家位置 利用缓存之间的位置进行插值 问题 物体移动速度较大时容易产生结果判断不一致
-          - 内插值和外插值的使用场景 内插值的使用场景 角色的移动不符合真实世界的物理模型加速度非常大 对于角色位置的精度要求很高 典型例子：FPS类游戏 外插值的使用场景、 游戏对象的移动遵守物理规则，加速度不会突然变化 游戏对象的移动速度会比较快，延迟会导致位置出现巨大的偏差 典型例子：载具系统，赛车游戏 混合使用 对载具系统采用外插值 对人物采用内插值
+          - 内插值和外插值的使用场景
+            - 内插值使用场景
+              - 角色移动不符合真实物理模型，加速度大
+              - 对角色位置精度要求高
+              - 典型例子：FPS类游戏
+            - 外插值使用场景
+              - 游戏对象移动遵守物理规则
           - 必要性
-            - 远程客户端发送来的同步数据存在传输延迟 受机器性能影响，远程客户端的数据同步频率低于渲染帧率 网络包到达时间会受网络抖动影响导致间隔不一致
-      - 帧同步 NG
+            - 插值的必要性
+              - 远程客户端发送来的同步数据存在传输延迟
+              - 受机器性能影响，远程客户端的数据同步频率低于渲染帧率
+              - 网络包到达时间会受网络抖动影响导致间隔不一致
+      - 帧同步
         - Deterministic Lockstep
-        - 作弊问题 多人PVP 双人PVP 帧同步本地有全部数据，透视外挂等
-        - 帧同步需要面对的挑战与解决：多端不一致问题 浮点数 随机数 容器与排序算法等 数学工具
+        - 作弊问题
+          - 多人PVP
+          - 双人PVP
+          - 帧同步本地有全部数据，透视外挂等
+        - 帧同步挑战：多端不一致问题
+          - 浮点数
+          - 随机数
+          - 容器与排序算法等
+          - 数学工具
         - Bucket Synchronization
-        - 带后和延迟问题 滞后和延达 缓冲池
-        - 不一致问题的定位方法 定时上传游戏数据checksum 定时上传游戏 如果不同玩家 如果不同玩家checksun不一致 上传游戏玩家 上传游戏玩家最近一段时间的游戏日志 通过对比进行定位
+        - 滞后和延迟问题
+          - 缓冲池
+        - 不一致问题的定位方法
+          - 定时上传游戏数据checksum
+          - 如果不同玩家checksum不一致
+            - 上传玩家最近一段时间的游戏日志
+            - 通过对比进行定位
         - 逻辑和渲染分离
-          - 不同帧率，独立运行 运行 独立运行 服务器可以跑逻辑帧 辑帧 断线重连加速 一定程度上防作弊
-        - 顿同步的优缺点 优点 低带宽 开发效率高 缺点 确定性实现困难 作弊（全图挂）问题较难避免 断线重连需要优化
+          - 逻辑和渲染分离的优势
+            - 不同帧率，独立运行
+            - 服务器可以跑逻辑帧
+            - 断线重连加速
+            - 一定程度上防作弊
+        - 帧同步的优缺点
+          - 优点
+            - 低带宽
+            - 开发效率高
+          - 缺点
+            - 确定性实现困难
+            - 作弊（全图挂）问题较难避免
+            - 断线重连需要优化
         - 掉线与重连问题
-          - 掉线重连的基本流程 掉线 重连 接收游戏开始到现在所有请求 追帧 重连的问题：耗时 重连的优化 大重连（客户端崩溃，内存中无数据） 通过快照，加速重连 客户端定时快照，关键帧快照，序列化到磁盘 服务器做定时快照（更换终端登录，用这种优化） 小重连（客户端未崩溃，内存中有数据） 客户端定时快照，关键帧快照
-      - 同步分类 同 快照同步 帧同步 状态同步
-    - 服务 服务器架构
+          - 掉线重连的基本流程
+            - 掉线
+            - 重连
+              - 接收游戏开始到现在所有请求
+              - 追帧
+            - 重连的问题：耗时
+            - 重连的优化
+              - 大重连（客户端崩溃）
+              - 通过快照加速重连
+              - 客户端定时快照，序列化到磁盘
+      - 同步分类
+        - 快照同步
+        - 帧同步
+        - 状态同步
+    - 服务器架构
       - 分布式系统
-        - 分式系统挑战 互斥问题 等性 故障与部分失效 不可靠的网络 分布式问题传染 一致性和共识算法 分布式事务 均衡 负载均衡 直机 随机 仑询 轮询 一致性哈希 发现 服务发现 Etcd Zookeeper
-      - 系统举例 大厅系统 用户管理系统 交易系统 社交系统 匹配系统 数据存储举例 Mysql Mongo Redis
-      - 可扩展 可扩展游戏世界 实 实现方案 Zoning 在大世界中将大量玩家分布 分布可能不是很均匀 Instancing 独立运行大量的游戏区域 减少拥挤、竞争 Replication 允许大量玩家高度聚集游玩
+        - 分布式系统挑战
+          - 互斥问题
+          - 故障与部分失效
+          - 不可靠的网络
+          - 一致性和共识算法
+          - 分布式事务
+          - 负载均衡
+            - 随机
+            - 轮询
+            - 一致性哈希
+          - 服务发现
+            - Etcd
+            - Zookeeper
+      - 系统举例
+        - 大厅系统
+        - 用户管理系统
+        - 交易系统
+        - 社交系统
+        - 匹配系统
+        - 数据存储举例
+          - MySQL
+          - MongoDB
+          - Redis
+      - 可扩展游戏世界
+        - Zoning
+          - 在大世界中将大量玩家分布
+          - 分布可能不均匀
+        - Instancing
+          - 独立运行大量游戏区域
+          - 减少拥挤、竞争
+        - Replication
+          - 允许大量玩家高度互动
     - 网络基础
       - 网络协议
         - Socket套接字
-          - UDP协议 无连接 不可靠 无流控 无拥塞控制
-          - TCP协议 面向连接 可靠、有序 流控 拥塞控制
-        - 基于UDP的可靠实时通信实现 自动重传(ARQ) 前向纠错(FEC)
-        - 网络分层 OSI七层模型 物理层 数据链路层 网络层 传输层 会话层 表示层 应用层
-      - 拓扑 网络拓扑
-        - P2P 特点
-          - 客户端之间互相通信 客户端承担游戏 优点 一个客户端挂掉 一个客户端挂掉，不影响其他玩家 不依赖于服务器 缺点 易作弊 需要良好的网络连接 玩家人数受限
-        - DS 特点
-          - 具有权威性 负责模拟整个游戏世界 负责分发数据给每个玩家 具备高性能 优点 反作弊易实现 能让更多的玩家一同游戏 网络状态 游戏响应不取决于每个玩家的网络状态 缺点 服务器花费较高 服务端承担更多的逻辑处理 服务器故障会影响到玩家
+          - UDP协议
+            - 无连接
+            - 不可靠
+            - 无流控
+            - 无拥塞控制
+          - TCP协议
+            - 面向连接
+            - 可靠、有序
+            - 流控
+            - 拥塞控制
+        - 基于UDP的可靠实时通信实现
+          - 自动重传(ARQ)
+          - 前向纠错(FEC)
+        - 网络分层
+          - OSI七层模型
+            - 物理层
+            - 数据链路层
+            - 网络层
+            - 传输层
+            - 会话层
+            - 表示层
+            - 应用层
+      - 网络拓扑
+        - P2P（Peer-to-Peer）特点
+          - P2P模式
+            - 客户端之间互相通信
+            - 客户端承担游戏逻辑
+            - 优点
+              - 一个客户端挂掉不影响其他玩家
+              - 不依赖于服务器
+            - 缺点
+              - 易作弊
+              - 需要良好的网络连接
+              - 玩家人数受限
+        - DS（Dedicated Server）特点
+          - 专用服务器（DS）特点
+            - 具有权威性
+            - 负责模拟整个游戏世界
+            - 负责分发数据给每个玩家
+            - 优点
+              - 反作弊易实现
+              - 能让更多玩家一同游戏
+              - 游戏响应不取决于每个玩家的网络状态
+            - 缺点
+              - 服务器花费较高
+              - 服务端承担更多逻辑
       - 通信方式
         - RPC
-          - Socket编程所面临的诸多问题 消息格式不统 封包和解包 消息分发处理 不是一种自然的编程模型
-          - 使用RPC的好处 集中式代码 易于编程 通信透明
-          - GIN RPC实现通信的基本原理 1.客户端发起函数调用（Clientfunctions） 2.客户端通过ClientStub进行消息的封装（序列化）及传输 3.Server端通过ServerStub(或者叫Skeleton)进行解码 并找到对应的函数进行相关处理，以及返回处理结果 4.ClientStub接收消息（反序列化），得到结果
-        - NetMessage 传统的消息机制 通常是异步通信
+          - Socket编程面临的诸多问题
+            - 消息格式不统一
+            - 封包和解包
+            - 消息分发处理
+            - 不是一种自然的编程模型
+          - 使用RPC的好处
+            - 集中式代码
+            - 易于编程
+            - 通信透明
+          - RPC实现通信的基本原理
+            - 客户端发起函数调用（Client Functions）
+            - 客户端通过ClientStub进行消息的封装（序列化）及传输
+            - Server端通过ServerStub（Skeleton）进行解码并找到对应函数处理，返回结果
+            - ClientStub接收消息（反序列化），得到结果
+        - NetMessage
+          - 传统的消息机制
+          - 通常是异步通信
       - 时钟同步
-        - 网络时间协议（NTP） 四个对应时间戳以及误差调整 1.客户端发送时间戳 2.服务端接收时间戳 3.服务端发送返回时间戳 4.客户端接收时间戳 NTP在计算传输时延的时候 默认上行延迟和下行延迟相等
-        - 基于流的消除高阶的时间同步协议 游戏开始的时候直接进行类似NTP的对时操作 利用多次对时消除误差过大项来达到时间差校准
-    - 游戏优化
-      - 反作弊 作弊手段分类 读取、篡改内存 读取网络包 Al Cheat 修改本地文件，贴图等
+        - 网络时间协议（NTP） - 四个时间戳及误差调整 1. 客户端发送时间戳 2. 服务端接收时间戳 3. 服务端发送返回时间戳 4. 客户端接收时间戳 - 计算传输时延：默认上行延迟和下行延迟相等
+        - 基于流的消除高阶的时间同步协议
+          - 游戏开始时直接进行类似NTP的对时操作
+          - 利用多次对时消除误差过大项来达到时间差校准
+    - 游戏网络优化
+      - 反作弊
+        - 作弊手段分类
+          - 读取、篡改内存
+          - 读取网络包
+          - AI Cheat
+          - 修改本地文件、贴图等
       - 带宽优化
-        - 数据压缩 对象更新频率 对象相关性 静态区域 AOI 暴力法 九宫格 十字链表 PVS
-      - 反作弊方法 混淆加密内存 加壳 本地文件校验 网络包加密 非对称加密分发密钥 对称加密传输数据 VAC&EAV 基于统计数据反作弊 检测已知的作弊程序
-  - 面回数据编程 与任务系统
+        - 带宽优化方法
+          - 数据压缩
+          - 对象更新频率
+          - 对象相关性
+          - 静态区域
+          - AOI（Area of Interest）
+            - 暴力法
+            - 九宫格
+            - 十字链表
+          - PVS（Potential Visibility Set）
+      - 反作弊方法
+        - 混淆加密内存
+        - 加壳
+        - 本地文件校验
+        - 网络包加密
+          - 非对称加密分发密钥
+          - 对称加密传输数据
+        - VAC&EAV
+        - 基于统计数据反作弊
+        - 检测已知的作弊程序
+  - 面向数据编程与任务系统
     - 基础架构
       - 如何构建游戏世界
-        - 复杂情况处理 组件间的依赖关系 GameObject间的依赖关系 事件的处理时机
+        - 复杂情况处理
+          - 组件间的依赖关系
+          - GameObject间的依赖关系
+          - 事件的处理时机
         - 游戏场景管理
-          - 空间数据结构 GameObject检索
-        - bject组成 Gameopjec 组件化 继承
-        - 界动起来 如何让游戏世界动起来
-          - 基于对象的更新Object-basedtick 基于组件的更新Component-basedtick 事件机制 （基本概念）
-        - 游戏世界组成 万物皆GameObject 动态物 静态物 环境 其它
-      - 戏引擎的分层架构 游戏引擎的
+          - 空间数据结构
+            - GameObject检索
+        - GameObject组成
+          - 组件化
+          - 继承
+        - 如何让游戏世界动起来
+          - 游戏更新方式
+            - 基于对象的更新（Object-based tick）
+            - 基于组件的更新（Component-based tick）
+            - 事件机制（基本概念）
+        - 游戏世界组成
+          - 万物皆GameObject
+          - 动态物
+          - 静态物
+          - 环境
+          - 其它
+      - 游戏引擎的分层架构
         - 工具层
         - 功能层
-          - GameTick控制各系统周期性更新 为游戏引擎提供核心功能模块 多核多线程架构趋势
+          - 功能层职责
+            - GameTick控制各系统周期性更新
+            - 为游戏引擎提供核心功能模块
+            - 多核多线程架构趋势
         - 资源层
-          - GUID 运行时资源管理 虚拟文件系统 Handle 资源生命周期 不同资源有不同的生命周期 尽可能减少资源的内存申请与释放 垃圾回收
+          - 资源层
+            - GUID
+            - 运行时资源管理
+            - 虚拟文件系统
+            - Handle
+            - 资源生命周期
+              - 不同资源有不同生命周期
+              - 尽可能减少资源的内存申请与释放
+            - 垃圾回收
         - 核心层
-          - 数学计算库 数据结构与容器 内存管理
+          - 核心层功能
+            - 数学计算库
+            - 数据结构与容器
+            - 内存管理
         - 平台层
-          - 硬件架构 图形API概念
-        - 为什么要分层 减少耦合，降低复杂度 上层无需知道下层的具体实现 应对不同的需求变化
+          - 平台层内容
+            - 硬件架构
+            - 图形API概念
+        - 为什么要分层
+          - 减少耦合，降低复杂度
+          - 上层无需知道下层的具体实现
+          - 应对不同的需求变化
     - 并行编程基础知识
-      - 多任务的类型 抢占式 非抢占式
-      - 并行 并行计算问题 易并 易并行问题 不易 不易并行问题 解决数据竞争 阻塞方法 锁原语 非阻塞方法 原子操作 内存序问题
-      - 行支持 操作系统的并行支持 程与线程 下文切换 线程的上下文切换
-    - 居编程 面向数据编程
-      - 原则思想 万物皆数据 指令也是数据 让代码与数据在内存中保持紧致
-      - 硬件环境 处理器-内存性能差距
-      - 缓存 局域性 LRU策略 缓存行 缓存行Cacheline 缓存缺 缓存缺失Cachemiss
-      - 其他编程范式 面向过程编程 面向对象编程 在游戏引擎中的问题
+      - 多任务的类型
+        - 抢占式
+        - 非抢占式
+      - 并行计算问题
+        - 易并行问题
+        - 不易并行问题
+        - 解决数据竞争
+          - 阻塞方法：锁原语
+          - 非阻塞方法：原子操作
+        - 内存序问题
+      - 操作系统的并行支持
+        - 进程与线程
+        - 线程的上下文切换
+    - 面向数据编程
+      - 原则思想
+        - 万物皆数据
+        - 指令也是数据
+        - 让代码与数据在内存中保持紧致
+      - 硬件环境
+        - 处理器-内存性能差距
+      - 缓存
+        - 局域性
+        - LRU策略
+        - 缓存行（Cacheline）
+        - 缓存缺失（Cache miss）
+      - 其他编程范式
+        - 面向过程编程
+        - 面向对象编程
+        - 在游戏引擎中的问题
       - SIMD
-      - 性能敏感数据排布 减少内存依赖 AOS vS. SOA
-      - 性能敏感编程 减少顺序依赖 false sharing 分支预测 基于存在性处理
-    - 实体-组件-系统 ECS
+      - 性能敏感数据排布
+        - 减少内存依赖
+        - AOS vs. SOA
+      - 性能敏感编程
+        - 减少顺序依赖
+        - 避免false sharing
+        - 分支预测优化
+        - 基于存在性处理
+    - 实体-组件-系统（ECS）
       - 实现举例
-        - UnrealMass框架 实体Entity实现 组件Component实现 组件C 碎片 Fragment 系统System实现 碎片请求 执行
-        - Unity DOTS Unity ECS 原型Archetype 数据排布 系统实现 UnityC#任务系统 原生容器 安全性系统 Burst编译器
+        - Unreal Mass框架
+          - 实体Entity实现
+          - 组件Component实现
+          - 组件碎片Fragment
+          - 系统System实现
+            - 碎片请求
+            - 执行
+        - Unity DOTS
+          - Unity ECS
+            - 原型Archetype
+            - 数据排布
+            - 系统实现
+          - Unity C#任务系统
+            - 原生容器
+            - 安全性系统
+          - Burst编译器
       - 回顾：基于组件的设计
-      - 概念 实体Entity 组件 Component 系统System
+      - ECS概念
+        - 实体Entity
+        - 组件Component
+        - 系统System
     - 游戏引擎并行框架
-      - Threadfork-join taroikjon
-      - Unreal并行框架 Named Thread与Worker Thread Thread Name TaskGraph
+      - Thread fork-join
+        - taroikjon
+      - Unreal并行框架
+        - Named Thread与Worker Thread
+        - Thread Name
+        - TaskGraph
       - Job System
         - 基于Fiber的JobSystem
           - Job系统的利弊分析
-          - Job调度 Job队列 全局队列 线程局部队列 两种访问方式 先进先出 后进先出 Job依赖 Job Stealing
-          - 基本构成 Job为实际任务 Fiber提供任务执行的上下文 WorkThread是实际执行的单元
+          - Job调度
+            - Job队列
+              - 全局队列
+              - 线程局部队列
+            - 访问方式
+              - 先进先出
+              - 后进先出
+            - Job依赖
+            - Job Stealing
+          - 基本构成
+            - Job为实际任务
+            - Fiber提供任务执行的上下文
+            - WorkThread是实际执行的单元
           - WorkThread数量与CPU核数匹配
-        - 协程介绍 协程与线程的对比 协程实现方式 有栈协程 无栈协程
+        - 协程介绍
+          - 协程与线程的对比
+          - 协程实现方式
+            - 有栈协程
+            - 无栈协程
       - Fixed-thread

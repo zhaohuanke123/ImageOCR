@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Engine 思维导图</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Marked.js for Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    :root {
+      --bg-deep: #0a0a0f;
+      --bg-card: #12121a;
+      --bg-card-hover: #1a1a25;
+      --border: #2a2a3a;
+      --border-glow: #3d3d5c;
+      --text-primary: #e8e8f0;
+      --text-secondary: #9090a8;
+      --text-muted: #606078;
+      --accent-cyan: #00d4aa;
+      --accent-purple: #8b5cf6;
+      --accent-blue: #3b82f6;
+      --accent-orange: #f59e0b;
+      --accent-pink: #ec4899;
+      --gradient-1: linear-gradient(135deg, #00d4aa 0%, #3b82f6 100%);
+      --gradient-2: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+      --shadow-glow: 0 0 40px rgba(0, 212, 170, 0.15);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* Background Pattern */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 20%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 50px,
+          rgba(255, 255, 255, 0.01) 50px,
+          rgba(255, 255, 255, 0.01) 51px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 50px,
+          rgba(255, 255, 255, 0.01) 50px,
+          rgba(255, 255, 255, 0.01) 51px
+        );
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Layout */
+    .app {
+      display: flex;
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 320px;
+      background: rgba(18, 18, 26, 0.95);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(20px);
+    }
+
+    .sidebar-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gradient-1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px 12px 44px;
+      background: var(--bg-deep);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1);
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-box::before {
+      content: '🔍';
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      opacity: 0.5;
+    }
+
+    /* Tree View */
+    .tree-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+    }
+
+    .tree-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .tree-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .tree-container::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 3px;
+    }
+
+    .tree-node {
+      user-select: none;
+    }
+
+    .tree-node-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s;
+      margin-bottom: 2px;
+    }
+
+    .tree-node-header:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .tree-node-header.active {
+      background: rgba(0, 212, 170, 0.1);
+      border-left: 2px solid var(--accent-cyan);
+    }
+
+    .tree-toggle {
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+
+    .tree-toggle.expanded {
+      transform: rotate(90deg);
+    }
+
+    .tree-toggle.hidden {
+      visibility: hidden;
+    }
+
+    .tree-label {
+      flex: 1;
+      font-size: 13px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tree-node-header.active .tree-label {
+      color: var(--text-primary);
+    }
+
+    .tree-children {
+      padding-left: 20px;
+      display: none;
+    }
+
+    .tree-children.expanded {
+      display: block;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Toolbar */
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(18, 18, 26, 0.8);
+      backdrop-filter: blur(20px);
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb-item {
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+
+    .breadcrumb-item:hover {
+      color: var(--accent-cyan);
+    }
+
+    .breadcrumb-item.current {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-glow);
+      color: var(--text-primary);
+    }
+
+    .btn.primary {
+      background: var(--gradient-1);
+      border: none;
+      color: var(--bg-deep);
+      font-weight: 500;
+    }
+
+    .btn.primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* Mindmap Canvas */
+    .mindmap-container {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mindmap-canvas {
+      position: absolute;
+      inset: 0;
+      cursor: grab;
+    }
+
+    .mindmap-canvas:active {
+      cursor: grabbing;
+    }
+
+    .mindmap-content {
+      position: absolute;
+      transform-origin: 0 0;
+      will-change: transform;
+    }
+
+    /* Node Card */
+    .node-card {
+      position: absolute;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      min-width: 200px;
+      max-width: 400px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .node-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow), 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .node-card.active {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 2px rgba(0, 212, 170, 0.2), var(--shadow-glow);
+    }
+
+    .node-card.root {
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+      border-color: var(--accent-cyan);
+      min-width: 280px;
+    }
+
+    .node-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .node-card.root .node-title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .node-content {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .node-content ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .node-content li {
+      margin: 4px 0;
+    }
+
+    .node-content code {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(0, 212, 170, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .node-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      background: rgba(139, 92, 246, 0.15);
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      color: var(--accent-purple);
+      margin-top: 12px;
+    }
+
+    /* Connection Lines */
+    .connections-svg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .connection-path {
+      fill: none;
+      stroke: var(--border);
+      stroke-width: 2;
+      opacity: 0.5;
+    }
+
+    .connection-path.highlight {
+      stroke: var(--accent-cyan);
+      opacity: 1;
+    }
+
+    /* Zoom Controls */
+    .zoom-controls {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .zoom-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .zoom-btn:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
+    }
+
+    .zoom-level {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Stats */
+    .stats {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      display: flex;
+      gap: 16px;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: var(--accent-cyan);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+    }
+
+    /* Loading */
+    .loading {
+      position: fixed;
+      inset: 0;
+      background: var(--bg-deep);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: opacity 0.5s;
+    }
+
+    .loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loading-spinner {
+      width: 60px;
+      height: 60px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent-cyan);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .loading-text {
+      margin-top: 24px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: fixed;
+        left: -320px;
+        z-index: 100;
+        transition: left 0.3s;
+      }
+
+      .sidebar.open {
+        left: 0;
+      }
+
+      .stats {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">加载思维导图中...</div>
+  </div>
+
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">G</div>
+          <span class="logo-text">Game Engine</span>
+        </div>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="搜索节点...">
+        </div>
+      </div>
+      <div class="tree-container" id="treeContainer">
+        <!-- Tree will be rendered here -->
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <div class="breadcrumb" id="breadcrumb">
+            <span class="breadcrumb-item current">Game Engine</span>
+          </div>
+        </div>
+        <div class="toolbar-right">
+          <button class="btn" id="expandAllBtn">
+            <span>📖</span>
+            <span>展开全部</span>
+          </button>
+          <button class="btn" id="collapseAllBtn">
+            <span>📕</span>
+            <span>折叠全部</span>
+          </button>
+          <button class="btn primary" id="centerBtn">
+            <span>🎯</span>
+            <span>居中</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mindmap-container" id="mindmapContainer">
+        <div class="mindmap-canvas" id="mindmapCanvas">
+          <svg class="connections-svg" id="connectionsSvg"></svg>
+          <div class="mindmap-content" id="mindmapContent">
+            <!-- Nodes will be rendered here -->
+          </div>
+        </div>
+
+        <!-- Zoom Controls -->
+        <div class="zoom-controls">
+          <button class="zoom-btn" id="zoomInBtn">+</button>
+          <div class="zoom-level" id="zoomLevel">100%</div>
+          <button class="zoom-btn" id="zoomOutBtn">−</button>
+          <button class="zoom-btn" id="resetZoomBtn">⟲</button>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-value" id="totalNodes">0</span>
+            <span class="stat-label">节点</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" id="maxDepth">0</span>
+            <span class="stat-label">层级</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Data
+    let graphData = null;
+    let nodesById = {};
+    let rootNodes = [];
+    let activeNodeId = null;
+    let expandedNodes = new Set();
+
+    // View state
+    let scale = 1;
+    let offsetX = 0;
+    let offsetY = 0;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+
+    // Layout constants
+    const NODE_WIDTH = 280;
+    const NODE_HEIGHT = 100;
+    const HORIZONTAL_GAP = 80;
+    const VERTICAL_GAP = 30;
+
+    // Node positions
+    let nodePositions = {};
+
+    // Initialize
+    async function init() {
+      try {
+        // Load data
+        const response = await fetch('graph.json');
+        graphData = await response.json();
+
+        // Build lookup
+        graphData.nodes.forEach(node => {
+          nodesById[node.id] = node;
+        });
+
+        // Find root nodes
+        rootNodes = graphData.nodes.filter(n => !n.parent_id);
+
+        // Calculate stats
+        document.getElementById('totalNodes').textContent = graphData.nodes.length;
+        document.getElementById('maxDepth').textContent = calculateMaxDepth();
+
+        // Expand root by default
+        if (rootNodes.length > 0) {
+          expandedNodes.add(rootNodes[0].id);
+        }
+
+        // Render
+        renderTree();
+        calculateLayout();
+        renderMindmap();
+
+        // Setup interactions
+        setupInteractions();
+
+        // Hide loading
+        document.getElementById('loading').classList.add('hidden');
+      } catch (error) {
+        console.error('Failed to load data:', error);
+        document.querySelector('.loading-text').textContent = '加载失败: ' + error.message;
+      }
+    }
+
+    // Calculate max depth
+    function calculateMaxDepth() {
+      let maxDepth = 0;
+      const depths = {};
+
+      function getDepth(nodeId, visited = new Set()) {
+        if (depths[nodeId] !== undefined) return depths[nodeId];
+        if (visited.has(nodeId)) return 1; // Cycle detected
+
+        visited.add(nodeId);
+        const node = nodesById[nodeId];
+        if (!node || !node.parent_id) {
+          depths[nodeId] = 1;
+          return 1;
+        }
+        depths[nodeId] = getDepth(node.parent_id, visited) + 1;
+        return depths[nodeId];
+      }
+
+      graphData.nodes.forEach(n => {
+        maxDepth = Math.max(maxDepth, getDepth(n.id));
+      });
+
+      return maxDepth;
+    }
+
+    // Render tree sidebar
+    function renderTree() {
+      const container = document.getElementById('treeContainer');
+      container.innerHTML = '';
+
+      rootNodes.forEach(root => {
+        container.appendChild(createTreeNode(root, 0));
+      });
+    }
+
+    function createTreeNode(node, depth, visited = new Set()) {
+      // Prevent cycles
+      if (visited.has(node.id)) {
+        return document.createElement('div'); // Empty div for cycle
+      }
+      visited.add(node.id);
+
+      const div = document.createElement('div');
+      div.className = 'tree-node';
+      div.dataset.nodeId = node.id;
+
+      const hasChildren = node.children && node.children.length > 0;
+      const isExpanded = expandedNodes.has(node.id);
+
+      const header = document.createElement('div');
+      header.className = 'tree-node-header' + (activeNodeId === node.id ? ' active' : '');
+      header.innerHTML = `
+        <span class="tree-toggle ${isExpanded ? 'expanded' : ''} ${!hasChildren ? 'hidden' : ''}">▶</span>
+        <span class="tree-label">${getFirstLine(node.text)}</span>
+      `;
+      header.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (e.target.classList.contains('tree-toggle')) {
+          toggleNode(node.id);
+        } else {
+          selectNode(node.id);
+        }
+      });
+
+      div.appendChild(header);
+
+      if (hasChildren) {
+        const childrenDiv = document.createElement('div');
+        childrenDiv.className = 'tree-children' + (isExpanded ? ' expanded' : '');
+        node.children.forEach(childId => {
+          const child = nodesById[childId];
+          if (child && !visited.has(childId)) {
+            childrenDiv.appendChild(createTreeNode(child, depth + 1, new Set(visited)));
+          }
+        });
+        div.appendChild(childrenDiv);
+      }
+
+      return div;
+    }
+
+    function getFirstLine(text) {
+      return text.split('\n')[0];
+    }
+
+    function toggleNode(nodeId) {
+      if (expandedNodes.has(nodeId)) {
+        expandedNodes.delete(nodeId);
+      } else {
+        expandedNodes.add(nodeId);
+      }
+      renderTree();
+      renderMindmap();
+    }
+
+    function selectNode(nodeId) {
+      activeNodeId = nodeId;
+      renderTree();
+      renderMindmap();
+      centerOnNode(nodeId);
+      updateBreadcrumb(nodeId);
+    }
+
+    function updateBreadcrumb(nodeId) {
+      const path = [];
+      const visited = new Set();
+      let current = nodesById[nodeId];
+      while (current && !visited.has(current.id)) {
+        visited.add(current.id);
+        path.unshift(current);
+        current = nodesById[current.parent_id];
+      }
+
+      const breadcrumb = document.getElementById('breadcrumb');
+      breadcrumb.innerHTML = path.map((n, i) => {
+        const isLast = i === path.length - 1;
+        return `<span class="breadcrumb-item ${isLast ? 'current' : ''}" data-node-id="${n.id}">${getFirstLine(n.text)}</span>`;
+      }).join('<span>›</span>');
+
+      // Add click handlers
+      breadcrumb.querySelectorAll('.breadcrumb-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const id = item.dataset.nodeId;
+          if (id) selectNode(id);
+        });
+      });
+    }
+
+    // Calculate layout positions
+    function calculateLayout() {
+      nodePositions = {};
+
+      // First pass: calculate subtree heights (bottom-up)
+      const subtreeHeights = {};
+
+      function calculateSubtreeHeight(nodeId, visited = new Set()) {
+        if (subtreeHeights[nodeId] !== undefined) return subtreeHeights[nodeId];
+        if (visited.has(nodeId)) return 0;
+        visited.add(nodeId);
+
+        const node = nodesById[nodeId];
+        if (!node) return 0;
+
+        const nodeHeight = estimateNodeHeight(node);
+        const hasChildren = node.children && node.children.length > 0 && expandedNodes.has(node.id);
+
+        if (!hasChildren) {
+          subtreeHeights[nodeId] = nodeHeight + VERTICAL_GAP;
+          return subtreeHeights[nodeId];
+        }
+
+        let totalHeight = 0;
+        node.children.forEach(childId => {
+          if (!visited.has(childId)) {
+            totalHeight += calculateSubtreeHeight(childId, new Set(visited));
+          }
+        });
+
+        subtreeHeights[nodeId] = Math.max(nodeHeight + VERTICAL_GAP, totalHeight);
+        return subtreeHeights[nodeId];
+      }
+
+      // Calculate all subtree heights
+      graphData.nodes.forEach(n => calculateSubtreeHeight(n.id));
+
+      // Second pass: assign positions (top-down)
+      function layoutNode(node, x, startY, visited = new Set()) {
+        if (visited.has(node.id)) return;
+        visited.add(node.id);
+
+        const nodeHeight = estimateNodeHeight(node);
+        const subtreeHeight = subtreeHeights[node.id] || nodeHeight + VERTICAL_GAP;
+        const hasChildren = node.children && node.children.length > 0 && expandedNodes.has(node.id);
+
+        // Center this node in its allocated space
+        const centerY = startY + (subtreeHeight - nodeHeight) / 2;
+
+        nodePositions[node.id] = {
+          x: x,
+          y: centerY,
+          width: NODE_WIDTH,
+          height: nodeHeight
+        };
+
+        if (hasChildren) {
+          const childX = x + NODE_WIDTH + HORIZONTAL_GAP;
+          let childY = startY;
+
+          node.children.forEach(childId => {
+            const child = nodesById[childId];
+            if (child && !visited.has(childId)) {
+              const childSubtreeHeight = subtreeHeights[childId] || estimateNodeHeight(child) + VERTICAL_GAP;
+              layoutNode(child, childX, childY, new Set(visited));
+              childY += childSubtreeHeight;
+            }
+          });
+        }
+      }
+
+      let globalY = 100;
+      rootNodes.forEach(root => {
+        const height = subtreeHeights[root.id] || estimateNodeHeight(root) + VERTICAL_GAP;
+        layoutNode(root, 100, globalY);
+        globalY += height + VERTICAL_GAP * 2;
+      });
+    }
+
+    function estimateNodeHeight(node) {
+      const lines = node.text.split('\n');
+      const baseHeight = 60;
+      const lineHeight = 22;
+      return Math.min(Math.max(baseHeight + lines.length * lineHeight, 80), 300);
+    }
+
+    // Render mindmap
+    function renderMindmap() {
+      const container = document.getElementById('mindmapContent');
+      container.innerHTML = '';
+
+      const svg = document.getElementById('connectionsSvg');
+      svg.innerHTML = '';
+
+      function renderNode(node, visited = new Set()) {
+        const pos = nodePositions[node.id];
+        if (!pos || visited.has(node.id)) return;
+        visited.add(node.id);
+
+        // Render children first (for connections)
+        if (node.children && expandedNodes.has(node.id)) {
+          node.children.forEach(childId => {
+            const child = nodesById[childId];
+            if (child && nodePositions[childId] && !visited.has(childId)) {
+              renderNode(child, visited);
+
+              // Draw connection
+              const childPos = nodePositions[childId];
+              const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+              const startX = pos.x + pos.width;
+              const startY = pos.y + pos.height / 2;
+              const endX = childPos.x;
+              const endY = childPos.y + childPos.height / 2;
+              const midX = (startX + endX) / 2;
+
+              path.setAttribute('d', `M ${startX} ${startY} C ${midX} ${startY}, ${midX} ${endY}, ${endX} ${endY}`);
+              path.setAttribute('class', 'connection-path' + (activeNodeId === node.id || activeNodeId === childId ? ' highlight' : ''));
+              svg.appendChild(path);
+            }
+          });
+        }
+
+        // Create node card
+        const card = document.createElement('div');
+        card.className = 'node-card' +
+          (node.id === rootNodes[0]?.id ? ' root' : '') +
+          (activeNodeId === node.id ? ' active' : '');
+        card.style.left = pos.x + 'px';
+        card.style.top = pos.y + 'px';
+        card.style.width = pos.width + 'px';
+        card.dataset.nodeId = node.id;
+
+        const lines = node.text.split('\n');
+        const title = lines[0];
+        const content = lines.slice(1).join('\n');
+
+        card.innerHTML = `
+          <div class="node-title">${escapeHtml(title)}</div>
+          ${content ? `<div class="node-content">${renderMarkdown(content)}</div>` : ''}
+          ${node.children && node.children.length > 0 ?
+            `<div class="node-badge">📁 ${node.children.length} 个子节点</div>` : ''}
+        `;
+
+        card.addEventListener('click', () => selectNode(node.id));
+        container.appendChild(card);
+      }
+
+      rootNodes.forEach(root => renderNode(root, new Set()));
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function renderMarkdown(text) {
+      // Simple markdown rendering for lists
+      return marked.parse(text);
+    }
+
+    // Center on node
+    function centerOnNode(nodeId) {
+      const pos = nodePositions[nodeId];
+      if (!pos) return;
+
+      const container = document.getElementById('mindmapContainer');
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+
+      offsetX = containerWidth / 2 - pos.x - pos.width / 2;
+      offsetY = containerHeight / 2 - pos.y - pos.height / 2;
+
+      updateTransform();
+    }
+
+    // Setup interactions
+    function setupInteractions() {
+      const canvas = document.getElementById('mindmapCanvas');
+      const container = document.getElementById('mindmapContainer');
+
+      // Pan
+      canvas.addEventListener('mousedown', (e) => {
+        if (e.target === canvas || e.target.classList.contains('connections-svg')) {
+          isDragging = true;
+          dragStartX = e.clientX - offsetX;
+          dragStartY = e.clientY - offsetY;
+        }
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+          offsetX = e.clientX - dragStartX;
+          offsetY = e.clientY - dragStartY;
+          updateTransform();
+        }
+      });
+
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+
+      // Zoom
+      container.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? 0.9 : 1.1;
+        const newScale = Math.max(0.2, Math.min(2, scale * delta));
+
+        // Zoom towards mouse position
+        const rect = container.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        offsetX = mouseX - (mouseX - offsetX) * (newScale / scale);
+        offsetY = mouseY - (mouseY - offsetY) * (newScale / scale);
+        scale = newScale;
+
+        updateTransform();
+      });
+
+      // Zoom buttons
+      document.getElementById('zoomInBtn').addEventListener('click', () => {
+        scale = Math.min(2, scale * 1.2);
+        updateTransform();
+      });
+
+      document.getElementById('zoomOutBtn').addEventListener('click', () => {
+        scale = Math.max(0.2, scale / 1.2);
+        updateTransform();
+      });
+
+      document.getElementById('resetZoomBtn').addEventListener('click', () => {
+        scale = 1;
+        offsetX = 0;
+        offsetY = 0;
+        updateTransform();
+      });
+
+      document.getElementById('centerBtn').addEventListener('click', () => {
+        if (rootNodes.length > 0) {
+          centerOnNode(rootNodes[0].id);
+        }
+      });
+
+      // Expand/Collapse all
+      document.getElementById('expandAllBtn').addEventListener('click', () => {
+        graphData.nodes.forEach(n => expandedNodes.add(n.id));
+        renderTree();
+        calculateLayout();
+        renderMindmap();
+      });
+
+      document.getElementById('collapseAllBtn').addEventListener('click', () => {
+        expandedNodes.clear();
+        if (rootNodes.length > 0) {
+          expandedNodes.add(rootNodes[0].id);
+        }
+        renderTree();
+        calculateLayout();
+        renderMindmap();
+      });
+
+      // Search
+      document.getElementById('searchInput').addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        filterTree(query);
+      });
+    }
+
+    function updateTransform() {
+      const content = document.getElementById('mindmapContent');
+      const svg = document.getElementById('connectionsSvg');
+      content.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+      svg.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+      document.getElementById('zoomLevel').textContent = Math.round(scale * 100) + '%';
+    }
+
+    function filterTree(query) {
+      const nodes = document.querySelectorAll('.tree-node');
+      nodes.forEach(node => {
+        const label = node.querySelector('.tree-label').textContent.toLowerCase();
+        if (!query || label.includes(query)) {
+          node.style.display = '';
+          // Expand parents
+          let parent = node.parentElement;
+          while (parent) {
+            if (parent.classList.contains('tree-children')) {
+              parent.classList.add('expanded');
+            }
+            parent = parent.parentElement;
+          }
+        } else {
+          node.style.display = 'none';
+        }
+      });
+    }
+
+    // Start
+    init();
+  </script>
+</body>
+</html>
