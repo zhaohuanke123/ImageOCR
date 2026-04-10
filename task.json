@@ -493,7 +493,7 @@
         "考虑使用 WebGL 进行图像处理",
         "测试不同分辨率图片的加载和渲染性能"
       ],
-      "passes": false,
+      "passes": true,
       "dependencies": [
         7,
         24
