@@ -10081,12 +10081,12 @@
       "confidence": 0.9950060725212098,
       "parent_id": null,
       "children": [
-        "node_0283",
         "node_0266",
+        "node_0283",
         "node_0293",
         "ocr_manual_1775781475128_vz42fesem",
-        "node_0315",
         "node_0314",
+        "node_0315",
         "node_0313",
         "node_0298"
       ]

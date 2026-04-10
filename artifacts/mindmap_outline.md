@@ -1,108 +1,4 @@
 - Game Engine
-  - 动画系统
-    - 动画技术基础
-      - 游戏中的2D动画技术
-        - 精灵动画
-        - Live2D
-        - 2D Skinned Animation
-        - 动画混合
-      - 游戏中的3D动画技术
-        - DoF（Degrees of Freedom）
-        - Rigid Hierarchical Animation
-        - Per-vertex Animation
-      - 2D旋转中的数学
-      - 关节姿势（Joint Pose）
-        - 旋转（Orientation）
-        - 位置（Position）
-        - 缩放（Scale）
-        - 仿射矩阵：局部空间到物体空间
-        - 插值
-        - 蒙皮
-          - 单关节蒙皮
-          - 蒙皮矩阵
-          - 蒙皮矩阵调色板
-          - 多骨骼
-        - 在内存中存储骨骼
-      - 蒙皮动画实现
-        - 坐标空间转换
-        - 生物的骨骼结构
-          - 骨骼
-          - 关节
-          - 根骨骼
-        - 骨骼绑定
-        - 姿势
-          - 绑定姿势
-          - T-pose
-          - A-pose
-      - 动画DCC流程
-        - 网格制作
-        - 网格调整
-        - 骨骼绑定
-        - 添加GamePlay关节
-        - 添加根骨骼
-        - 蒙皮
-        - 动画制作
-        - 动画导出
-      - 3D旋转中的数学
-        - 欧拉角
-          - 顺序依赖
-          - 万向节死锁
-          - 难以插值、组合
-        - 四元数
-          - 2D旋转与复数
-          - 四元数的定义
-          - 欧拉角到四元数的转换
-          - 四元数进行旋转
-      - 动画压缩
-        - 动画片段存储
-          - 动画数据尺寸
-          - 动画轨道（track）数据之间的差别
-          - 关节动画数据之间的差别
-        - DoF缩减
-        - 关键帧
-          - 关键帧提取
-          - 浮点数压缩
-          - 四元数压缩
-        - 误差处理
-          - 误差累积
-          - 精度衡量
-          - 误差补偿
-        - 动画重定向
-    - 动画技术进阶
-      - 动画混合
-        - LERP
-        - LCNF
-        - 混合权重的计算
-        - 混合时间轴对齐
-      - 混合空间（BlendSpace）
-        - 1D混合空间
-        - 2D混合空间
-        - 局部混合（Skeleton Masked Blending）
-        - 叠加混合（Additive Blending）
-      - 动画状态机
-        - ASM的定义
-        - Cross Fades
-        - 分层ASM
-      - 动画混合树
-        - Blend Tree
-          - LERP blend node
-          - additive blend node
-        - 动画混合树的节点
-        - 动画树的控制信号
-      - 反向动力学（Inverse Kinematics）
-        - 基础概念
-          - 终端效应器（End-Effectors）
-        - IK vs FK
-        - Two Bone IK
-        - 多关节IK
-          - 关节约束
-        - 启发式算法
-          - 循环坐标下降算法（CCD）
-          - FABRIK
-          - FABRIK的约束
-        - 多终端效应器难题
-        - 雅可比矩阵法
-        - IK前沿
   - 渲染
     - GPU架构
       - Immediate Mode Rendering（立即模式渲染）
@@ -497,6 +393,111 @@
           - 步骤1：从光源处出发，向光照的方向看去，构造光照空间，渲染需要产生阴影的物体，将深度写入ZBuffer
           - 步骤2：正常渲染物体，根据世界坐标变换到光照空间坐标，计算该点在Shadow Map中的深度值并比较
           - 相关技术：Shadow Bias、Cascade Shadow Map、Variance Shadow Map、PCF、PCSS
+  - 动画系统
+    - 补充
+    - 动画技术基础
+      - 游戏中的2D动画技术
+        - 精灵动画
+        - Live2D
+        - 2D Skinned Animation
+        - 动画混合
+      - 游戏中的3D动画技术
+        - DoF（Degrees of Freedom）
+        - Rigid Hierarchical Animation
+        - Per-vertex Animation
+      - 2D旋转中的数学
+      - 关节姿势（Joint Pose）
+        - 旋转（Orientation）
+        - 位置（Position）
+        - 缩放（Scale）
+        - 仿射矩阵：局部空间到物体空间
+        - 插值
+        - 蒙皮
+          - 单关节蒙皮
+          - 蒙皮矩阵
+          - 蒙皮矩阵调色板
+          - 多骨骼
+        - 在内存中存储骨骼
+      - 蒙皮动画实现
+        - 坐标空间转换
+        - 生物的骨骼结构
+          - 骨骼
+          - 关节
+          - 根骨骼
+        - 骨骼绑定
+        - 姿势
+          - 绑定姿势
+          - T-pose
+          - A-pose
+      - 动画DCC流程
+        - 网格制作
+        - 网格调整
+        - 骨骼绑定
+        - 添加GamePlay关节
+        - 添加根骨骼
+        - 蒙皮
+        - 动画制作
+        - 动画导出
+      - 3D旋转中的数学
+        - 欧拉角
+          - 顺序依赖
+          - 万向节死锁
+          - 难以插值、组合
+        - 四元数
+          - 2D旋转与复数
+          - 四元数的定义
+          - 欧拉角到四元数的转换
+          - 四元数进行旋转
+      - 动画压缩
+        - 动画片段存储
+          - 动画数据尺寸
+          - 动画轨道（track）数据之间的差别
+          - 关节动画数据之间的差别
+        - DoF缩减
+        - 关键帧
+          - 关键帧提取
+          - 浮点数压缩
+          - 四元数压缩
+        - 误差处理
+          - 误差累积
+          - 精度衡量
+          - 误差补偿
+        - 动画重定向
+    - 动画技术进阶
+      - 动画混合
+        - LERP
+        - LCNF
+        - 混合权重的计算
+        - 混合时间轴对齐
+      - 混合空间（BlendSpace）
+        - 1D混合空间
+        - 2D混合空间
+        - 局部混合（Skeleton Masked Blending）
+        - 叠加混合（Additive Blending）
+      - 动画状态机
+        - ASM的定义
+        - Cross Fades
+        - 分层ASM
+      - 动画混合树
+        - Blend Tree
+          - LERP blend node
+          - additive blend node
+        - 动画混合树的节点
+        - 动画树的控制信号
+      - 反向动力学（Inverse Kinematics）
+        - 基础概念
+          - 终端效应器（End-Effectors）
+        - IK vs FK
+        - Two Bone IK
+        - 多关节IK
+          - 关节约束
+        - 启发式算法
+          - 循环坐标下降算法（CCD）
+          - FABRIK
+          - FABRIK的约束
+        - 多终端效应器难题
+        - 雅可比矩阵法
+        - IK前沿
   - 物理系统
     - 物理系统应用
       - 角色控制器
@@ -688,6 +689,88 @@
         - 采样
         - 量化
         - 编码
+  - 工具链
+    - 界面（GUI）
+      - UI模式
+        - 即时模式（IMGUI）
+        - 保留模式（RMGUI）
+      - 架构模式
+        - MVC
+        - MVP
+        - MVVM
+    - C++代码反射
+      - 代码分析
+        - 抽象语法树（AST）
+        - Clang
+      - 反射信息收集
+        - Tags
+      - 代码生成
+        - 代码渲染
+        - Mustache
+      - 运行时反射信息注册
+    - 常见编辑器 - World Editor
+      - 架构
+      - 数据抽象
+        - 布局信息（Layout）
+        - 地形（Terrain）
+        - 环境（Environment）
+      - 多系统间的数据交互
+    - 鲁棒性设计
+      - Command模式
+        - 定义
+        - UID
+        - 序列化与反序列化
+      - 基础Command类型
+        - Add
+        - Delete
+        - Update
+    - 软件架构
+      - Stand-alone架构
+      - In Game架构
+      - Editor
+      - Play in Editor
+    - 插件系统
+      - 架构
+        - Plugin Manager
+        - Interfaces
+        - SDK
+      - 版本控制
+    - 数据结构设计
+      - 数据定义（Schema）
+        - 基础元素
+        - 继承
+        - 引用
+      - 两种设计方式
+        - 独立的schema定义文件
+        - 代码内部定义
+      - 不同场景下的引擎数据
+        - Runtime
+        - Storage
+    - 资产管理
+      - 资产格式
+        - 文本（Text）
+        - 二进制（Binary）
+      - 资产加载
+        - 序列化与反序列化
+        - 版本兼容
+      - 资产结构设计
+        - 资产引用
+        - 资产实例
+        - 数据拷贝
+        - 数据继承
+    - 协同编辑
+      - 资产拆分
+        - 按逻辑分层
+        - 按位置分块
+        - One File
+        - One File Per Actor
+      - 在一个场景内协同编辑
+      - 同步操作
+      - 分布式操作
+        - 一致性问题
+        - 锁
+        - 实例锁
+        - 资产锁
   - GamePlay
     - 复杂的游戏性及其基本要素
       - 可视化脚本
@@ -864,88 +947,6 @@
             - 装饰节点
             - 前置条件
             - 黑板变量
-  - 工具链
-    - 界面（GUI）
-      - UI模式
-        - 即时模式（IMGUI）
-        - 保留模式（RMGUI）
-      - 架构模式
-        - MVC
-        - MVP
-        - MVVM
-    - C++代码反射
-      - 代码分析
-        - 抽象语法树（AST）
-        - Clang
-      - 反射信息收集
-        - Tags
-      - 代码生成
-        - 代码渲染
-        - Mustache
-      - 运行时反射信息注册
-    - 常见编辑器 - World Editor
-      - 架构
-      - 数据抽象
-        - 布局信息（Layout）
-        - 地形（Terrain）
-        - 环境（Environment）
-      - 多系统间的数据交互
-    - 鲁棒性设计
-      - Command模式
-        - 定义
-        - UID
-        - 序列化与反序列化
-      - 基础Command类型
-        - Add
-        - Delete
-        - Update
-    - 软件架构
-      - Stand-alone架构
-      - In Game架构
-      - Editor
-      - Play in Editor
-    - 插件系统
-      - 架构
-        - Plugin Manager
-        - Interfaces
-        - SDK
-      - 版本控制
-    - 数据结构设计
-      - 数据定义（Schema）
-        - 基础元素
-        - 继承
-        - 引用
-      - 两种设计方式
-        - 独立的schema定义文件
-        - 代码内部定义
-      - 不同场景下的引擎数据
-        - Runtime
-        - Storage
-    - 资产管理
-      - 资产格式
-        - 文本（Text）
-        - 二进制（Binary）
-      - 资产加载
-        - 序列化与反序列化
-        - 版本兼容
-      - 资产结构设计
-        - 资产引用
-        - 资产实例
-        - 数据拷贝
-        - 数据继承
-    - 协同编辑
-      - 资产拆分
-        - 按逻辑分层
-        - 按位置分块
-        - One File
-        - One File Per Actor
-      - 在一个场景内协同编辑
-      - 同步操作
-      - 分布式操作
-        - 一致性问题
-        - 锁
-        - 实例锁
-        - 资产锁
   - 网络
     - 网络同步
       - 同步的效果
