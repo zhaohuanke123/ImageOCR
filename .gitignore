@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+tests_tmp/
+
+# Project specific
+artifacts/tiles/
+artifacts/ocr_raw.jsonl
+artifacts/ocr_merged.json
+artifacts/nodes.json
+artifacts/review_overlay.jpg
+artifacts/reports/
+*.pyc
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+
+# Playwright
+.playwright-mcp/
+
+# OS
+.DS_Store
+Thumbs.db

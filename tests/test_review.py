@@ -67,4 +67,7 @@ def test_build_review_bundle_outputs_html_and_issue_files(tmp_path: Path) -> Non
     assert Path(outputs["html"]).exists()
     assert Path(outputs["issues_json"]).exists()
     assert Path(outputs["issues_csv"]).exists()
-    assert "OCR 复核器" in Path(outputs["html"]).read_text(encoding="utf-8")
+    html_content = Path(outputs["html"]).read_text(encoding="utf-8")
+    # Check for data injection and title (React build) or fallback template
+    assert "review-data" in html_content or "OCR 复核器" in html_content
+    assert "OCR Review" in html_content or "OCR 复核器" in html_content

@@ -31,18 +31,50 @@ def export_nodes(nodes: list[MindmapNode], config: AppConfig) -> Path:
     return path
 
 
-def export_graph(graph_payload: dict, config: AppConfig) -> Path:
+def export_graph(graph_payload: dict, config: AppConfig, image_path: str | Path | None = None) -> Path:
+    """Export graph data to JSON file.
+
+    Args:
+        graph_payload: Graph data with nodes, edges, and roots
+        config: Application configuration
+        image_path: Optional image path to include metadata (image_src, image_width, image_height)
+    """
     path = config.artifacts_path / "graph.json"
+
+    # Add image metadata if image_path is provided
+    if image_path is not None:
+        image_path = Path(image_path)
+        with Image.open(image_path) as img:
+            width, height = img.size
+
+        # Add image metadata to the payload
+        graph_payload = {
+            **graph_payload,
+            "image_src": image_path.resolve().as_uri(),
+            "image_width": width,
+            "image_height": height,
+        }
+
     write_json(path, graph_payload)
     return path
 
 
 def export_outline(graph_payload: dict, config: AppConfig) -> Path:
     nodes = {node["id"]: node for node in graph_payload["nodes"]}
-    roots = graph_payload["roots"]
+    # Use roots if present, otherwise compute from parent_id
+    if "roots" in graph_payload:
+        roots = graph_payload["roots"]
+    else:
+        roots = [node["id"] for node in graph_payload["nodes"] if not node.get("parent_id")]
     lines: list[str] = []
+    visited: set[str] = set()
 
     def visit(node_id: str, depth: int) -> None:
+        if node_id not in nodes:  # 跳过不存在的节点
+            return
+        if node_id in visited:  # 跳过已访问的节点（防止循环引用）
+            return
+        visited.add(node_id)
         node = nodes[node_id]
         text = " ".join(part.strip() for part in node["text"].splitlines() if part.strip())
         lines.append(f"{'  ' * depth}- {text}")

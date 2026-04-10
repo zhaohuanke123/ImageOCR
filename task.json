@@ -1,0 +1,503 @@
+{
+  "project": "OCR Pipeline",
+  "description": "离线 OCR 工具 - 准确还原思维导图的文本内容和层级结构",
+  "methodology": "PRD 驱动开发 + frontend-design skill",
+  "tasks": [
+    {
+      "id": 1,
+      "title": "调研阶段 - OCR 复核工具竞品分析",
+      "description": "调研现有的 OCR 复核工具和标注工具，收集设计灵感",
+      "steps": [
+        "调研至少 3 个 OCR 标注/复核工具（如 LabelImg、CVAT、Label Studio）",
+        "分析每个工具的核心功能、UI 风格、交互方式",
+        "调研图片标注工具的交互模式（框选、缩放、平移）",
+        "收集图像调整工具的 UI 设计灵感（对比度、亮度调节）",
+        "记录关键 UX 模式：框选交互、实时预览、结果展示",
+        "输出调研报告文档（research-report.md）"
+      ],
+      "passes": true
+    },
+    {
+      "id": 2,
+      "title": "功能 UX 文档 - 交互复核模块",
+      "description": "从 PRD 提取交互复核功能的 UX/UI 考量",
+      "steps": [
+        "从 PRD 筛选 HTML 复核界面相关功能",
+        "为每个功能定义详细用户故事",
+        "列出 UX/UI 考量：核心体验、状态描述、动画、信息架构",
+        "定义高级用户场景和边缘案例",
+        "整合通用 UX 原则（简洁性、效率、可访问性）",
+        "输出功能 UX 文档（feature-ux.md）"
+      ],
+      "passes": true,
+      "dependencies": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "title": "设计规范创建 - 工具型界面设计系统",
+      "description": "创建适合 OCR 复核工具的设计系统",
+      "steps": [
+        "定义色彩体系（主色、功能色、状态色）",
+        "定义字体家族和排版规范（标题、正文、代码/数据）",
+        "设计按钮样式（主要、次要、图标按钮）",
+        "设计工具栏组件规则",
+        "设计卡片容器规则（问题卡片、节点卡片）",
+        "定义间距系统、圆角、阴影",
+        "定义交互反馈规范（hover、active、disabled）",
+        "输出设计规范文档（design-system.md）"
+      ],
+      "passes": true,
+      "dependencies": [
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "title": "React 项目初始化",
+      "description": "创建 React 项目基础架构，配置开发环境",
+      "steps": [
+        "使用 Vite 创建 React + TypeScript 项目",
+        "配置项目目录结构（components, hooks, stores, utils, types）",
+        "安装核心依赖：zustand（状态管理）、clsx/tailwind-merge（样式工具）",
+        "配置 Tailwind CSS，导入设计规范中的 CSS 变量",
+        "配置路径别名（@/components 等）",
+        "创建基础布局组件（AppLayout）",
+        "配置 ESLint 和 Prettier"
+      ],
+      "passes": true,
+      "dependencies": [
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "title": "基础 UI 组件库",
+      "description": "创建项目通用 UI 组件",
+      "steps": [
+        "创建 Button 组件（primary、secondary、ghost、icon 变体）",
+        "创建 Icon 组件（使用 Lucide React 图标库）",
+        "创建 Input 组件（带图标、清除按钮）",
+        "创建 Card 组件（基础卡片、问题卡片、节点卡片）",
+        "创建 Tag/Badge 组件",
+        "创建 Tooltip 组件",
+        "创建 Spinner/Loading 组件",
+        "创建 Toast/Notification 组件",
+        "编写组件 Storybook 文档（可选）"
+      ],
+      "passes": true,
+      "dependencies": [
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "title": "状态管理 - Zustand Store",
+      "description": "创建全局状态管理结构",
+      "steps": [
+        "创建 useImageStore：图片加载状态、缩放、平移、亮度/对比度",
+        "创建 useAnnotationStore：节点数据、边数据、选中状态、悬停状态",
+        "创建 useIssueStore：问题列表、筛选条件",
+        "创建 useUIStore：工具栏状态、模态框状态、loading 状态",
+        "创建 useOCRStore：框选模式、OCR 请求状态、补录结果",
+        "定义 Store 类型接口（TypeScript）",
+        "实现 Store 持久化（localStorage）"
+      ],
+      "passes": true,
+      "dependencies": [
+        4
+      ]
+    },
+    {
+      "id": 7,
+      "title": "图片主视图 - Canvas 渲染层",
+      "description": "实现思维导图图片的 Canvas 渲染和交互",
+      "steps": [
+        "创建 ImageViewer 组件，使用 Canvas 渲染图片",
+        "实现图片加载状态（loading、error、success）",
+        "实现滚轮缩放（以鼠标位置为中心）",
+        "实现拖拽平移（空格+拖拽、中键拖拽）",
+        "实现缩放比例显示和重置按钮",
+        "实现适应窗口/实际大小快捷操作",
+        "实现 CSS Filter 图像调整（亮度、对比度）",
+        "优化大图片渲染性能（requestAnimationFrame）"
+      ],
+      "passes": true,
+      "dependencies": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "title": "标注叠加层 - SVG 渲染",
+      "description": "在图片上叠加显示 OCR 识别结果标注",
+      "steps": [
+        "创建 AnnotationOverlay 组件，使用 SVG 叠加在 Canvas 上",
+        "实现节点边界框渲染（矩形、颜色编码）",
+        "实现边连线渲染（贝塞尔曲线或直线）",
+        "实现标注框悬停高亮效果",
+        "实现标注框点击选中功能",
+        "实现标注框文字标签显示",
+        "实现问题节点的特殊样式（颜色边框、虚线）",
+        "优化大量标注的渲染性能（虚拟化、分层渲染）"
+      ],
+      "passes": true,
+      "dependencies": [
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "title": "工具栏组件",
+      "description": "实现顶部工具栏功能",
+      "steps": [
+        "创建 Toolbar 组件，水平布局",
+        "实现亮度调节按钮组（-/+）",
+        "实现对比度调节按钮组（-/+）",
+        "实现重置按钮",
+        "实现框选 OCR 模式切换按钮",
+        "实现导出按钮",
+        "实现缩放控制按钮（放大/缩小/适应窗口）",
+        "添加 Tooltip 提示",
+        "实现按钮禁用状态（边界值、loading）"
+      ],
+      "passes": true,
+      "dependencies": [
+        5,
+        6
+      ]
+    },
+    {
+      "id": 10,
+      "title": "框选 OCR 功能",
+      "description": "实现框选遗漏区域触发 OCR 补录",
+      "steps": [
+        "创建 SelectionOverlay 组件，处理框选交互",
+        "实现框选模式状态切换",
+        "实现鼠标拖拽绘制矩形选框",
+        "实现选框的视觉反馈（半透明蒙层、边框）",
+        "实现选框坐标计算（图片坐标转换）",
+        "创建 OCR API 服务（fetch 封装）",
+        "实现 OCR 请求 loading 状态",
+        "实现 OCR 结果更新到 Store",
+        "处理 OCR 失败和空结果情况",
+        "实现防抖处理"
+      ],
+      "passes": true,
+      "dependencies": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "title": "问题列表面板",
+      "description": "实现问题检测结果的展示",
+      "steps": [
+        "创建 IssuePanel 组件，右侧面板布局",
+        "创建 IssueCard 组件（问题类型图标、描述、定位按钮）",
+        "实现问题列表渲染（虚拟滚动）",
+        "实现问题类型图标和颜色编码",
+        "实现问题点击定位到对应标注",
+        "实现问题列表的展开/折叠",
+        "实现问题数量统计显示",
+        "实现问题类型筛选功能"
+      ],
+      "passes": true,
+      "dependencies": [
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 12,
+      "title": "节点列表面板",
+      "description": "实现识别节点的树形列表展示",
+      "steps": [
+        "创建 NodePanel 组件，右侧面板布局",
+        "创建 NodeCard 组件（节点文本、置信度、定位按钮）",
+        "实现节点列表渲染（虚拟滚动）",
+        "实现节点树形结构展示（缩进、展开/折叠）",
+        "实现节点搜索/筛选功能",
+        "实现节点点击定位到对应标注",
+        "实现节点选中状态同步",
+        "实现节点悬停预览"
+      ],
+      "passes": true,
+      "dependencies": [
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "id": 13,
+      "title": "导出功能",
+      "description": "实现识别结果的导出功能",
+      "steps": [
+        "创建 ExportModal 组件",
+        "实现导出格式选择（JSON、Markdown）",
+        "实现 JSON 导出逻辑",
+        "实现 Markdown 层级大纲导出逻辑",
+        "实现导出确认提示",
+        "实现导出成功/失败 Toast 反馈",
+        "实现文件下载功能"
+      ],
+      "passes": true,
+      "dependencies": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": 14,
+      "title": "节点编辑功能",
+      "description": "实现节点的编辑、删除、合并功能",
+      "steps": [
+        "创建 NodeEditModal 组件（编辑节点文本、置信度）",
+        "实现节点文本内联编辑（双击节点进入编辑模式）",
+        "实现节点删除功能（删除按钮、确认对话框）",
+        "实现节点合并功能（选中多个节点 → 合并为一个）",
+        "实现节点拆分功能（将多行节点拆分为多个节点）",
+        "实现编辑操作的撤销/重做（可选）",
+        "更新 dataStore 支持节点修改操作",
+        "实现编辑后的问题列表自动更新"
+      ],
+      "passes": true,
+      "dependencies": [
+        12
+      ]
+    },
+    {
+      "id": 15,
+      "title": "边编辑功能",
+      "description": "实现父子关系的编辑功能",
+      "steps": [
+        "创建 EdgeEditModal 组件（修改父子关系）",
+        "实现边的可视化选择（点击连线选中）",
+        "实现边的删除功能（删除按钮、确认对话框）",
+        "实现拖拽调整父子关系（拖拽节点到新父节点）",
+        "实现添加新边功能（选择父节点、子节点）",
+        "更新 dataStore 支持边修改操作",
+        "实现编辑后的节点树自动更新"
+      ],
+      "passes": true,
+      "dependencies": [
+        14
+      ]
+    },
+    {
+      "id": 16,
+      "title": "保存修改功能",
+      "description": "实现修改后数据的保存和导出",
+      "steps": [
+        "创建 SaveModal 组件（保存确认、变更预览）",
+        "实现变更追踪（记录所有编辑操作）",
+        "实现保存到本地文件（File System Access API 或下载）",
+        "实现导出修改后的 graph.json",
+        "实现导出变更日志（记录修改内容）",
+        "添加保存快捷键（Ctrl+S）",
+        "实现未保存提醒（关闭页面前提示）"
+      ],
+      "passes": true,
+      "dependencies": [
+        14,
+        15
+      ]
+    },
+    {
+      "id": 17,
+      "title": "基准数据编辑器",
+      "description": "实现 baseline 数据的人工校对编辑器",
+      "steps": [
+        "创建 BaselineEditor 页面组件",
+        "实现基准数据加载（从 baseline/ 目录）",
+        "实现区域图片显示和标注叠加",
+        "实现 expected_blocks 编辑（添加、删除、修改）",
+        "实现 expected_nodes 编辑（添加、删除、修改、合并）",
+        "实现 expected_edges 编辑（添加、删除）",
+        "实现标注框拖拽调整",
+        "实现保存到 region_XX.json 文件",
+        "创建基准编辑器入口（从复查界面跳转）"
+      ],
+      "passes": true,
+      "dependencies": [
+        16
+      ]
+    },
+    {
+      "id": 18,
+      "title": "回归测试流程完善",
+      "description": "完善回归测试的执行和报告展示",
+      "steps": [
+        "创建 RegressionReport 页面组件",
+        "实现回归测试结果可视化（通过/失败、指标图表）",
+        "实现失败案例详情查看（diff overlay 显示）",
+        "实现按区域查看测试结果",
+        "实现历史测试结果对比",
+        "添加一键运行回归测试按钮",
+        "实现测试报告导出（HTML、PDF）"
+      ],
+      "passes": true,
+      "dependencies": [
+        17
+      ]
+    },
+    {
+      "id": 19,
+      "title": "集成测试和文档",
+      "description": "完成整体功能的集成测试和用户文档",
+      "steps": [
+        "编写端到端测试用例",
+        "测试完整工作流：OCR → 复查 → 编辑 → 保存 → 回归测试",
+        "编写用户使用文档（README 更新）",
+        "录制功能演示视频（可选）",
+        "性能测试和优化（大图片、多节点）",
+        "浏览器兼容性测试"
+      ],
+      "passes": true,
+      "dependencies": [
+        18
+      ]
+    },
+    {
+      "id": 20,
+      "title": "边编辑交互优化",
+      "description": "优化边的编辑交互方式，支持拖拽和点选",
+      "steps": [
+        "实现拖拽节点到另一个节点建立父子关系",
+        "实现先后点选两个节点确定父子关系（先选父节点，再选子节点）",
+        "添加边编辑模式切换按钮",
+        "优化边的视觉反馈（悬停高亮、可点击区域扩大）",
+        "移除或保留点击边编辑的方式作为备选"
+      ],
+      "passes": true,
+      "dependencies": [
+        15
+      ]
+    },
+    {
+      "id": 21,
+      "title": "框选OCR坐标修复",
+      "description": "修复框选功能的坐标转换问题",
+      "steps": [
+        "调查 SVG viewBox 与实际图片坐标的映射关系",
+        "修复 screenToImage 坐标转换函数",
+        "确保框选区域与实际选择区域一致",
+        "测试不同缩放级别下的框选准确性"
+      ],
+      "passes": true,
+      "dependencies": [
+        10
+      ]
+    },
+    {
+      "id": 22,
+      "title": "节点调整大小功能",
+      "description": "实现节点边界框的拖拽调整大小",
+      "steps": [
+        "在节点四角和四边添加拖拽手柄",
+        "实现拖拽调整 bbox 大小",
+        "更新节点的 bbox 数据",
+        "支持多行节点的行高调整"
+      ],
+      "passes": true,
+      "dependencies": [
+        14
+      ]
+    },
+    {
+      "id": 23,
+      "title": "直接保存到原文件",
+      "description": "实现直接覆盖保存功能，无需手动下载",
+      "steps": [
+        "使用 File System Access API 直接写入原文件",
+        "保存到 artifacts/graph.json",
+        "保存变更日志",
+        "添加保存成功/失败提示",
+        "兼容不支持 File System Access API 的浏览器（回退到下载）"
+      ],
+      "passes": true,
+      "dependencies": [
+        16
+      ]
+    },
+    {
+      "id": 24,
+      "title": "前端性能优化 - 渲染层优化",
+      "description": "优化 SVG 渲染性能，解决大量节点时的卡顿问题",
+      "steps": [
+        "分析当前渲染性能瓶颈（React DevTools Profiler）",
+        "实现 SVG 元素的 React.memo 优化，避免不必要重渲染",
+        "使用 useMemo 缓存 visibleNodes/visibleEdges 计算结果",
+        "优化 AnnotationOverlay 组件，分离静态层和动态层",
+        "考虑使用 CSS transform 替代 SVG viewBox 进行缩放平移",
+        "实现视口裁剪，只渲染可见区域内的节点和边",
+        "测试 500+ 节点场景的渲染性能"
+      ],
+      "passes": true,
+      "dependencies": [
+        8,
+        22
+      ]
+    },
+    {
+      "id": 25,
+      "title": "前端性能优化 - 事件处理优化",
+      "description": "优化鼠标事件处理，减少交互卡顿",
+      "steps": [
+        "实现鼠标移动事件的节流（throttle）处理",
+        "优化拖拽操作，使用 requestAnimationFrame 更新位置",
+        "减少 hover 状态变化触发的重渲染",
+        "优化 resize 手柄的拖拽性能",
+        "实现事件的 passive 监听优化",
+        "测试拖拽流畅度"
+      ],
+      "passes": true,
+      "dependencies": [
+        24
+      ]
+    },
+    {
+      "id": 26,
+      "title": "前端性能优化 - 状态管理优化",
+      "description": "优化 Zustand Store 和组件订阅，减少不必要渲染",
+      "steps": [
+        "审查各 Store 的订阅粒度，使用选择器避免过度订阅",
+        "优化 useDataStore 的 nodesById 更新逻辑",
+        "考虑使用 immer 或手动不可变更新减少对象引用变化",
+        "优化 useAnnotationStore 的选择状态更新",
+        "实现组件级别的 shouldComponentUpdate 或 React.memo",
+        "使用 Zustand 的 shallow 比较优化",
+        "测试状态更新触发的渲染次数"
+      ],
+      "passes": true,
+      "dependencies": [
+        6,
+        24
+      ]
+    },
+    {
+      "id": 27,
+      "title": "前端性能优化 - 图片加载优化",
+      "description": "优化大图片的加载和渲染性能",
+      "steps": [
+        "实现图片的渐进式加载或低分辨率预览",
+        "考虑使用 Canvas 替代 img 标签渲染大图",
+        "实现图片的分块加载（类似地图瓦片）",
+        "优化 CSS filter 性能（可能触发重绘）",
+        "考虑使用 WebGL 进行图像处理",
+        "测试不同分辨率图片的加载和渲染性能"
+      ],
+      "passes": false,
+      "dependencies": [
+        7,
+        24
+      ]
+    }
+  ]
+}

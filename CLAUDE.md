@@ -6,6 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Offline OCR pipeline for processing large mind map images using PaddleOCR. Extracts text and hierarchical structure from images and outputs structured data (JSON, Markdown).
 
+The project consists of:
+- **Python Backend**: OCR processing pipeline with CLI tools
+- **React Frontend**: Interactive review and editing interface (see `frontend/`)
+
 ## Commands
 
 ```powershell
@@ -42,6 +46,34 @@ uv run ocr-pipeline serve-editor-ocr
 # Lint
 uv run ruff check src/
 uv run ruff format src/
+```
+
+### Frontend Commands
+
+```powershell
+# Navigate to frontend directory
+cd frontend
+
+# Install frontend dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run frontend tests
+npm run test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+
+# Lint frontend code
+npm run lint
 ```
 
 ## Architecture
@@ -119,3 +151,112 @@ All outputs go to `artifacts/`:
 - `review_overlay.jpg` - Image with node/edge overlay
 - `review/` - HTML reviewer + issue lists
 - `reports/` - Regression test summaries
+
+## Frontend Architecture
+
+The React frontend (`frontend/`) provides an interactive interface for reviewing and editing OCR results.
+
+### Directory Structure
+
+```
+frontend/
+  src/
+    components/
+      features/       # Main page components
+        ReviewPage.tsx       - Main OCR review interface
+        BaselineEditor.tsx   - Baseline annotation editor
+        RegressionReport.tsx - Regression test results viewer
+        ImageViewer.tsx      - Pan/zoom image display
+        AnnotationOverlay.tsx - Node/edge overlay rendering
+        IssuePanel.tsx       - Issue list sidebar
+        NodePanel.tsx        - Node tree sidebar
+        NodeEditModal.tsx    - Node editing dialog
+        NodeMergeModal.tsx   - Multi-node merge dialog
+        EdgeEditModal.tsx    - Edge editing dialog
+        SaveModal.tsx        - Save confirmation dialog
+        Toolbar.tsx          - Image manipulation toolbar
+      ui/              # Reusable UI components
+        Button.tsx, Input.tsx, Modal.tsx, Toast.tsx, etc.
+    stores/           # Zustand state management
+      dataStore.ts          - OCR data, nodes, edges, mutations
+      viewStore.ts          - Viewport, zoom, pan, tool mode
+      annotationStore.ts    - Selection, hover, visibility filters
+      changeTrackingStore.ts - Undo/redo, operation history
+      baselineEditorStore.ts - Baseline editing state
+      regressionStore.ts    - Regression test state
+    types/            # TypeScript definitions
+      index.ts        - All type definitions (MindmapNode, etc.)
+    utils/            # Helper functions
+      index.ts        - Export, bbox, formatting utilities
+    __tests__/        # Vitest test files
+  public/             # Static assets (dev mode)
+  dist/               - Production build output
+```
+
+### State Management (Zustand)
+
+The frontend uses Zustand for state management with the following stores:
+
+1. **dataStore**: Core data management
+   - `nodesById`: Map of node ID to node data
+   - `childrenMap`: Parent-to-children relationships
+   - Mutations: `updateNode`, `deleteNode`, `mergeNodes`, `splitNode`
+   - Edge operations: `addEdge`, `deleteEdge`, `wouldCreateCycle`
+
+2. **viewStore**: Image viewport state
+   - `scale`, `offsetX`, `offsetY`: Zoom and pan
+   - `brightness`, `contrast`: Image adjustments
+   - `toolMode`: 'select' | 'pan' | 'box-select'
+
+3. **annotationStore**: UI selection state
+   - `selectedNodeId`, `hoveredNodeId`, `selectedEdgeId`
+   - Visibility toggles: `showBlocks`, `showNodes`, `showEdges`
+   - Filters: `searchText`, `rootsOnly`, `lowConfidenceOnly`
+
+4. **changeTrackingStore**: Edit history
+   - `operations`: Array of recorded changes
+   - `undoLastOperation()`: Undo support
+   - `getChangeLog()`: Export change history
+
+### Routing
+
+Hash-based routing via `App.tsx`:
+- `#/review` - Review page (default)
+- `#/baseline-editor?dataset=<name>&region=<id>` - Baseline editor
+- `#/regression` - Regression report
+
+### Key Features
+
+1. **Review Page**
+   - Image viewer with pan/zoom
+   - Node/edge overlay visualization
+   - Issue filtering and navigation
+   - Node tree with expand/collapse
+   - Multi-select for merging
+
+2. **Baseline Editor**
+   - Draw/edit annotations on image regions
+   - Add/edit/delete blocks, nodes, edges
+   - Save to JSON for regression testing
+
+3. **Regression Report**
+   - View test results by region
+   - Compare expected vs actual
+   - Track metrics over time
+
+### Development Mode
+
+In development, the frontend loads data from `public/` directory:
+- `public/graph.json` - OCR data
+- `public/<image>.jpg` - Source image
+
+The vite dev server proxies:
+- `/artifacts/*` -> Project `artifacts/` directory
+- `/baseline/*` -> Project `baseline/` directory
+
+### Production Build
+
+The CLI command `review-html`:
+1. Runs `npm run build` in frontend/
+2. Injects OCR data as embedded JSON
+3. Outputs single HTML file to `artifacts/review/index.html`

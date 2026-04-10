@@ -21,6 +21,36 @@ def _decode_data_url(data_url: str) -> bytes:
     return base64.b64decode(encoded)
 
 
+def _resolve_image_path(image_path: str) -> Path:
+    """Resolve image path to absolute path.
+
+    Handles various path formats:
+    - Absolute paths: D:/path/to/image.jpg
+    - file:/// URLs: file:///D:/path/to/image.jpg
+    - Relative paths: /image.jpg or image.jpg (resolved relative to project root)
+    """
+    source = Path(str(image_path))
+    print(f"[DEBUG] _resolve_image_path input: {image_path}")
+
+    # Handle file:/// URLs
+    if source.as_posix().startswith('file:///'):
+        result = Path(image_path[8:])
+        print(f"[DEBUG] file:/// URL resolved to: {result}")
+        return result
+
+    # If already absolute, use as-is
+    if source.is_absolute():
+        print(f"[DEBUG] Absolute path: {source}")
+        return source
+
+    # For relative paths, resolve from project root (2 levels up from this file)
+    # This file is at src/ocr_pipeline/editor_api.py, project root is ../../..
+    project_root = Path(__file__).parent.parent.parent
+    result = (project_root / image_path.lstrip('/')).resolve()
+    print(f"[DEBUG] Relative path resolved: project_root={project_root}, result={result}")
+    return result
+
+
 def _load_region_image(payload: dict[str, Any]) -> tuple[Image.Image, float, float]:
     padding = int(payload.get("padding", 0) or 0)
     if payload.get("image_data"):
@@ -34,9 +64,7 @@ def _load_region_image(payload: dict[str, Any]) -> tuple[Image.Image, float, flo
     if not image_path or not crop_bbox:
         raise ValueError("image_path and crop_bbox are required when image_data is not provided.")
 
-    source = Path(str(image_path))
-    if not source.is_absolute():
-        source = (Path.cwd() / source).resolve()
+    source = _resolve_image_path(image_path)
     if not source.exists():
         raise FileNotFoundError(f"Image not found: {source}")
 
@@ -131,9 +159,12 @@ def serve_editor_ocr(config: AppConfig, host: str = "127.0.0.1", port: int = 876
             try:
                 content_length = int(self.headers.get("Content-Length", "0"))
                 payload = json.loads(self.rfile.read(content_length) or b"{}")
+                # Debug: log the received payload
+                print(f"[DEBUG] Received payload: image_path={payload.get('image_path')}, crop_bbox={payload.get('crop_bbox')}")
                 result = run_editor_region_ocr(payload, config=config, engine=engine)
                 self._send(HTTPStatus.OK, result)
             except Exception as exc:  # pragma: no cover - defensive server branch
+                print(f"[ERROR] {exc}")
                 self._send(HTTPStatus.BAD_REQUEST, {"error": str(exc)})
 
         def log_message(self, format: str, *args: object) -> None:  # noqa: A003

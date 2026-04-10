@@ -189,3 +189,16 @@ def serve_editor_ocr_command(
     app_config = load_config(config)
     typer.echo(f"serving: http://{host}:{port}")
     serve_editor_ocr(config=app_config, host=host, port=port)
+
+
+@app.command()
+def export(
+    graph: Path = typer.Option("artifacts/graph.json", "--graph", exists=True, readable=True),
+    config: Path = "config.yaml",
+) -> None:
+    """Export graph data to various formats (outline, etc.)."""
+    app_config = load_config(config)
+    graph_payload = read_json(graph)
+
+    outline_path = export_outline(graph_payload, app_config)
+    typer.echo(f"outline: {outline_path}")

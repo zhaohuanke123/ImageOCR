@@ -31,7 +31,7 @@ def run_full_pipeline(image_path: str | Path, config: AppConfig) -> dict[str, st
         horizontal_bias=config.graph_horizontal_bias,
         vertical_tolerance=config.graph_vertical_tolerance,
     )
-    export_graph(graph_payload, config)
+    export_graph(graph_payload, config, image_path=image_path)
     outline_path = export_outline(graph_payload, config)
     overlay_path = export_review_overlay(graph_payload, image_path, config)
     return {

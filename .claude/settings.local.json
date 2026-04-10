@@ -4,7 +4,11 @@
       "Bash",
       "Read",
       "Edit",
-      "WebFetch"
+      "WebFetch",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright",
+      "mcp__plugin_playwright",
+      "mcp__plugin_playwright_playwright__browser_snapshot"
     ]
   }
 }
