@@ -5,6 +5,7 @@ from pathlib import Path
 
 # 第2层节点顺序
 L2_ORDER = [
+    "基础架构",
     "渲染",
     "动画系统",
     "物理系统",
