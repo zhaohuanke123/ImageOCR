@@ -99,7 +99,7 @@ export const useAnnotationStore = create<AnnotationState>((set, get) => ({
 
   // Ctrl/Cmd + click for multi-select (without needing to enter multi-select mode)
   selectNodeWithCtrl: (nodeId) => {
-    const { selectedNodeIds, selectedNodeId } = get();
+    const { selectedNodeIds } = get();
     const newSet = new Set(selectedNodeIds);
 
     if (newSet.has(nodeId)) {

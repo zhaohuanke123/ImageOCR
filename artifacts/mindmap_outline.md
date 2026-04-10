@@ -45,151 +45,6 @@
         - Compile阶段
           - 剔除所有没有被引用的Resources和Passes
           - 计算资源的生命周期
-    - Lumen
-      - Lumen流程
-        - Shading Full Pixels with Screen Space Probes
-        - Surface Caching（表面缓存）
-          - Mesh Card
-            - 功能：可以看成是放在6个轴对称方向上的相机
-            - 通过正交投影的方式来光栅化Mesh
-            - 从而获取Mesh的各种属性（Albedo, Normal, Depth等）
-            - 对应surface cache
-          - Surface Cache
-            - 5张Atlas
-              - Albedo
-              - Normal
-              - Depth
-              - Emissive
-              - Opacity
-            - 生成方式
-              - Two Pass
-              - Card Capture
-        - Fast Ray Trace in Any Hardware
-          - 有向距离场（SDF）
-            - 原理：有向距离场在每个点将距离最近表面的距离保存到体积纹理中
-            - 网格体外的每个点保存的距离为正值，网格体内的每个点保存的距离为负值
-          - SDF实用属性
-            - 在追踪光线时安全地跳过空白空间（球体追踪）
-            - 只需区区几步就可以判定出交叉点
-            - 对距离场进行光线追踪将生成可见性效果
-            - 可以计算出近似的锥体交叉点，实现柔和阴影
-          - 全局距离场
-            - 分辨率较低的距离场，跟随摄像机
-            - 在关卡中使用有向距离场遮蔽
-            - 创建每个Object网格体距离场的缓存
-            - 合成到围绕摄像机的若干体积纹理中（裁剪图）
-            - 只有新的可见区域或受场景修改影响的区域才需更新
-          - SDF局限性
-            - 通过全局位置偏移或置换使网格体变形的材质可能会导致自阴影失真
-            - 因为距离场表达是离线生成的，并不知道有这些变形
-            - 仅投射刚性网格体的阴影
-        - Radiance Injection（辐射注入）
-          - Voxel Lighting
-            - 动机：Global SDF无法采样surface cache
-            - 解决方案：Merge all cards into global
-          - 间接光照
-            - N+2 bounces through feedback
-            - Probe
-              - 4x4 hemispherical probe per 4x4 tile
-              - Jitter pattern
-          - 更新策略
-            - Fixed update budget
-            - Select pages to update based on priority
-          - 直接光照
-            - Cull lights to 8x8 tiles
-            - Select first 8 lights per tile
-        - Build a lot of Probes with Different
-          - Screen Space Probe
-            - Probe structure
-              - 8x8 Octahedral Atlas
-              - Radiance and HitDistance
-            - Adaptive Placement
-          - World Space Probes and Ray Connecting
-            - 内容：3D clipmap grids centered around camera
-            - 32x32 Radiance per probe
-            - 更新策略
-          - Sampling
-            - Important Sampling
-            - PDF计算
-            - Incoming Radiance
-            - Last frame's Screen Space Radiance
-          - Spatial Probe Filtering
-            - Screen Space Probe Filter within the neighbor Screen Space Probe
-            - Ignore normal differences, Only depth weighting
-            - Use Angle error from reprojected neighbor ray hits
-      - 之前常见的GI算法
-        - Reflective Shadow Map
-        - Light Propagation Volume
-        - Sparse Voxel Octree for Real-time Global Illumination
-        - Voxelization Based Global Illumination
-        - Screen Space Global Illumination
-        - Dynamic Diffuse Global Illumination
-        - Ray-tracing based Global Illumination
-    - Nanite
-      - GPU Driven Render Pipeline
-        - Culling（剔除）
-          - 提交优化
-            - Material Batch
-            - Indirect Draw
-            - Texture Batch
-            - Virtual Texture
-            - Bindless Texture
-          - Cluster剔除（Coarse/粗粒度）
-          - 三角形剔除
-            - Backface Culling（背面剔除）
-            - Small Triangle Culling（小三角形剔除）
-            - Occlusion Culling（遮挡剔除）
-        - 目标：GPU承担更多的提交和剔除工作
-      - Visibility Buffer（可见性缓冲）
-        - Visibility Buffer流程
-          - Visibility Pass：对场景进行光栅化，将PrimitiveID和Material ID保存到visibility buffer中
-          - Worklist Pass：构建Worklist，将屏幕划分成很多tile
-          - Shading Passes：拿到几何和材质信息，对表面着色
-        - 解决了延迟渲染的问题
-          - 带宽高
-          - 渲染性能与场景复杂度绑定，容易造成overdraw
-          - 对MSAA支持不友好
-      - Virtualized Geometry Nanite
-        - Deferred Material
-          - 思想：将材质分类，找出每个材质对应的像素进行Shading
-          - MaterialID：表示当前像素属于哪个材质
-        - Nanite Mesh Build Process
-          - Group
-          - Merge
-          - Simplify
-          - Split
-        - Rasterization（光栅化）
-          - 软件光栅化
-            - 顶点处理阶段
-              - 每个顶点对应一个线程
-              - ClusterVB顶点数超出128可再启动一个Group
-              - 最大支持256顶点
-            - 面片处理阶段
-              - 每个线程负责一个三角形
-          - 现代GPU光栅化流程
-            - 大尺寸Tile判定机制
-            - 小尺寸Tile（4x4）判定机制
-            - 2x2的quad作为最小处理单元
-            - 目标：实现像素的并行计算
-        - Culling Dataflow
-          - Main Pass流程
-            - ZB PrevHZB
-            - Instance Culling
-            - Hierarchy/Cluster Culling
-            - Rasterizer
-              - Software Rasterizer
-              - Hardware Rasterizer
-            - Build HZB
-          - Post Pass
-            - Occluded instances && Occluded Nodes and Clusters
-            - CurrentBuildHZB
-            - Instance Culling
-            - Hierarchical/Cluster Culling
-            - Rasterizer
-        - Virtual Shadow Map
-          - 目标：显著提升阴影分辨率
-          - 配合拥有高度细节内容的Nanite几何体
-          - 以合理的性能开销实现高质量阴影
     - 渲染系统
       - 视效
         - 粒子常见属性
@@ -393,8 +248,152 @@
           - 步骤1：从光源处出发，向光照的方向看去，构造光照空间，渲染需要产生阴影的物体，将深度写入ZBuffer
           - 步骤2：正常渲染物体，根据世界坐标变换到光照空间坐标，计算该点在Shadow Map中的深度值并比较
           - 相关技术：Shadow Bias、Cascade Shadow Map、Variance Shadow Map、PCF、PCSS
+    - Lumen
+      - Lumen流程
+        - Shading Full Pixels with Screen Space Probes
+        - Surface Caching（表面缓存）
+          - Mesh Card
+            - 功能：可以看成是放在6个轴对称方向上的相机
+            - 通过正交投影的方式来光栅化Mesh
+            - 从而获取Mesh的各种属性（Albedo, Normal, Depth等）
+            - 对应surface cache
+          - Surface Cache
+            - 5张Atlas
+              - Albedo
+              - Normal
+              - Depth
+              - Emissive
+              - Opacity
+            - 生成方式
+              - Two Pass
+              - Card Capture
+        - Fast Ray Trace in Any Hardware
+          - 有向距离场（SDF）
+            - 原理：有向距离场在每个点将距离最近表面的距离保存到体积纹理中
+            - 网格体外的每个点保存的距离为正值，网格体内的每个点保存的距离为负值
+          - SDF实用属性
+            - 在追踪光线时安全地跳过空白空间（球体追踪）
+            - 只需区区几步就可以判定出交叉点
+            - 对距离场进行光线追踪将生成可见性效果
+            - 可以计算出近似的锥体交叉点，实现柔和阴影
+          - 全局距离场
+            - 分辨率较低的距离场，跟随摄像机
+            - 在关卡中使用有向距离场遮蔽
+            - 创建每个Object网格体距离场的缓存
+            - 合成到围绕摄像机的若干体积纹理中（裁剪图）
+            - 只有新的可见区域或受场景修改影响的区域才需更新
+          - SDF局限性
+            - 通过全局位置偏移或置换使网格体变形的材质可能会导致自阴影失真
+            - 因为距离场表达是离线生成的，并不知道有这些变形
+            - 仅投射刚性网格体的阴影
+        - Radiance Injection（辐射注入）
+          - Voxel Lighting
+            - 动机：Global SDF无法采样surface cache
+            - 解决方案：Merge all cards into global
+          - 间接光照
+            - N+2 bounces through feedback
+            - Probe
+              - 4x4 hemispherical probe per 4x4 tile
+              - Jitter pattern
+          - 更新策略
+            - Fixed update budget
+            - Select pages to update based on priority
+          - 直接光照
+            - Cull lights to 8x8 tiles
+            - Select first 8 lights per tile
+        - Build a lot of Probes with Different
+          - Screen Space Probe
+            - Probe structure
+              - 8x8 Octahedral Atlas
+              - Radiance and HitDistance
+            - Adaptive Placement
+          - World Space Probes and Ray Connecting
+            - 内容：3D clipmap grids centered around camera
+            - 32x32 Radiance per probe
+            - 更新策略
+          - Sampling
+            - Important Sampling
+            - PDF计算
+            - Incoming Radiance
+            - Last frame's Screen Space Radiance
+          - Spatial Probe Filtering
+            - Screen Space Probe Filter within the neighbor Screen Space Probe
+            - Ignore normal differences, Only depth weighting
+            - Use Angle error from reprojected neighbor ray hits
+      - 之前常见的GI算法
+        - Reflective Shadow Map
+        - Light Propagation Volume
+        - Sparse Voxel Octree for Real-time Global Illumination
+        - Voxelization Based Global Illumination
+        - Screen Space Global Illumination
+        - Dynamic Diffuse Global Illumination
+        - Ray-tracing based Global Illumination
+    - Nanite
+      - GPU Driven Render Pipeline
+        - Culling（剔除）
+          - 提交优化
+            - Material Batch
+            - Indirect Draw
+            - Texture Batch
+            - Virtual Texture
+            - Bindless Texture
+          - Cluster剔除（Coarse/粗粒度）
+          - 三角形剔除
+            - Backface Culling（背面剔除）
+            - Small Triangle Culling（小三角形剔除）
+            - Occlusion Culling（遮挡剔除）
+        - 目标：GPU承担更多的提交和剔除工作
+      - Visibility Buffer（可见性缓冲）
+        - Visibility Buffer流程
+          - Visibility Pass：对场景进行光栅化，将PrimitiveID和Material ID保存到visibility buffer中
+          - Worklist Pass：构建Worklist，将屏幕划分成很多tile
+          - Shading Passes：拿到几何和材质信息，对表面着色
+        - 解决了延迟渲染的问题
+          - 带宽高
+          - 渲染性能与场景复杂度绑定，容易造成overdraw
+          - 对MSAA支持不友好
+      - Virtualized Geometry Nanite
+        - Deferred Material
+          - 思想：将材质分类，找出每个材质对应的像素进行Shading
+          - MaterialID：表示当前像素属于哪个材质
+        - Nanite Mesh Build Process
+          - Group
+          - Merge
+          - Simplify
+          - Split
+        - Rasterization（光栅化）
+          - 软件光栅化
+            - 顶点处理阶段
+              - 每个顶点对应一个线程
+              - ClusterVB顶点数超出128可再启动一个Group
+              - 最大支持256顶点
+            - 面片处理阶段
+              - 每个线程负责一个三角形
+          - 现代GPU光栅化流程
+            - 大尺寸Tile判定机制
+            - 小尺寸Tile（4x4）判定机制
+            - 2x2的quad作为最小处理单元
+            - 目标：实现像素的并行计算
+        - Culling Dataflow
+          - Main Pass流程
+            - ZB PrevHZB
+            - Instance Culling
+            - Hierarchy/Cluster Culling
+            - Rasterizer
+              - Software Rasterizer
+              - Hardware Rasterizer
+            - Build HZB
+          - Post Pass
+            - Occluded instances && Occluded Nodes and Clusters
+            - CurrentBuildHZB
+            - Instance Culling
+            - Hierarchical/Cluster Culling
+            - Rasterizer
+        - Virtual Shadow Map
+          - 目标：显著提升阴影分辨率
+          - 配合拥有高度细节内容的Nanite几何体
+          - 以合理的性能开销实现高质量阴影
   - 动画系统
-    - 补充
     - 动画技术基础
       - 游戏中的2D动画技术
         - 精灵动画
@@ -498,71 +497,8 @@
         - 多终端效应器难题
         - 雅可比矩阵法
         - IK前沿
+    - 补充
   - 物理系统
-    - 物理系统应用
-      - 角色控制器
-        - 与刚体动力学的差异
-        - 基本组成
-        - 与环境的碰撞
-        - 自动阶跃（autostepping）
-        - 坡度限制与强制滑坡
-        - 更新大小
-        - 推动物体
-        - 移动平台
-      - 布娃娃模拟
-        - 用途
-        - 骨骼与刚体的映射
-        - 人体关节约束
-        - 约束参数
-        - 动画与布娃娃的混合过渡
-        - 富力布娃娃
-      - 布料模拟
-        - 方法
-          - 基于动画的布料表现
-          - 基于刚体的布料模拟
-          - 基于网格的布料模拟
-            - 物理网格VS.渲染网格
-            - 布料约束
-            - 布料物理材质
-            - 求解方法
-              - 弹簧-质点系统
-              - Verlet积分
-              - PBD（Position Based Dynamics）
-            - 自碰撞
-      - 载具模拟
-        - 真实感-风格化谱系
-        - 建模
-        - 力
-          - 牵引力
-          - 弹簧力
-          - 轮胎力
-        - 质心
-        - 转向过度与转向不足
-        - 重量转移
-        - 转向角
-          - Ackermann转向
-        - 轮胎接触
-      - 破坏模拟
-        - 概念
-          - 分块层级
-          - 连接图
-          - 连接强度
-          - 计算损伤
-        - 模型破碎算法
-          - 维诺图（Voronoi）
-          - 二维
-          - 三维
-          - 不同的破碎图案
-        - 破坏系统
-          - 增加真实感
-          - 破坏系统引入的问题
-          - 常见的破坏SDK
-      - PBD/XPBD
-        - 拉格朗日力学约束建模
-        - 拉伸约束
-        - 约束投影
-        - 工作流
-        - XPBD
     - 物理系统基础概念
       - 刚体类型
         - 静态刚体（static）
@@ -650,7 +586,80 @@
         - 连续碰撞检测
           - 冲击时间-保守步进法
         - 确定性模拟
+    - 物理系统应用
+      - 角色控制器
+        - 与刚体动力学的差异
+        - 基本组成
+        - 与环境的碰撞
+        - 自动阶跃（autostepping）
+        - 坡度限制与强制滑坡
+        - 更新大小
+        - 推动物体
+        - 移动平台
+      - 布娃娃模拟
+        - 用途
+        - 骨骼与刚体的映射
+        - 人体关节约束
+        - 约束参数
+        - 动画与布娃娃的混合过渡
+        - 富力布娃娃
+      - 布料模拟
+        - 方法
+          - 基于动画的布料表现
+          - 基于刚体的布料模拟
+          - 基于网格的布料模拟
+            - 物理网格VS.渲染网格
+            - 布料约束
+            - 布料物理材质
+            - 求解方法
+              - 弹簧-质点系统
+              - Verlet积分
+              - PBD（Position Based Dynamics）
+            - 自碰撞
+      - 载具模拟
+        - 真实感-风格化谱系
+        - 建模
+        - 力
+          - 牵引力
+          - 弹簧力
+          - 轮胎力
+        - 质心
+        - 转向过度与转向不足
+        - 重量转移
+        - 转向角
+          - Ackermann转向
+        - 轮胎接触
+      - 破坏模拟
+        - 概念
+          - 分块层级
+          - 连接图
+          - 连接强度
+          - 计算损伤
+        - 模型破碎算法
+          - 维诺图（Voronoi）
+          - 二维
+          - 三维
+          - 不同的破碎图案
+        - 破坏系统
+          - 增加真实感
+          - 破坏系统引入的问题
+          - 常见的破坏SDK
+      - PBD/XPBD
+        - 拉格朗日力学约束建模
+        - 拉伸约束
+        - 约束投影
+        - 工作流
+        - XPBD
   - 音效
+    - 声音基础
+      - 声音三要素
+        - 响度
+        - 音高
+        - 音色
+      - 脉冲编码调制
+        - 采样
+        - 量化
+        - 编码
     - 音频
       - 空间化音频
         - 双耳音频空间化
@@ -680,61 +689,12 @@
             - 等功率平移
       - 声障
       - 声笼
-    - 声音基础
-      - 声音三要素
-        - 响度
-        - 音高
-        - 音色
-      - 脉冲编码调制
-        - 采样
-        - 量化
-        - 编码
   - 工具链
-    - 界面（GUI）
-      - UI模式
-        - 即时模式（IMGUI）
-        - 保留模式（RMGUI）
-      - 架构模式
-        - MVC
-        - MVP
-        - MVVM
-    - C++代码反射
-      - 代码分析
-        - 抽象语法树（AST）
-        - Clang
-      - 反射信息收集
-        - Tags
-      - 代码生成
-        - 代码渲染
-        - Mustache
-      - 运行时反射信息注册
-    - 常见编辑器 - World Editor
-      - 架构
-      - 数据抽象
-        - 布局信息（Layout）
-        - 地形（Terrain）
-        - 环境（Environment）
-      - 多系统间的数据交互
-    - 鲁棒性设计
-      - Command模式
-        - 定义
-        - UID
-        - 序列化与反序列化
-      - 基础Command类型
-        - Add
-        - Delete
-        - Update
     - 软件架构
       - Stand-alone架构
       - In Game架构
       - Editor
       - Play in Editor
-    - 插件系统
-      - 架构
-        - Plugin Manager
-        - Interfaces
-        - SDK
-      - 版本控制
     - 数据结构设计
       - 数据定义（Schema）
         - 基础元素
@@ -746,6 +706,46 @@
       - 不同场景下的引擎数据
         - Runtime
         - Storage
+    - 鲁棒性设计
+      - Command模式
+        - 定义
+        - UID
+        - 序列化与反序列化
+      - 基础Command类型
+        - Add
+        - Delete
+        - Update
+    - C++代码反射
+      - 代码分析
+        - 抽象语法树（AST）
+        - Clang
+      - 反射信息收集
+        - Tags
+      - 代码生成
+        - 代码渲染
+        - Mustache
+      - 运行时反射信息注册
+    - 插件系统
+      - 架构
+        - Plugin Manager
+        - Interfaces
+        - SDK
+      - 版本控制
+    - 界面（GUI）
+      - UI模式
+        - 即时模式（IMGUI）
+        - 保留模式（RMGUI）
+      - 架构模式
+        - MVC
+        - MVP
+        - MVVM
+    - 常见编辑器 - World Editor
+      - 架构
+      - 数据抽象
+        - 布局信息（Layout）
+        - 地形（Terrain）
+        - 环境（Environment）
+      - 多系统间的数据交互
     - 资产管理
       - 资产格式
         - 文本（Text）
@@ -821,58 +821,6 @@
           - 由原生引擎代码支配游戏世界
           - 脚本扩展原生引擎功能
           - 由脚本支配
-    - AI Planning（AI规划）
-      - Monte Carlo Tree Search（蒙特卡洛树搜索，MCTS）
-        - 决策
-          - Default Policy
-            - 最保守的选择
-            - 最佳的选择
-            - 最鲁棒的选择
-            - 最激进的选择
-        - MCTS流程
-          - 选择（Selection）
-            - Tree Policy
-            - UCB公式
-            - 平衡开发与探索问题
-          - 拓展（Expansion）
-          - 仿真+评估（Simulation）
-            - Rollout Policy
-            - 评估函数
-          - 反向传播（Backpropagation）
-      - Goal-Orientated Action Planner（目标导向的动作规划器，GOAP）
-        - GOAP（目标导向动作规划器）
-          - 目标集
-            - 对WorldState中的部分属性做是否满足的判断
-          - 动作集
-            - 前提条件
-            - 动作损耗
-            - 动作影响
-            - 对WorldState的改变描述
-          - 逆向规划
-      - HTN（分层任务网络）
-        - 原子任务
-          - 前提条件
-          - 动作影响
-          - 对WorldState的改变描述
-        - 复合任务
-          - 前提条件
-          - 拆分方法
-    - 构建高级的AI系统
-      - Machine Learning（机器学习，ML）
-        - 机器学习类型
-          - 监督学习
-          - 无监督学习
-          - 半监督学习
-          - 强化学习
-            - 马尔可夫决策过程
-            - 状态
-            - 动作
-            - 奖励
-            - 累计奖励最大
-            - 如何利用强化学习构建AI
-            - 状态抽象
-            - 动作抽象
-            - 奖励设置
     - 基础AI系统
       - 寻路
         - 路径平滑
@@ -947,7 +895,166 @@
             - 装饰节点
             - 前置条件
             - 黑板变量
+    - 构建高级的AI系统
+      - Machine Learning（机器学习，ML）
+        - 机器学习类型
+          - 监督学习
+          - 无监督学习
+          - 半监督学习
+          - 强化学习
+            - 马尔可夫决策过程
+            - 状态
+            - 动作
+            - 奖励
+            - 累计奖励最大
+            - 如何利用强化学习构建AI
+            - 状态抽象
+            - 动作抽象
+            - 奖励设置
+    - AI Planning（AI规划）
+      - Monte Carlo Tree Search（蒙特卡洛树搜索，MCTS）
+        - 决策
+          - Default Policy
+            - 最保守的选择
+            - 最佳的选择
+            - 最鲁棒的选择
+            - 最激进的选择
+        - MCTS流程
+          - 选择（Selection）
+            - Tree Policy
+            - UCB公式
+            - 平衡开发与探索问题
+          - 拓展（Expansion）
+          - 仿真+评估（Simulation）
+            - Rollout Policy
+            - 评估函数
+          - 反向传播（Backpropagation）
+      - Goal-Orientated Action Planner（目标导向的动作规划器，GOAP）
+        - GOAP（目标导向动作规划器）
+          - 目标集
+            - 对WorldState中的部分属性做是否满足的判断
+          - 动作集
+            - 前提条件
+            - 动作损耗
+            - 动作影响
+            - 对WorldState的改变描述
+          - 逆向规划
+      - HTN（分层任务网络）
+        - 原子任务
+          - 前提条件
+          - 动作影响
+          - 对WorldState的改变描述
+        - 复合任务
+          - 前提条件
+          - 拆分方法
   - 网络
+    - 网络基础
+      - 网络协议
+        - Socket套接字
+          - UDP协议
+            - 无连接
+            - 不可靠
+            - 无流控
+            - 无拥塞控制
+          - TCP协议
+            - 面向连接
+            - 可靠、有序
+            - 流控
+            - 拥塞控制
+        - 基于UDP的可靠实时通信实现
+          - 自动重传(ARQ)
+          - 前向纠错(FEC)
+        - 网络分层
+          - OSI七层模型
+            - 物理层
+            - 数据链路层
+            - 网络层
+            - 传输层
+            - 会话层
+            - 表示层
+            - 应用层
+      - 网络拓扑
+        - P2P（Peer-to-Peer）特点
+          - P2P模式
+            - 客户端之间互相通信
+            - 客户端承担游戏逻辑
+            - 优点
+              - 一个客户端挂掉不影响其他玩家
+              - 不依赖于服务器
+            - 缺点
+              - 易作弊
+              - 需要良好的网络连接
+              - 玩家人数受限
+        - DS（Dedicated Server）特点
+          - 专用服务器（DS）特点
+            - 具有权威性
+            - 负责模拟整个游戏世界
+            - 负责分发数据给每个玩家
+            - 优点
+              - 反作弊易实现
+              - 能让更多玩家一同游戏
+              - 游戏响应不取决于每个玩家的网络状态
+            - 缺点
+              - 服务器花费较高
+              - 服务端承担更多逻辑
+      - 通信方式
+        - RPC
+          - Socket编程面临的诸多问题
+            - 消息格式不统一
+            - 封包和解包
+            - 消息分发处理
+            - 不是一种自然的编程模型
+          - 使用RPC的好处
+            - 集中式代码
+            - 易于编程
+            - 通信透明
+          - RPC实现通信的基本原理
+            - 客户端发起函数调用（Client Functions）
+            - 客户端通过ClientStub进行消息的封装（序列化）及传输
+            - Server端通过ServerStub（Skeleton）进行解码并找到对应函数处理，返回结果
+            - ClientStub接收消息（反序列化），得到结果
+        - NetMessage
+          - 传统的消息机制
+          - 通常是异步通信
+      - 时钟同步
+        - 网络时间协议（NTP） - 四个时间戳及误差调整 1. 客户端发送时间戳 2. 服务端接收时间戳 3. 服务端发送返回时间戳 4. 客户端接收时间戳 - 计算传输时延：默认上行延迟和下行延迟相等
+        - 基于流的消除高阶的时间同步协议
+          - 游戏开始时直接进行类似NTP的对时操作
+          - 利用多次对时消除误差过大项来达到时间差校准
+    - 服务器架构
+      - 分布式系统
+        - 分布式系统挑战
+          - 互斥问题
+          - 故障与部分失效
+          - 不可靠的网络
+          - 一致性和共识算法
+          - 分布式事务
+          - 负载均衡
+            - 随机
+            - 轮询
+            - 一致性哈希
+          - 服务发现
+            - Etcd
+            - Zookeeper
+      - 系统举例
+        - 大厅系统
+        - 用户管理系统
+        - 交易系统
+        - 社交系统
+        - 匹配系统
+        - 数据存储举例
+          - MySQL
+          - MongoDB
+          - Redis
+      - 可扩展游戏世界
+        - Zoning
+          - 在大世界中将大量玩家分布
+          - 分布可能不均匀
+        - Instancing
+          - 独立运行大量游戏区域
+          - 减少拥挤、竞争
+        - Replication
+          - 允许大量玩家高度互动
     - 网络同步
       - 同步的效果
         - 多端一致
@@ -1089,113 +1196,6 @@
         - 快照同步
         - 帧同步
         - 状态同步
-    - 服务器架构
-      - 分布式系统
-        - 分布式系统挑战
-          - 互斥问题
-          - 故障与部分失效
-          - 不可靠的网络
-          - 一致性和共识算法
-          - 分布式事务
-          - 负载均衡
-            - 随机
-            - 轮询
-            - 一致性哈希
-          - 服务发现
-            - Etcd
-            - Zookeeper
-      - 系统举例
-        - 大厅系统
-        - 用户管理系统
-        - 交易系统
-        - 社交系统
-        - 匹配系统
-        - 数据存储举例
-          - MySQL
-          - MongoDB
-          - Redis
-      - 可扩展游戏世界
-        - Zoning
-          - 在大世界中将大量玩家分布
-          - 分布可能不均匀
-        - Instancing
-          - 独立运行大量游戏区域
-          - 减少拥挤、竞争
-        - Replication
-          - 允许大量玩家高度互动
-    - 网络基础
-      - 网络协议
-        - Socket套接字
-          - UDP协议
-            - 无连接
-            - 不可靠
-            - 无流控
-            - 无拥塞控制
-          - TCP协议
-            - 面向连接
-            - 可靠、有序
-            - 流控
-            - 拥塞控制
-        - 基于UDP的可靠实时通信实现
-          - 自动重传(ARQ)
-          - 前向纠错(FEC)
-        - 网络分层
-          - OSI七层模型
-            - 物理层
-            - 数据链路层
-            - 网络层
-            - 传输层
-            - 会话层
-            - 表示层
-            - 应用层
-      - 网络拓扑
-        - P2P（Peer-to-Peer）特点
-          - P2P模式
-            - 客户端之间互相通信
-            - 客户端承担游戏逻辑
-            - 优点
-              - 一个客户端挂掉不影响其他玩家
-              - 不依赖于服务器
-            - 缺点
-              - 易作弊
-              - 需要良好的网络连接
-              - 玩家人数受限
-        - DS（Dedicated Server）特点
-          - 专用服务器（DS）特点
-            - 具有权威性
-            - 负责模拟整个游戏世界
-            - 负责分发数据给每个玩家
-            - 优点
-              - 反作弊易实现
-              - 能让更多玩家一同游戏
-              - 游戏响应不取决于每个玩家的网络状态
-            - 缺点
-              - 服务器花费较高
-              - 服务端承担更多逻辑
-      - 通信方式
-        - RPC
-          - Socket编程面临的诸多问题
-            - 消息格式不统一
-            - 封包和解包
-            - 消息分发处理
-            - 不是一种自然的编程模型
-          - 使用RPC的好处
-            - 集中式代码
-            - 易于编程
-            - 通信透明
-          - RPC实现通信的基本原理
-            - 客户端发起函数调用（Client Functions）
-            - 客户端通过ClientStub进行消息的封装（序列化）及传输
-            - Server端通过ServerStub（Skeleton）进行解码并找到对应函数处理，返回结果
-            - ClientStub接收消息（反序列化），得到结果
-        - NetMessage
-          - 传统的消息机制
-          - 通常是异步通信
-      - 时钟同步
-        - 网络时间协议（NTP） - 四个时间戳及误差调整 1. 客户端发送时间戳 2. 服务端接收时间戳 3. 服务端发送返回时间戳 4. 客户端接收时间戳 - 计算传输时延：默认上行延迟和下行延迟相等
-        - 基于流的消除高阶的时间同步协议
-          - 游戏开始时直接进行类似NTP的对时操作
-          - 利用多次对时消除误差过大项来达到时间差校准
     - 游戏网络优化
       - 反作弊
         - 作弊手段分类
@@ -1225,59 +1225,6 @@
         - 基于统计数据反作弊
         - 检测已知的作弊程序
   - 面向数据编程与任务系统
-    - 基础架构
-      - 如何构建游戏世界
-        - 复杂情况处理
-          - 组件间的依赖关系
-          - GameObject间的依赖关系
-          - 事件的处理时机
-        - 游戏场景管理
-          - 空间数据结构
-            - GameObject检索
-        - GameObject组成
-          - 组件化
-          - 继承
-        - 如何让游戏世界动起来
-          - 游戏更新方式
-            - 基于对象的更新（Object-based tick）
-            - 基于组件的更新（Component-based tick）
-            - 事件机制（基本概念）
-        - 游戏世界组成
-          - 万物皆GameObject
-          - 动态物
-          - 静态物
-          - 环境
-          - 其它
-      - 游戏引擎的分层架构
-        - 工具层
-        - 功能层
-          - 功能层职责
-            - GameTick控制各系统周期性更新
-            - 为游戏引擎提供核心功能模块
-            - 多核多线程架构趋势
-        - 资源层
-          - 资源层
-            - GUID
-            - 运行时资源管理
-            - 虚拟文件系统
-            - Handle
-            - 资源生命周期
-              - 不同资源有不同生命周期
-              - 尽可能减少资源的内存申请与释放
-            - 垃圾回收
-        - 核心层
-          - 核心层功能
-            - 数学计算库
-            - 数据结构与容器
-            - 内存管理
-        - 平台层
-          - 平台层内容
-            - 硬件架构
-            - 图形API概念
-        - 为什么要分层
-          - 减少耦合，降低复杂度
-          - 上层无需知道下层的具体实现
-          - 应对不同的需求变化
     - 并行编程基础知识
       - 多任务的类型
         - 抢占式
@@ -1340,6 +1287,59 @@
         - 实体Entity
         - 组件Component
         - 系统System
+    - 基础架构
+      - 如何构建游戏世界
+        - 复杂情况处理
+          - 组件间的依赖关系
+          - GameObject间的依赖关系
+          - 事件的处理时机
+        - 游戏场景管理
+          - 空间数据结构
+            - GameObject检索
+        - GameObject组成
+          - 组件化
+          - 继承
+        - 如何让游戏世界动起来
+          - 游戏更新方式
+            - 基于对象的更新（Object-based tick）
+            - 基于组件的更新（Component-based tick）
+            - 事件机制（基本概念）
+        - 游戏世界组成
+          - 万物皆GameObject
+          - 动态物
+          - 静态物
+          - 环境
+          - 其它
+      - 游戏引擎的分层架构
+        - 工具层
+        - 功能层
+          - 功能层职责
+            - GameTick控制各系统周期性更新
+            - 为游戏引擎提供核心功能模块
+            - 多核多线程架构趋势
+        - 资源层
+          - 资源层
+            - GUID
+            - 运行时资源管理
+            - 虚拟文件系统
+            - Handle
+            - 资源生命周期
+              - 不同资源有不同生命周期
+              - 尽可能减少资源的内存申请与释放
+            - 垃圾回收
+        - 核心层
+          - 核心层功能
+            - 数学计算库
+            - 数据结构与容器
+            - 内存管理
+        - 平台层
+          - 平台层内容
+            - 硬件架构
+            - 图形API概念
+        - 为什么要分层
+          - 减少耦合，降低复杂度
+          - 上层无需知道下层的具体实现
+          - 应对不同的需求变化
     - 游戏引擎并行框架
       - Thread fork-join
         - taroikjon

@@ -60,6 +60,43 @@ export const NodePanel = memo(function NodePanel({ onEditNode, onMergeNodes }: N
     }
   }, [rootNodes, expandedNodes.size]);
 
+  // Auto-expand ancestor nodes when searching
+  useEffect(() => {
+    if (!searchText) return;
+
+    // Find all nodes that match the search
+    const matchingNodeIds = new Set<string>();
+    const findMatchingNodes = (node: MindmapNode) => {
+      if (node.text.toLowerCase().includes(searchText.toLowerCase())) {
+        matchingNodeIds.add(node.id);
+      }
+      const children = childrenMap.get(node.id) ?? [];
+      for (const childId of children) {
+        const child = nodesById.get(childId);
+        if (child) findMatchingNodes(child);
+      }
+    };
+    rootNodes.forEach(findMatchingNodes);
+
+    // Find all ancestors of matching nodes
+    const ancestorIds = new Set<string>();
+    const findAncestors = (nodeId: string) => {
+      const node = nodesById.get(nodeId);
+      if (node?.parent_id) {
+        ancestorIds.add(node.parent_id);
+        findAncestors(node.parent_id);
+      }
+    };
+    matchingNodeIds.forEach(findAncestors);
+
+    // Expand all ancestors
+    if (ancestorIds.size > 0) {
+      useAnnotationStore.setState(state => ({
+        expandedNodes: new Set([...state.expandedNodes, ...ancestorIds])
+      }));
+    }
+  }, [searchText, rootNodes, childrenMap, nodesById]);
+
   // Check if node matches filter
   const nodeMatchesFilter = useCallback(
     (node: MindmapNode): boolean => {
@@ -105,6 +142,23 @@ export const NodePanel = memo(function NodePanel({ onEditNode, onMergeNodes }: N
     }
   };
 
+  // Check if node or any descendant matches search
+  const nodeOrDescendantMatches = useCallback(
+    (node: MindmapNode): boolean => {
+      // Check current node
+      if (nodeMatchesFilter(node)) return true;
+
+      // Check descendants recursively
+      const children = childrenMap.get(node.id) ?? [];
+      for (const childId of children) {
+        const child = nodesById.get(childId);
+        if (child && nodeOrDescendantMatches(child)) return true;
+      }
+      return false;
+    },
+    [nodeMatchesFilter, childrenMap, nodesById]
+  );
+
   // Render node tree recursively
   const renderNode = (node: MindmapNode, level: number): React.ReactNode => {
     const children = childrenMap.get(node.id) ?? [];
@@ -114,9 +168,8 @@ export const NodePanel = memo(function NodePanel({ onEditNode, onMergeNodes }: N
     const isInMultiSelection = selectedNodeIds.has(node.id);
     const isEditing = editingNodeId === node.id;
 
-    // Check visibility
-    const matches = nodeMatchesFilter(node);
-    if (!matches && searchText) return null;
+    // Check visibility - when searching, show node if it or any descendant matches
+    if (searchText && !nodeOrDescendantMatches(node)) return null;
 
     return (
       <div key={node.id} className="select-none">

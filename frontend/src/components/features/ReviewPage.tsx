@@ -13,7 +13,7 @@ import { SaveModal } from './SaveModal';
 import { KeyboardHelp } from './KeyboardHelp';
 import { Input, ExportModal, ToastContainer, useToast, showToast } from '@/components/ui';
 import { Search, Download, Save, X } from 'lucide-react';
-import { exportAsJson, exportAsMarkdown, exportGraphJson, exportChangeLog, saveToFile } from '@/utils';
+import { exportAsJson, exportAsMarkdown, exportGraphJson, exportChangeLog } from '@/utils';
 import type { ExportFormat } from '@/components/ui';
 import { useKeyboardShortcuts, createDefaultShortcuts } from '@/hooks';
 

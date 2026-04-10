@@ -6,7 +6,7 @@
  * - Help panel integration
  */
 
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export interface KeyboardShortcut {
   key: string;
